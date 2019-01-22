@@ -1,0 +1,34 @@
+command=$HOME/.config/i3blocks/statusbar/$BLOCK_NAME
+separator_block_width=15
+
+[mailbox]
+interval=30
+signal=12
+label=📬
+
+[memory]
+interval=30
+label=🧠
+
+[volume]
+interval=10
+signal=10
+
+[cpu]
+interval=15
+label=💻
+
+[disk]
+interval=60
+command=$HOME/.config/i3blocks/statusbar/disk / 🏠
+
+[internet]
+interval=10
+
+[battery]
+command=$HOME/.config/i3blocks/statusbar/battery BAT0
+interval=5
+
+[clock]
+label=📅
+interval=30

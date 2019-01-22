@@ -1,0 +1,108 @@
+# vim:filetype=i3config
+#i3 config 
+
+##Misc Settings
+# set Super key
+set $mod Mod4
+# Font for window titles
+font pango:Hack 8
+# set default border style for new windows
+default_border pixel 5
+default_floating_border none
+# restart i3 inplace
+bindsym $mod+Shift+r restart
+# reboot,shutdown,kill i3 or lock screen
+bindsym $mod+x exec --no-startup-id fin
+
+##Shortcuts for window manipulation
+# kill focused window
+bindsym $mod+Shift+q kill
+# change focus
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+bindsym $mod+h focus left
+# move focused window
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+bindsym $mod+Shift+h move left
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen toggle
+# change container layout
+bindsym $mod+t layout tabbed
+bindsym $mod+e layout toggle split
+# toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+# Use Mouse+$mod to drag floating windows
+floating_modifier $mod
+# change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+
+##Dropdown windows
+for_window [instance="dropdown_*"] floating enable
+for_window [instance="dropdown_*"] move scratchpad
+for_window [instance="dropdown_*"] sticky enable
+for_window [instance="dropdown_*"] scratchpad show
+for_window [instance="dropdown_*"] move position center
+for_window [instance="dropdown_tmuxdd"] resize set 1000 700
+for_window [instance="dropdown_tmuxdd"] border pixel 3
+
+##Workspace Settings
+# Define names for default workspaces
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+# switch to workspace
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
+
+##Status bar settings
+bar {
+    font pango:hack 10
+	status_command i3blocks
+	position top
+	mode dock
+	modifier None
+}
+
+##Start applications on launch
+exec --no-startup-id nitrogen --restore
+exec --no-startup-id compton --config ~/.compton.conf
+exec --no-startup-id dunst
+exec --no-startup-id xfce4-power-manager
+exec --no-startup-id unclutter --jitter 250 --ignore-scrolling
+
+##Keybindings for programs
+set $runmenu /usr/bin/dmenu_run
+
+bindsym $mod+Return exec $TERMINAL
+bindsym $mod+Shift+Return exec lxterminal
+bindsym $mod+b exec $BROWSER
+bindsym $mod+d exec $runmenu
+bindsym $mod+r exec $TERMINAL -e $FILE
+
+##Media Keybindings
+bindsym $mod+a exec $TERMINAL -e pulsemixer
+bindsym $mod+Shift+a exec --no-startup-id sound mute
+bindsym $mod+p exec --no-startup-id sound up 10
+bindsym $mod+Shift+p exec --no-startup-id sound down 10
+
+##Email Keybindings
+bindsym $mod+m exec $TERMINAL -e neomutt
+bindsym $mod+Shift+m exec --no-startup-id $HOME/.config/mutt/etc/mailsync.sh
+
+##Misc Keybindings
+bindsym $mod+s exec --no-startup-id ducksearch
+bindsym $mod+u exec --no-startup-id ddspawn tmuxdd

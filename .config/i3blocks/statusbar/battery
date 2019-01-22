@@ -1,0 +1,20 @@
+#!/bin/sh
+# Give a battery name (e.g. BAT0) as an argument.
+
+case $BLOCK_BUTTON in
+    3) pgrep -x dunst >/dev/null && notify-send "<b>🔋 Battery module:</b>
+⛽: no battery
+🔋: discharging
+♻: stagnant charge
+🔌: charging
+⚡: charged" ;;
+esac
+
+if [ -d /sys/class/power_supply/"$1" ]; then
+    capacity=$(cat /sys/class/power_supply/"$1"/capacity)
+    status=$(cat /sys/class/power_supply/"$1"/status)
+else
+    echo "⛽ no BAT" || exit
+fi
+
+echo $(echo "$status" | sed -e "s/,//g;s/Discharging/🔋/;s/Charging/🔌/;s/Unknown/♻️/;s/Full/⚡/;s/ 0*/ /g;s/ :/ /g") $(echo "$capacity" | sed -e 's/$/%/')
