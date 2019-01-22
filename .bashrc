@@ -2,7 +2,6 @@
 
 ##If not running interactively, don't do anything
 [[ $- != *i* ]] && return
-
 ##misc settings
 shopt -s autocd
 stty -ixon 
