@@ -85,12 +85,9 @@ exec --no-startup-id xfce4-power-manager
 exec --no-startup-id unclutter --jitter 250 --ignore-scrolling
 
 ##Keybindings for programs
-set $runmenu /usr/bin/dmenu_run
-
 bindsym $mod+Return exec $TERMINAL
 bindsym $mod+Shift+Return exec lxterminal
 bindsym $mod+b exec $BROWSER
-bindsym $mod+d exec $runmenu
 bindsym $mod+r exec $TERMINAL -e $FILE
 
 ##Media Keybindings
@@ -104,5 +101,7 @@ bindsym $mod+m exec $TERMINAL -e neomutt
 bindsym $mod+Shift+m exec --no-startup-id $HOME/.config/mutt/etc/mailsync.sh
 
 ##Misc Keybindings
+bindsym $mod+d exec --no-startup-id dmenu_run
 bindsym $mod+s exec --no-startup-id ducksearch
 bindsym $mod+u exec --no-startup-id ddspawn tmuxdd
+bindsym $mod+g exec --no-startup-id passmenu

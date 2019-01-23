@@ -27,7 +27,7 @@ interval=10
 
 [battery]
 command=$HOME/.config/i3blocks/statusbar/battery BAT0
-interval=5
+interval=10
 
 [clock]
 label=📅

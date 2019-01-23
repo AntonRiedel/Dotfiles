@@ -2,13 +2,14 @@
 
 ##If not running interactively, don't do anything
 [[ $- != *i* ]] && return
+
 ##misc settings
 shopt -s autocd
 stty -ixon 
 set -o vi
 
 ##set the prompter
-PS1='[\[\033[1;34m\]\u\[\033[0m\]@\h \W]\$ '
+export PS1="\[$(tput bold)\]\[$(tput setaf 1)\][\[$(tput setaf 3)\]\u\[$(tput setaf 2)\]@\[$(tput setaf 4)\]\h \[$(tput setaf 5)\]\W\[$(tput setaf 1)\]]\[$(tput setaf 7)\]\\$ \[$(tput sgr0)\]"
 
 ##set c/c++ compiler
 export CC=$(which gcc)
