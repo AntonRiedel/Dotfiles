@@ -7,3 +7,4 @@ cat /dev/null > $HOME/.bash_history
 
 #clear cache
 rm -rf $HOME/.cache/qutebrowser/*
+rm -rf $HOME/.cache/ranger/*
