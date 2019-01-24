@@ -23,8 +23,7 @@ shebangtest() {
 
 case "$file" in
 	*\.tex) latexmk "$file" -pdfxe -bibtex-cond;;
-    *\.md) pandoc "$file" --pdf-engine=xelatex -o "$base".pdf ;;
+    *\.md) pandoc "$file" -o "$base".pdf --pdf-engine=xelatex;;
     *\.html) pandoc "$file" --pdf-engine=xelatex -o "$base".pdf ;;
-	*\.py) python2 "$file" ;;
 	*) shebangtest ;;
 esac

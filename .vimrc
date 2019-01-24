@@ -2,7 +2,7 @@
  
  " Misc {{{
 set backspace=indent,eol,start
-let mapleader=" "
+let mapleader=","
 set clipboard=unnamed
 set mouse=a
 set encoding=utf-8
@@ -65,9 +65,13 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'sjl/badwolf'
 Plugin 'mboughaba/i3config.vim'
 Plugin 'itchyny/lightline.vim'
+Plugin 'skywind3000/asyncrun.vim'
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'benmills/vimux'
 Plugin 'rafaqz/ranger.vim'
+Plugin 'junegunn/fzf.vim'
 Plugin 'xuhdev/vim-latex-live-preview'
+Plugin 'vhdirk/vim-cmake'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'godlygeek/tabular'
 Plugin 'tpope/vim-fugitive'
@@ -95,7 +99,10 @@ let g:lightline = {
       \ }
 " }}}
 
-" Tex/Text files {{{
+" Tex/Markdown/Text files {{{
+" Compile documents
+nnoremap <leader>lc :w! \| :AsyncRun compiler %<CR>
+nnoremap <leader>lp :!opout <c-r>%<CR><CR>
 " live preview
 let g:livepreview_previewer = 'zathura'
 autocmd BufEnter *.tex set updatetime=50 
@@ -110,10 +117,27 @@ autocmd BufRead,BufNewFile *.txt,*.tex hi clear SpellBad
 autocmd BufRead,BufNewFile *.txt,*.tex hi SpellBad cterm=underline ctermfg=red
 "}}} 
 
+" vim-Cmake {{{
+let g:cmake_ycm_symlinks=1
+nnoremap <leader>cm :CMake<CR>
+nnoremap <leader>cc :CMakeClean<CR>
+nnoremap <leader>m :AsyncRun make<CR>
+"}}}
+
 " YouCompleteMe {{{
 " set interpreter to python2 to make python2-jedi work
 let g:ycm_python_interpreter_path = '/usr/bin/python2'
 " }}}
+
+" AsyncRun {{{
+:let g:asyncrun_open=8
+"}}}
+
+" Vimux {{{
+nnoremap <leader>vp :VimuxPromptCommand<CR>
+nnoremap <leader>vl :VimuxRunLastCommand<CR>
+
+"}}}
 
 " Ranger {{{
 map <leader>rr :RangerEdit<cr>
@@ -131,10 +155,8 @@ autocmd BufWritePost .vimrc source $MYVIMRC
 autocmd BufWritePost ~/.Xresources !xrdb %
 "}}}
 
-" Custom  Shortcuts {{{
+" Custom Shortcuts {{{
 inoremap jj <ESC>
-map <leader>c :w! \| !compiler <c-r>%<CR><CR>
-map <leader>p :!opout <c-r>%<CR><CR>
 "}}}
 
 " vim:foldmethod=marker:foldlevel=0

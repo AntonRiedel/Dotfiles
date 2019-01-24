@@ -9,6 +9,7 @@ export TERMINAL="st"
 export BROWSER="qutebrowser"
 export READER="zathura"
 export FILE="ranger"
+RANGER_LOAD_DEFAULT_RC=FALSE
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
