@@ -2,7 +2,7 @@
  
  " Misc {{{
 set backspace=indent,eol,start
-let mapleader=","
+let mapleader=" "
 set clipboard=unnamed
 set mouse=a
 set encoding=utf-8
@@ -11,7 +11,7 @@ set wrap
 set linebreak
 set nobackup
 set noswapfile
-autocmd BufEnter * set updatetime=1000
+"autocmd BufEnter * set updatetime=1000
 filetype indent on
 filetype plugin on
 "}}}
@@ -52,7 +52,6 @@ set modelines=1
 set foldmethod=indent
 set foldnestmax=10
 set foldenable
-nnoremap <space> za
 set foldlevelstart=10
 "}}}
 
@@ -101,11 +100,11 @@ let g:lightline = {
 
 " Tex/Markdown/Text files {{{
 " Compile documents
-nnoremap <leader>lc :w! \| :AsyncRun compiler %<CR>
-nnoremap <leader>lp :!opout <c-r>%<CR><CR>
+nnoremap <leader>lk :w! \| :AsyncRun latexmk -pdfxe %<CR>
+nnoremap <leader>lv :!zathura %:r.pdf<CR>
 " live preview
-let g:livepreview_previewer = 'zathura'
 autocmd BufEnter *.tex set updatetime=50 
+let g:livepreview_previewer = 'zathura'
 " Clear out build files when leaving .tex document
 autocmd VimLeave *.tex !latexmk -c
 " spell checking 
@@ -151,7 +150,7 @@ map <leader>rc :set operatorfunc=RangerChangeOperator<cr>g@
 
 " AutoCommands {{{
 " source .vimrc after saving any changes
-autocmd BufWritePost .vimrc source $MYVIMRC
+autocmd BufWritePost ~/.vimrc source $MYVIMRC
 autocmd BufWritePost ~/.Xresources !xrdb %
 "}}}
 

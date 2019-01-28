@@ -7,7 +7,7 @@ set $mod Mod4
 # Font for window titles
 font pango:Hack 8
 # set default border style for new windows
-default_border pixel 5
+default_border pixel 3
 default_floating_border none
 # restart i3 inplace
 bindsym $mod+Shift+r restart

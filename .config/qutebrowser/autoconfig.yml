@@ -4,7 +4,7 @@
 config_version: 2
 settings:
   content.pdfjs:
-    global: false
+    global: true
   content.persistent_storage:
     global: ask
   content.plugins:
@@ -17,7 +17,12 @@ settings:
     global: 22
   fonts.web.size.default_fixed:
     global: 16
+  scrolling.bar:
+    global: when-searching
   url.default_page:
     global: campus.tum.de
+  url.searchengines:
+    global:
+      DEFAULT: https://duckduckgo.com/?q={}
   url.start_pages:
     global: campus.tum.de
