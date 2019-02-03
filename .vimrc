@@ -108,12 +108,12 @@ let g:livepreview_previewer = 'zathura'
 " Clear out build files when leaving .tex document
 autocmd VimLeave *.tex !latexmk -c
 " spell checking 
-autocmd BufRead,BufNewFile *.txt,*.tex setlocal spell spelllang=en_us
-autocmd BufRead,BufNewFile *.txt,*.tex set complete+=kspell
-autocmd BufRead,BufNewFile *.txt,*.tex set spellfile=~/.vim/spell/en_us.utf-8.add
+autocmd BufRead,BufNewFile *.txt,*.tex,*.md setlocal spell spelllang=en_us
+autocmd BufRead,BufNewFile *.txt,*.tex,*.md set complete+=kspell
+autocmd BufRead,BufNewFile *.txt,*.tex,*.md set spellfile=~/.vim/spell/en_us.utf-8.add
 " set highligthing of misspelled words
-autocmd BufRead,BufNewFile *.txt,*.tex hi clear SpellBad
-autocmd BufRead,BufNewFile *.txt,*.tex hi SpellBad cterm=underline ctermfg=red
+autocmd BufRead,BufNewFile *.txt,*.tex,*.md hi clear SpellBad
+autocmd BufRead,BufNewFile *.txt,*.tex,*.md hi SpellBad cterm=underline ctermfg=red
 "}}} 
 
 " vim-Cmake {{{

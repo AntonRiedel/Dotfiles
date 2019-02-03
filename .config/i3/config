@@ -88,6 +88,7 @@ exec --no-startup-id unclutter --jitter 250 --ignore-scrolling
 bindsym $mod+Return exec $TERMINAL
 bindsym $mod+Shift+Return exec lxterminal
 bindsym $mod+b exec $BROWSER
+bindsym $mod+Shift+b exec iceweasel
 bindsym $mod+r exec $TERMINAL -e $FILE
 
 ##Media Keybindings
