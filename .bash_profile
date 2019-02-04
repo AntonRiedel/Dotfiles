@@ -1,6 +1,7 @@
 #
 # ~/.bash_profile
 #
+
 ##set/extend enviroment variables
 export PATH=$HOME/.local/bin:$PATH
 export EDITOR="vim"
