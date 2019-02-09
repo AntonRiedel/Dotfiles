@@ -14,7 +14,7 @@ RANGER_LOAD_DEFAULT_RC=FALSE
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
-#start window manager on login
+##start window manager on login
 if [ -z "$DISPLAY" ] && [ "$(fgconsole)" -eq 1 ]; then
   exec startx --vt1 &> /dev/null
 fi

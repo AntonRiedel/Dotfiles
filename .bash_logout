@@ -8,3 +8,4 @@ cat /dev/null > $HOME/.bash_history
 #clear cache
 rm -rf $HOME/.cache/qutebrowser/*
 rm -rf $HOME/.cache/ranger/*
+rm -rf $HOME/.cache/mozilla/*

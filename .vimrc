@@ -75,6 +75,7 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'godlygeek/tabular'
 Plugin 'tpope/vim-fugitive'
 Plugin 'mklabs/vim-cowsay'
+Plugin 'fadein/vim-FIGlet'
 call vundle#end()
 "}}}
 
