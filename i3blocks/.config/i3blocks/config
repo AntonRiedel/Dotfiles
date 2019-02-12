@@ -26,7 +26,7 @@ command=$HOME/.config/i3blocks/statusbar/disk / 🏠
 interval=10
 
 [battery]
-command=$HOME/.config/i3blocks/statusbar/battery BAT0
+command=$HOME/.config/i3blocks/statusbar/battery BAT1
 interval=10
 
 [clock]

@@ -24,7 +24,7 @@ if [ -f "$usermodmap" ]; then
 fi
 
 #set keyboard
-setxkbmap gb
+setxkbmap de
 #make capslock useful
 setxkbmap -option caps:escape
 #Window Manager
