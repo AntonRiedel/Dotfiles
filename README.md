@@ -10,4 +10,4 @@ These are my personal Dotfiles I use across different machines. In particular yo
 * tmux
 * ranger
 
-My Dotfiles are meant to be deployed with GNU Stow
+My Dotfiles are meant to be deployed with GNU Stow (https://stevenrbaker.com/tech/managing-dotfiles-with-gnu-stow.html).
