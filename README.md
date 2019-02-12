@@ -9,3 +9,5 @@ These are my personal Dotfiles I use across different machines. In particular yo
 * vim
 * tmux
 * ranger
+
+My Dotfiles are meant to be deployed with GNU Stow
