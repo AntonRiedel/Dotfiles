@@ -7,7 +7,7 @@ export PATH=$HOME/.local/bin:$PATH
 export EDITOR="vim"
 export VISUAL=$EDITOR
 export TERMINAL="urxvtc"
-export TERMINAL2="lxterminal"
+export TERMINAL2="xfce4-terminal"
 export BROWSER="qutebrowser"
 if [ "$(cat /etc/hostname)" == "Mars" ];then
     export BROWSER2="iceweasel"
