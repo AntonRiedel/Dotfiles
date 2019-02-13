@@ -7,9 +7,13 @@ export PATH=$HOME/.bin:$PATH
 export EDITOR="vim"
 export VISUAL=$EDITOR
 export TERMINAL="st"
+export TERMINAL2="lxterminal"
 export BROWSER="qutebrowser"
+export BROWSER2="falkon"
 export READER="zathura"
+export READER2="evince"
 export FILE="ranger"
+export FILE2="nnn"
 RANGER_LOAD_DEFAULT_RC=FALSE
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc

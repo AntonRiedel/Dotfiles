@@ -86,10 +86,11 @@ exec --no-startup-id unclutter --jitter 50 --ignore-scrolling
 
 ##Keybindings for programs
 bindsym $mod+Return exec $TERMINAL
-bindsym $mod+Shift+Return exec lxterminal
+bindsym $mod+Shift+Return exec $TERMINAL2
 bindsym $mod+b exec $BROWSER
-#bindsym $mod+Shift+b exec iceweasel
-bindsym $mod+r exec $TERMINAL -e $FILE
+bindsym $mod+Shift+b exec $BROWSER2
+bindsym $mod+n exec $TERMINAL -e $FILE
+bindsym $mod+Shift+n exec $TERMINAL2 -e $FILE2
 
 ##Media Keybindings
 bindsym $mod+a exec $TERMINAL -e pulsemixer
