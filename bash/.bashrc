@@ -20,6 +20,7 @@ export CC=$(which gcc)
 export CXX=$(which g++)
 #export CC=$(which clang)
 #export CXX=$(which clang++)
+#export CC=$(which tcc)
 
 ##aliases
 alias ls="ls --color=auto"
@@ -29,7 +30,7 @@ alias m="neomutt"
 alias v="vim"
 alias r="ranger"
 alias pi="sudo pacman -S"
-alias pu="sudo pacman -Syu"
+alias pu="sudo pacman -Syu && yay -Sua"
 alias pr="sudo pacman -Rns"
 alias pq="pacman -Ss"
 alias cu="nmcli con up --ask"
