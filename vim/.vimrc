@@ -101,7 +101,7 @@ let g:lightline = {
 
 " Tex/Markdown/Text files {{{
 " Compile documents
-nnoremap <leader>lk :w! \| :AsyncRun latexmk -pdf %<CR>
+nnoremap <leader>lk :w! \| :AsyncRun latexmk -xelatex %<CR>
 nnoremap <leader>lv :!zathura %:r.pdf<CR>
 " live preview
 autocmd BufEnter *.tex set updatetime=50 
