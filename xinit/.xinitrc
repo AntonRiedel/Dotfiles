@@ -24,8 +24,8 @@ if [ -f "$usermodmap" ]; then
 fi
 
 #set keyboard
-if ["$(cat /etc/hostname)" == "Mars" ];then
-    setxkbmap uk
+if [ "$(cat /etc/hostname)" == "Mars" ];then
+    setxkbmap gb
 else
     setxkbmap de
 fi
