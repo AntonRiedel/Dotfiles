@@ -24,7 +24,11 @@ if [ -f "$usermodmap" ]; then
 fi
 
 #set keyboard
-setxkbmap de
+if ["$(cat /etc/hostname)" == "Mars" ];then
+    setxkbmap uk
+else
+    setxkbmap de
+fi
 #make capslock useful
 setxkbmap -option caps:escape
 #Window Manager
