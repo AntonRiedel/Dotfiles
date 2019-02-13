@@ -9,7 +9,11 @@ export VISUAL=$EDITOR
 export TERMINAL="st"
 export TERMINAL2="lxterminal"
 export BROWSER="qutebrowser"
-export BROWSER2="falkon"
+if [ "$(cat /etc/hostname)" == "Mars" ];then
+    export BROWSER2="iceweasel"
+else
+    export BROWSER2="firefox"
+fi
 export READER="zathura"
 export READER2="evince"
 export FILE="ranger"
