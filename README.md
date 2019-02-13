@@ -5,7 +5,7 @@ These are my personal Dotfiles I use across different machines. In particular yo
 * i3
 * i3blocks
 * bash
-* st/xterm/urxvt
+* urxvt/xterm
 * vim
 * tmux
 * ranger
