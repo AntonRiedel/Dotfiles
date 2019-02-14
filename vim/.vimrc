@@ -104,12 +104,13 @@ let g:lightline = {
 
 " Tex/Markdown/Text files {{{
 " Compile documents
-nnoremap <leader>lk :w! \| :AsyncRun latexmk -xelatex %<CR>
+nnoremap <leader>lk :w! \| :AsyncRun latexmk -xelatex<CR>
 nnoremap <leader>pk :w! \| :Pandoc! pdf<CR>
 nnoremap <leader>lv :!zathura %:r.pdf<CR>
 " live preview
 autocmd BufEnter *.tex set updatetime=50 
 let g:livepreview_previewer = 'zathura'
+let g:livepreview_engine = 'xelatex'
 " Clear out build files when leaving .tex document
 autocmd VimLeave *.tex !latexmk -c
 " spell checking 
