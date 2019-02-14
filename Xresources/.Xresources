@@ -1,64 +1,27 @@
-!! Color settings
-*.foreground:   #ffffff
-*.background:   #1e1e1e
-*.cursorColor:  #ffffff
-
-! black
-*.color0:       #5a7260
-*.color8:       #8da691
-
-! red
-*.color1:       #8f423c
-*.color9:       #eeaa88
-
-! green
-*.color2:       #bbbb88
-*.color10:      #ccc68d
-
-! yellow
-*.color3:       #f9d25b
-*.color11:      #eedd99
-
-! blue
-*.color4:       #e0ba69
-*.color12:      #c9b957
-
-! magenta
-*.color5:       #709289
-*.color13:      #ffcbab
-
-! cyan
-*.color6:       #d13516
-*.color14:      #c25431
-
-! white
-*.color7:       #efe2e0
-*.color15:      #f9f1ed
-
-! Urxvt Settings
-! copy/paste Ctrl+Alt+c/v
+!!Urxvt Settings
+!copy/paste Ctrl+Alt+c/v
 !for transperancy
 urxvt.depth: 32
-urxvt.background: [90]#002b36
+urxvt.background: [80]#002b36
+!Misc Settings
 urxvt.font: xft:hack:size=16
 urxvt.loginShell: false
 urxvt.visualBell: true
 urxvt.scrollBar: false
-!! Extensions
+!Extensions
 urxvt.perl-ext-common: default,resize-font,keyboard-select
-!! keyboard-select:
+!keyboard-select:
 urxvt.keysym.M-Escape: perl:keyboard-select:activate
 urxvt.keyboard-select.clipboard: true
-!! resize-font
+!resize-font
 urxvt.resize-font.smaller: C-Down
 urxvt.resize-font.bigger: C-Up
-!
-!! XTerm Settings
+
+!!XTerm Settings
 !xterm*background:   #002b36
 !xterm*faceName: Hack 
 !xterm*faceSize: 16
-!xterm*font: xft:hack:size=16, \
-!xft:emojione:size=12
+!xterm*font: xft:hack:size=16
 !xterm*renderFont: true
 !xterm*visualBell: true
 !xterm*vt100*geometry: 80x25
@@ -71,12 +34,39 @@ urxvt.resize-font.bigger: C-Up
 !xterm*metaSendsEscape: true
 !xterm*termName: xterm-256color
 !xterm*scaleHeight: 1.1
-!
-!! Make backspace behave 
+!!Make backspace behave 
 !xterm*vt100.backarrowKey: false
 !xterm*ttyModes: erase ^?
-!
-!! Set Shift Ctrl c for copy and Shift Ctrl v for paste 
+!!Set Shift Ctrl c for copy and Shift Ctrl v for paste 
 !*vt100.translations: #override \n\
 !Ctrl Shift <Key>C: copy-selection(CLIPBOARD) \n\
 !Ctrl Shift <Key>V: insert-selection(CLIPBOARD) 
+
+!! Color settings (terminal.sexy)
+*.foreground:   #ffffff
+*.background:   #1e1e1e
+*.cursorColor:  #ffffff
+! black
+*.color0:       #5a7260
+*.color8:       #8da691
+! red
+*.color1:       #8f423c
+*.color9:       #eeaa88
+! green
+*.color2:       #bbbb88
+*.color10:      #ccc68d
+! yellow
+*.color3:       #f9d25b
+*.color11:      #eedd99
+! blue
+*.color4:       #e0ba69
+*.color12:      #c9b957
+! magenta
+*.color5:       #709289
+*.color13:      #ffcbab
+! cyan
+*.color6:       #d13516
+*.color14:      #c25431
+! white
+*.color7:       #efe2e0
+*.color15:      #f9f1ed
