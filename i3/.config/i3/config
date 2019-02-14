@@ -12,7 +12,7 @@ default_floating_border none
 # restart i3 inplace
 bindsym $mod+Shift+r restart
 # reboot,shutdown,kill i3 or lock screen
-bindsym $mod+x exec --no-startup-id fin
+bindsym $mod+x exec --no-startup-id fin.sh
 
 ##Shortcuts for window manipulation
 # kill focused window
@@ -95,9 +95,9 @@ bindsym $mod+Shift+n exec $TERMINAL2 -e $FILE2
 
 ##Media Keybindings
 bindsym $mod+a exec $TERMINAL -e pulsemixer
-bindsym $mod+Shift+a exec --no-startup-id sound mute
-bindsym $mod+p exec --no-startup-id sound up 10
-bindsym $mod+Shift+p exec --no-startup-id sound down 10
+bindsym $mod+Shift+a exec --no-startup-id sound.sh mute
+bindsym $mod+p exec --no-startup-id sound.sh up 10
+bindsym $mod+Shift+p exec --no-startup-id sound.sh down 10
 
 ##Email Keybindings
 bindsym $mod+m exec $TERMINAL -e neomutt
@@ -105,6 +105,6 @@ bindsym $mod+Shift+m exec --no-startup-id $HOME/.config/mutt/etc/mailsync.sh
 
 ##Misc Keybindings
 bindsym $mod+d exec --no-startup-id dmenu_run
-bindsym $mod+s exec --no-startup-id ducksearch
-bindsym $mod+u exec --no-startup-id ddspawn tmuxdd
+bindsym $mod+s exec --no-startup-id ducksearch.sh
+bindsym $mod+u exec --no-startup-id ddspawn.sh tmuxdd.sh
 bindsym $mod+g exec --no-startup-id passmenu

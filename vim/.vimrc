@@ -72,6 +72,7 @@ Plugin 'junegunn/fzf.vim'
 Plugin 'xuhdev/vim-latex-live-preview'
 Plugin 'vhdirk/vim-cmake'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'Chiel92/vim-autoformat.git'
 Plugin 'godlygeek/tabular'
 Plugin 'tpope/vim-fugitive'
 Plugin 'mklabs/vim-cowsay'
@@ -102,6 +103,7 @@ let g:lightline = {
 " Tex/Markdown/Text files {{{
 " Compile documents
 nnoremap <leader>lk :w! \| :AsyncRun latexmk -xelatex %<CR>
+nnoremap <leader>pk :w! \| :AsyncRun pandoc % -o %:r.pdf --pdf-engine=xelatex<CR>
 nnoremap <leader>lv :!zathura %:r.pdf<CR>
 " live preview
 autocmd BufEnter *.tex set updatetime=50 
@@ -128,6 +130,10 @@ nnoremap <leader>m :AsyncRun make<CR>
 " set interpreter to python2 to make python2-jedi work
 let g:ycm_python_interpreter_path = '/usr/bin/python2'
 " }}}
+
+" Autoformat {{{
+autocmd BufWritePre *.c,*.h,*.cpp,*.md,*.py,*.sh Autoformat
+"}}}
 
 " AsyncRun {{{
 :let g:asyncrun_open=8
@@ -157,6 +163,7 @@ autocmd BufWritePost ~/.Xresources !xrdb %
 
 " Custom Shortcuts {{{
 inoremap jj <ESC>
+cnoremap sw execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
 "}}}
 
 " vim:foldmethod=marker:foldlevel=0
