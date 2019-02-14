@@ -10,7 +10,7 @@ pgrep -x dmenu && exit
 
 choice=$(echo "🦆" | dmenu -i -p "Search DuckDuckGo:") || exit 1
 
-if [ "$choice" = "🦆"  ]; then
+if [ "$choice" = "🦆" ]; then
     $browser "https://duckduckgo.com"
 else
     # Detect if url

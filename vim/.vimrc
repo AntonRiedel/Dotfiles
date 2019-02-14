@@ -70,6 +70,8 @@ Plugin 'benmills/vimux'
 Plugin 'rafaqz/ranger.vim'
 Plugin 'junegunn/fzf.vim'
 Plugin 'xuhdev/vim-latex-live-preview'
+Plugin 'vim-pandoc/vim-pandoc'
+Plugin 'vim-pandoc/vim-pandoc-syntax'
 Plugin 'vhdirk/vim-cmake'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'Chiel92/vim-autoformat.git'
@@ -103,7 +105,7 @@ let g:lightline = {
 " Tex/Markdown/Text files {{{
 " Compile documents
 nnoremap <leader>lk :w! \| :AsyncRun latexmk -xelatex %<CR>
-nnoremap <leader>pk :w! \| :AsyncRun pandoc % -o %:r.pdf --pdf-engine=xelatex<CR>
+nnoremap <leader>pk :w! \| :Pandoc! pdf<CR>
 nnoremap <leader>lv :!zathura %:r.pdf<CR>
 " live preview
 autocmd BufEnter *.tex set updatetime=50 

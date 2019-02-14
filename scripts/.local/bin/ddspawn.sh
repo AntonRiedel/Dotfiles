@@ -7,8 +7,7 @@
 
 [ -z "$1" ] && exit
 
-if xwininfo -tree -root | grep "(\"dropdown_$1\" ";
-then
+if xwininfo -tree -root | grep "(\"dropdown_$1\" "; then
     echo "Window detected."
     i3 "[instance=\"dropdown_$1\"] scratchpad show; [instance=\"dropdown_$1\"] move position center"
 else
