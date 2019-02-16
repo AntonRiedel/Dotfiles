@@ -79,11 +79,10 @@ bar {
 
 ##Start applications on launch
 exec --no-startup-id nitrogen --restore
-exec --no-startup-id compton --config ~/.config/compton.conf
+exec --no-startup-id compton -c ~/.config/compton.conf
 exec --no-startup-id dunst
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id unclutter --jitter 20 --ignore-scrolling
-exec --no-startup-id urxvtd -q -f -o
 
 ##Keybindings for programs
 bindsym $mod+Return exec $TERMINAL

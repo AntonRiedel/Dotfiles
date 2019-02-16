@@ -1,6 +1,4 @@
-" .vimrc
- 
- " Misc {{{
+" Misc {{{
 set backspace=indent,eol,start
 let mapleader=" "
 set clipboard=unnamed
@@ -11,7 +9,6 @@ set wrap
 set linebreak
 set nobackup
 set noswapfile
-"autocmd BufEnter * set updatetime=1000
 filetype indent on
 filetype plugin on
 "}}}
@@ -49,44 +46,46 @@ set modelines=1
 "}}}
 
 " Folding {{{
-set foldmethod=indent
-set foldnestmax=10
 set foldenable
-set foldlevelstart=10
+set foldmethod=indent
+set foldlevelstart=3
 "}}}
 
-" Vundle {{{
-set nocompatible
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'sjl/badwolf'
-Plugin 'mboughaba/i3config.vim'
-Plugin 'itchyny/lightline.vim'
-Plugin 'skywind3000/asyncrun.vim'
-Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'benmills/vimux'
-Plugin 'rafaqz/ranger.vim'
-Plugin 'junegunn/fzf.vim'
-Plugin 'xuhdev/vim-latex-live-preview'
-Plugin 'vim-pandoc/vim-pandoc'
-Plugin 'vim-pandoc/vim-pandoc-syntax'
-Plugin 'vhdirk/vim-cmake'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'Chiel92/vim-autoformat.git'
-Plugin 'godlygeek/tabular'
-Plugin 'tpope/vim-fugitive'
-Plugin 'mklabs/vim-cowsay'
-Plugin 'fadein/vim-FIGlet'
-call vundle#end()
+" Vim-Plug {{{
+call plug#begin() 
+Plug 'iCyMind/NeoSolarized'
+Plug 'mboughaba/i3config.vim'
+Plug 'itchyny/lightline.vim'
+
+Plug 'francoiscabrol/ranger.vim'
+Plug 'rbgrouleff/bclose.vim'
+Plug 'ctrlpvim/ctrlp.vim'
+
+Plug 'sbdchd/neoformat'
+Plug 'godlygeek/tabular'
+Plug 'jiangmiao/auto-pairs'
+Plug 'tpope/vim-surround'
+
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+let g:deoplete#enable_at_startup = 1
+Plug 'Shougo/neosnippet.vim'
+Plug 'Shougo/neosnippet-snippets'
+Plug 'donRaphaco/neotex', { 'for': 'tex' }
+Plug 'vhdirk/vim-cmake'
+
+Plug 'mklabs/vim-cowsay'
+Plug 'fadein/vim-FIGlet'
+call plug#end()
 "}}}
 
-" badwolf {{{
-syntax enable 
-colorscheme badwolf
-let g:badwolf_darkgutter=1
-let g:badwolf_tabline=3
+" Deoplete {{{
+inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : "\<C-j>"
+inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<C-k>"
+"}}}}
+
+" NeoSolarized {{{
+syntax enable
+colorscheme NeoSolarized
 "}}}
 
 " lightline {{{
@@ -103,14 +102,11 @@ let g:lightline = {
 " }}}
 
 " Tex/Markdown/Text files {{{
-" Compile documents
-nnoremap <leader>lk :w! \| :AsyncRun latexmk -xelatex<CR>
-nnoremap <leader>pk :w! \| :Pandoc! pdf<CR>
-nnoremap <leader>lv :!zathura %:r.pdf<CR>
-" live preview
-autocmd BufEnter *.tex set updatetime=50 
-let g:livepreview_previewer = 'zathura'
-let g:livepreview_engine = 'xelatex'
+let g:tex_flavor="latex"
+let g:neotex_pdflatex_alternative="xelatex"
+let g:neotex_delay="500"
+"Compile documents
+nnoremap <leader>lv :silent !zathura %:r.pdf &<CR>
 " Clear out build files when leaving .tex document
 autocmd VimLeave *.tex !latexmk -c
 " spell checking 
@@ -129,38 +125,12 @@ nnoremap <leader>cc :CMakeClean<CR>
 nnoremap <leader>m :AsyncRun make<CR>
 "}}}
 
-" YouCompleteMe {{{
-" set interpreter to python2 to make python2-jedi work
-let g:ycm_python_interpreter_path = '/usr/bin/python2'
-" }}}
-
 " Autoformat {{{
-autocmd BufWritePre *.c,*.h,*.cpp,*.md,*.py,*.sh Autoformat
-"}}}
-
-" AsyncRun {{{
-:let g:asyncrun_open=8
-"}}}
-
-" Vimux {{{
-nnoremap <leader>vp :VimuxPromptCommand<CR>
-nnoremap <leader>vl :VimuxRunLastCommand<CR>
-
-"}}}
-
-" Ranger {{{
-map <leader>rr :RangerEdit<cr>
-map <leader>rv :RangerVSplit<cr>
-map <leader>rs :RangerSplit<cr>
-map <leader>rt :RangerTab<cr>
-map <leader>ri :RangerInsert<cr>
-map <leader>ra :RangerAppend<cr>
-map <leader>rc :set operatorfunc=RangerChangeOperator<cr>g@
+autocmd BufWritePre *.c,*.h,*.cpp,*.md,*.py,*.sh Neoformat
 "}}}
 
 " AutoCommands {{{
-" source .vimrc after saving any changes
-autocmd BufWritePost ~/.vimrc source $MYVIMRC
+autocmd BufWritePost ~/.config/nvim/init.vim source ~/.config/nvim/init.vim
 autocmd BufWritePost ~/.Xresources !xrdb %
 "}}}
 

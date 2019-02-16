@@ -4,10 +4,10 @@
 
 ##set/extend enviroment variables
 export PATH=$HOME/.local/bin:$PATH
-export EDITOR="vim"
+export EDITOR="nvim"
 export VISUAL=$EDITOR
-export TERMINAL="urxvtc"
-export TERMINAL2="xfce4-terminal"
+export TERMINAL="xfce4-terminal"
+export TERMINAL2="lxterminal"
 export BROWSER="qutebrowser"
 if [ "$(cat /etc/hostname)" == "Mars" ];then
     export BROWSER2="iceweasel"

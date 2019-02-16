@@ -4,9 +4,8 @@ My Personal Dotfiles which I use across different machines. In particular, you c
 
 * i3
 * i3blocks
+* neovim
 * bash
-* urxvt/xterm
-* vim
 * tmux
 * ranger
 
