@@ -33,3 +33,5 @@ alias pr="sudo pacman -Rns"
 alias pq="pacman -Ss"
 alias cu="nmcli con up --ask"
 alias vpn="sudo vpnc"
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"

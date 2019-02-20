@@ -15,5 +15,5 @@ case "$choice" in
 Shutdown) ClearCache && shutdown now ;;
 Reboot) ClearCache && reboot ;;
 "Exit i3") i3-msg exit ;;
-"Lock Screen") lockscreen ;;
+"Lock Screen") lockscreen.sh ;;
 esac

@@ -39,15 +39,6 @@ floating_modifier $mod
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
 
-##Dropdown windows
-for_window [instance="dropdown_*"] floating enable
-for_window [instance="dropdown_*"] move scratchpad
-for_window [instance="dropdown_*"] sticky enable
-for_window [instance="dropdown_*"] scratchpad show
-for_window [instance="dropdown_*"] move position center
-for_window [instance="dropdown_tmuxdd"] resize set 1000 700
-for_window [instance="dropdown_tmuxdd"] border pixel 3
-
 ##Workspace Settings
 # Define names for default workspaces
 set $ws1 "1"
@@ -102,8 +93,7 @@ bindsym $mod+Shift+p exec --no-startup-id sound.sh down 10
 bindsym $mod+m exec $TERMINAL -e neomutt
 bindsym $mod+Shift+m exec --no-startup-id $HOME/.config/mutt/etc/mailsync.sh
 
-##Misc Keybindings
+##Menu Keybindings
 bindsym $mod+d exec --no-startup-id dmenu_run
 bindsym $mod+s exec --no-startup-id ducksearch.sh
-bindsym $mod+u exec --no-startup-id ddspawn.sh tmuxdd.sh
 bindsym $mod+g exec --no-startup-id passmenu
