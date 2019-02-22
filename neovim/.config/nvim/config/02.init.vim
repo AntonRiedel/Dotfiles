@@ -1,31 +1,34 @@
 "02.init.vim
+"Set general options
 
 "Misc
 set backspace=indent,eol,start
 let mapleader=" "
 set clipboard=unnamed
 set mouse=a
-set encoding=utf-8
+set fileencoding=utf-8
 set fileformat=unix
-set wrap
-set linebreak
-set autoindent
+filetype on
+filetype plugin on
+filetype plugin indent on
 set nobackup
 set noswapfile
+set wrap
+set linebreak
+set smartindent
 
 " Searching
 set ignorecase
 set incsearch
 set hlsearch
 
-" Spaces and Tabs
+" Tabs
 set tabstop=4
 set expandtab
 set softtabstop=4
 set shiftwidth=4
-set modelines=1
 
 " Folding
 set foldenable
 set foldmethod=indent
-set foldlevelstart=3
+set foldlevelstart=99

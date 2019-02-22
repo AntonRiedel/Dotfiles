@@ -2,14 +2,6 @@
 ""inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : "\<C-j>"
 ""inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<C-k>"
 
-" Tex/Markdown/Text files
-let g:tex_flavor="latex"
-let g:neotex_pdflatex_alternative="xelatex"
-let g:neotex_delay="500"
-"Compile documents
-nnoremap <leader>lv :silent !zathura %:r.pdf &<CR>
-" Clear out build files when leaving .tex document
-autocmd VimLeave *.tex !latexmk -c
 " spell checking 
 autocmd BufRead,BufNewFile *.txt,*.tex,*.md setlocal spell spelllang=en_us
 autocmd BufRead,BufNewFile *.txt,*.tex,*.md set complete+=kspell

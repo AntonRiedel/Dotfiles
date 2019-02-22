@@ -24,5 +24,5 @@ colorscheme NeoSolarized
 
 " lightline
 let g:lightline = {
-      \ 'colorscheme': 'solarized dark',
+      \ 'colorscheme': 'solarized',
       \ }
