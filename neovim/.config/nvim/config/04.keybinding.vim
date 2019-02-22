@@ -9,3 +9,15 @@ cnoremap sw execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
 let g:ranger_map_keys = 0
 let g:ranger_replace_netrw = 1
 nnoremap <leader>r :RangerNewTab<CR>
+
+"neotex
+"compile document
+nnoremap <leader>lk :NeoTex<CR>
+"start preview
+nnoremap <leader>lp :NeoTexOn<CR>
+"view pdf document
+nnoremap <leader>lv :silent !zathura %:r.pdf &<CR>
+
+"neomake
+nnoremap <leader>n :Neomake<CR>
+let g:neomake_open_list = 2
