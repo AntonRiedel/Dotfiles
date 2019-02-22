@@ -7,7 +7,7 @@ Plug 'itchyny/lightline.vim'
 
 Plug 'francoiscabrol/ranger.vim'
 Plug 'rbgrouleff/bclose.vim'
-Plug 'ctrlpvim/ctrlp.vim'
+Plug 'junegunn/fzf.vim'
 
 Plug 'sbdchd/neoformat'
 Plug 'godlygeek/tabular'

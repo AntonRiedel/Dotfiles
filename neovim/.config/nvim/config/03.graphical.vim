@@ -1,17 +1,28 @@
 " 03.graphical.vim
 
-"" NeoSolarized
+" UI Layout
+set number
+set relativenumber
+set ruler
+set showcmd
+set showmode
+set cursorline
+set splitbelow
+set splitright
+set wildmenu
+set hidden
+set laststatus=2
+set lazyredraw
+set showmatch
+set colorcolumn=80
+
+" NeoSolarized
+set termguicolors
 syntax enable
+set background="dark"
 colorscheme NeoSolarized
 
 " lightline
 let g:lightline = {
-      \ 'colorscheme': 'wombat',
-      \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
-      \ },
-      \ 'component_function': {
-      \   'gitbranch': 'fugitive#head'
-      \ },
+      \ 'colorscheme': 'solarized dark',
       \ }
