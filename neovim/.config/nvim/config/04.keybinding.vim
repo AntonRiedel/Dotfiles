@@ -2,7 +2,7 @@
 "     File Name           :     04.keybinding.vim
 "     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
 "     Creation Date       :     [2019-02-23 19:34]
-"     Last Modified       :     [2019-02-23 20:26]
+"     Last Modified       :     [2019-02-23 22:14]
 "     Description         :     Configuration for keybindings
 "--------------------------------------------------------------------------------
 
@@ -26,12 +26,17 @@ nnoremap <leader>r :RangerNewTab<CR>
 
 "neotex
 "compile document
-nnoremap <leader>lk :NeoTex<CR>
+autocmd FileType tex nnoremap <leader>lk :NeoTex<CR>
 "start preview
-nnoremap <leader>lp :NeoTexOn<CR>
+autocmd FileType tex nnoremap <leader>lp :NeoTexOn<CR>
+
+"markdown
+autocmd FileType markdown nnoremap <leader>mk :!pandoc % --pdf-engine=xelatex -o %:r.pdf<CR>
+
 "view pdf document
-nnoremap <leader>lv :silent !$READER %:r.pdf &<CR>
-nnoremap <leader>llv :silent !$READER2 %:r.pdf &<CR>
+autocmd FileType tex,markdown nnoremap <leader>lv :silent !$READER %:r.pdf &<CR>
+autocmd FileType tex,markdown nnoremap <leader>llv :silent !$READER2 %:r.pdf &<CR>
+
 
 "neomake
 nnoremap <leader>m :Neomake<CR>
