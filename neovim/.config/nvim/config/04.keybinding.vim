@@ -19,5 +19,5 @@ nnoremap <leader>lp :NeoTexOn<CR>
 nnoremap <leader>lv :silent !zathura %:r.pdf &<CR>
 
 "neomake
-nnoremap <leader>n :Neomake<CR>
+nnoremap <leader>m :Neomake<CR>
 let g:neomake_open_list = 2

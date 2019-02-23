@@ -28,5 +28,3 @@ Plug 'donRaphaco/neotex', { 'for': 'tex' }
 Plug 'mklabs/vim-cowsay'
 Plug 'fadein/vim-FIGlet'
 call plug#end()
-
-"Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}

@@ -19,7 +19,6 @@ set colorcolumn=80
 " NeoSolarized
 set termguicolors
 syntax enable
-set background="dark"
 colorscheme NeoSolarized
 
 " lightline
