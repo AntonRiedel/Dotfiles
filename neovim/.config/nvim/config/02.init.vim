@@ -2,14 +2,14 @@
 "     File Name           :     02.init.vim
 "     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
 "     Creation Date       :     [2019-02-23 19:33]
-"     Last Modified       :     [2019-02-23 19:34]
+"     Last Modified       :     [2019-02-23 19:52]
 "     Description         :     Basic configuration for Neovim
 "--------------------------------------------------------------------------------
 
 "Misc
 set backspace=indent,eol,start
 let mapleader=" "
-set clipboard=unnamed
+set clipboard=unnamedplus
 set mouse=a
 set fileencoding=utf-8
 set fileformat=unix
