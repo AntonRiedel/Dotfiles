@@ -2,13 +2,7 @@
 "set autocommands 
 
 "Autoformat
-autocmd BufWritePre *.c,*.h,*.cpp,*.md,*.py,*.sh Neoformat
-
+autocmd BufWritePre *.c,*.h,*.cpp,.tex,*.md,*.py,*.sh Neoformat
+"autocmd BufWritePre *.tex !latexindent  -m -y="modifyLineBreaks:textWrapOptions:columns:80" -w %
 "Neomake
 autocmd BufWritePost,BufEnter * Neomake
-
-"resource init.vim
-autocmd BufWritePost ~/.config/nvim/init.vim ~/.config/nvim/config/*.vim source ~/.config/nvim/init.vim
-
-"resource bashrc
-autocmd BufWritePost ~/.bashrc source ~/.bashrc

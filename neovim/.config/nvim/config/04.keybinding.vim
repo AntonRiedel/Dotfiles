@@ -16,8 +16,12 @@ nnoremap <leader>lk :NeoTex<CR>
 "start preview
 nnoremap <leader>lp :NeoTexOn<CR>
 "view pdf document
-nnoremap <leader>lv :silent !zathura %:r.pdf &<CR>
+nnoremap <leader>lv :silent !$READER %:r.pdf &<CR>
+nnoremap <leader>llv :silent !$READER2 %:r.pdf &<CR>
 
 "neomake
 nnoremap <leader>m :Neomake<CR>
 let g:neomake_open_list = 2
+
+"neoformat
+nnoremap <leader>f :Neoformat<CR>
