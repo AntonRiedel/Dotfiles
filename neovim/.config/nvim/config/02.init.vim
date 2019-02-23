@@ -17,18 +17,18 @@ set wrap
 set linebreak
 set smartindent
 
-" Searching
+"Searching
 set ignorecase
 set incsearch
 set hlsearch
 
-" Tabs
+"Tabs
 set tabstop=4
 set expandtab
 set softtabstop=4
 set shiftwidth=4
 
-" Folding
+"Folding
 set foldenable
 set foldmethod=indent
 set foldlevelstart=99

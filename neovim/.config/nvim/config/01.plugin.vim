@@ -15,7 +15,7 @@ Plug 'jiangmiao/auto-pairs'
 
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'zchee/deoplete-clang', { 'for': ['.c','.cpp','.h'] }
-Plug 'vhdirk/vim-cmake', { 'for': ['.c','.cpp','.h'] }
+"Plug 'vhdirk/vim-cmake', { 'for': ['.c','.cpp','.h'] }
 Plug 'zchee/deoplete-jedi', { 'for': 'py' }
 Plug 'neomake/neomake'
 Plug 'sbdchd/neoformat'

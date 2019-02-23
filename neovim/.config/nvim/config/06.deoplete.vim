@@ -1,6 +1,7 @@
 "05.deoplete.vim
 "Configure deoplete
 
+"start deoplete at startup
 let g:deoplete#enable_at_startup = 1
 
 "deoplete-clang
