@@ -43,4 +43,5 @@ ShortcutsNoMnemonics=TRUE
 ShortcutsNoHelpkey=TRUE
 ShortcutsNoMenukey=TRUE
 ScrollingBar=TERMINAL_SCROLLBAR_NONE
+TitleInitial=
 
