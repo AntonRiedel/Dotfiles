@@ -1,5 +1,10 @@
-"01.plugin.vim
-"list and load all pulgins
+"--------------------------------------------------------------------------------
+"     File Name           :     01.plugin.vim
+"     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
+"     Creation Date       :     [2019-02-23 19:31]
+"     Last Modified       :     [2019-02-23 19:32]
+"     Description         :     Configuration for plugins (using vim-plug)
+"--------------------------------------------------------------------------------
 
 call plug#begin() 
 Plug 'iCyMind/NeoSolarized'
@@ -12,6 +17,7 @@ Plug 'junegunn/fzf.vim'
 
 Plug 'godlygeek/tabular'
 Plug 'jiangmiao/auto-pairs'
+Plug 'shanzi/autoHEADER'
 
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'zchee/deoplete-clang', { 'for': ['.c','.cpp','.h'] }

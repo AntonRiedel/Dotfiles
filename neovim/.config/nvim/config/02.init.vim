@@ -1,5 +1,10 @@
-"02.init.vim
-"Set general options
+"--------------------------------------------------------------------------------
+"     File Name           :     02.init.vim
+"     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
+"     Creation Date       :     [2019-02-23 19:33]
+"     Last Modified       :     [2019-02-23 19:34]
+"     Description         :     Basic configuration for Neovim
+"--------------------------------------------------------------------------------
 
 "Misc
 set backspace=indent,eol,start

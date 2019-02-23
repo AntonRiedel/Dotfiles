@@ -1,6 +1,10 @@
-#
-# ~/.bash_profile
-#
+#################################################################################
+#     File Name           :     .bash_profile
+#     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
+#     Creation Date       :     [2019-02-23 19:41]
+#     Last Modified       :     [2019-02-23 19:41]
+#     Description         :      
+#################################################################################
 
 ##set/extend enviroment variables
 export PATH=$HOME/.local/bin:$PATH

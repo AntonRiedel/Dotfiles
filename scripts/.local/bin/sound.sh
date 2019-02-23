@@ -1,5 +1,11 @@
-#!/bin/sh
-# A general audio interface
+#! /bin/bash
+#################################################################################
+#     File Name           :     sound.sh
+#     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
+#     Creation Date       :     [2019-02-23 19:46]
+#     Last Modified       :     [2019-02-23 19:47]
+#     Description         :     Audio interface (uses pulsemixer and i3)
+#################################################################################
 
 [ -z "$2" ] && num="2" || num="$2"
 

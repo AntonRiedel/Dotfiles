@@ -1,7 +1,12 @@
-"07.neoformat.vim
-"set options for neoformat
+"--------------------------------------------------------------------------------
+"     File Name           :     07.neoformat.vim
+"     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
+"     Creation Date       :     [2019-02-23 19:36]
+"     Last Modified       :     [2019-02-23 19:37]
+"     Description         :     Configuration for Neoforamt
+"--------------------------------------------------------------------------------
 
-"give option to latexindent
+"latexindent
 let g:neoformat_tex_latexindent = {
     \ 'exe': 'latexindent',
     \ 'args': ['-m', '-y="modifyLineBreaks:textWrapOptions:columns:80"'],

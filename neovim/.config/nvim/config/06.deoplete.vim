@@ -1,5 +1,10 @@
-"05.deoplete.vim
-"Configure deoplete
+"--------------------------------------------------------------------------------
+"     File Name           :     06.deoplete.vim
+"     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
+"     Creation Date       :     [2019-02-23 19:35]
+"     Last Modified       :     [2019-02-23 19:36]
+"     Description         :     Configuration for deoplete-{clang,jedi}
+"--------------------------------------------------------------------------------
 
 "start deoplete at startup
 let g:deoplete#enable_at_startup = 1

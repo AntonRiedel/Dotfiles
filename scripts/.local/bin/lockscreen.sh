@@ -1,4 +1,12 @@
-#!/bin/sh
+#! /bin/bash
+#################################################################################
+#     File Name           :     lockscreen.sh
+#     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
+#     Creation Date       :     [2019-02-23 19:43]
+#     Last Modified       :     [2019-02-23 19:45]
+#     Description         :     Lock screen and display a distorted screenshot
+#                               of the desktop
+#################################################################################
 
 rm -f /tmp/locked.png
 

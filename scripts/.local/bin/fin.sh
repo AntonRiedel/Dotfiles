@@ -1,7 +1,11 @@
-#!/bin/bash
-
-#This script will either shutdown, reboot, kill the current i3 instance or lock the screen.
-#The script will open a dmenu prompt and ask for your choice.
+#! /bin/bash
+#################################################################################
+#     File Name           :     fin.sh
+#     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
+#     Creation Date       :     [2019-02-23 19:42]
+#     Last Modified       :     [2019-02-23 19:43]
+#     Description         :     Shutdown, reboot or kill current i3 instance
+#################################################################################
 
 ClearCache() {
     rm -rf $HOME/.cache/*

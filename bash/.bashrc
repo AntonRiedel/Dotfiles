@@ -1,4 +1,10 @@
-## ~/.bashrc #
+#################################################################################
+#     File Name           :     .bashrc
+#     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
+#     Creation Date       :     [2019-02-23 19:40]
+#     Last Modified       :     [2019-02-23 19:41]
+#     Description         :      
+#################################################################################
 
 ##If not running interactively, don't do anything
 [[ $- != *i* ]] && return

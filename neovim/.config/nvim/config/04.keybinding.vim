@@ -1,5 +1,10 @@
-"04.keybinds.vim
-"Set keybinds
+"--------------------------------------------------------------------------------
+"     File Name           :     04.keybinding.vim
+"     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
+"     Creation Date       :     [2019-02-23 19:34]
+"     Last Modified       :     [2019-02-23 19:35]
+"     Description         :     Configuration for keybindings
+"--------------------------------------------------------------------------------
 
 "Misc
 inoremap jj <ESC>
