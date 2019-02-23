@@ -1,9 +1,9 @@
 "--------------------------------------------------------------------------------
-"     File Name           :     /home/anton/.config/nvim/init.vim
+"     File Name           :     init.vim
 "     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
-"     Creation Date       :     [2019-02-23 19:38]
-"     Last Modified       :     [2019-02-23 20:29]
-"     Description         :     Main configuration file for Neovim
+"     Creation Date       :     [2019-02-23 23:57]
+"     Last Modified       :     [2019-02-23 23:57]
+"     Description         :      
 "--------------------------------------------------------------------------------
 
 "split configuration across serveral files

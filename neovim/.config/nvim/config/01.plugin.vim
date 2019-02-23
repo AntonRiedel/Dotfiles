@@ -2,7 +2,7 @@
 "     File Name           :     01.plugin.vim
 "     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
 "     Creation Date       :     [2019-02-23 19:31]
-"     Last Modified       :     [2019-02-23 22:11]
+"     Last Modified       :     [2019-02-23 23:55]
 "     Description         :     Configuration for plugins (using vim-plug)
 "--------------------------------------------------------------------------------
 
@@ -30,6 +30,7 @@ Plug 'neomake/neomake'
 Plug 'sbdchd/neoformat'
 Plug 'Shougo/neosnippet.vim'
 Plug 'Shougo/neosnippet-snippets'
+
 
 "Plug 'lervag/vimtex', { 'for': 'tex' }
 Plug 'donRaphaco/neotex', { 'for': 'tex' }
