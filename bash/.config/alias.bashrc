@@ -3,7 +3,7 @@
 #     File Name           :     alias.bashrc
 #     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
 #     Creation Date       :     [2019-02-24 12:09]
-#     Last Modified       :     [2019-02-24 12:54]
+#     Last Modified       :     [2019-02-24 13:15]
 #     Description         :     Aliases for bash shell
 #################################################################################
 
@@ -27,3 +27,6 @@ alias vpn="sudo vpnc"
 ##custom commands
 #search and edit a config file
 ce() { find $HOME/Dotfiles/* -type f | fzf | xargs -r -I % $EDITOR % ;}
+#search and enter a directory in $HOME
+fd() { find $HOME/* -type d | fzf | xargs -r -I % $EDITOR % ;}
+
