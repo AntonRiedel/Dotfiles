@@ -2,7 +2,7 @@
 "     File Name           :     02.init.vim
 "     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
 "     Creation Date       :     [2019-02-23 19:33]
-"     Last Modified       :     [2019-02-23 19:52]
+"     Last Modified       :     [2019-02-24 18:35]
 "     Description         :     Basic configuration for Neovim
 "--------------------------------------------------------------------------------
 
@@ -29,9 +29,10 @@ set hlsearch
 
 "Tabs
 set tabstop=4
-set expandtab
 set softtabstop=4
 set shiftwidth=4
+set smarttab
+set expandtab
 
 "Folding
 set foldenable

@@ -2,7 +2,7 @@
 "     File Name           :     01.plugin.vim
 "     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
 "     Creation Date       :     [2019-02-23 19:31]
-"     Last Modified       :     [2019-02-24 12:19]
+"     Last Modified       :     [2019-02-24 14:46]
 "     Description         :     Configuration for plugins (using vim-plug)
 "--------------------------------------------------------------------------------
 
@@ -13,6 +13,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'iCyMind/NeoSolarized'
 Plug 'mboughaba/i3config.vim'
 Plug 'itchyny/lightline.vim'
+Plug 'easymotion/vim-easymotion'
 
 Plug 'francoiscabrol/ranger.vim'
 Plug 'rbgrouleff/bclose.vim'

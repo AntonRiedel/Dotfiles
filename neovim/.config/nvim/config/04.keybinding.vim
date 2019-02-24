@@ -2,7 +2,7 @@
 "     File Name           :     04.keybinding.vim
 "     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
 "     Creation Date       :     [2019-02-23 19:34]
-"     Last Modified       :     [2019-02-24 10:54]
+"     Last Modified       :     [2019-02-24 18:51]
 "     Description         :     Configuration for keybindings
 "--------------------------------------------------------------------------------
 
@@ -32,7 +32,7 @@ func! s:mapMoveToWindowInDirection(direction)
 
     execute "tnoremap" "<silent>" "<C-" . a:direction . ">"
                 \ "<C-\\><C-n>"
-                    \ ":call <SID>maybeInsertMode(\"" . a:direction . "\")<CR>"
+                \ ":call <SID>maybeInsertMode(\"" . a:direction . "\")<CR>"
     execute "nnoremap" "<silent>" "<C-" . a:direction . ">"
                 \ ":call <SID>maybeInsertMode(\"" . a:direction . "\")<CR>"
 endfunc
@@ -61,7 +61,7 @@ nnoremap <leader>td :tabclose<CR>
 "spellchecking
 noremap <leader>se :setlocal spell! spelllang=en_us<CR>
 noremap <leader>sd :setlocal spell! spelllang=de_de<CR>
-noremap <leader>s :set nospell<CR>
+noremap <leader>ss :set nospell<CR>
 
 "ranger
 let g:ranger_map_keys = 0
@@ -82,8 +82,8 @@ autocmd FileType tex,markdown nnoremap <leader>lv :silent !$READER %:r.pdf &<CR>
 autocmd FileType tex,markdown nnoremap <leader>llv :silent !$READER2 %:r.pdf &<CR>
 
 "neomake
-nnoremap <leader>m :Neomake<CR>
+nnoremap <leader>nm :Neomake<CR>
 let g:neomake_open_list = 2
 
 "neoformat
-nnoremap <leader>f :Neoformat<CR>
+nnoremap <leader>nf :Neoformat<CR>
