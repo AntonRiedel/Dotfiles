@@ -1,3 +1,5 @@
+# vim: set ft=config:
+#newsboat config
 auto-reload yes
 
 bind-key j down

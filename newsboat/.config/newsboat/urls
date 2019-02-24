@@ -5,13 +5,6 @@ https://www.linux.com/feeds/news/rss "~NEWSFEED: Linux.com"
 https://www.linuxjournal.com/news/feed "~NEWSFEED: Linux Journal"
 https://static.fsf.org/fsforg/rss/news.xml "~NEWSFEED: FSF News"
 -------------------------
----ARCHLINUX/PARABOLA----
--------------------------
-https://www.parabola.nu/feeds/packages/x86_64/ "~PARABOLA: Packages"
-https://labs.parabola.nu/issues.atom "~PARABOLA: Issues"
-https://www.archlinux.org/feeds/packages/x86_64/ "~ARCH: Packages"
-https://bugs.archlinux.org/feed.php?feed_type=rss2&topic=clo&project=0 "~ARCH: Issues"
--------------------------
 -------YOUTUBE-----------
 -------------------------
 https://www.youtube.com/feeds/videos.xml?channel_id=UCkK9UDm_ZNrq_rIXCz3xCGA "~YOUTUBE: Bryan Lunduke"
@@ -20,12 +13,18 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UCVls1GmFKf6WlTraIb_IaJg "~Y
 https://www.youtube.com/feeds/videos.xml?channel_id=UC3XTzVzaHQEd30rQbuvCtTQ "~YOUTUBE: Last Week Tonight (John Oliver)"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCarEovlrD9QY-fy-Z6apIDQ "~YOUTUBE: Patriot Act (Hasan Minhaj)"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCwWhs_6x42TyRM4Wstoq8HA "~YOUTUBE: The Daily Show with Trevor Noah (Trevor Noah)"
-https://www.youtube.com/feeds/videos.xml?channel_id=UCMtFAi84ehTSYSE9XoHefig "~YOUTUBE: The Late Show with Stephen Colbert (Steven Colbert)"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCMtFAi84ehTSYSE9XoHefig "~YOUTUBE: The Late Show with Stephen Colbert (Stephen Colbert)"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCVTyTA7-g9nopHeHbeuvpRA "~YOUTUBE: Late Night with Seth Meyers (Seth Meyers)"
+-------------------------
+---ARCHLINUX/PARABOLA----
+-------------------------
+https://www.parabola.nu/feeds/packages/x86_64/ "~PARABOLA: Packages"
+https://labs.parabola.nu/issues.atom "~PARABOLA: Issues"
+https://www.archlinux.org/feeds/packages/x86_64/ "~ARCH: Packages"
+https://bugs.archlinux.org/feed.php?feed_type=rss2&topic=clo&project=0 "~ARCH: Issues"
 -------------------------
 -------GIT_REPOS---------
 -------------------------
-https://github.com/AntonRiedel.atom "~GITHUB: me"
 https://github.com/Shougo.atom "~GITHUB: Shougo (deoplete)"
 https://github.com/SirVer.atom "~GITHUB: SirVer (ultisnips)"
 https://github.com/junegunn.atom "~GITHUB: junegunn (vim-plug,fzf)"
