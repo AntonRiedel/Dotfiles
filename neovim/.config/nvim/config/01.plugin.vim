@@ -2,7 +2,7 @@
 "     File Name           :     01.plugin.vim
 "     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
 "     Creation Date       :     [2019-02-23 19:31]
-"     Last Modified       :     [2019-02-24 09:34]
+"     Last Modified       :     [2019-02-24 10:25]
 "     Description         :     Configuration for plugins (using vim-plug)
 "--------------------------------------------------------------------------------
 
@@ -28,8 +28,11 @@ Plug 'zchee/deoplete-clang', { 'for': ['.c','.cpp','.h'] }
 Plug 'zchee/deoplete-jedi', { 'for': 'py' }
 Plug 'neomake/neomake'
 Plug 'sbdchd/neoformat'
-Plug 'Shougo/neosnippet.vim'
-Plug 'Shougo/neosnippet-snippets'
+
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+"Plug 'Shougo/neosnippet.vim'
+"Plug 'Shougo/neosnippet-snippets'
 
 
 "Plug 'lervag/vimtex', { 'for': 'tex' }

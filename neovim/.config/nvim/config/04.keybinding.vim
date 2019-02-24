@@ -2,7 +2,7 @@
 "     File Name           :     04.keybinding.vim
 "     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
 "     Creation Date       :     [2019-02-23 19:34]
-"     Last Modified       :     [2019-02-24 09:45]
+"     Last Modified       :     [2019-02-24 10:54]
 "     Description         :     Configuration for keybindings
 "--------------------------------------------------------------------------------
 
@@ -16,7 +16,7 @@ nnoremap <leader>w :w<CR>
 nnoremap <leader>ww :wq<CR>
 
 "quit easily
-nnoremap <leader>q :q<CR>
+nnoremap <leader>qq :q!<CR>
 
 "move between splits (even if there is a terminal running)
 "(source: https://medium.com/@garoth/neovim-terminal-usecases-tricks-8961e5ac19b9)
@@ -80,7 +80,6 @@ autocmd FileType markdown nnoremap <leader>mk :!pandoc % --pdf-engine=xelatex -o
 "view pdf document
 autocmd FileType tex,markdown nnoremap <leader>lv :silent !$READER %:r.pdf &<CR>
 autocmd FileType tex,markdown nnoremap <leader>llv :silent !$READER2 %:r.pdf &<CR>
-
 
 "neomake
 nnoremap <leader>m :Neomake<CR>
