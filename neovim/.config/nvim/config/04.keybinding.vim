@@ -2,7 +2,7 @@
 "     File Name           :     04.keybinding.vim
 "     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
 "     Creation Date       :     [2019-02-23 19:34]
-"     Last Modified       :     [2019-02-24 00:48]
+"     Last Modified       :     [2019-02-24 09:45]
 "     Description         :     Configuration for keybindings
 "--------------------------------------------------------------------------------
 
@@ -41,22 +41,22 @@ for dir in ["h", "j", "l", "k"]
 endfor
 
 "start terminal in a split at the bottom of the window
-nnoremap <leader>t :split<bar>terminal<CR><C-w>J:resize10<CR>i<CR>
+nnoremap <leader>e :split<bar>terminal<CR><C-w>J:resize10<CR>i<CR>
 
-"enter normal mode in terminal
+"enter normal mode in terminal easily
 tnoremap jj <C-\><C-n>
 
 "move between buffers
-nnoremap bb :buffers<CR>
-nnoremap bn :bnext<CR>
-nnoremap bp :bprevious<CR>
-nnoremap bd :bdelete!<CR>
+nnoremap <leader>bb :buffers<CR>
+nnoremap <leader>bn :bnext<CR>
+nnoremap <leader>bp :bprevious<CR>
+nnoremap <leader>bd :bdelete!<CR>
 
 "move between tabs
-nnoremap tt :tabs<CR>
-nnoremap tn :tabnext<CR>
-nnoremap tp :tabprevious<CR>
-nnoremap td :tabclose<CR>
+nnoremap <leader>tt :tabs<CR>
+nnoremap <leader>tn :tabnext<CR>
+nnoremap <leader>tp :tabprevious<CR>
+nnoremap <leader>td :tabclose<CR>
 
 "spellchecking
 noremap <leader>se :setlocal spell! spelllang=en_us<CR>

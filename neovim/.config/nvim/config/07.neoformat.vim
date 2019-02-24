@@ -2,7 +2,7 @@
 "     File Name           :     07.neoformat.vim
 "     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
 "     Creation Date       :     [2019-02-23 19:36]
-"     Last Modified       :     [2019-02-23 19:37]
+"     Last Modified       :     [2019-02-24 09:46]
 "     Description         :     Configuration for Neoforamt
 "--------------------------------------------------------------------------------
 
