@@ -2,7 +2,7 @@
 "     File Name           :     04.keybinding.vim
 "     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
 "     Creation Date       :     [2019-02-23 19:34]
-"     Last Modified       :     [2019-02-24 18:51]
+"     Last Modified       :     [2019-02-24 19:37]
 "     Description         :     Configuration for keybindings
 "--------------------------------------------------------------------------------
 
@@ -68,22 +68,22 @@ let g:ranger_map_keys = 0
 let g:ranger_replace_netrw = 1
 nnoremap <leader>r :RangerNewTab<CR>
 
-"neotex
-"compile document
-autocmd FileType tex nnoremap <leader>lk :NeoTex<CR>
-"start preview
-autocmd FileType tex nnoremap <leader>lp :NeoTexOn<CR>
-
-"markdown
-autocmd FileType markdown nnoremap <leader>mk :!pandoc % --pdf-engine=xelatex -o %:r.pdf<CR>
-
-"view pdf document
-autocmd FileType tex,markdown nnoremap <leader>lv :silent !$READER %:r.pdf &<CR>
-autocmd FileType tex,markdown nnoremap <leader>llv :silent !$READER2 %:r.pdf &<CR>
-
 "neomake
 nnoremap <leader>nm :Neomake<CR>
 let g:neomake_open_list = 2
 
 "neoformat
 nnoremap <leader>nf :Neoformat<CR>
+
+"neotex
+"compile document
+autocmd FileType tex nnoremap <leader>nt :NeoTex<CR>
+"start preview
+autocmd FileType tex nnoremap <leader>nto :NeoTexOn<CR>
+
+"markdown
+autocmd FileType markdown nnoremap <leader>p :!pandoc % --pdf-engine=xelatex -o %:r.pdf<CR>
+
+"view pdf document
+autocmd FileType tex,markdown nnoremap <leader>pv :silent !$READER %:r.pdf &<CR>
+autocmd FileType tex,markdown nnoremap <leader>ppv :silent !$READER2 %:r.pdf &<CR>
