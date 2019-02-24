@@ -2,8 +2,8 @@
 #     File Name           :     .bash_profile
 #     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
 #     Creation Date       :     [2019-02-23 19:41]
-#     Last Modified       :     [2019-02-23 21:24]
-#     Description         :      
+#     Last Modified       :     [2019-02-24 12:15]
+#     Description         :     
 #################################################################################
 
 ##set/extend enviroment variables
@@ -25,7 +25,8 @@ export FILE="ranger"
 export FILE2="nnn"
 RANGER_LOAD_DEFAULT_RC=FALSE
 
-[[ -f ~/.bashrc ]] && . ~/.bashrc
+##source bashrc
+echo "$0" | grep "bash$" >/dev/null && [ -f ~/.bashrc ] && source "$HOME/.bashrc"
 
 ##start window manager on login
 if [ -z "$DISPLAY" ] && [ "$(fgconsole)" -eq 1 ]; then
