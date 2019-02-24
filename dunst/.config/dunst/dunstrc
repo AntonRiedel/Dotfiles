@@ -1,3 +1,6 @@
+# vim: ft=cfg
+#dunstrc
+
 [global]
     monitor = 0
     follow = keyboard
@@ -90,5 +93,3 @@
     foreground = "#ebdbb2"
     frame_color = "#fabd2f"
     timeout = 0
-
-# vim: ft=cfg
