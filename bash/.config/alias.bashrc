@@ -3,7 +3,7 @@
 #     File Name           :     alias.bashrc
 #     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
 #     Creation Date       :     [2019-02-24 12:09]
-#     Last Modified       :     [2019-02-24 12:09]
+#     Last Modified       :     [2019-02-24 12:54]
 #     Description         :     Aliases for bash shell
 #################################################################################
 
@@ -25,5 +25,5 @@ alias cu="nmcli con up --ask"
 alias vpn="sudo vpnc"
 
 ##custom commands
-se() { du -a ~/.local/bin/* ~/.config/* | awk '{print $2}' | fzf | xargs  -r $EDITOR ;}
-vf() { fzf | xargs -r -I % $EDITOR % ;}
+#search and edit a config file
+ce() { find $HOME/Dotfiles/* -type f | fzf | xargs -r -I % $EDITOR % ;}
