@@ -1,4 +1,11 @@
-#!/bin/sh
+#! /bin/bash
+#################################################################################
+#     File Name           :     clock
+#     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
+#     Creation Date       :     [2019-02-24 11:39]
+#     Last Modified       :     [AUTO_UPDATE_BEFORE_SAVE]
+#     Description         :     Script for i3blocks (display date and time)
+#################################################################################
 
 date '+%Y %b %d (%a) %I:%M%p'
 

@@ -1,6 +1,12 @@
-#!/bin/sh
+#! /bin/bash
+#################################################################################
+#     File Name           :     disk
+#     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
+#     Creation Date       :     [2019-02-24 11:43]
+#     Last Modified       :     [AUTO_UPDATE_BEFORE_SAVE]
+#     Description         :     Script for i3blocks (display disk usage)
+#################################################################################
 
-# Status bar module for disk space
 # $1 should be drive mountpoint
 # $2 is optional icon, otherwise mountpoint will displayed
 

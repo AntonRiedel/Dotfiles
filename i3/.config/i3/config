@@ -1,17 +1,20 @@
-#vim:filetype=i3config
-#i3 config 
+# vim: set ft=i3config:
+
+#i3 config
+#This config file uses enviromental variables (defined in ~/.bash_profile) and
+#custom scripts (which have to be inside PATH)
 
 ##Misc Settings
-# set Super key
+# Super key
 set $mod Mod4
-# Font for window titles
+# font for window titles
 font pango:Hack 8
-# set default border style for new windows
+# default border style for new windows
 default_border pixel 3
 default_floating_border none
 # restart i3 inplace
 bindsym $mod+Shift+r restart
-# reboot,shutdown,kill i3 or lock screen
+# reboot, shutdown, kill i3 or lock screen
 bindsym $mod+x exec --no-startup-id fin.sh
 
 ##Shortcuts for window manipulation
@@ -29,7 +32,7 @@ bindsym $mod+Shift+l move right
 bindsym $mod+Shift+h move left
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
-# change container layout
+# change container layout (only using two layout)
 bindsym $mod+t layout tabbed
 bindsym $mod+e layout toggle split
 # toggle tiling / floating
@@ -69,10 +72,10 @@ bar {
 }
 
 ##Start applications on launch
-exec --no-startup-id nitrogen --restore
-exec --no-startup-id compton -c ~/.config/compton.conf
-exec --no-startup-id dunst
 exec --no-startup-id xfce4-power-manager
+exec --no-startup-id dunst
+exec --no-startup-id compton -c ~/.config/compton.conf
+exec --no-startup-id nitrogen --restore
 exec --no-startup-id unclutter --jitter 20 --ignore-scrolling
 
 ##Keybindings for programs
@@ -95,5 +98,4 @@ bindsym $mod+Shift+m exec --no-startup-id $HOME/.config/mutt/etc/mailsync.sh
 
 ##Menu Keybindings
 bindsym $mod+d exec --no-startup-id dmenu_run
-bindsym $mod+s exec --no-startup-id ducksearch.sh
 bindsym $mod+g exec --no-startup-id passmenu

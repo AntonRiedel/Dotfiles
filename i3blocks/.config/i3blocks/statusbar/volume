@@ -1,4 +1,11 @@
-#!/bin/sh
+#! /bin/bash
+#################################################################################
+#     File Name           :     volume
+#     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
+#     Creation Date       :     [2019-02-24 11:47]
+#     Last Modified       :     [AUTO_UPDATE_BEFORE_SAVE]
+#     Description         :     Script for i3blocks (display media status)
+#################################################################################
 
 case $BLOCK_BUTTON in
 	1) setsid $TERMINAL -e pulsemixer & ;;
@@ -24,4 +31,3 @@ else
 fi
 
 echo $icon $vol
-#printf "%s %s%%\\n" "$icon" "$vol"
