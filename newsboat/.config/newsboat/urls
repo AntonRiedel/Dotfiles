@@ -1,30 +1,34 @@
 -------------------------
 -------NEWSFEEDS---------
 -------------------------
-https://www.linux.com/feeds/news/rss "~NEWSFEED: Linux.com"
-https://www.linuxjournal.com/news/feed "~NEWSFEED: Linux Journal"
-https://static.fsf.org/fsforg/rss/news.xml "~NEWSFEED: FSF News"
+https://static.fsf.org/fsforg/rss/news.xml "NEWSFEED" "~NEWSFEED: FSF News"
+https://www.linux.com/feeds/news/rss "NEWSFEED" "~NEWSFEED: Linux.com"
+https://www.linuxjournal.com/news/feed "NEWSFEED" "~NEWSFEED: Linux Journal"
+https://www.phoronix.com/rss.php "NEWSFEED" "~NEWSFEED: Phoronix"
+https://www.zdnet.com/topic/linux/rss.xml "NEWSFEED" "~NEWSFEED: ZDNet"
+https://itsfoss.com/feed/ "NEWSFEED" "~NEWSFEED: It's Foss"
 -------------------------
 -------YOUTUBE-----------
 -------------------------
-https://www.youtube.com/feeds/videos.xml?channel_id=UCkK9UDm_ZNrq_rIXCz3xCGA "~YOUTUBE: Bryan Lunduke"
-https://www.youtube.com/feeds/videos.xml?channel_id=UC2eYFnH61tmytImy1mTYvhA "~YOUTUBE: Luke Smith"
-https://www.youtube.com/feeds/videos.xml?channel_id=UCVls1GmFKf6WlTraIb_IaJg "~YOUTUBE: DistroTube (Derek Taylor)
-https://www.youtube.com/feeds/videos.xml?channel_id=UC3XTzVzaHQEd30rQbuvCtTQ "~YOUTUBE: Last Week Tonight (John Oliver)"
-https://www.youtube.com/feeds/videos.xml?channel_id=UCarEovlrD9QY-fy-Z6apIDQ "~YOUTUBE: Patriot Act (Hasan Minhaj)"
-https://www.youtube.com/feeds/videos.xml?channel_id=UCwWhs_6x42TyRM4Wstoq8HA "~YOUTUBE: The Daily Show with Trevor Noah (Trevor Noah)"
-https://www.youtube.com/feeds/videos.xml?channel_id=UCMtFAi84ehTSYSE9XoHefig "~YOUTUBE: The Late Show with Stephen Colbert (Stephen Colbert)"
-https://www.youtube.com/feeds/videos.xml?channel_id=UCVTyTA7-g9nopHeHbeuvpRA "~YOUTUBE: Late Night with Seth Meyers (Seth Meyers)"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCkK9UDm_ZNrq_rIXCz3xCGA "YOUTUBE" "~YOUTUBE: Bryan Lunduke"
+https://www.youtube.com/feeds/videos.xml?channel_id=UC2eYFnH61tmytImy1mTYvhA "YOUTUBE" "~YOUTUBE: Luke Smith"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCVls1GmFKf6WlTraIb_IaJg "YOUTUBE" "~YOUTUBE: DistroTube (Derek Taylor)
+https://www.youtube.com/feeds/videos.xml?channel_id=UC3XTzVzaHQEd30rQbuvCtTQ "YOUTUBE" "~YOUTUBE: Last Week Tonight (John Oliver)"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCarEovlrD9QY-fy-Z6apIDQ "YOUTUBE" "~YOUTUBE: Patriot Act (Hasan Minhaj)"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCwWhs_6x42TyRM4Wstoq8HA "YOUTUBE" "~YOUTUBE: The Daily Show with Trevor Noah (Trevor Noah)"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCMtFAi84ehTSYSE9XoHefig "YOUTUBE" "~YOUTUBE: The Late Show with Stephen Colbert (Stephen Colbert)"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCVTyTA7-g9nopHeHbeuvpRA "YOUTUBE" "~YOUTUBE: Late Night with Seth Meyers (Seth Meyers)"
 -------------------------
 ---ARCHLINUX/PARABOLA----
 -------------------------
-https://www.parabola.nu/feeds/packages/x86_64/ "~PARABOLA: Packages"
-https://labs.parabola.nu/issues.atom "~PARABOLA: Issues"
-https://www.archlinux.org/feeds/packages/x86_64/ "~ARCH: Packages"
-https://bugs.archlinux.org/feed.php?feed_type=rss2&topic=clo&project=0 "~ARCH: Issues"
+https://www.parabola.nu/feeds/news "DISTRO" "~PARABOLA: News"
+https://www.parabola.nu/feeds/packages/x86_64/ "DISTRO" "~PARABOLA: Packages x86_64"
+https://www.archlinux.org/feeds/news "DISTRO" "~ARCH: News"
+https://www.archlinux.org/feeds/packages/x86_64/ "DISTRO" "~ARCH: Packages x86_64"
+https://aur.archlinux.org/rss/ "DISTRO" "~ARCH: AUR"
 -------------------------
 -------GIT_REPOS---------
 -------------------------
-https://github.com/Shougo.atom "~GITHUB: Shougo (deoplete)"
-https://github.com/SirVer.atom "~GITHUB: SirVer (ultisnips)"
-https://github.com/junegunn.atom "~GITHUB: junegunn (vim-plug,fzf)"
+https://github.com/Shougo.atom "GIT" "~GITHUB: Shougo (deoplete)"
+https://github.com/SirVer.atom "GIT" "~GITHUB: SirVer (ultisnips)"
+https://github.com/junegunn.atom "GIT" "~GITHUB: junegunn (vim-plug,fzf)"

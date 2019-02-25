@@ -1,7 +1,22 @@
 # vim: set ft=config:
 #newsboat config
+
+#reload all feeds when starting newsboat
 auto-reload yes
 
+#view all urls in a feed and open them with custom script
+external-url-viewer "urlscan -dc -r 'qutebrowser {}'"
+#set custorm skript as default browser
+#if the provided url is a link, it will open it in a browser
+#if it is a file (.pdf;.png,;...) or a youtube video, it will be downloaded and
+#viewed accordingly
+browser linkhandler.sh
+
+#download videos
+macro t set browser "tsp youtube-dl --add-metadata -ic"; open-in-browser ; set browser linkhandler
+macro a set browser "tsp youtube-dl --add-metadata -xic -f bestaudio/best"; open-in-browser ; set browser linkhandler
+
+#set vim-like keybindings
 bind-key j down
 bind-key k up
 bind-key j next articlelist
@@ -22,11 +37,10 @@ bind-key U show-urls
 bind-key x pb-delete
 bind-key ^t next-unread
 
+#set colors
 color listnormal cyan default
 color listfocus black yellow standout bold
 color listnormal_unread blue default
 color listfocus_unread yellow default bold
 color info red black bold
 color article cyan default
-
-browser $BROWSER

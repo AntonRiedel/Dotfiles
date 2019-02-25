@@ -9,7 +9,7 @@
 #################################################################################
 
 case $BLOCK_BUTTON in
-    BAT) /usr/bin/xfce4-power-manager-settings ;;
+    1) /usr/bin/xfce4-power-manager-settings ;;
     3) pgrep -x dunst >/dev/null && notify-send "<b>🔋 Battery module:</b>
 ⛽: no battery
 🔋: discharging

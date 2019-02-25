@@ -2,7 +2,7 @@
 "     File Name           :     03.graphical.vim
 "     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
 "     Creation Date       :     [2019-02-23 19:34]
-"     Last Modified       :     [2019-02-24 09:37]
+"     Last Modified       :     [2019-02-25 17:09]
 "     Description         :     Configuration for GUI
 "--------------------------------------------------------------------------------
 
@@ -34,3 +34,7 @@ colorscheme NeoSolarized
 let g:lightline = {
       \ 'colorscheme': 'solarized',
       \ }
+
+"Signify
+let g:signify_vcx_list = ['git']
+let g:signif_realtime = 1

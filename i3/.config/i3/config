@@ -85,6 +85,7 @@ bindsym $mod+b exec $BROWSER
 bindsym $mod+Shift+b exec $BROWSER2
 bindsym $mod+n exec $TERMINAL -e $FILE
 bindsym $mod+Shift+n exec $TERMINAL2 -e $FILE2
+bindsym $mod+v exec $TERMINAL2 -e newsboat
 
 ##Media Keybindings
 bindsym $mod+a exec $TERMINAL -e pulsemixer

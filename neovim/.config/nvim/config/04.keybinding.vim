@@ -2,7 +2,7 @@
 "     File Name           :     04.keybinding.vim
 "     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
 "     Creation Date       :     [2019-02-23 19:34]
-"     Last Modified       :     [2019-02-24 19:37]
+"     Last Modified       :     [2019-02-25 17:07]
 "     Description         :     Configuration for keybindings
 "--------------------------------------------------------------------------------
 
@@ -10,13 +10,10 @@
 inoremap jj <ESC>
 
 "write easily
-nnoremap <leader>w :w<CR>
+nnoremap <leader><leader> :w<CR>
 
 "write and quit easily
 nnoremap <leader>ww :wq<CR>
-
-"quit easily
-nnoremap <leader>qq :q!<CR>
 
 "move between splits (even if there is a terminal running)
 "(source: https://medium.com/@garoth/neovim-terminal-usecases-tricks-8961e5ac19b9)
@@ -44,7 +41,7 @@ endfor
 nnoremap <leader>e :split<bar>terminal<CR><C-w>J:resize10<CR>i<CR>
 
 "enter normal mode in terminal easily
-tnoremap jj <C-\><C-n>
+tnoremap <leader><ESC> <C-\><C-n>
 
 "move between buffers
 nnoremap <leader>bb :buffers<CR>
@@ -66,7 +63,7 @@ noremap <leader>ss :set nospell<CR>
 "ranger
 let g:ranger_map_keys = 0
 let g:ranger_replace_netrw = 1
-nnoremap <leader>r :RangerNewTab<CR>
+nnoremap <leader>r :RangerCurrentFileNewTab<CR>
 
 "neomake
 nnoremap <leader>nm :Neomake<CR>
