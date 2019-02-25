@@ -7,6 +7,10 @@ https://www.linuxjournal.com/news/feed "NEWSFEED" "~NEWSFEED: Linux Journal"
 https://www.phoronix.com/rss.php "NEWSFEED" "~NEWSFEED: Phoronix"
 https://www.zdnet.com/topic/linux/rss.xml "NEWSFEED" "~NEWSFEED: ZDNet"
 https://itsfoss.com/feed/ "NEWSFEED" "~NEWSFEED: It's Foss"
+http://feeds.nature.com/news/rss/news_s13 "NEWSFEED" "~NEWSFEED: Nature"
+http://feeds.aps.org/rss/recent/physics.xml "NEWSFEED" "~NEWSFEED: American Physical Society"
+http://www.tagesschau.de/xml/tagesschau-meldungen/ "NEWSFEED" "~NEWSFEED: ARD Tagesschau"
+http://www.spiegel.de/schlagzeilen/rss/0,5291,,00.xml "NEWSFEED" "~NEWSFEED: Spiegel"
 -------------------------
 -------YOUTUBE-----------
 -------------------------
@@ -18,6 +22,8 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UCarEovlrD9QY-fy-Z6apIDQ "YO
 https://www.youtube.com/feeds/videos.xml?channel_id=UCwWhs_6x42TyRM4Wstoq8HA "YOUTUBE" "~YOUTUBE: The Daily Show with Trevor Noah (Trevor Noah)"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCMtFAi84ehTSYSE9XoHefig "YOUTUBE" "~YOUTUBE: The Late Show with Stephen Colbert (Stephen Colbert)"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCVTyTA7-g9nopHeHbeuvpRA "YOUTUBE" "~YOUTUBE: Late Night with Seth Meyers (Seth Meyers)"
+https://www.youtube.com/feeds/videos.xml?channel_id=UC7_gcs09iThXybpVgjHZ_7g "YOUTUBE" "~YOUTUBE: PBS Space Time (Matthew O’Dowd)"
+https://www.youtube.com/channel/
 -------------------------
 ---ARCHLINUX/PARABOLA----
 -------------------------
