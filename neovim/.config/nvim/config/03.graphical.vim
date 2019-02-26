@@ -1,10 +1,10 @@
-"--------------------------------------------------------------------------------
+"------------------------------------------------------------------------------
 "     File Name           :     03.graphical.vim
 "     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
 "     Creation Date       :     [2019-02-23 19:34]
-"     Last Modified       :     [2019-02-25 17:09]
+"     Last Modified       :     [2019-02-26 15:15]
 "     Description         :     Configuration for GUI
-"--------------------------------------------------------------------------------
+"------------------------------------------------------------------------------
 
 " UI Layout
 set number
@@ -37,4 +37,4 @@ let g:lightline = {
 
 "Signify
 let g:signify_vcx_list = ['git']
-let g:signif_realtime = 1
+let g:signify_realtime = 1

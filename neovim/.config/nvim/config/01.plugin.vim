@@ -1,10 +1,10 @@
-"--------------------------------------------------------------------------------
+"------------------------------------------------------------------------------
 "     File Name           :     01.plugin.vim
 "     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
 "     Creation Date       :     [2019-02-23 19:31]
-"     Last Modified       :     [2019-02-25 17:09]
+"     Last Modified       :     [2019-02-26 15:12]
 "     Description         :     Configuration for plugins (using vim-plug)
-"--------------------------------------------------------------------------------
+"------------------------------------------------------------------------------
 
 let g:plug_threads = 4
 let g:plug_timeout = 90
@@ -29,6 +29,9 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'zchee/deoplete-clang', { 'for': ['.c','.cpp','.h'] }
 "Plug 'vhdirk/vim-cmake', { 'for': ['.c','.cpp','.h'] }
 Plug 'zchee/deoplete-jedi', { 'for': ['py','ipynb'] }
+"Plug 'Valloric/YouCompleteMe', { 'do': './install.py \-\-clang\-completer' }
+Plug 'bfredl/nvim-ipy', { 'for': ['py','ipynb'] }
+
 Plug 'neomake/neomake'
 Plug 'sbdchd/neoformat'
 
@@ -40,8 +43,6 @@ Plug 'honza/vim-snippets'
 
 "Plug 'lervag/vimtex', { 'for': 'tex' }
 Plug 'donRaphaco/neotex', { 'for': 'tex' }
-Plug 'bfredl/nvim-ipy', { 'for': ['py','ipynb'] }
-Plug 'numirias/semshi', { 'for': ['py','ipynb'] }
 
 Plug 'mklabs/vim-cowsay'
 Plug 'fadein/vim-FIGlet'

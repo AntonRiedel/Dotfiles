@@ -1,19 +1,13 @@
-"--------------------------------------------------------------------------------
+"------------------------------------------------------------------------------
 "     File Name           :     04.keybinding.vim
 "     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
 "     Creation Date       :     [2019-02-23 19:34]
-"     Last Modified       :     [2019-02-25 17:07]
+"     Last Modified       :     [2019-02-26 15:17]
 "     Description         :     Configuration for keybindings
-"--------------------------------------------------------------------------------
+"------------------------------------------------------------------------------
 
 "escape insert mode easily
 inoremap jj <ESC>
-
-"write easily
-nnoremap <leader><leader> :w<CR>
-
-"write and quit easily
-nnoremap <leader>ww :wq<CR>
 
 "move between splits (even if there is a terminal running)
 "(source: https://medium.com/@garoth/neovim-terminal-usecases-tricks-8961e5ac19b9)
@@ -38,7 +32,7 @@ for dir in ["h", "j", "l", "k"]
 endfor
 
 "start terminal in a split at the bottom of the window
-nnoremap <leader>e :split<bar>terminal<CR><C-w>J:resize10<CR>i<CR>
+nnoremap <leader>e :split<bar>terminal<CR><C-w>J:resize10<CR>a<CR>
 
 "enter normal mode in terminal easily
 tnoremap <leader><ESC> <C-\><C-n>

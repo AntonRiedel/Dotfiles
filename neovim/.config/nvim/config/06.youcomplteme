@@ -1,0 +1,12 @@
+"--------------------------------------------------------------------------------
+"     File Name           :     Dotfiles/neovim/.config/nvim/config/06.youcomplteme.vim
+"     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
+"     Creation Date       :     [2019-02-26 12:09]
+"     Last Modified       :     [2019-02-26 12:14]
+"     Description         :     Configuration for YouComplteMe
+"--------------------------------------------------------------------------------
+
+let g:ycm_python_interpreter_path = '/usr/bin/python2'
+
+let g:ycm_global_ycm_extra_conf= '$HOME/.vim/plugged/YouCompleteMe/.ycm_extra_conf.py'
+
