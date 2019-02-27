@@ -2,9 +2,13 @@
 "     File Name           :     04.keybinding.vim
 "     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
 "     Creation Date       :     [2019-02-23 19:34]
-"     Last Modified       :     [2019-02-26 15:17]
+"     Last Modified       :     [2019-02-26 15:43]
 "     Description         :     Configuration for keybindings
 "------------------------------------------------------------------------------
+
+"Quickly open vim config files in split
+"init.vim will be automatically sourced if any changes are made
+nnoremap <leader>ev :Files $MYVIMCONFIG<CR>
 
 "escape insert mode easily
 inoremap jj <ESC>

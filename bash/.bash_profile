@@ -1,16 +1,17 @@
-#################################################################################
+###############################################################################
 #     File Name           :     .bash_profile
 #     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
 #     Creation Date       :     [2019-02-23 19:41]
-#     Last Modified       :     [2019-02-24 12:15]
-#     Description         :     
-#################################################################################
+#     Last Modified       :     [2019-02-26 15:33]
+#     Description         :     bash_profile
+###############################################################################
 
 ##set/extend enviroment variables
 export PATH=$HOME/.local/bin:$PATH
 export EDITOR="nvim"
 export VISUAL=$EDITOR
 export MYVIMRC=~/.config/nvim/init.vim
+export MYVIMCONFIG=~/.config/nvim/config
 export TERMINAL="xfce4-terminal"
 export TERMINAL2="lxterminal"
 export BROWSER="qutebrowser"
