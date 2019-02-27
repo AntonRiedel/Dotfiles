@@ -2,7 +2,7 @@
 "     File Name           :     init.vim
 "     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
 "     Creation Date       :     [2019-02-23 23:57]
-"     Last Modified       :     [2019-02-26 15:29]
+"     Last Modified       :     [2019-02-27 20:19]
 "     Description         :     Central config file for neovim
 "------------------------------------------------------------------------------
 

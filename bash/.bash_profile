@@ -2,7 +2,7 @@
 #     File Name           :     .bash_profile
 #     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
 #     Creation Date       :     [2019-02-23 19:41]
-#     Last Modified       :     [2019-02-26 15:33]
+#     Last Modified       :     [2019-02-27 19:11]
 #     Description         :     bash_profile
 ###############################################################################
 

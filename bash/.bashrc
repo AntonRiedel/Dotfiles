@@ -2,7 +2,7 @@
 #     File Name           :     .bashrc
 #     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
 #     Creation Date       :     [2019-02-23 19:40]
-#     Last Modified       :     [2019-02-26 15:32]
+#     Last Modified       :     [2019-02-27 19:11]
 #     Description         :     Bashrc
 ###############################################################################
 
