@@ -13,11 +13,10 @@ settings:
     global: true
   editor.command:
     global:
-    - gvim
-    - -f
-    - '{file}'
-    - -c
-    - normal {line}G{column0}l
+    - lxterminal
+    - -e
+    - nvim
+    - '{}'
   url.default_page:
     global: about:blank
   url.start_pages:
