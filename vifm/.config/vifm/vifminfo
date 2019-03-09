@@ -13,8 +13,8 @@
 # Bookmarks:
 
 # TUI:
-al
-q1
+ar
+q0
 v2
 ov
 m-1
@@ -209,14 +209,68 @@ d/home/anton/LRZ Sync+Share/7. Semester (WS18_19)/Quantenfeldtheorie
 	Mitschrift
 4
 d/home/anton/LRZ Sync+Share/7. Semester (WS18_19)/Quantenfeldtheorie/Mitschrift
-	qft1_ws18_3.pdf
+	Math-lecture5.pdf
+1
+d/home/anton/LRZ Sync+Share/7. Semester (WS18_19)/Quantenfeldtheorie
+	Solutions
+5
+d/home/anton/LRZ Sync+Share/7. Semester (WS18_19)/Quantenfeldtheorie/Solutions
+	QFT_CentralTutorial_Sheet0_Exercise2_parts_d_e.pdf
+1
+d/home/anton/LRZ Sync+Share/7. Semester (WS18_19)/Quantenfeldtheorie
+	Introduction_Course
+2
+d/home/anton/LRZ Sync+Share/7. Semester (WS18_19)/Quantenfeldtheorie/Introduction_Course
+	rpf_weiler_3-8-17.pdf
 6
+d/home/anton/LRZ Sync+Share/7. Semester (WS18_19)/Quantenfeldtheorie
+	Introduction_Course
+2
+d/home/anton/LRZ Sync+Share/7. Semester (WS18_19)
+	Werkstudent
+5
+d/home/anton/LRZ Sync+Share/7. Semester (WS18_19)/Werkstudent
+	Unterlagen
+2
+d/home/anton/LRZ Sync+Share/7. Semester (WS18_19)
+	LatticQCD
+2
+d/home/anton/LRZ Sync+Share/7. Semester (WS18_19)/LatticQCD
+	LatticeQCDforNovices.pdf
+1
+d/home/anton/LRZ Sync+Share/7. Semester (WS18_19)
+	LatticQCD
+2
+d/home/anton/LRZ Sync+Share
+	books
+7
+d/home/anton/LRZ Sync+Share/books
+	thebookofgns3.pdf
+14
 d
 
 # Right window history (oldest to newest):
 D/home/anton
 	..
 0
+D/home
+	..
+0
+D/
+	opt
+9
+D/opt
+	..
+0
+D/
+	proc
+10
+D/proc
+	2
+2
+D/proc/2
+	map_files
+4
 D
 
 # Command line history (oldest to newest):
@@ -226,8 +280,8 @@ D
 :lstrash
 :run
 :colorscheme solarized-dark
-:view
 :q
+:view
 
 # Search history (oldest to newest):
 
