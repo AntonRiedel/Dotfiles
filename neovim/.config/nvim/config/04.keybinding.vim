@@ -2,7 +2,7 @@
 "     File Name           :     04.keybinding.vim
 "     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
 "     Creation Date       :     [2019-02-23 19:34]
-"     Last Modified       :     [2019-02-26 15:43]
+"     Last Modified       :     [2019-03-09 21:22]
 "     Description         :     Configuration for keybindings
 "------------------------------------------------------------------------------
 
@@ -58,10 +58,8 @@ noremap <leader>se :setlocal spell! spelllang=en_us<CR>
 noremap <leader>sd :setlocal spell! spelllang=de_de<CR>
 noremap <leader>ss :set nospell<CR>
 
-"ranger
-let g:ranger_map_keys = 0
-let g:ranger_replace_netrw = 1
-nnoremap <leader>r :RangerCurrentFileNewTab<CR>
+"vifm
+nnoremap <leader>r :edit.<CR>
 
 "neomake
 nnoremap <leader>nm :Neomake<CR>

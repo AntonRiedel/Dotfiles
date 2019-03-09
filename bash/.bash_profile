@@ -2,7 +2,7 @@
 #     File Name           :     .bash_profile
 #     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
 #     Creation Date       :     [2019-02-23 19:41]
-#     Last Modified       :     [2019-02-27 19:11]
+#     Last Modified       :     [2019-03-09 21:06]
 #     Description         :     bash_profile
 ###############################################################################
 
@@ -22,9 +22,9 @@ else
 fi
 export READER="zathura"
 export READER2="evince"
-export FILE="ranger"
+
+export FILE="$HOME/.config/vifm/scripts/vifmrun"
 export FILE2="nnn"
-RANGER_LOAD_DEFAULT_RC=FALSE
 
 ##source bashrc
 echo "$0" | grep "bash$" >/dev/null && [ -f ~/.bashrc ] && source "$HOME/.bashrc"

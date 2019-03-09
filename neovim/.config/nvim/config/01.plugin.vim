@@ -2,7 +2,7 @@
 "     File Name           :     01.plugin.vim
 "     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
 "     Creation Date       :     [2019-02-23 19:31]
-"     Last Modified       :     [2019-02-28 11:34]
+"     Last Modified       :     [2019-03-09 21:17]
 "     Description         :     Configuration for plugins (using vim-plug)
 "------------------------------------------------------------------------------
 
@@ -16,13 +16,17 @@ Plug 'itchyny/lightline.vim'
 Plug 'mhinz/vim-signify'
 
 Plug 'easymotion/vim-easymotion'
+Plug 'tpope/vim-eunuch'
 
-Plug 'francoiscabrol/ranger.vim'
-Plug 'rbgrouleff/bclose.vim'
+Plug 'vifm/neovim-vifm'
+"Plug 'francoiscabrol/ranger.vim'
+"Plug 'rbgrouleff/bclose.vim'
+
 Plug 'junegunn/fzf.vim'
 
 Plug 'godlygeek/tabular'
 Plug 'jiangmiao/auto-pairs'
+Plug 'tpope/vim-surround'
 Plug 'shanzi/autoHEADER'
 
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
