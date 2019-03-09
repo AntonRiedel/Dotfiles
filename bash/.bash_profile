@@ -2,7 +2,7 @@
 #     File Name           :     .bash_profile
 #     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
 #     Creation Date       :     [2019-02-23 19:41]
-#     Last Modified       :     [2019-03-09 21:06]
+#     Last Modified       :     [2019-03-09 22:05]
 #     Description         :     bash_profile
 ###############################################################################
 
@@ -23,7 +23,7 @@ fi
 export READER="zathura"
 export READER2="evince"
 
-export FILE="$HOME/.config/vifm/scripts/vifmrun"
+export FILE="$HOME/.local/bin/vifm"
 export FILE2="nnn"
 
 ##source bashrc

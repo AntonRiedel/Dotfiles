@@ -80,8 +80,137 @@ d/home/anton/Dotfiles/neovim/.config/nvim
 	config
 1
 d/home/anton/Dotfiles/neovim/.config/nvim/config
-	06.youcomplteme
+	07.snippet.vim
+8
+d/home/anton/Dotfiles/neovim/.config/nvim
+	config
+1
+d/home/anton/Dotfiles/neovim/.config
+	nvim
+1
+d/home/anton/Dotfiles/neovim
+	..
+0
+d/home/anton/Dotfiles
+	neovim
+9
+d/home/anton
+	LRZ Sync+Share
+3
+d/home/anton/LRZ Sync+Share
+	8. Semester (SS19)
+4
+d/home/anton/LRZ Sync+Share/8. Semester (SS19)
+	Quantenfeldtheorie 2
+1
+d/home/anton/LRZ Sync+Share
+	8. Semester (SS19)
+4
+d/home/anton/LRZ Sync+Share/8. Semester (SS19)
+	Quantenfeldtheorie 2
+1
+d/home/anton/LRZ Sync+Share
+	7. Semester (WS18_19)
+3
+d/home/anton/LRZ Sync+Share/7. Semester (WS18_19)
+	Quantenmechanik 2
+4
+d/home/anton/LRZ Sync+Share/7. Semester (WS18_19)/Quantenmechanik 2
+	QM2_2017
+3
+d/home/anton/LRZ Sync+Share/7. Semester (WS18_19)
+	Quantenfeldtheorie
+3
+d/home/anton/LRZ Sync+Share/7. Semester (WS18_19)/Quantenfeldtheorie
+	Exercise_Sheets
+1
+d/home/anton/LRZ Sync+Share/7. Semester (WS18_19)/Quantenfeldtheorie/Exercise_Sheets
+	qft_sheet_14_bonus.pdf
+15
+d/home/anton
+	LRZ Sync+Share
+3
+d/home/anton/LRZ Sync+Share
+	Bewerbung_Master
+5
+d/home/anton/LRZ Sync+Share/Bewerbung_Master
+	SS_19
+1
+d/home/anton/LRZ Sync+Share
+	8. Semester (SS19)
+4
+d/home/anton/LRZ Sync+Share/8. Semester (SS19)
+	Quantenfeldtheorie 2
+1
+d/home/anton/LRZ Sync+Share
+	7. Semester (WS18_19)
+3
+d/home/anton/LRZ Sync+Share/7. Semester (WS18_19)
+	Quantenmechanik 2
+4
+d/home/anton/LRZ Sync+Share/7. Semester (WS18_19)/Quantenmechanik 2
+	QM2_2017
+3
+d/home/anton/LRZ Sync+Share/7. Semester (WS18_19)
+	Quantenfeldtheorie
+3
+d/home/anton/LRZ Sync+Share/7. Semester (WS18_19)/Quantenfeldtheorie
+	Mitschrift
+4
+d/home/anton/LRZ Sync+Share/7. Semester (WS18_19)/Quantenfeldtheorie/Mitschrift
+	qft1_ws18_1.pdf
 7
+d/home/anton/LRZ Sync+Share/7. Semester (WS18_19)/Quantenfeldtheorie
+	Mitschrift
+4
+d/home/anton/LRZ Sync+Share/7. Semester (WS18_19)
+	Quantenfeldtheorie
+3
+d/home/anton/LRZ Sync+Share
+	7. Semester (WS18_19)
+3
+d/home/anton
+	LRZ Sync+Share
+3
+d/home
+	anton
+1
+d/
+	home
+4
+d/home/anton/.vim/plugged
+	..
+0
+d/home/anton/.vim
+	plugged
+2
+d/home/anton
+	LRZ Sync+Share
+3
+d/home/anton/LRZ Sync+Share
+	7. Semester (WS18_19)
+3
+d/home/anton/LRZ Sync+Share/7. Semester (WS18_19)
+	Quantenfeldtheorie
+3
+d/home/anton/LRZ Sync+Share/7. Semester (WS18_19)/Quantenfeldtheorie
+	Literature
+3
+d/home/anton/LRZ Sync+Share/7. Semester (WS18_19)/Quantenfeldtheorie/Literature
+	(Frontiers in Physics) Michael E. Peskin_ Daniel V. Schroeder-An Introduction To Quantum Field Theory-Westview Press_CRC Press .pdf
+1
+d/home/anton/LRZ Sync+Share/7. Semester (WS18_19)/Quantenfeldtheorie
+	Literature
+3
+d/home/anton/LRZ Sync+Share/7. Semester (WS18_19)
+	Quantenfeldtheorie
+3
+d/home/anton/LRZ Sync+Share/7. Semester (WS18_19)/Quantenfeldtheorie
+	Mitschrift
+4
+d/home/anton/LRZ Sync+Share/7. Semester (WS18_19)/Quantenfeldtheorie/Mitschrift
+	qft1_ws18_3.pdf
+6
 d
 
 # Right window history (oldest to newest):
@@ -96,8 +225,8 @@ D
 :trashes
 :lstrash
 :run
-:view
 :colorscheme solarized-dark
+:view
 :q
 
 # Search history (oldest to newest):
