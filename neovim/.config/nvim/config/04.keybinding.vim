@@ -2,7 +2,7 @@
 "     File Name           :     04.keybinding.vim
 "     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
 "     Creation Date       :     [2019-02-23 19:34]
-"     Last Modified       :     [2019-03-09 21:22]
+"     Last Modified       :     [2019-03-11 00:27]
 "     Description         :     Configuration for keybindings
 "------------------------------------------------------------------------------
 
@@ -12,6 +12,9 @@ nnoremap <leader>ev :Files $MYVIMCONFIG<CR>
 
 "escape insert mode easily
 inoremap jj <ESC>
+
+"write file with sudo (using suda plugin)
+nnoremap sw :w suda://%<CR>
 
 "move between splits (even if there is a terminal running)
 "(source: https://medium.com/@garoth/neovim-terminal-usecases-tricks-8961e5ac19b9)

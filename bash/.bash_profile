@@ -2,7 +2,7 @@
 #     File Name           :     .bash_profile
 #     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
 #     Creation Date       :     [2019-02-23 19:41]
-#     Last Modified       :     [2019-03-10 10:07]
+#     Last Modified       :     [2019-03-11 00:27]
 #     Description         :     bash_profile
 ###############################################################################
 
@@ -27,7 +27,6 @@ fi
 
 export READER="zathura"
 export READER2="evince"
-
 
 ##source bashrc
 echo "$0" | grep "bash$" >/dev/null && [ -f ~/.bashrc ] && source "$HOME/.bashrc"

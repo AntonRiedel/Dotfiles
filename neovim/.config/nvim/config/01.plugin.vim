@@ -2,7 +2,7 @@
 "     File Name           :     01.plugin.vim
 "     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
 "     Creation Date       :     [2019-02-23 19:31]
-"     Last Modified       :     [2019-03-09 21:17]
+"     Last Modified       :     [2019-03-11 00:19]
 "     Description         :     Configuration for plugins (using vim-plug)
 "------------------------------------------------------------------------------
 
@@ -17,6 +17,7 @@ Plug 'mhinz/vim-signify'
 
 Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-eunuch'
+Plug 'lambdalisue/suda.vim'
 
 Plug 'vifm/neovim-vifm'
 "Plug 'francoiscabrol/ranger.vim'
