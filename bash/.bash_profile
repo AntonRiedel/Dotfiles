@@ -2,14 +2,14 @@
 #     File Name           :     .bash_profile
 #     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
 #     Creation Date       :     [2019-02-23 19:41]
-#     Last Modified       :     [2019-03-11 00:27]
+#     Last Modified       :     [2019-03-11 18:40]
 #     Description         :     bash_profile
 ###############################################################################
 
 ##set/extend enviroment variables
 export PATH=$HOME/.local/bin:$PATH
 
-export TERMINAL="st"
+export TERMINAL="termite"
 export TERMINAL2="lxterminal"
 
 export EDITOR="nvim"
