@@ -2,7 +2,7 @@
 #     File Name           :     environment.sh
 #     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
 #     Creation Date       :     [2019-03-12 16:42]
-#     Last Modified       :     [2019-03-12 16:58]
+#     Last Modified       :     [2019-03-12 19:41]
 #     Description         :     Environment variables for the shell
 ###############################################################################
 
