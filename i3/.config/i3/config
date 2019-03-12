@@ -1,6 +1,10 @@
-# vim: set ft=i3config:
-
-#i3 config
+###############################################################################
+#     File Name           :     config
+#     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
+#     Creation Date       :     [2019-02-23 19:40]
+#     Last Modified       :     [2019-03-12 21:36]
+#     Description         :     i3 configruation file
+###############################################################################
 
 ##Misc Settings
 # Super key
@@ -102,3 +106,5 @@ bindsym $mod+Shift+m exec --no-startup-id $HOME/.config/mutt/etc/mailsync.sh
 ##Menu Keybindings
 bindsym $mod+d exec --no-startup-id dmenu_run
 bindsym $mod+g exec --no-startup-id passmenu
+
+# vim: set ft=i3config:
