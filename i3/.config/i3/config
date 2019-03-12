@@ -1,8 +1,6 @@
 # vim: set ft=i3config:
 
 #i3 config
-#This config file uses enviromental variables (defined in ~/.bash_profile) and
-#custom scripts (which have to be inside PATH)
 
 ##Misc Settings
 # Super key
@@ -16,6 +14,11 @@ default_floating_border none
 bindsym $mod+Shift+r restart
 # reboot, shutdown, kill i3 or lock screen
 bindsym $mod+x exec --no-startup-id fin.sh
+
+##Dropdown terminal running tmux
+for_window [instance="tmux"] floating enable, sticky enable, move position center
+for_window [instance="tmux"] resize set 800 640, border pixel 10
+bindsym $mod+u exec --no-startup-id $TERMINAL --name=tmux -e "tmux new-session -A -s 'DROP'"
 
 ##Shortcuts for window manipulation
 # kill focused window
@@ -84,7 +87,6 @@ bindsym $mod+Shift+Return exec $TERMINAL2
 bindsym $mod+b exec $BROWSER
 bindsym $mod+Shift+b exec $BROWSER2
 bindsym $mod+n exec $TERMINAL -e $FILE
-bindsym $mod+Shift+n exec $TERMINAL2 -e $FILE2
 bindsym $mod+v exec $TERMINAL -e newsboat
 
 ##Media Keybindings
