@@ -2,7 +2,7 @@
 #     File Name           :     alias.sh
 #     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
 #     Creation Date       :     [2019-03-12 16:54]
-#     Last Modified       :     [2019-03-13 00:38]
+#     Last Modified       :     [2019-03-13 14:34]
 #     Description         :     Aliases for the shell
 ###############################################################################
 
@@ -26,10 +26,10 @@ alias vpn="sudo vpnc"
 
 ##custom commands
 #search and edit a configuration file
-ce() { find $HOME/Dotfiles/* -type f | fzf --layout=reverse --height=40% | xargs -r -I % $EDITOR %; }
+ce() { find $HOME/Dotfiles/* -type f | fzf | xargs -r -I % $EDITOR %; }
 #search and enter a directory in $HOME
 fd() { cd "$(find $HOME/* -type d | fzf)" && pwd && ls; }
 #search and execute a command from history
-hs() { $(cat "$HOME/.bash_history" | sort -u | fzf --layout=reverse --height=40%); }
+hs() { $(cat "$HOME/.bash_history" | sort -u | fzf); }
 #search for a process and kill it
-kp() { kill "$(ps -e | fzf --layout=reverse --height=40% | awk '{ print $1 }')"; }
+kp() { kill "$(ps -e | fzf | awk '{ print $1 }')"; }

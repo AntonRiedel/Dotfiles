@@ -2,7 +2,7 @@
 #     File Name           :     environment.sh
 #     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
 #     Creation Date       :     [2019-03-12 16:42]
-#     Last Modified       :     [2019-03-12 19:41]
+#     Last Modified       :     [2019-03-13 14:34]
 #     Description         :     Environment variables for the shell
 ###############################################################################
 
@@ -31,3 +31,6 @@ fi
 #reader for pdf files
 export READER="zathura"
 export READER2="evince"
+
+#default options for fzf
+export FZF_DEFAULT_OPTS="--reverse --height=40%"
