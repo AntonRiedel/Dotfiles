@@ -2,7 +2,7 @@
 "     File Name           :     01.plugin.vim
 "     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
 "     Creation Date       :     [2019-02-23 19:31]
-"     Last Modified       :     [2019-03-11 00:34]
+"     Last Modified       :     [2019-03-13 22:41]
 "     Description         :     Configuration for plugins (using vim-plug)
 "------------------------------------------------------------------------------
 
@@ -27,9 +27,7 @@ Plug 'shanzi/autoHEADER'
 
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'zchee/deoplete-clang', { 'for': ['.c','.cpp','.h'] }
-Plug 'zchee/deoplete-jedi', { 'for': ['py','ipynb'] }
-
-Plug 'bfredl/nvim-ipy', { 'for': ['py','ipynb'] }
+Plug 'zchee/deoplete-jedi', { 'for': ['.py','.ipynb'] }
 
 "Plug 'Valloric/YouCompleteMe', { 'do': './install.py \-\-clang\-completer' }
 "Plug 'vhdirk/vim-cmake', { 'for': ['.c','.cpp','.h'] }
@@ -42,8 +40,8 @@ Plug 'honza/vim-snippets'
 "Plug 'Shougo/neosnippet.vim'
 "Plug 'Shougo/neosnippet-snippets'
 
-"Plug 'lervag/vimtex', { 'for': 'tex' }
-Plug 'donRaphaco/neotex', { 'for': 'tex' }
+"Plug 'lervag/vimtex', { 'for': '.tex' }
+Plug 'donRaphaco/neotex', { 'for': '.tex' }
 
 Plug 'mklabs/vim-cowsay'
 Plug 'fadein/vim-FIGlet'
