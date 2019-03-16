@@ -2,14 +2,14 @@
 "     File Name           :     01.plugin.vim
 "     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
 "     Creation Date       :     [2019-02-23 19:31]
-"     Last Modified       :     [2019-03-13 22:41]
+"     Last Modified       :     [2019-03-14 23:26]
 "     Description         :     Configuration for plugins (using vim-plug)
 "------------------------------------------------------------------------------
 
 let g:plug_threads = 4
 let g:plug_timeout = 90
 
-call plug#begin('~/.vim/plugged')
+call plug#begin('$HOME/.vim/plugged')
 Plug 'iCyMind/NeoSolarized'
 Plug 'mboughaba/i3config.vim'
 Plug 'itchyny/lightline.vim'

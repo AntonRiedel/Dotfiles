@@ -2,7 +2,7 @@
 "     File Name           :     08.neoformat.vim
 "     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
 "     Creation Date       :     [2019-02-23 19:36]
-"     Last Modified       :     [2019-02-26 15:20]
+"     Last Modified       :     [2019-03-15 13:36]
 "     Description         :     Configuration for Neoforamt
 "------------------------------------------------------------------------------
 
@@ -20,5 +20,3 @@ let g:neoformat_basic_format_align = 1
 let g:neoformat_basic_format_retab = 1
 " Enable trimmming of trailing whitespace if filetype not found
 let g:neoformat_basic_format_trim = 1
-
-

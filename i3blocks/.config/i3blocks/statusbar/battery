@@ -9,8 +9,7 @@
 #################################################################################
 
 case $BLOCK_BUTTON in
-    1) /usr/bin/xfce4-power-manager-settings ;;
-    3) pgrep -x dunst >/dev/null && notify-send "<b>🔋 Battery module:</b>
+    1) pgrep -x dunst >/dev/null && notify-send "<b>🔋 Battery module:</b>
 ⛽: no battery
 🔋: discharging
 ♻: stagnant charge
