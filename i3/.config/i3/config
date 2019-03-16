@@ -81,7 +81,7 @@ bar {
 ##Start applications on launch
 exec --no-startup-id $HOME/.screenlayout/Standard.sh
 exec --no-startup-id nitrogen --restore
-exec --no-startup-id compton -c $HOME/.config/compton/config
+exec --no-startup-id compton
 exec --no-startup-id dunst
 exec --no-startup-id unclutter --jitter 20 --ignore-scrolling
 
