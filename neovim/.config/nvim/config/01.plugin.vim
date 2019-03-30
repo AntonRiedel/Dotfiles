@@ -2,7 +2,7 @@
 "     File Name           :     01.plugin.vim
 "     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
 "     Creation Date       :     [2019-02-23 19:31]
-"     Last Modified       :     [2019-03-14 23:26]
+"     Last Modified       :     [2019-03-24 18:53]
 "     Description         :     Configuration for plugins (using vim-plug)
 "------------------------------------------------------------------------------
 
@@ -15,6 +15,7 @@ Plug 'mboughaba/i3config.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'mhinz/vim-signify'
 
+Plug 'kassio/neoterm'
 Plug 'vifm/neovim-vifm'
 Plug 'junegunn/fzf.vim'
 

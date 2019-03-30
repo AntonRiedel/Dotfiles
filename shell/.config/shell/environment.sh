@@ -2,7 +2,7 @@
 #     File Name           :     environment.sh
 #     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
 #     Creation Date       :     [2019-03-12 16:42]
-#     Last Modified       :     [2019-03-13 14:34]
+#     Last Modified       :     [2019-03-26 15:40]
 #     Description         :     Environment variables for the shell
 ###############################################################################
 
@@ -22,7 +22,7 @@ export MYVIMCONFIG=~/.config/nvim/config
 export FILE="$HOME/.local/bin/vifm"
 
 export BROWSER="qutebrowser"
-if [ "$(cat /etc/hostname)" == "Mars" ]; then
+if [ "$(hostname)" == "Mars" ]; then
     export BROWSER2="iceweasel"
 else
     export BROWSER2="firefox"

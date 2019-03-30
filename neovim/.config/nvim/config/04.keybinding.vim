@@ -2,7 +2,7 @@
 "     File Name           :     04.keybinding.vim
 "     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
 "     Creation Date       :     [2019-02-23 19:34]
-"     Last Modified       :     [2019-03-11 00:27]
+"     Last Modified       :     [2019-03-28 10:39]
 "     Description         :     Configuration for keybindings
 "------------------------------------------------------------------------------
 
@@ -39,7 +39,8 @@ for dir in ["h", "j", "l", "k"]
 endfor
 
 "start terminal in a split at the bottom of the window
-nnoremap <leader>e :split<bar>terminal<CR><C-w>J:resize10<CR>a<CR>
+"nnoremap <leader>e :split<bar>terminal<CR><C-w>J:resize10<CR>a
+nnoremap <leader>e :botright :Tnew<CR><C-w>j:resize10<CR>a
 
 "enter normal mode in terminal easily
 tnoremap <leader><ESC> <C-\><C-n>
@@ -83,3 +84,9 @@ autocmd FileType markdown nnoremap <leader>p :!pandoc % --pdf-engine=xelatex -o 
 "view pdf document
 autocmd FileType tex,markdown nnoremap <leader>pv :silent !$READER %:r.pdf &<CR>
 autocmd FileType tex,markdown nnoremap <leader>ppv :silent !$READER2 %:r.pdf &<CR>
+
+"execute python scripts easily
+autocmd FileType python let g:neoterm_repl_python=Python
+
+autocmd FileType python nnoremap <leader>p :TREPLSendFile<CR>
+"autocmd FileType python nnoremap <leader>p :botright :Tnew<CR>:TREPLSendFile<CR>

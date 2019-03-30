@@ -23,6 +23,7 @@ bindsym $mod+x exec --no-startup-id fin.sh
 for_window [instance="tmux"] floating enable, sticky enable, move position center
 for_window [instance="tmux"] resize set 1000 680, border pixel 10
 bindsym $mod+u exec --no-startup-id $TERMINAL --name=tmux -e "tmux new-session -A -s 'DROP'"
+bindsym $mod+Shift+u exec --no-startup-id $TERMINAL2 --name=tmux -e "tmux new-session -A -s 'DROP'"
 
 ##Shortcuts for window manipulation
 # kill focused window
@@ -92,6 +93,7 @@ bindsym $mod+b exec $BROWSER
 bindsym $mod+Shift+b exec $BROWSER2
 bindsym $mod+n exec $TERMINAL -e $FILE
 bindsym $mod+v exec $TERMINAL -e newsboat
+bindsym $mod+c exec $TERMINAL -e calcurse
 
 ##Media Keybindings
 bindsym $mod+a exec $TERMINAL -e pulsemixer
