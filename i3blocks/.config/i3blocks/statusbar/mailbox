@@ -17,4 +17,6 @@ case $BLOCK_BUTTON in
 - Middle click syncs mail" ;;
 esac
 
+if [ ! $(hostname)== "Atlas" ]; then
 echo "$(du -a $HOME/.mail/*/{INBOX,Inbox}/new/* 2>/dev/null | sed -n '$=') $(cat /tmp/imapsyncicon 2>/dev/null)"
+fi

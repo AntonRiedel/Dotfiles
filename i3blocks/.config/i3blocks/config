@@ -20,7 +20,7 @@ label=💻
 
 [disk]
 interval=60
-command=$HOME/.config/i3blocks/statusbar/disk / 🏠
+command=$HOME/.config/i3blocks/statusbar/disk $HOME 🏠
 
 [internet]
 interval=10

@@ -27,7 +27,7 @@ if [ -d /sys/class/power_supply/$BAT ]; then
     capacity=$(cat /sys/class/power_supply/$BAT/capacity)
     status=$(cat /sys/class/power_supply/$BAT/status)
 else
-    echo "⛽ no BAT" || exit
+    echo "⛽" || exit
 fi
 
 echo $(echo "$status" | sed -e "s/,//g;s/Discharging/🔋/;s/Charging/🔌/;s/Unknown/♻️/;s/Full/⚡/;s/ 0*/ /g;s/ :/ /g") $(echo "$capacity" | sed -e 's/$/%/')

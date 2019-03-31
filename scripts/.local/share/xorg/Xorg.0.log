@@ -1,0 +1,545 @@
+[  6060.793] (WW) Failed to open protocol names file lib/xorg/protocol.txt
+[  6060.793] 
+X.Org X Server 1.20.4
+X Protocol Version 11, Revision 0
+[  6060.793] Build Operating System: Linux Arch Linux
+[  6060.793] Current Operating System: Linux Atlas 5.0.5-arch1-1-ARCH #1 SMP PREEMPT Wed Mar 27 17:53:10 UTC 2019 x86_64
+[  6060.793] Kernel command line: BOOT_IMAGE=/boot/vmlinuz-linux root=UUID=66c42a1d-e116-4244-ad43-777517cbc259 rw quiet
+[  6060.793] Build Date: 27 February 2019  04:04:00PM
+[  6060.793]  
+[  6060.793] Current version of pixman: 0.38.0
+[  6060.793] 	Before reporting problems, check http://wiki.x.org
+	to make sure that you have the latest version.
+[  6060.793] Markers: (--) probed, (**) from config file, (==) default setting,
+	(++) from command line, (!!) notice, (II) informational,
+	(WW) warning, (EE) error, (NI) not implemented, (??) unknown.
+[  6060.793] (==) Log file: "/home/anton/.local/share/xorg/Xorg.0.log", Time: Sun Mar 31 13:16:52 2019
+[  6060.793] (==) Using system config directory "/usr/share/X11/xorg.conf.d"
+[  6060.793] (==) No Layout section.  Using the first Screen section.
+[  6060.793] (==) No screen section available. Using defaults.
+[  6060.793] (**) |-->Screen "Default Screen Section" (0)
+[  6060.793] (**) |   |-->Monitor "<default monitor>"
+[  6060.793] (==) No monitor specified for screen "Default Screen Section".
+	Using a default monitor configuration.
+[  6060.793] (==) Automatically adding devices
+[  6060.793] (==) Automatically enabling devices
+[  6060.793] (==) Automatically adding GPU devices
+[  6060.793] (==) Automatically binding GPU devices
+[  6060.793] (==) Max clients allowed: 256, resource mask: 0x1fffff
+[  6060.793] (WW) The directory "/usr/share/fonts/misc" does not exist.
+[  6060.793] 	Entry deleted from font path.
+[  6060.793] (WW) The directory "/usr/share/fonts/OTF" does not exist.
+[  6060.793] 	Entry deleted from font path.
+[  6060.793] (WW) The directory "/usr/share/fonts/Type1" does not exist.
+[  6060.793] 	Entry deleted from font path.
+[  6060.793] (WW) The directory "/usr/share/fonts/100dpi" does not exist.
+[  6060.793] 	Entry deleted from font path.
+[  6060.793] (WW) The directory "/usr/share/fonts/75dpi" does not exist.
+[  6060.793] 	Entry deleted from font path.
+[  6060.793] (==) FontPath set to:
+	/usr/share/fonts/TTF
+[  6060.793] (==) ModulePath set to "/usr/lib/xorg/modules"
+[  6060.793] (II) The server relies on udev to provide the list of input devices.
+	If no devices become available, reconfigure udev or disable AutoAddDevices.
+[  6060.793] (II) Module ABI versions:
+[  6060.793] 	X.Org ANSI C Emulation: 0.4
+[  6060.793] 	X.Org Video Driver: 24.0
+[  6060.793] 	X.Org XInput driver : 24.1
+[  6060.793] 	X.Org Server Extension : 10.0
+[  6060.794] (++) using VT number 1
+
+[  6060.795] (II) systemd-logind: took control of session /org/freedesktop/login1/session/_35
+[  6060.796] (II) xfree86: Adding drm device (/dev/dri/card0)
+[  6060.796] (II) systemd-logind: got fd for /dev/dri/card0 226:0 fd 10 paused 0
+[  6060.797] (II) xfree86: Adding drm device (/dev/dri/card1)
+[  6060.797] (II) systemd-logind: got fd for /dev/dri/card1 226:1 fd 11 paused 0
+[  6060.801] (--) PCI: (1@0:0:0) 1002:6779:174b:a004 rev 0, Mem @ 0xe0000000/268435456, 0xfe920000/131072, I/O @ 0x0000f000/256, BIOS @ 0x????????/131072
+[  6060.801] (--) PCI:*(38@0:0:0) 1002:67df:1043:0519 rev 231, Mem @ 0xc0000000/268435456, 0xd0000000/2097152, 0xfe800000/262144, I/O @ 0x0000e000/256, BIOS @ 0x????????/131072
+[  6060.801] (WW) Open ACPI failed (/var/run/acpid.socket) (No such file or directory)
+[  6060.801] (II) LoadModule: "glx"
+[  6060.801] (II) Loading /usr/lib/xorg/modules/extensions/libglx.so
+[  6060.802] (II) Module glx: vendor="X.Org Foundation"
+[  6060.802] 	compiled for 1.20.4, module version = 1.0.0
+[  6060.802] 	ABI class: X.Org Server Extension, version 10.0
+[  6060.802] (II) Applying OutputClass "AMDgpu" to /dev/dri/card1
+[  6060.802] 	loading driver: amdgpu
+[  6060.802] (==) Matched amdgpu as autoconfigured driver 0
+[  6060.802] (==) Matched ati as autoconfigured driver 1
+[  6060.802] (==) Matched modesetting as autoconfigured driver 2
+[  6060.802] (==) Matched fbdev as autoconfigured driver 3
+[  6060.802] (==) Matched vesa as autoconfigured driver 4
+[  6060.802] (==) Assigned the driver to the xf86ConfigLayout
+[  6060.802] (II) LoadModule: "amdgpu"
+[  6060.802] (II) Loading /usr/lib/xorg/modules/drivers/amdgpu_drv.so
+[  6060.802] (II) Module amdgpu: vendor="X.Org Foundation"
+[  6060.802] 	compiled for 1.20.4, module version = 19.0.1
+[  6060.802] 	Module class: X.Org Video Driver
+[  6060.802] 	ABI class: X.Org Video Driver, version 24.0
+[  6060.802] (II) LoadModule: "ati"
+[  6060.803] (WW) Warning, couldn't open module ati
+[  6060.803] (EE) Failed to load module "ati" (module does not exist, 0)
+[  6060.803] (II) LoadModule: "modesetting"
+[  6060.803] (II) Loading /usr/lib/xorg/modules/drivers/modesetting_drv.so
+[  6060.803] (II) Module modesetting: vendor="X.Org Foundation"
+[  6060.803] 	compiled for 1.20.4, module version = 1.20.4
+[  6060.803] 	Module class: X.Org Video Driver
+[  6060.803] 	ABI class: X.Org Video Driver, version 24.0
+[  6060.803] (II) LoadModule: "fbdev"
+[  6060.803] (WW) Warning, couldn't open module fbdev
+[  6060.803] (EE) Failed to load module "fbdev" (module does not exist, 0)
+[  6060.803] (II) LoadModule: "vesa"
+[  6060.803] (WW) Warning, couldn't open module vesa
+[  6060.803] (EE) Failed to load module "vesa" (module does not exist, 0)
+[  6060.803] (II) AMDGPU: Driver for AMD Radeon:
+	All GPUs supported by the amdgpu kernel driver
+[  6060.803] (II) modesetting: Driver for Modesetting Kernel Drivers: kms
+[  6060.803] (WW) Falling back to old probe method for modesetting
+[  6060.803] (EE) AMDGPU(G0): amdgpu_device_initialize failed
+[  6060.803] (II) modeset(G1): using drv /dev/dri/card0
+[  6060.803] (WW) VGA arbiter: cannot open kernel arbiter, no multi-card support
+[  6060.803] (II) AMDGPU(0): Creating default Display subsection in Screen section
+	"Default Screen Section" for depth/fbbpp 24/32
+[  6060.803] (==) AMDGPU(0): Depth 24, (--) framebuffer bpp 32
+[  6060.803] (II) AMDGPU(0): Pixel depth = 24 bits stored in 4 bytes (32 bpp pixmaps)
+[  6060.803] (==) AMDGPU(0): Default visual is TrueColor
+[  6060.803] (==) AMDGPU(0): RGB weight 888
+[  6060.803] (II) AMDGPU(0): Using 8 bits per RGB (8 bit DAC)
+[  6060.803] (--) AMDGPU(0): Chipset: "Radeon RX 580 Series" (ChipID = 0x67df)
+[  6060.803] (II) Loading sub module "fb"
+[  6060.803] (II) LoadModule: "fb"
+[  6060.803] (II) Loading /usr/lib/xorg/modules/libfb.so
+[  6060.803] (II) Module fb: vendor="X.Org Foundation"
+[  6060.803] 	compiled for 1.20.4, module version = 1.0.0
+[  6060.803] 	ABI class: X.Org ANSI C Emulation, version 0.4
+[  6060.803] (II) Loading sub module "dri2"
+[  6060.803] (II) LoadModule: "dri2"
+[  6060.803] (II) Module "dri2" already built-in
+[  6060.866] (II) Loading sub module "glamoregl"
+[  6060.866] (II) LoadModule: "glamoregl"
+[  6060.866] (II) Loading /usr/lib/xorg/modules/libglamoregl.so
+[  6060.869] (II) Module glamoregl: vendor="X.Org Foundation"
+[  6060.869] 	compiled for 1.20.4, module version = 1.0.1
+[  6060.869] 	ABI class: X.Org ANSI C Emulation, version 0.4
+[  6060.877] (II) AMDGPU(0): glamor X acceleration enabled on Radeon RX 580 Series (POLARIS10, DRM 3.27.0, 5.0.5-arch1-1-ARCH, LLVM 8.0.0)
+[  6060.877] (II) AMDGPU(0): glamor detected, initialising EGL layer.
+[  6060.877] (==) AMDGPU(0): TearFree property default: auto
+[  6060.877] (==) AMDGPU(0): VariableRefresh: disabled
+[  6060.877] (II) AMDGPU(0): KMS Pageflipping: enabled
+[  6060.877] (II) AMDGPU(0): Output DisplayPort-0 has no monitor section
+[  6060.877] (II) AMDGPU(0): Output DisplayPort-1 has no monitor section
+[  6060.877] (II) AMDGPU(0): Output HDMI-A-1 has no monitor section
+[  6060.877] (II) AMDGPU(0): Output HDMI-A-2 has no monitor section
+[  6060.877] (II) AMDGPU(0): Output DVI-D-1 has no monitor section
+[  6060.889] (II) AMDGPU(0): EDID for output DisplayPort-0
+[  6060.889] (II) AMDGPU(0): EDID for output DisplayPort-1
+[  6060.889] (II) AMDGPU(0): EDID for output HDMI-A-1
+[  6060.889] (II) AMDGPU(0): Manufacturer: ACI  Model: 249a  Serial#: 28053
+[  6060.889] (II) AMDGPU(0): Year: 2017  Week: 44
+[  6060.889] (II) AMDGPU(0): EDID Version: 1.3
+[  6060.889] (II) AMDGPU(0): Digital Display Input
+[  6060.889] (II) AMDGPU(0): Max Image Size [cm]: horiz.: 52  vert.: 29
+[  6060.889] (II) AMDGPU(0): Gamma: 2.20
+[  6060.889] (II) AMDGPU(0): DPMS capabilities: Off
+[  6060.889] (II) AMDGPU(0): Supported color encodings: RGB 4:4:4 YCrCb 4:4:4 
+[  6060.889] (II) AMDGPU(0): First detailed timing is preferred mode
+[  6060.889] (II) AMDGPU(0): redX: 0.641 redY: 0.338   greenX: 0.311 greenY: 0.619
+[  6060.889] (II) AMDGPU(0): blueX: 0.159 blueY: 0.059   whiteX: 0.313 whiteY: 0.329
+[  6060.889] (II) AMDGPU(0): Supported established timings:
+[  6060.889] (II) AMDGPU(0): 720x400@70Hz
+[  6060.889] (II) AMDGPU(0): 640x480@60Hz
+[  6060.889] (II) AMDGPU(0): 640x480@67Hz
+[  6060.889] (II) AMDGPU(0): 640x480@75Hz
+[  6060.889] (II) AMDGPU(0): 800x600@56Hz
+[  6060.889] (II) AMDGPU(0): 800x600@60Hz
+[  6060.889] (II) AMDGPU(0): 800x600@72Hz
+[  6060.889] (II) AMDGPU(0): 800x600@75Hz
+[  6060.889] (II) AMDGPU(0): 832x624@75Hz
+[  6060.889] (II) AMDGPU(0): 1024x768@60Hz
+[  6060.889] (II) AMDGPU(0): 1024x768@70Hz
+[  6060.889] (II) AMDGPU(0): 1024x768@75Hz
+[  6060.889] (II) AMDGPU(0): 1280x1024@75Hz
+[  6060.889] (II) AMDGPU(0): Manufacturer's mask: 0
+[  6060.889] (II) AMDGPU(0): Supported standard timings:
+[  6060.889] (II) AMDGPU(0): #0: hsize: 1152  vsize 864  refresh: 75  vid: 20337
+[  6060.889] (II) AMDGPU(0): #1: hsize: 1280  vsize 960  refresh: 60  vid: 16513
+[  6060.889] (II) AMDGPU(0): #2: hsize: 1280  vsize 1024  refresh: 60  vid: 32897
+[  6060.889] (II) AMDGPU(0): #3: hsize: 1440  vsize 900  refresh: 60  vid: 149
+[  6060.889] (II) AMDGPU(0): #4: hsize: 1680  vsize 1050  refresh: 60  vid: 179
+[  6060.889] (II) AMDGPU(0): #5: hsize: 1920  vsize 1080  refresh: 60  vid: 49361
+[  6060.889] (II) AMDGPU(0): #6: hsize: 1280  vsize 720  refresh: 60  vid: 49281
+[  6060.889] (II) AMDGPU(0): #7: hsize: 1280  vsize 800  refresh: 60  vid: 129
+[  6060.889] (II) AMDGPU(0): Supported detailed timing:
+[  6060.889] (II) AMDGPU(0): clock: 148.5 MHz   Image Size:  521 x 293 mm
+[  6060.889] (II) AMDGPU(0): h_active: 1920  h_sync: 2008  h_sync_end 2052 h_blank_end 2200 h_border: 0
+[  6060.889] (II) AMDGPU(0): v_active: 1080  v_sync: 1084  v_sync_end 1089 v_blanking: 1125 v_border: 0
+[  6060.889] (II) AMDGPU(0): Serial No: HBLMTF028053
+[  6060.889] (II) AMDGPU(0): Ranges: V min: 50 V max: 75 Hz, H min: 24 H max: 83 kHz, PixClock max 175 MHz
+[  6060.889] (II) AMDGPU(0): Monitor name: ASUS VS247
+[  6060.889] (II) AMDGPU(0): Supported detailed timing:
+[  6060.889] (II) AMDGPU(0): clock: 27.0 MHz   Image Size:  521 x 293 mm
+[  6060.889] (II) AMDGPU(0): h_active: 720  h_sync: 736  h_sync_end 798 h_blank_end 858 h_border: 0
+[  6060.889] (II) AMDGPU(0): v_active: 480  v_sync: 489  v_sync_end 495 v_blanking: 525 v_border: 0
+[  6060.889] (II) AMDGPU(0): Supported detailed timing:
+[  6060.889] (II) AMDGPU(0): clock: 74.2 MHz   Image Size:  521 x 293 mm
+[  6060.889] (II) AMDGPU(0): h_active: 1280  h_sync: 1390  h_sync_end 1430 h_blank_end 1650 h_border: 0
+[  6060.890] (II) AMDGPU(0): v_active: 720  v_sync: 725  v_sync_end 730 v_blanking: 750 v_border: 0
+[  6060.890] (II) AMDGPU(0): Supported detailed timing:
+[  6060.890] (II) AMDGPU(0): clock: 74.2 MHz   Image Size:  521 x 293 mm
+[  6060.890] (II) AMDGPU(0): h_active: 1280  h_sync: 1720  h_sync_end 1760 h_blank_end 1980 h_border: 0
+[  6060.890] (II) AMDGPU(0): v_active: 720  v_sync: 725  v_sync_end 730 v_blanking: 750 v_border: 0
+[  6060.890] (II) AMDGPU(0): Supported detailed timing:
+[  6060.890] (II) AMDGPU(0): clock: 27.0 MHz   Image Size:  521 x 293 mm
+[  6060.890] (II) AMDGPU(0): h_active: 720  h_sync: 732  h_sync_end 796 h_blank_end 864 h_border: 0
+[  6060.890] (II) AMDGPU(0): v_active: 576  v_sync: 581  v_sync_end 586 v_blanking: 625 v_border: 0
+[  6060.890] (II) AMDGPU(0): Number of EDID sections to follow: 1
+[  6060.890] (II) AMDGPU(0): EDID (in hex):
+[  6060.890] (II) AMDGPU(0): 	00ffffffffffff0004699a24956d0000
+[  6060.890] (II) AMDGPU(0): 	2c1b010380341d782a2ac5a4564f9e28
+[  6060.890] (II) AMDGPU(0): 	0f5054b7ef00714f814081809500b300
+[  6060.890] (II) AMDGPU(0): 	d1c081c08100023a801871382d40582c
+[  6060.890] (II) AMDGPU(0): 	450009252100001e000000ff0048424c
+[  6060.890] (II) AMDGPU(0): 	4d54463032383035330a000000fd0032
+[  6060.890] (II) AMDGPU(0): 	4b185311000a202020202020000000fc
+[  6060.890] (II) AMDGPU(0): 	00415355532056533234370a202001e6
+[  6060.890] (II) AMDGPU(0): 	020322714f0102031112130414050e0f
+[  6060.890] (II) AMDGPU(0): 	1d1e1f10230917078301000065030c00
+[  6060.890] (II) AMDGPU(0): 	10008c0ad08a20e02d10103e96000925
+[  6060.890] (II) AMDGPU(0): 	21000018011d007251d01e206e285500
+[  6060.890] (II) AMDGPU(0): 	09252100001e011d00bc52d01e20b828
+[  6060.890] (II) AMDGPU(0): 	554009252100001e8c0ad09020403120
+[  6060.890] (II) AMDGPU(0): 	0c405500092521000018000000000000
+[  6060.890] (II) AMDGPU(0): 	0000000000000000000000000000005d
+[  6060.890] (II) AMDGPU(0): Printing probed modes for output HDMI-A-1
+[  6060.890] (II) AMDGPU(0): Modeline "1920x1080"x60.0  148.50  1920 2008 2052 2200  1080 1084 1089 1125 +hsync +vsync (67.5 kHz eP)
+[  6060.890] (II) AMDGPU(0): Modeline "1920x1080"x50.0  148.50  1920 2448 2492 2640  1080 1084 1089 1125 +hsync +vsync (56.2 kHz e)
+[  6060.890] (II) AMDGPU(0): Modeline "1920x1080"x59.9  148.35  1920 2008 2052 2200  1080 1084 1089 1125 +hsync +vsync (67.4 kHz e)
+[  6060.890] (II) AMDGPU(0): Modeline "1680x1050"x59.9  119.00  1680 1728 1760 1840  1050 1053 1059 1080 +hsync -vsync (64.7 kHz e)
+[  6060.890] (II) AMDGPU(0): Modeline "1280x1024"x75.0  135.00  1280 1296 1440 1688  1024 1025 1028 1066 +hsync +vsync (80.0 kHz e)
+[  6060.890] (II) AMDGPU(0): Modeline "1280x1024"x60.0  108.00  1280 1328 1440 1688  1024 1025 1028 1066 +hsync +vsync (64.0 kHz e)
+[  6060.890] (II) AMDGPU(0): Modeline "1440x900"x59.9   88.75  1440 1488 1520 1600  900 903 909 926 +hsync -vsync (55.5 kHz e)
+[  6060.890] (II) AMDGPU(0): Modeline "1280x960"x60.0  108.00  1280 1376 1488 1800  960 961 964 1000 +hsync +vsync (60.0 kHz e)
+[  6060.890] (II) AMDGPU(0): Modeline "1280x800"x59.9   71.00  1280 1328 1360 1440  800 803 809 823 +hsync -vsync (49.3 kHz e)
+[  6060.890] (II) AMDGPU(0): Modeline "1152x864"x75.0  108.00  1152 1216 1344 1600  864 865 868 900 +hsync +vsync (67.5 kHz e)
+[  6060.890] (II) AMDGPU(0): Modeline "1280x720"x60.0   74.25  1280 1390 1430 1650  720 725 730 750 +hsync +vsync (45.0 kHz e)
+[  6060.890] (II) AMDGPU(0): Modeline "1280x720"x50.0   74.25  1280 1720 1760 1980  720 725 730 750 +hsync +vsync (37.5 kHz e)
+[  6060.890] (II) AMDGPU(0): Modeline "1280x720"x59.9   74.18  1280 1390 1430 1650  720 725 730 750 +hsync +vsync (45.0 kHz e)
+[  6060.890] (II) AMDGPU(0): Modeline "1440x576"x50.0   54.00  1440 1464 1592 1728  576 581 586 625 -hsync -vsync (31.2 kHz e)
+[  6060.890] (II) AMDGPU(0): Modeline "1024x768"x75.0   78.75  1024 1040 1136 1312  768 769 772 800 +hsync +vsync (60.0 kHz e)
+[  6060.890] (II) AMDGPU(0): Modeline "1024x768"x70.1   75.00  1024 1048 1184 1328  768 771 777 806 -hsync -vsync (56.5 kHz e)
+[  6060.890] (II) AMDGPU(0): Modeline "1024x768"x60.0   65.00  1024 1048 1184 1344  768 771 777 806 -hsync -vsync (48.4 kHz e)
+[  6060.890] (II) AMDGPU(0): Modeline "1440x480"x60.0   54.05  1440 1472 1596 1716  480 489 495 525 -hsync -vsync (31.5 kHz e)
+[  6060.890] (II) AMDGPU(0): Modeline "1440x480"x59.9   54.00  1440 1472 1596 1716  480 489 495 525 -hsync -vsync (31.5 kHz e)
+[  6060.890] (II) AMDGPU(0): Modeline "832x624"x74.6   57.28  832 864 928 1152  624 625 628 667 -hsync -vsync (49.7 kHz e)
+[  6060.890] (II) AMDGPU(0): Modeline "800x600"x72.2   50.00  800 856 976 1040  600 637 643 666 +hsync +vsync (48.1 kHz e)
+[  6060.890] (II) AMDGPU(0): Modeline "800x600"x75.0   49.50  800 816 896 1056  600 601 604 625 +hsync +vsync (46.9 kHz e)
+[  6060.890] (II) AMDGPU(0): Modeline "800x600"x60.3   40.00  800 840 968 1056  600 601 605 628 +hsync +vsync (37.9 kHz e)
+[  6060.890] (II) AMDGPU(0): Modeline "800x600"x56.2   36.00  800 824 896 1024  600 601 603 625 +hsync +vsync (35.2 kHz e)
+[  6060.890] (II) AMDGPU(0): Modeline "720x576"x50.0   27.00  720 732 796 864  576 581 586 625 -hsync -vsync (31.2 kHz e)
+[  6060.890] (II) AMDGPU(0): Modeline "720x480"x60.0   27.03  720 736 798 858  480 489 495 525 -hsync -vsync (31.5 kHz e)
+[  6060.890] (II) AMDGPU(0): Modeline "720x480"x59.9   27.00  720 736 798 858  480 489 495 525 -hsync -vsync (31.5 kHz e)
+[  6060.890] (II) AMDGPU(0): Modeline "640x480"x75.0   31.50  640 656 720 840  480 481 484 500 -hsync -vsync (37.5 kHz e)
+[  6060.890] (II) AMDGPU(0): Modeline "640x480"x66.7   30.24  640 704 768 864  480 483 486 525 -hsync -vsync (35.0 kHz e)
+[  6060.890] (II) AMDGPU(0): Modeline "640x480"x60.0   25.20  640 656 752 800  480 490 492 525 -hsync -vsync (31.5 kHz e)
+[  6060.890] (II) AMDGPU(0): Modeline "640x480"x59.9   25.18  640 656 752 800  480 490 492 525 -hsync -vsync (31.5 kHz e)
+[  6060.890] (II) AMDGPU(0): Modeline "720x400"x70.1   28.32  720 738 846 900  400 412 414 449 -hsync +vsync (31.5 kHz e)
+[  6060.890] (II) AMDGPU(0): EDID for output HDMI-A-2
+[  6060.890] (II) AMDGPU(0): EDID for output DVI-D-1
+[  6060.890] (II) AMDGPU(0): Output DisplayPort-0 disconnected
+[  6060.890] (II) AMDGPU(0): Output DisplayPort-1 disconnected
+[  6060.890] (II) AMDGPU(0): Output HDMI-A-1 connected
+[  6060.890] (II) AMDGPU(0): Output HDMI-A-2 disconnected
+[  6060.890] (II) AMDGPU(0): Output DVI-D-1 disconnected
+[  6060.890] (II) AMDGPU(0): Using exact sizes for initial modes
+[  6060.890] (II) AMDGPU(0): Output HDMI-A-1 using initial mode 1920x1080 +0+0
+[  6060.890] (II) AMDGPU(0): mem size init: gart size :1ff973000 vram size: s:1ff2e8000 visible:f2e8000
+[  6060.890] (==) AMDGPU(0): DPI set to (96, 96)
+[  6060.890] (==) AMDGPU(0): Using gamma correction (1.0, 1.0, 1.0)
+[  6060.890] (II) Loading sub module "ramdac"
+[  6060.890] (II) LoadModule: "ramdac"
+[  6060.890] (II) Module "ramdac" already built-in
+[  6060.890] (==) modeset(G1): Depth 24, (==) framebuffer bpp 32
+[  6060.890] (==) modeset(G1): RGB weight 888
+[  6060.890] (==) modeset(G1): Default visual is TrueColor
+[  6060.890] (II) Loading sub module "glamoregl"
+[  6060.890] (II) LoadModule: "glamoregl"
+[  6060.890] (II) Loading /usr/lib/xorg/modules/libglamoregl.so
+[  6060.890] (II) Module glamoregl: vendor="X.Org Foundation"
+[  6060.890] 	compiled for 1.20.4, module version = 1.0.1
+[  6060.890] 	ABI class: X.Org ANSI C Emulation, version 0.4
+[  6060.894] (II) modeset(G1): glamor X acceleration enabled on AMD CAICOS (DRM 2.50.0 / 5.0.5-arch1-1-ARCH, LLVM 8.0.0)
+[  6060.894] (II) modeset(G1): glamor initialized
+[  6060.895] (II) modeset(G1): Output HDMI-2-1 has no monitor section
+[  6060.897] (II) modeset(G1): Output DVI-D-2-1 has no monitor section
+[  6060.909] (II) modeset(G1): Output VGA-2-1 has no monitor section
+[  6060.911] (II) modeset(G1): EDID for output HDMI-2-1
+[  6060.912] (II) modeset(G1): EDID for output DVI-D-2-1
+[  6060.926] (II) modeset(G1): EDID for output VGA-2-1
+[  6060.926] (==) modeset(G1): Using gamma correction (1.0, 1.0, 1.0)
+[  6060.926] (==) modeset(G1): DPI set to (96, 96)
+[  6060.926] (II) Loading sub module "fb"
+[  6060.926] (II) LoadModule: "fb"
+[  6060.926] (II) Loading /usr/lib/xorg/modules/libfb.so
+[  6060.926] (II) Module fb: vendor="X.Org Foundation"
+[  6060.926] 	compiled for 1.20.4, module version = 1.0.0
+[  6060.926] 	ABI class: X.Org ANSI C Emulation, version 0.4
+[  6060.926] (II) UnloadModule: "amdgpu"
+[  6060.953] (==) modeset(G0): Backing store enabled
+[  6060.953] (==) modeset(G0): Silken mouse disabled
+[  6060.953] (II) modeset(G0): Initializing kms color map for depth 24, 8 bpc.
+[  6060.953] (==) modeset(G0): DPMS enabled
+[  6060.954] (II) modeset(G0): [DRI2] Setup complete
+[  6060.954] (II) modeset(G0): [DRI2]   DRI driver: r600
+[  6060.954] (II) modeset(G0): [DRI2]   VDPAU driver: r600
+[  6060.954] (II) AMDGPU(0): [DRI2] Setup complete
+[  6060.954] (II) AMDGPU(0): [DRI2]   DRI driver: radeonsi
+[  6060.954] (II) AMDGPU(0): [DRI2]   VDPAU driver: radeonsi
+[  6060.954] (II) AMDGPU(0): Front buffer pitch: 8192 bytes
+[  6060.954] (II) AMDGPU(0): SYNC extension fences enabled
+[  6060.954] (II) AMDGPU(0): Present extension enabled
+[  6060.954] (==) AMDGPU(0): DRI3 enabled
+[  6060.954] (==) AMDGPU(0): Backing store enabled
+[  6060.954] (II) AMDGPU(0): Direct rendering enabled
+[  6060.968] (II) AMDGPU(0): Use GLAMOR acceleration.
+[  6060.968] (II) AMDGPU(0): Acceleration enabled
+[  6060.968] (==) AMDGPU(0): DPMS enabled
+[  6060.968] (==) AMDGPU(0): Silken mouse disabled
+[  6060.968] (II) AMDGPU(0): Set up textured video (glamor)
+[  6060.973] (II) Initializing extension Generic Event Extension
+[  6060.973] (II) Initializing extension SHAPE
+[  6060.973] (II) Initializing extension MIT-SHM
+[  6060.973] (II) Initializing extension XInputExtension
+[  6060.973] (II) Initializing extension XTEST
+[  6060.973] (II) Initializing extension BIG-REQUESTS
+[  6060.973] (II) Initializing extension SYNC
+[  6060.973] (II) Initializing extension XKEYBOARD
+[  6060.973] (II) Initializing extension XC-MISC
+[  6060.973] (II) Initializing extension SECURITY
+[  6060.973] (II) Initializing extension XFIXES
+[  6060.973] (II) Initializing extension RENDER
+[  6060.973] (II) Initializing extension RANDR
+[  6060.973] (II) Initializing extension COMPOSITE
+[  6060.973] (II) Initializing extension DAMAGE
+[  6060.973] (II) Initializing extension MIT-SCREEN-SAVER
+[  6060.973] (II) Initializing extension DOUBLE-BUFFER
+[  6060.973] (II) Initializing extension RECORD
+[  6060.973] (II) Initializing extension DPMS
+[  6060.973] (II) Initializing extension Present
+[  6060.973] (II) Initializing extension DRI3
+[  6060.973] (II) Initializing extension X-Resource
+[  6060.973] (II) Initializing extension XVideo
+[  6060.973] (II) Initializing extension XVideo-MotionCompensation
+[  6060.973] (II) Initializing extension GLX
+[  6060.978] (II) AIGLX: Loaded and initialized radeonsi
+[  6060.978] (II) GLX: Initialized DRI2 GL provider for screen 0
+[  6060.978] (II) Initializing extension XFree86-VidModeExtension
+[  6060.978] (II) Initializing extension XFree86-DGA
+[  6060.978] (II) Initializing extension XFree86-DRI
+[  6060.978] (II) Initializing extension DRI2
+[  6060.980] (II) modeset(G0): Damage tracking initialized
+[  6060.980] (II) AMDGPU(0): Setting screen physical size to 508 x 285
+[  6061.043] (II) config/udev: Adding input device Power Button (/dev/input/event1)
+[  6061.043] (**) Power Button: Applying InputClass "libinput keyboard catchall"
+[  6061.043] (II) LoadModule: "libinput"
+[  6061.043] (II) Loading /usr/lib/xorg/modules/input/libinput_drv.so
+[  6061.044] (II) Module libinput: vendor="X.Org Foundation"
+[  6061.044] 	compiled for 1.20.3, module version = 0.28.2
+[  6061.044] 	Module class: X.Org XInput Driver
+[  6061.044] 	ABI class: X.Org XInput driver, version 24.1
+[  6061.044] (II) Using input driver 'libinput' for 'Power Button'
+[  6061.044] (II) systemd-logind: got fd for /dev/input/event1 13:65 fd 23 paused 0
+[  6061.044] (**) Power Button: always reports core events
+[  6061.044] (**) Option "Device" "/dev/input/event1"
+[  6061.044] (**) Option "_source" "server/udev"
+[  6061.045] (II) event1  - Power Button: is tagged by udev as: Keyboard
+[  6061.045] (II) event1  - Power Button: device is a keyboard
+[  6061.045] (II) event1  - Power Button: device removed
+[  6061.045] (**) Option "config_info" "udev:/sys/devices/LNXSYSTM:00/LNXPWRBN:00/input/input1/event1"
+[  6061.045] (II) XINPUT: Adding extended input device "Power Button" (type: KEYBOARD, id 6)
+[  6061.046] (II) event1  - Power Button: is tagged by udev as: Keyboard
+[  6061.046] (II) event1  - Power Button: device is a keyboard
+[  6061.046] (II) config/udev: Adding input device Power Button (/dev/input/event0)
+[  6061.046] (**) Power Button: Applying InputClass "libinput keyboard catchall"
+[  6061.046] (II) Using input driver 'libinput' for 'Power Button'
+[  6061.046] (II) systemd-logind: got fd for /dev/input/event0 13:64 fd 26 paused 0
+[  6061.046] (**) Power Button: always reports core events
+[  6061.046] (**) Option "Device" "/dev/input/event0"
+[  6061.046] (**) Option "_source" "server/udev"
+[  6061.047] (II) event0  - Power Button: is tagged by udev as: Keyboard
+[  6061.047] (II) event0  - Power Button: device is a keyboard
+[  6061.047] (II) event0  - Power Button: device removed
+[  6061.047] (**) Option "config_info" "udev:/sys/devices/LNXSYSTM:00/LNXSYBUS:00/PNP0C0C:00/input/input0/event0"
+[  6061.047] (II) XINPUT: Adding extended input device "Power Button" (type: KEYBOARD, id 7)
+[  6061.047] (II) event0  - Power Button: is tagged by udev as: Keyboard
+[  6061.047] (II) event0  - Power Button: device is a keyboard
+[  6061.047] (II) config/udev: Adding input device HDA ATI HDMI HDMI/DP,pcm=3 (/dev/input/event10)
+[  6061.047] (II) No input driver specified, ignoring this device.
+[  6061.047] (II) This device may have been added with another device file.
+[  6061.048] (II) config/udev: Adding input device SIGMACHIP USB Keyboard (/dev/input/event6)
+[  6061.048] (**) SIGMACHIP USB Keyboard: Applying InputClass "libinput keyboard catchall"
+[  6061.048] (II) Using input driver 'libinput' for 'SIGMACHIP USB Keyboard'
+[  6061.048] (II) systemd-logind: got fd for /dev/input/event6 13:70 fd 27 paused 0
+[  6061.048] (**) SIGMACHIP USB Keyboard: always reports core events
+[  6061.048] (**) Option "Device" "/dev/input/event6"
+[  6061.048] (**) Option "_source" "server/udev"
+[  6061.049] (II) event6  - SIGMACHIP USB Keyboard: is tagged by udev as: Keyboard
+[  6061.049] (II) event6  - SIGMACHIP USB Keyboard: device is a keyboard
+[  6061.049] (II) event6  - SIGMACHIP USB Keyboard: device removed
+[  6061.049] (**) Option "config_info" "udev:/sys/devices/pci0000:00/0000:00:01.3/0000:03:00.0/usb1/1-10/1-10:1.0/0003:1C4F:0002.0005/input/input24/event6"
+[  6061.049] (II) XINPUT: Adding extended input device "SIGMACHIP USB Keyboard" (type: KEYBOARD, id 8)
+[  6061.050] (II) event6  - SIGMACHIP USB Keyboard: is tagged by udev as: Keyboard
+[  6061.050] (II) event6  - SIGMACHIP USB Keyboard: device is a keyboard
+[  6061.050] (II) config/udev: Adding input device SIGMACHIP USB Keyboard Consumer Control (/dev/input/event7)
+[  6061.050] (**) SIGMACHIP USB Keyboard Consumer Control: Applying InputClass "libinput keyboard catchall"
+[  6061.050] (II) Using input driver 'libinput' for 'SIGMACHIP USB Keyboard Consumer Control'
+[  6061.051] (II) systemd-logind: got fd for /dev/input/event7 13:71 fd 28 paused 0
+[  6061.051] (**) SIGMACHIP USB Keyboard Consumer Control: always reports core events
+[  6061.051] (**) Option "Device" "/dev/input/event7"
+[  6061.051] (**) Option "_source" "server/udev"
+[  6061.052] (II) event7  - SIGMACHIP USB Keyboard Consumer Control: is tagged by udev as: Keyboard
+[  6061.052] (II) event7  - SIGMACHIP USB Keyboard Consumer Control: device is a keyboard
+[  6061.052] (II) event7  - SIGMACHIP USB Keyboard Consumer Control: device removed
+[  6061.052] (II) libinput: SIGMACHIP USB Keyboard Consumer Control: needs a virtual subdevice
+[  6061.052] (**) Option "config_info" "udev:/sys/devices/pci0000:00/0000:00:01.3/0000:03:00.0/usb1/1-10/1-10:1.1/0003:1C4F:0002.0006/input/input25/event7"
+[  6061.052] (II) XINPUT: Adding extended input device "SIGMACHIP USB Keyboard Consumer Control" (type: MOUSE, id 9)
+[  6061.052] (**) Option "AccelerationScheme" "none"
+[  6061.052] (**) SIGMACHIP USB Keyboard Consumer Control: (accel) selected scheme none/0
+[  6061.052] (**) SIGMACHIP USB Keyboard Consumer Control: (accel) acceleration factor: 2.000
+[  6061.052] (**) SIGMACHIP USB Keyboard Consumer Control: (accel) acceleration threshold: 4
+[  6061.053] (II) event7  - SIGMACHIP USB Keyboard Consumer Control: is tagged by udev as: Keyboard
+[  6061.053] (II) event7  - SIGMACHIP USB Keyboard Consumer Control: device is a keyboard
+[  6061.053] (II) config/udev: Adding input device SIGMACHIP USB Keyboard System Control (/dev/input/event8)
+[  6061.053] (**) SIGMACHIP USB Keyboard System Control: Applying InputClass "libinput keyboard catchall"
+[  6061.053] (II) Using input driver 'libinput' for 'SIGMACHIP USB Keyboard System Control'
+[  6061.053] (II) systemd-logind: got fd for /dev/input/event8 13:72 fd 29 paused 0
+[  6061.053] (**) SIGMACHIP USB Keyboard System Control: always reports core events
+[  6061.053] (**) Option "Device" "/dev/input/event8"
+[  6061.053] (**) Option "_source" "server/udev"
+[  6061.054] (II) event8  - SIGMACHIP USB Keyboard System Control: is tagged by udev as: Keyboard
+[  6061.054] (II) event8  - SIGMACHIP USB Keyboard System Control: device is a keyboard
+[  6061.054] (II) event8  - SIGMACHIP USB Keyboard System Control: device removed
+[  6061.054] (**) Option "config_info" "udev:/sys/devices/pci0000:00/0000:00:01.3/0000:03:00.0/usb1/1-10/1-10:1.1/0003:1C4F:0002.0006/input/input26/event8"
+[  6061.054] (II) XINPUT: Adding extended input device "SIGMACHIP USB Keyboard System Control" (type: KEYBOARD, id 10)
+[  6061.055] (II) event8  - SIGMACHIP USB Keyboard System Control: is tagged by udev as: Keyboard
+[  6061.055] (II) event8  - SIGMACHIP USB Keyboard System Control: device is a keyboard
+[  6061.056] (II) config/udev: Adding input device Logitech G203 Prodigy Gaming Mouse (/dev/input/event2)
+[  6061.056] (**) Logitech G203 Prodigy Gaming Mouse: Applying InputClass "libinput pointer catchall"
+[  6061.056] (II) Using input driver 'libinput' for 'Logitech G203 Prodigy Gaming Mouse'
+[  6061.112] (II) systemd-logind: got fd for /dev/input/event2 13:66 fd 30 paused 0
+[  6061.112] (**) Logitech G203 Prodigy Gaming Mouse: always reports core events
+[  6061.112] (**) Option "Device" "/dev/input/event2"
+[  6061.112] (**) Option "_source" "server/udev"
+[  6061.113] (II) event2  - Logitech G203 Prodigy Gaming Mouse: is tagged by udev as: Mouse
+[  6061.113] (II) event2  - Logitech G203 Prodigy Gaming Mouse: device is a pointer
+[  6061.113] (II) event2  - Logitech G203 Prodigy Gaming Mouse: device removed
+[  6061.113] (**) Option "config_info" "udev:/sys/devices/pci0000:00/0000:00:01.3/0000:03:00.0/usb1/1-7/1-7:1.0/0003:046D:C084.0001/input/input2/event2"
+[  6061.113] (II) XINPUT: Adding extended input device "Logitech G203 Prodigy Gaming Mouse" (type: MOUSE, id 11)
+[  6061.113] (**) Option "AccelerationScheme" "none"
+[  6061.113] (**) Logitech G203 Prodigy Gaming Mouse: (accel) selected scheme none/0
+[  6061.113] (**) Logitech G203 Prodigy Gaming Mouse: (accel) acceleration factor: 2.000
+[  6061.113] (**) Logitech G203 Prodigy Gaming Mouse: (accel) acceleration threshold: 4
+[  6061.115] (II) event2  - Logitech G203 Prodigy Gaming Mouse: is tagged by udev as: Mouse
+[  6061.115] (II) event2  - Logitech G203 Prodigy Gaming Mouse: device is a pointer
+[  6061.115] (II) config/udev: Adding input device Logitech G203 Prodigy Gaming Mouse (/dev/input/mouse0)
+[  6061.115] (II) No input driver specified, ignoring this device.
+[  6061.115] (II) This device may have been added with another device file.
+[  6061.116] (II) config/udev: Adding input device Logitech G203 Prodigy Gaming Mouse Keyboard (/dev/input/event3)
+[  6061.116] (**) Logitech G203 Prodigy Gaming Mouse Keyboard: Applying InputClass "libinput keyboard catchall"
+[  6061.116] (II) Using input driver 'libinput' for 'Logitech G203 Prodigy Gaming Mouse Keyboard'
+[  6061.116] (II) systemd-logind: got fd for /dev/input/event3 13:67 fd 31 paused 0
+[  6061.116] (**) Logitech G203 Prodigy Gaming Mouse Keyboard: always reports core events
+[  6061.116] (**) Option "Device" "/dev/input/event3"
+[  6061.116] (**) Option "_source" "server/udev"
+[  6061.117] (II) event3  - Logitech G203 Prodigy Gaming Mouse Keyboard: is tagged by udev as: Keyboard
+[  6061.117] (II) event3  - Logitech G203 Prodigy Gaming Mouse Keyboard: device is a keyboard
+[  6061.117] (II) event3  - Logitech G203 Prodigy Gaming Mouse Keyboard: device removed
+[  6061.117] (**) Option "config_info" "udev:/sys/devices/pci0000:00/0000:00:01.3/0000:03:00.0/usb1/1-7/1-7:1.1/0003:046D:C084.0002/input/input3/event3"
+[  6061.117] (II) XINPUT: Adding extended input device "Logitech G203 Prodigy Gaming Mouse Keyboard" (type: KEYBOARD, id 12)
+[  6061.118] (II) event3  - Logitech G203 Prodigy Gaming Mouse Keyboard: is tagged by udev as: Keyboard
+[  6061.118] (II) event3  - Logitech G203 Prodigy Gaming Mouse Keyboard: device is a keyboard
+[  6061.118] (II) config/udev: Adding input device Logitech G203 Prodigy Gaming Mouse Consumer Control (/dev/input/event4)
+[  6061.118] (**) Logitech G203 Prodigy Gaming Mouse Consumer Control: Applying InputClass "libinput keyboard catchall"
+[  6061.118] (II) Using input driver 'libinput' for 'Logitech G203 Prodigy Gaming Mouse Consumer Control'
+[  6061.119] (II) systemd-logind: got fd for /dev/input/event4 13:68 fd 32 paused 0
+[  6061.119] (**) Logitech G203 Prodigy Gaming Mouse Consumer Control: always reports core events
+[  6061.119] (**) Option "Device" "/dev/input/event4"
+[  6061.119] (**) Option "_source" "server/udev"
+[  6061.120] (II) event4  - Logitech G203 Prodigy Gaming Mouse Consumer Control: is tagged by udev as: Keyboard
+[  6061.120] (II) event4  - Logitech G203 Prodigy Gaming Mouse Consumer Control: device is a keyboard
+[  6061.120] (II) event4  - Logitech G203 Prodigy Gaming Mouse Consumer Control: device removed
+[  6061.120] (II) libinput: Logitech G203 Prodigy Gaming Mouse Consumer Control: needs a virtual subdevice
+[  6061.120] (**) Option "config_info" "udev:/sys/devices/pci0000:00/0000:00:01.3/0000:03:00.0/usb1/1-7/1-7:1.1/0003:046D:C084.0002/input/input4/event4"
+[  6061.120] (II) XINPUT: Adding extended input device "Logitech G203 Prodigy Gaming Mouse Consumer Control" (type: MOUSE, id 13)
+[  6061.120] (**) Option "AccelerationScheme" "none"
+[  6061.120] (**) Logitech G203 Prodigy Gaming Mouse Consumer Control: (accel) selected scheme none/0
+[  6061.120] (**) Logitech G203 Prodigy Gaming Mouse Consumer Control: (accel) acceleration factor: 2.000
+[  6061.120] (**) Logitech G203 Prodigy Gaming Mouse Consumer Control: (accel) acceleration threshold: 4
+[  6061.121] (II) event4  - Logitech G203 Prodigy Gaming Mouse Consumer Control: is tagged by udev as: Keyboard
+[  6061.121] (II) event4  - Logitech G203 Prodigy Gaming Mouse Consumer Control: device is a keyboard
+[  6061.122] (II) config/udev: Adding input device Logitech G203 Prodigy Gaming Mouse System Control (/dev/input/event5)
+[  6061.122] (**) Logitech G203 Prodigy Gaming Mouse System Control: Applying InputClass "libinput keyboard catchall"
+[  6061.122] (II) Using input driver 'libinput' for 'Logitech G203 Prodigy Gaming Mouse System Control'
+[  6061.123] (II) systemd-logind: got fd for /dev/input/event5 13:69 fd 33 paused 0
+[  6061.123] (**) Logitech G203 Prodigy Gaming Mouse System Control: always reports core events
+[  6061.123] (**) Option "Device" "/dev/input/event5"
+[  6061.123] (**) Option "_source" "server/udev"
+[  6061.124] (II) event5  - Logitech G203 Prodigy Gaming Mouse System Control: is tagged by udev as: Keyboard
+[  6061.124] (II) event5  - Logitech G203 Prodigy Gaming Mouse System Control: device is a keyboard
+[  6061.124] (II) event5  - Logitech G203 Prodigy Gaming Mouse System Control: device removed
+[  6061.124] (**) Option "config_info" "udev:/sys/devices/pci0000:00/0000:00:01.3/0000:03:00.0/usb1/1-7/1-7:1.1/0003:046D:C084.0002/input/input5/event5"
+[  6061.124] (II) XINPUT: Adding extended input device "Logitech G203 Prodigy Gaming Mouse System Control" (type: KEYBOARD, id 14)
+[  6061.125] (II) event5  - Logitech G203 Prodigy Gaming Mouse System Control: is tagged by udev as: Keyboard
+[  6061.125] (II) event5  - Logitech G203 Prodigy Gaming Mouse System Control: device is a keyboard
+[  6061.126] (II) config/udev: Adding input device HDA ATI HDMI HDMI/DP,pcm=3 (/dev/input/event11)
+[  6061.126] (II) No input driver specified, ignoring this device.
+[  6061.126] (II) This device may have been added with another device file.
+[  6061.126] (II) config/udev: Adding input device HDA ATI HDMI HDMI/DP,pcm=7 (/dev/input/event12)
+[  6061.126] (II) No input driver specified, ignoring this device.
+[  6061.126] (II) This device may have been added with another device file.
+[  6061.126] (II) config/udev: Adding input device HDA ATI HDMI HDMI/DP,pcm=8 (/dev/input/event13)
+[  6061.126] (II) No input driver specified, ignoring this device.
+[  6061.126] (II) This device may have been added with another device file.
+[  6061.126] (II) config/udev: Adding input device HDA ATI HDMI HDMI/DP,pcm=9 (/dev/input/event14)
+[  6061.126] (II) No input driver specified, ignoring this device.
+[  6061.126] (II) This device may have been added with another device file.
+[  6061.127] (II) config/udev: Adding input device HDA ATI HDMI HDMI/DP,pcm=10 (/dev/input/event15)
+[  6061.127] (II) No input driver specified, ignoring this device.
+[  6061.127] (II) This device may have been added with another device file.
+[  6061.127] (II) config/udev: Adding input device HDA ATI HDMI HDMI/DP,pcm=11 (/dev/input/event16)
+[  6061.127] (II) No input driver specified, ignoring this device.
+[  6061.127] (II) This device may have been added with another device file.
+[  6061.127] (II) config/udev: Adding input device HD-Audio Generic Front Mic (/dev/input/event17)
+[  6061.127] (II) No input driver specified, ignoring this device.
+[  6061.127] (II) This device may have been added with another device file.
+[  6061.127] (II) config/udev: Adding input device HD-Audio Generic Rear Mic (/dev/input/event18)
+[  6061.127] (II) No input driver specified, ignoring this device.
+[  6061.127] (II) This device may have been added with another device file.
+[  6061.128] (II) config/udev: Adding input device HD-Audio Generic Line (/dev/input/event19)
+[  6061.128] (II) No input driver specified, ignoring this device.
+[  6061.128] (II) This device may have been added with another device file.
+[  6061.128] (II) config/udev: Adding input device HD-Audio Generic Line Out (/dev/input/event20)
+[  6061.128] (II) No input driver specified, ignoring this device.
+[  6061.128] (II) This device may have been added with another device file.
+[  6061.128] (II) config/udev: Adding input device HD-Audio Generic Front Headphone (/dev/input/event21)
+[  6061.128] (II) No input driver specified, ignoring this device.
+[  6061.128] (II) This device may have been added with another device file.
+[  6061.128] (II) config/udev: Adding input device PC Speaker (/dev/input/event9)
+[  6061.128] (II) No input driver specified, ignoring this device.
+[  6061.128] (II) This device may have been added with another device file.
+[  6061.131] (**) SIGMACHIP USB Keyboard Consumer Control: Applying InputClass "libinput keyboard catchall"
+[  6061.131] (II) Using input driver 'libinput' for 'SIGMACHIP USB Keyboard Consumer Control'
+[  6061.131] (II) systemd-logind: returning pre-existing fd for /dev/input/event7 13:71
+[  6061.131] (**) SIGMACHIP USB Keyboard Consumer Control: always reports core events
+[  6061.131] (**) Option "Device" "/dev/input/event7"
+[  6061.131] (**) Option "_source" "_driver/libinput"
+[  6061.131] (II) libinput: SIGMACHIP USB Keyboard Consumer Control: is a virtual subdevice
+[  6061.131] (**) Option "config_info" "udev:/sys/devices/pci0000:00/0000:00:01.3/0000:03:00.0/usb1/1-10/1-10:1.1/0003:1C4F:0002.0006/input/input25/event7"
+[  6061.131] (II) XINPUT: Adding extended input device "SIGMACHIP USB Keyboard Consumer Control" (type: KEYBOARD, id 15)
+[  6061.131] (**) Logitech G203 Prodigy Gaming Mouse Consumer Control: Applying InputClass "libinput keyboard catchall"
+[  6061.131] (II) Using input driver 'libinput' for 'Logitech G203 Prodigy Gaming Mouse Consumer Control'
+[  6061.131] (II) systemd-logind: returning pre-existing fd for /dev/input/event4 13:68
+[  6061.131] (**) Logitech G203 Prodigy Gaming Mouse Consumer Control: always reports core events
+[  6061.131] (**) Option "Device" "/dev/input/event4"
+[  6061.131] (**) Option "_source" "_driver/libinput"
+[  6061.131] (II) libinput: Logitech G203 Prodigy Gaming Mouse Consumer Control: is a virtual subdevice
+[  6061.131] (**) Option "config_info" "udev:/sys/devices/pci0000:00/0000:00:01.3/0000:03:00.0/usb1/1-7/1-7:1.1/0003:046D:C084.0002/input/input4/event4"
+[  6061.131] (II) XINPUT: Adding extended input device "Logitech G203 Prodigy Gaming Mouse Consumer Control" (type: KEYBOARD, id 16)
