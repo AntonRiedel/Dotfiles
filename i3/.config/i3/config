@@ -85,6 +85,7 @@ exec --no-startup-id nitrogen --restore
 exec --no-startup-id compton
 exec --no-startup-id dunst
 exec --no-startup-id unclutter --jitter 20 --ignore-scrolling
+exec --no-startup-id conky
 
 ##Keybindings for programs
 bindsym $mod+Return exec $TERMINAL
