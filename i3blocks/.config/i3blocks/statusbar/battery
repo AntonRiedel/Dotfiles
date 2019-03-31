@@ -17,7 +17,7 @@ case $BLOCK_BUTTON in
 ⚡: charged" ;;
 esac
 
-if [ "$(cat /etc/hostname)" == "Mars" ]; then
+if [ "$(hostname)" == "Mars" ]; then
     BAT="BAT0"
 else
     BAT="BAT1"

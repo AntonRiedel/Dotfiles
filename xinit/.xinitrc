@@ -3,12 +3,12 @@
 #     File Name           :     .xinitrc
 #     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
 #     Creation Date       :     [2019-02-23 19:39]
-#     Last Modified       :     [2019-03-13 17:38]
+#     Last Modified       :     [2019-03-31 18:37]
 #     Description         :     Start Xorg
 ###############################################################################
 
 #set keyboard
-if [ "$(cat /etc/hostname)" == "Mars" ];then
+if [ "$(hostname)" == "Mars" ];then
     setxkbmap gb
 else
     setxkbmap de
