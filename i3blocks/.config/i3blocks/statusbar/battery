@@ -26,8 +26,9 @@ fi
 if [ -d /sys/class/power_supply/$BAT ]; then
     capacity=$(cat /sys/class/power_supply/$BAT/capacity)
     status=$(cat /sys/class/power_supply/$BAT/status)
+    wear=$(bc <<< "scale=2; $(cat /sys/class/power_supply/$BAT/charge_full) / $(cat /sys/class/power_supply/$BAT/charge_full_design)")
 else
     echo "⛽" || exit
 fi
 
-echo $(echo "$status" | sed -e "s/,//g;s/Discharging/🔋/;s/Charging/🔌/;s/Unknown/♻️/;s/Full/⚡/;s/ 0*/ /g;s/ :/ /g") $(echo "$capacity" | sed -e 's/$/%/')
+echo $(echo "$status" | sed -e "s/,//g;s/Discharging/🔋/;s/Charging/🔌/;s/Unknown/♻️/;s/Full/⚡/;s/ 0*/ /g;s/ :/ /g") $(echo "$capacity" | sed -e 's/$/%/') $(echo \($wear\))
