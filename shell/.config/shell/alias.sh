@@ -2,7 +2,7 @@
 #     File Name           :     alias.sh
 #     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
 #     Creation Date       :     [2019-03-12 16:54]
-#     Last Modified       :     [2019-03-13 17:23]
+#     Last Modified       :     [2019-04-01 17:16]
 #     Description         :     Aliases for the shell
 ###############################################################################
 
@@ -11,16 +11,17 @@ alias ls="ls --color=auto"
 alias ll="ls -al -h --color=auto"
 alias pdf=$READER
 alias pdf2=$READER2
-alias m="neomutt"
 alias v=$EDITOR
 alias vi=$EDITOR
 alias vim=$EDITOR
-alias vifm=$FILE
 alias vf=$FILE
+alias vif=$FILE
+alias vifm=$FILE
 alias pi="sudo pacman -S"
-alias pu="sudo pacman -Syu && yay -Sua"
+alias pu="sudo pacman -Syu && yay -Syua"
 alias pr="sudo pacman -Rns"
 alias pq="pacman -Ss"
+alias yp="yay -Ss"
 alias cu="nmcli con up --ask"
 alias vpn="sudo vpnc"
 
