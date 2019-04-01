@@ -2,7 +2,7 @@
 #     File Name           :     alias.sh
 #     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
 #     Creation Date       :     [2019-03-12 16:54]
-#     Last Modified       :     [2019-04-01 17:16]
+#     Last Modified       :     [2019-04-01 20:17]
 #     Description         :     Aliases for the shell
 ###############################################################################
 
@@ -31,6 +31,6 @@ ce() { nvim $(find $HOME/Dotfiles/* -type f | fzf); }
 #search and enter a directory (fails if you lack permissions)
 fd() { cd "$(find / -type d 2>/dev/null | fzf)" && pwd && ls; }
 #search and execute a command from history
-hs() { $(cat "$HOME/.bash_history" | sort -u | fzf); }
+hs() { $(history | awk '{ print $2 }' | sort -u | fzf); }
 #search for a process and kill it
 kp() { kill -s SIGRTMIN+15 "$(ps -e | fzf | awk '{ print $1 }')" 2>/dev/null; }
