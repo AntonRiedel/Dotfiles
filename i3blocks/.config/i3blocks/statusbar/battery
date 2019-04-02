@@ -35,4 +35,4 @@ else
     echo "⛽" || exit
 fi
 
-echo $(echo "$status" | sed -e "s/,//g;s/Discharging/🔋/;s/Charging/🔌/;s/Unknown/♻️/;s/Full/⚡/;s/ 0*/ /g;s/ :/ /g") $(echo "$capacity" | sed -e 's/$/%/') $(echo \($wear\) | sed 's/\.[0-9][0-9]/%/')
+echo $(echo "$status" | sed -e "s/,//g;s/Discharging/🔋/;s/Charging/🔌/;s/Unknown/♻️/;s/Full/⚡/;s/ 0*/ /g;s/ :/ /g") $(echo "$capacity" | sed -e 's/$/%/') $(echo \($wear\) | sed 's/\.[0-9]*/%/')
