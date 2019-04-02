@@ -2,7 +2,7 @@
 #     File Name           :     alias.sh
 #     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
 #     Creation Date       :     [2019-03-12 16:54]
-#     Last Modified       :     [2019-04-02 17:50]
+#     Last Modified       :     [2019-04-02 18:17]
 #     Description         :     Aliases for the shell
 ###############################################################################
 

@@ -2,7 +2,7 @@
 #     File Name           :     environment.sh
 #     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
 #     Creation Date       :     [2019-03-12 16:42]
-#     Last Modified       :     [2019-04-02 17:37]
+#     Last Modified       :     [2019-04-02 18:16]
 #     Description         :     Environment variables for the shell
 ###############################################################################
 
@@ -26,7 +26,7 @@ if [ "$(hostname)" == "Mars" ]; then
 else
     export BROWSER="/usr/bin/firefox"
 fi
-export BROWSER2="vimb"
+export BROWSER2="qutebrowser"
 
 #reader for pdf files
 export READER="/usr/bin/zathura"
