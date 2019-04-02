@@ -2,7 +2,7 @@
 #     File Name           :     alias.sh
 #     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
 #     Creation Date       :     [2019-03-12 16:54]
-#     Last Modified       :     [2019-04-01 20:17]
+#     Last Modified       :     [2019-04-02 17:50]
 #     Description         :     Aliases for the shell
 ###############################################################################
 
@@ -21,6 +21,7 @@ alias pi="sudo pacman -S"
 alias pu="sudo pacman -Syu && yay -Syua"
 alias pr="sudo pacman -Rns"
 alias pq="pacman -Ss"
+alias yi="yay -S"
 alias yp="yay -Ss"
 alias cu="nmcli con up --ask"
 alias vpn="sudo vpnc"
