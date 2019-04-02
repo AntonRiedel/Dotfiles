@@ -19,16 +19,20 @@ esac
 
 if [ "$(hostname)" == "Mars" ]; then
     BAT="BAT0"
+    charge_full="$(cat /sys/class/power_supply/BAT0/energy_full)"
+    charge_full_design="$(cat /sys/class/power_supply/BAT0/energy_full_design)"
 else
     BAT="BAT1"
+    charge_full="$(cat /sys/class/power_supply/BAT0/charge_full)"
+    charge_full_design="$(cat /sys/class/power_supply/BAT0/charge_full_design)"
 fi
 
 if [ -d /sys/class/power_supply/$BAT ]; then
     capacity=$(cat /sys/class/power_supply/$BAT/capacity)
     status=$(cat /sys/class/power_supply/$BAT/status)
-    wear=$(bc <<< "scale=2; $(cat /sys/class/power_supply/$BAT/charge_full) / $(cat /sys/class/power_supply/$BAT/charge_full_design)")
+    wear=$(bc <<< "scale=2; ($charge_full / $charge_full_design)*100")
 else
     echo "⛽" || exit
 fi
 
-echo $(echo "$status" | sed -e "s/,//g;s/Discharging/🔋/;s/Charging/🔌/;s/Unknown/♻️/;s/Full/⚡/;s/ 0*/ /g;s/ :/ /g") $(echo "$capacity" | sed -e 's/$/%/') $(echo \($wear\))
+echo $(echo "$status" | sed -e "s/,//g;s/Discharging/🔋/;s/Charging/🔌/;s/Unknown/♻️/;s/Full/⚡/;s/ 0*/ /g;s/ :/ /g") $(echo "$capacity" | sed -e 's/$/%/') $(echo \($wear\) | sed 's/\.[0-9][0-9]/%/')
