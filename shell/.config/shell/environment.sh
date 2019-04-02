@@ -2,7 +2,7 @@
 #     File Name           :     environment.sh
 #     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
 #     Creation Date       :     [2019-03-12 16:42]
-#     Last Modified       :     [2019-04-01 17:07]
+#     Last Modified       :     [2019-04-02 17:37]
 #     Description         :     Environment variables for the shell
 ###############################################################################
 
@@ -21,12 +21,12 @@ export MYVIMCONFIG=$HOME/.config/nvim/config
 #it will be started instead of /usr/bin/vifm since it appears first in PATH
 export FILE="$HOME/.local/bin/vifm"
 
-export BROWSER="qutebrowser"
 if [ "$(hostname)" == "Mars" ]; then
-    export BROWSER2="/usr/bin/iceweasel"
+    export BROWSER="/usr/bin/iceweasel"
 else
-    export BROWSER2="/usr/bin/firefox"
+    export BROWSER="/usr/bin/firefox"
 fi
+export BROWSER2="vimb"
 
 #reader for pdf files
 export READER="/usr/bin/zathura"
