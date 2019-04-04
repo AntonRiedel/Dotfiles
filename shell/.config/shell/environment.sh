@@ -2,7 +2,7 @@
 #     File Name           :     environment.sh
 #     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
 #     Creation Date       :     [2019-03-12 16:42]
-#     Last Modified       :     [2019-04-02 20:16]
+#     Last Modified       :     [2019-04-04 10:05]
 #     Description         :     Environment variables for the shell
 ###############################################################################
 
@@ -10,7 +10,6 @@
 export PATH=$HOME/.local/bin:$PATH
 
 export TERMINAL="/usr/bin/termite"
-export TERMINAL2="/usr/bin/lxterminal"
 
 export EDITOR="/usr/bin/nvim"
 export VISUAL=$EDITOR

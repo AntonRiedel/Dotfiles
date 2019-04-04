@@ -17,14 +17,14 @@ case $BLOCK_BUTTON in
 ⚡: charged" ;;
 esac
 
-if [ "$(hostname)" == "Mars" ]; then
-    BAT="BAT0"
-    charge_full="$(cat /sys/class/power_supply/BAT0/energy_full)"
-    charge_full_design="$(cat /sys/class/power_supply/BAT0/energy_full_design)"
-else
+if [ "$(hostname)" == "Jupiter" ]; then
     BAT="BAT1"
     charge_full="$(cat /sys/class/power_supply/BAT1/charge_full)"
     charge_full_design="$(cat /sys/class/power_supply/BAT1/charge_full_design)"
+else
+    BAT="BAT0"
+    charge_full="$(cat /sys/class/power_supply/BAT0/energy_full)"
+    charge_full_design="$(cat /sys/class/power_supply/BAT0/energy_full_design)"
 fi
 
 if [ -d /sys/class/power_supply/$BAT ]; then
