@@ -9,7 +9,7 @@
 #################################################################################
 
 case $BLOCK_BUTTON in
-    1) pgrep -x dunst >/dev/null && notify-send "<b>🔋 Battery module:</b>
+1) pgrep -x dunst >/dev/null && notify-send "<b>🔋 Battery module:</b>
 ⛽: no battery
 🔋: discharging
 ♻: stagnant charge
@@ -17,26 +17,12 @@ case $BLOCK_BUTTON in
 ⚡: charged" ;;
 esac
 
-#if [ "$(hostname)" == "Jupiter" ]; then
-    #BAT="BAT1"
-    #charge_full="$(cat /sys/class/power_supply/BAT1/charge_full)"
-    #charge_full_design="$(cat /sys/class/power_supply/BAT1/charge_full_design)"
-#else
-    #BAT="BAT0"
-    #charge_full="$(cat /sys/class/power_supply/BAT0/energy_full)"
-    #charge_full_design="$(cat /sys/class/power_supply/BAT0/energy_full_design)"
-#fi
-
-#if [ -d /sys/class/power_supply/$BAT ]; then
-    #capacity=$(cat /sys/class/power_supply/$BAT/capacity)
-    #status=$(cat /sys/class/power_supply/$BAT/status)
-    #wear=$(bc <<< "scale=2; ($charge_full / $charge_full_design)*100")
-if [ -d /sys/class/power_supply/BAT? ];then
+if [ -d /sys/class/power_supply/BAT? ]; then
     capacity=$(cat /sys/class/power_supply/BAT?/capacity)
     status=$(cat /sys/class/power_supply/BAT?/status)
     charge_full="$(cat /sys/class/power_supply/BAT?//*_full)"
     charge_full_design="$(cat /sys/class/power_supply/BAT?/*_full_design)"
-    wear=$(bc <<< "scale=2; ($charge_full / $charge_full_design)*100")
+    wear=$(bc <<<"scale=2; ($charge_full / $charge_full_design)*100")
 else
     echo "⛽" || exit
 fi
