@@ -2,7 +2,7 @@
 "     File Name           :     04.keybinding.vim
 "     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
 "     Creation Date       :     [2019-02-23 19:34]
-"     Last Modified       :     [2019-03-28 10:39]
+"     Last Modified       :     [2019-04-05 00:14]
 "     Description         :     Configuration for keybindings
 "------------------------------------------------------------------------------
 
@@ -14,7 +14,7 @@ nnoremap <leader>ev :Files $MYVIMCONFIG<CR>
 inoremap jj <ESC>
 
 "write file with sudo (using suda plugin)
-nnoremap sw :w suda://%<CR>
+cnoremap sw :w suda://%<CR>
 
 "move between splits (even if there is a terminal running)
 "(source: https://medium.com/@garoth/neovim-terminal-usecases-tricks-8961e5ac19b9)
@@ -86,7 +86,4 @@ autocmd FileType tex,markdown nnoremap <leader>pv :silent !$READER %:r.pdf &<CR>
 autocmd FileType tex,markdown nnoremap <leader>ppv :silent !$READER2 %:r.pdf &<CR>
 
 "execute python scripts easily
-autocmd FileType python let g:neoterm_repl_python=Python
-
-autocmd FileType python nnoremap <leader>p :TREPLSendFile<CR>
-"autocmd FileType python nnoremap <leader>p :botright :Tnew<CR>:TREPLSendFile<CR>
+autocmd FileType python nnoremap <leader>p :T python %<CR>

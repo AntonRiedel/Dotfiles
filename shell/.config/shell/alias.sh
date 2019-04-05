@@ -2,7 +2,7 @@
 #     File Name           :     alias.sh
 #     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
 #     Creation Date       :     [2019-03-12 16:54]
-#     Last Modified       :     [2019-04-02 18:17]
+#     Last Modified       :     [2019-04-04 23:31]
 #     Description         :     Aliases for the shell
 ###############################################################################
 
@@ -14,6 +14,7 @@ alias pdf2=$READER2
 alias v=$EDITOR
 alias vi=$EDITOR
 alias vim=$EDITOR
+alias diff="$EDITOR -d"
 alias vf=$FILE
 alias vif=$FILE
 alias vifm=$FILE
