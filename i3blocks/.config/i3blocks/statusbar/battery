@@ -9,12 +9,12 @@
 #################################################################################
 
 case $BLOCK_BUTTON in
-1) pgrep -x dunst >/dev/null && notify-send "<b>🔋 Battery module:</b>
-⛽: no battery
-🔋: discharging
+3) pgrep -x dunst >/dev/null && notify-send "🔋 Battery module" "🔋: discharging
+🛑: not charging
 ♻: stagnant charge
 🔌: charging
-⚡: charged" ;;
+⚡: charged
+❗: battery very low!" ;;
 esac
 
 if [ -d /sys/class/power_supply/BAT? ]; then

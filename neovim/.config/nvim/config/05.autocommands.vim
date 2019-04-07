@@ -2,7 +2,7 @@
 "     File Name           :     05.autocommands.vim
 "     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
 "     Creation Date       :     [2019-02-23 19:35]
-"     Last Modified       :     [2019-02-26 15:41]
+"     Last Modified       :     [2019-04-07 11:09]
 "     Description         :     Configuration for autocommands
 "--------------------------------------------------------------------------------
 
@@ -13,7 +13,8 @@ augroup myvimrc
 augroup END
 
 "Autoformat
-autocmd BufWritePre *.c,*.h,*.cpp,*.tex,*.md,*.py,*.sh Neoformat
+autocmd BufWritePre * Neoformat
+"autocmd BufWritePre *.c,*.h,*.cpp,*.tex,*.md,*.py,*.sh Neoformat
 
 "Neomake
 autocmd BufWritePost * Neomake

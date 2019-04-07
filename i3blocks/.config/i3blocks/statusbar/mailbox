@@ -8,10 +8,9 @@
 ###############################################################################
 
 case $BLOCK_BUTTON in
-	3) $TERMINAL -e neomutt ;;
-	2) setsid $HOME/.config/mutt/etc/mailsync.sh >/dev/null & ;;
-	1) pgrep -x dunst >/dev/null && notify-send "<b>📬 Mail module:</b>
-- Shows unread mail
+3) $TERMINAL -e neomutt ;;
+2) setsid $HOME/.config/mutt/etc/mailsync.sh >/dev/null &;;
+1) pgrep -x dunst >/dev/null && notify-send "📬 Mail module" "\- Shows unread mail
 - Shows 🔃 if syncing mail
 - Left click opens neomutt
 - Middle click syncs mail" ;;
