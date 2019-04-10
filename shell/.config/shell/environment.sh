@@ -2,7 +2,7 @@
 #     File Name           :     environment.sh
 #     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
 #     Creation Date       :     [2019-03-12 16:42]
-#     Last Modified       :     [2019-04-04 10:05]
+#     Last Modified       :     [2019-04-10 20:58]
 #     Description         :     Environment variables for the shell
 ###############################################################################
 
@@ -29,7 +29,7 @@ fi
 
 #backup browser
 if [ "$(hostname)" == "Mars" ]; then
-    export BROWSER2="/usr/bin/iceweasel"
+    export BROWSER2="/usr/bin/waterfox"
 else
     export BROWSER2="/usr/bin/firefox"
 fi

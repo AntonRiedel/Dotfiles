@@ -10,21 +10,14 @@
 
 case $BLOCK_BUTTON in
 3) pgrep -x dunst >/dev/null && notify-send "🔋 Battery module" "🔋: discharging
-🛑: not charging
-♻: stagnant charge
 🔌: charging
 ⚡: charged
-❗: battery very low!" ;;
+♻:: stagnant charge
+⛽: no battery" ;;
 esac
 
 if [ -d /sys/class/power_supply/BAT? ]; then
-    capacity=$(cat /sys/class/power_supply/BAT?/capacity)
-    status=$(cat /sys/class/power_supply/BAT?/status)
-    charge_full="$(cat /sys/class/power_supply/BAT?//*_full)"
-    charge_full_design="$(cat /sys/class/power_supply/BAT?/*_full_design)"
-    wear=$(bc <<<"scale=2; ($charge_full / $charge_full_design)*100")
+    acpi -b | awk '{print $3,$4,$5}' | sed -e 's/,//g' -e 's/,//g;s/Discharging/🔋/;s/Charging/🔌/;s/Unknown/♻️/;s/Full/⚡/;s/ 0*/ /g;s/ :/ /g'
 else
     echo "⛽" || exit
 fi
-
-echo $(echo "$status" | sed -e "s/,//g;s/Discharging/🔋/;s/Charging/🔌/;s/Unknown/♻️/;s/Full/⚡/;s/ 0*/ /g;s/ :/ /g") $(echo "$capacity" | sed -e 's/$/%/') $(echo \($wear\) | sed 's/\.[0-9]*/%/')

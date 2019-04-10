@@ -2,7 +2,7 @@ command=$HOME/.config/i3blocks/statusbar/$BLOCK_NAME
 separator_block_width=15
 
 [mailbox]
-interval=30
+interval=120
 signal=12
 label=📬
 
@@ -15,18 +15,18 @@ interval=10
 signal=10
 
 [cpu]
-interval=15
+interval=30
 label=💻
 
 [disk]
-interval=60
+interval=120
 command=$HOME/.config/i3blocks/statusbar/disk $HOME 🏠
 
 [internet]
 interval=10
 
 [battery]
-interval=10
+interval=120
 
 [clock]
 label=📅
