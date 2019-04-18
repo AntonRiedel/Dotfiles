@@ -17,7 +17,7 @@ case $BLOCK_BUTTON in
 esac
 
 if [ -d /sys/class/power_supply/BAT? ]; then
-    acpi -b | awk '{print $3,$4,$5}' | sed -e 's/,//g' -e 's/,//g;s/Discharging/🔋/;s/Charging/🔌/;s/Unknown/♻️/;s/Full/⚡/;s/ 0*/ /g;s/ :/ /g'
+    acpi -b | awk '{print $3,$4,$5}' | sed -e 's/,//g;s/Discharging/🔋/;s/Charging/🔌/;s/Unknown/♻️/;s/Full/⚡/g'
 else
     echo "⛽" || exit
 fi

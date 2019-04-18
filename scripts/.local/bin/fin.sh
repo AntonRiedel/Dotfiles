@@ -3,11 +3,12 @@
 #     File Name           :     fin.sh
 #     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
 #     Creation Date       :     [2019-02-23 19:42]
-#     Last Modified       :     [2019-03-16 17:04]
+#     Last Modified       :     [2019-04-16 12:11]
 #     Description         :     Shutdown, reboot or kill current i3 instance
 #################################################################################
 
 ClearCache() {
+    history -c
     rm -rf $HOME/.cache/*
 }
 
