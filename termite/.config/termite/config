@@ -4,7 +4,7 @@ clickable_url                = true
 icon_name                    = terminal
 cursor_blink                 = off
 mouse_autohide               = true
-browser                      = $BROWSER2
+browser                      = /usr/bin/iceweasel
 
 [colors]
 # Base16 Solarized Dark

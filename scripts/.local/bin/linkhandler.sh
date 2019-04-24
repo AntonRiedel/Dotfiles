@@ -3,7 +3,7 @@
 #     File Name           :     linkhandler.sh
 #     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
 #     Creation Date       :     [2019-02-25 18:28]
-#     Last Modified       :     [2019-02-27 19:19]
+#     Last Modified       :     [2019-04-24 20:50]
 #     Description         :     Feed script a url or file location.
 #								If an image, it will view in sxiv,
 #								if a video or gif, it will view in mpv
