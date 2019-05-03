@@ -2,7 +2,7 @@
 #     File Name           :     environment.sh
 #     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
 #     Creation Date       :     [2019-03-12 16:42]
-#     Last Modified       :     [2019-04-24 17:18]
+#     Last Modified       :     [2019-05-03 08:55]
 #     Description         :     Environment variables for the shell
 ###############################################################################
 
@@ -11,7 +11,7 @@ export PATH=$HOME/.local/bin:$PATH
 
 export TERMINAL="/usr/bin/termite"
 
-export EDITOR="/usr/bin/nvim"
+export EDITOR="nvim"
 export VISUAL=$EDITOR
 export MYVIMRC=$HOME/.config/nvim/init.vim
 export MYVIMCONFIG=$HOME/.config/nvim/config
