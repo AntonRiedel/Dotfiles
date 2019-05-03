@@ -2,7 +2,7 @@
 "     File Name           :     01.plugin.vim
 "     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
 "     Creation Date       :     [2019-02-23 19:31]
-"     Last Modified       :     [2019-03-24 18:53]
+"     Last Modified       :     [2019-05-03 12:44]
 "     Description         :     Configuration for plugins (using vim-plug)
 "------------------------------------------------------------------------------
 
@@ -43,6 +43,8 @@ Plug 'honza/vim-snippets'
 
 "Plug 'lervag/vimtex', { 'for': '.tex' }
 Plug 'donRaphaco/neotex', { 'for': '.tex' }
+
+Plug 'junegunn/goyo.vim'
 
 Plug 'mklabs/vim-cowsay'
 Plug 'fadein/vim-FIGlet'
