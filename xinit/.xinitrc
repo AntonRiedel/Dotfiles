@@ -3,11 +3,11 @@
 #     File Name           :     .xinitrc
 #     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
 #     Creation Date       :     [2019-02-23 19:39]
-#     Last Modified       :     [2019-05-19 14:21]
+#     Last Modified       :     [2019-05-19 14:46]
 #     Description         :     Start Xorg
 ###############################################################################
 
-#set keyboard
+#set keyboard layout
 if [ "$(hostname)" == "Mars" ];then
     setxkbmap gb
 else
@@ -23,11 +23,20 @@ xset s off
 
 #Set default desktop layout
 $HOME/.screenlayout/Standard.sh
+
 #Set default wallpaper
-nitrogen --restore
-#start background applications
+xwallpaper --maximize $HOME/.config/i3/wallpaper/default
+
+#start compositor
 compton &
+
+#start notification daemon
 dunst &
+
+#set window manager agnostic keybindings
+sxhkd &
+
+#you do not need a mouse
 unclutter --jitter 20 --ignore-scrolling &
 
 #start Window Manager

@@ -77,6 +77,3 @@ bar {
         mode dock
         modifier None
 }
-
-##Start applications on launch with autostart script
-exec --no-startup-id $HOME/.config/i3/autostart.sh
