@@ -2,7 +2,7 @@
 "     File Name           :     01.plugin.vim
 "     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
 "     Creation Date       :     [2019-02-23 19:31]
-"     Last Modified       :     [2019-05-03 12:44]
+"     Last Modified       :     [2019-05-19 14:30]
 "     Description         :     Configuration for plugins (using vim-plug)
 "------------------------------------------------------------------------------
 
@@ -12,6 +12,7 @@ let g:plug_timeout = 90
 call plug#begin('$HOME/.vim/plugged')
 Plug 'iCyMind/NeoSolarized'
 Plug 'mboughaba/i3config.vim'
+Plug 'kovetskiy/sxhkd-vim'
 Plug 'itchyny/lightline.vim'
 Plug 'mhinz/vim-signify'
 

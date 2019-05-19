@@ -1,0 +1,27 @@
+##Keybindings for programs
+super + Return
+	$TERMINAL
+super + {_,shift} + b
+	{$BROWSER,$BROWSER2}
+super + {_,shift} + n
+	{$TERMINAL -e $FILE,$HOME/.local/bin/nextcloud}
+super + v
+	$TERMINAL -e newsboat
+super + c
+	$TERMINAL -e calcurse
+
+##Media Keybindings
+super + {_,shift} + a
+	{$TERMINAL -e pulsemixer,sound.sh mut}
+super + {_,shift} + p
+	{sound.sh up 10,sound.sh down 10}
+
+##Email Keybindings
+super + {_,shift} + m
+	{$TERMINAL -e neomutt,mailsync}
+
+##Menu Keybindings
+super + d
+	dmenu_run
+super + g
+	passmenu

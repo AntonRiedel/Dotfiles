@@ -33,10 +33,10 @@ bindsym $mod+k focus up
 bindsym $mod+l focus right
 bindsym $mod+h focus left
 # move focused window
-bindsym $mod+Shift+j move down
-bindsym $mod+Shift+k move up
-bindsym $mod+Shift+l move right
-bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down 30
+bindsym $mod+Shift+k move up 30
+bindsym $mod+Shift+l move right 30
+bindsym $mod+Shift+h move left 30
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
 # change container layout (only using tabbed and toglle split)
@@ -80,28 +80,3 @@ bar {
 
 ##Start applications on launch with autostart script
 exec --no-startup-id $HOME/.config/i3/autostart.sh
-
-##Keybindings for programs
-bindsym $mod+Return exec $TERMINAL
-bindsym $mod+b exec $BROWSER
-bindsym $mod+Shift+b exec $BROWSER2
-bindsym $mod+n exec $TERMINAL -e $FILE
-bindsym $mod+Shift+n exec $HOME/.local/bin/nextcloud
-bindsym $mod+v exec $TERMINAL -e newsboat
-bindsym $mod+c exec $TERMINAL -e calcurse
-
-##Media Keybindings
-bindsym $mod+a exec $TERMINAL -e pulsemixer
-bindsym $mod+Shift+a exec --no-startup-id sound.sh mute
-bindsym $mod+p exec --no-startup-id sound.sh up 10
-bindsym $mod+Shift+p exec --no-startup-id sound.sh down 10
-
-##Email Keybindings
-bindsym $mod+m exec $TERMINAL -e neomutt
-bindsym $mod+Shift+m exec --no-startup-id mailsync
-
-##Menu Keybindings
-bindsym $mod+d exec --no-startup-id dmenu_run
-bindsym $mod+g exec --no-startup-id passmenu
-
-# vim: set ft=i3config:
