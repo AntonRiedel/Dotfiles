@@ -3,7 +3,7 @@
 #     File Name           :     .xinitrc
 #     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
 #     Creation Date       :     [2019-02-23 19:39]
-#     Last Modified       :     [2019-05-19 14:46]
+#     Last Modified       :     [2019-05-19 21:06]
 #     Description         :     Start Xorg
 ###############################################################################
 
@@ -22,7 +22,7 @@ xset -dpms
 xset s off
 
 #Set default desktop layout
-$HOME/.screenlayout/Standard.sh
+$HOME/.screenlayout/default
 
 #Set default wallpaper
 xwallpaper --maximize $HOME/.config/i3/wallpaper/default
@@ -40,4 +40,5 @@ sxhkd &
 unclutter --jitter 20 --ignore-scrolling &
 
 #start Window Manager
-exec i3
+#exec i3
+exec dwm

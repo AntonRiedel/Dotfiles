@@ -22,7 +22,7 @@ bindsym $mod+x exec --no-startup-id fin.sh
 ##Dropdown terminal running tmux
 for_window [instance="tmux"] floating enable, sticky enable, move position center
 for_window [instance="tmux"] resize set 1000 680, border pixel 10
-bindsym $mod+u exec --no-startup-id $TERMINAL --name=tmux -e "tmux new-session -A -s 'DROP'"
+bindsym $mod+u exec --no-startup-id $TERMINAL -n=tmux -e tmux new-session -A -s 'DROP'
 
 ##Shortcuts for window manipulation
 # kill focused window
@@ -77,3 +77,5 @@ bar {
         mode dock
         modifier None
 }
+
+bindsym $mod+g exec passmenu
