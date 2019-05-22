@@ -3,7 +3,7 @@
 #     File Name           :     .xinitrc
 #     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
 #     Creation Date       :     [2019-02-23 19:39]
-#     Last Modified       :     [2019-05-19 21:06]
+#     Last Modified       :     [2019-05-21 21:19]
 #     Description         :     Start Xorg
 ###############################################################################
 
@@ -25,7 +25,7 @@ xset s off
 $HOME/.screenlayout/default
 
 #Set default wallpaper
-xwallpaper --maximize $HOME/.config/i3/wallpaper/default
+xwallpaper --maximize $HOME/.config/wallpaper/default
 
 #start compositor
 compton &

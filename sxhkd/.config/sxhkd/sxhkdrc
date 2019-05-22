@@ -1,6 +1,6 @@
 ##Keybindings for programs
-super + {_,shift} + Return
-	{$TERMINAL,$TERMINAL2}
+super +  Return
+	$TERMINAL
 super + {_,shift} + b
 	{$BROWSER,$BROWSER2}
 super + {_,shift} + n
