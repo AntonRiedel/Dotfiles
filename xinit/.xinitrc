@@ -3,7 +3,7 @@
 #     File Name           :     .xinitrc
 #     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
 #     Creation Date       :     [2019-02-23 19:39]
-#     Last Modified       :     [2019-05-21 21:19]
+#     Last Modified       :     [2019-05-24 18:49]
 #     Description         :     Start Xorg
 ###############################################################################
 
@@ -35,6 +35,9 @@ dunst &
 
 #set window manager agnostic keybindings
 sxhkd &
+
+#activate statusbar
+bar.sh &
 
 #you do not need a mouse
 unclutter --jitter 20 --ignore-scrolling &
