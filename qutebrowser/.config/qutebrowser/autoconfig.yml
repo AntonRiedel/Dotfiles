@@ -4,7 +4,7 @@
 config_version: 2
 settings:
   backend:
-    global: webkit
+    global: webengine
   completion.web_history.max_items:
     global: 0
   content.cookies.accept:

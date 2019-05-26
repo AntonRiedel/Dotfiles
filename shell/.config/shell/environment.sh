@@ -2,7 +2,7 @@
 #     File Name           :     environment.sh
 #     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
 #     Creation Date       :     [2019-03-12 16:42]
-#     Last Modified       :     [2019-05-22 18:19]
+#     Last Modified       :     [2019-05-26 14:13]
 #     Description         :     Environment variables for the shell
 ###############################################################################
 
@@ -10,7 +10,6 @@
 export PATH=$HOME/.local/bin:$PATH
 
 export TERMINAL="st"
-#export TERMINAL2=
 
 export EDITOR="nvim"
 export VISUAL=$EDITOR
@@ -22,18 +21,10 @@ export MYVIMCONFIG=$HOME/.config/nvim/config
 export FILE="$HOME/.local/bin/vifm"
 
 #main browser
-if [ "$(hostname)" == "Atlas" ]; then
-    export BROWSER="falkon"
-else
-    export BROWSER="qutebrowser"
-fi
+export BROWSER="qutebrowser"
 
 #backup browser
-if [ "$(hostname)" == "Mars" ]; then
-    export BROWSER2="iceweasel"
-else
-    export BROWSER2="firefox"
-fi
+export BROWSER2="firefox"
 
 #reader for pdf files
 export READER="zathura"

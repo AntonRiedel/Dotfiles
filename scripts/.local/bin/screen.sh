@@ -3,7 +3,7 @@
 #     File Name           :     screen.sh
 #     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
 #     Creation Date       :     [2019-02-23 19:30]
-#     Last Modified       :     [2019-05-25 12:29]
+#     Last Modified       :     [2019-05-26 14:25]
 #     Description         :     Handle desktop setup
 #################################################################################
 
