@@ -2,7 +2,7 @@
 "     File Name           :     04.keybinding.vim
 "     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
 "     Creation Date       :     [2019-02-23 19:34]
-"     Last Modified       :     [2019-04-05 00:14]
+"     Last Modified       :     [2019-05-26 14:48]
 "     Description         :     Configuration for keybindings
 "------------------------------------------------------------------------------
 
@@ -63,7 +63,7 @@ noremap <leader>sd :setlocal spell! spelllang=de_de<CR>
 noremap <leader>ss :set nospell<CR>
 
 "vifm
-nnoremap <leader>r :edit.<CR>
+nnoremap <leader>r :Vifm.<CR>
 
 "neomake
 nnoremap <leader>nm :Neomake<CR>
