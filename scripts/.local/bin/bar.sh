@@ -3,7 +3,7 @@
 #     File Name           :     autostart.sh
 #     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
 #     Creation Date       :     [2019-05-20 18:16]
-#     Last Modified       :     [2019-05-21 10:00]
+#     Last Modified       :     [2019-06-02 17:58]
 #     Description         :     DWM autostart script (for status configuration)
 ###############################################################################
 
@@ -35,11 +35,7 @@ sound() {
     fi
 }
 
-mail() {
-    du -a ~/.local/share/mail/*/INBOX/new/* 2>/dev/null | sed -n '$='
-}
-
 while true; do
-    xsetroot -name "MAIL:$(mail)|MEM:$(memory)|TEMP:$(cpu)|VOL:$(sound)|BAT:$(battery)|TIME:$(mydate)"
-    sleep 5s
+    xsetroot -name "MEM:$(memory)|TEMP:$(cpu)|VOL:$(sound)|BAT:$(battery)|TIME:$(mydate)"
+    sleep 10s
 done

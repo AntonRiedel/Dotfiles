@@ -3,7 +3,7 @@
 #     File Name           :     environment.sh
 #     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
 #     Creation Date       :     [2019-03-12 16:42]
-#     Last Modified       :     [2019-06-02 16:58]
+#     Last Modified       :     [2019-06-02 18:03]
 #     Description         :     Runs on login
 ###############################################################################
 
@@ -37,4 +37,4 @@ export FZF_DEFAULT_OPTS="--reverse --height=40%"
 echo "$0" | grep "bash$" >/dev/null && [ -f $HOME/.bashrc ] && source "$HOME/.bashrc"
 
 # Start graphical server if dwm is not already running.
-[ "$(tty)" = "/dev/tty1" ] && ! pgrep -x Xorg >/dev/null && exec startx
+[ "$(tty)" = "/dev/tty1" ] && ! pgrep -x Xorg >/dev/null && exec startx >&/dev/null
