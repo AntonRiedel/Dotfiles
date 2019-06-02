@@ -15,13 +15,13 @@ super + {_,shift} + p
 	{sound.sh up 10,sound.sh down 10}
 
 ##Email Keybinding
-super + {_,shift} + m
+super + {_,shift} + e
 	{$TERMINAL -e neomutt,$TERMINAL -e mailsync}
 
 ##Menu Keybindings
 super + x
 	fin.sh
-super + d
+super + s
 	dmenu_run
 super + g
 	$TERMINAL -e passmenu && wait 1s
