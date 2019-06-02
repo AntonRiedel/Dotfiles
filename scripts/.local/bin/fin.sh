@@ -1,9 +1,9 @@
-#! /bin/bash
+#! /bin/sh
 #################################################################################
 #     File Name           :     fin.sh
 #     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
 #     Creation Date       :     [2019-02-23 19:42]
-#     Last Modified       :     [2019-05-21 20:20]
+#     Last Modified       :     [2019-06-02 17:06]
 #     Description         :     Shutdown, reboot or kill current i3 instance
 #################################################################################
 

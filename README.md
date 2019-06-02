@@ -8,7 +8,6 @@ You can find configuration files for
 * tmux (screen multiplexer)
 * vifm (file browser)
 * dunst (notification daemon)
-* compton (compositor)
 * sxhkd (hotkey daemon)
 * htop (system monitor)
 * neofetch (system information tool)
@@ -19,11 +18,12 @@ These Dotfiles are meant to be deployed with GNU Stow (https://stevenrbaker.com/
 
 Under `old` you can find configuration files for programs I used to use such as:
 
-* i3
-* i3bar
-* termite
-* urxvt
-* xterm
-* lxterminal
-* ranger
-* zsh
+* i3 (->dwm)
+* i3bar (->build-in bar of dwm)
+* termite (->st)
+* urxvt (->st)
+* xterm (->st)
+* lxterminal (->st)
+* ranger (->vifm)
+* zsh (->bash)
+* compton (->xcompmgr)

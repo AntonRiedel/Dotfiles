@@ -3,7 +3,7 @@
 #     File Name           :     .xinitrc
 #     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
 #     Creation Date       :     [2019-02-23 19:39]
-#     Last Modified       :     [2019-06-02 16:57]
+#     Last Modified       :     [2019-06-02 17:10]
 #     Description         :     Start Xorg
 ###############################################################################
 
@@ -31,7 +31,8 @@ xwallpaper --stretch "$HOME/.config/wallpaper/default"
 bar.sh &
 
 #start compositor
-compton &
+#compton &
+xcompmgr &
 
 #start notification daemon
 dunst &
