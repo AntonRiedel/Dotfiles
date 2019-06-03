@@ -16,7 +16,7 @@ super + {_,shift} + p
 
 ##Email Keybinding
 super + {_,shift} + e
-	{$TERMINAL -e neomutt,$TERMINAL -e mailsync}
+	{$TERMINAL -e neomutt,mailsync}
 
 ##Menu Keybindings
 super + x
