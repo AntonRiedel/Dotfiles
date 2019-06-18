@@ -3,7 +3,7 @@
 #     File Name           :     sound.sh
 #     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
 #     Creation Date       :     [2019-02-23 19:46]
-#     Last Modified       :     [2019-06-02 17:08]
+#     Last Modified       :     [2019-06-18 19:15]
 #     Description         :     Audio interface (uses pulsemixer and i3)
 #################################################################################
 
@@ -15,3 +15,5 @@ d*) pulsemixer --change-volume -"$num" ;;
 m*) pulsemixer --toggle-mute ;;
 truemute) pulsemixer --mute ;;
 esac
+
+refbar.sh
