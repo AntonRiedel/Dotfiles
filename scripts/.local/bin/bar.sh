@@ -1,9 +1,9 @@
-#! /bin/bash
+#! /bin/sh
 ###############################################################################
 #     File Name           :     autostart.sh
 #     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
 #     Creation Date       :     [2019-05-20 18:16]
-#     Last Modified       :     [2019-06-18 19:58]
+#     Last Modified       :     [2019-06-19 10:36]
 #     Description         :     DWM autostart script (for status configuration)
 ###############################################################################
 
@@ -15,6 +15,8 @@ delim="|"
 
 # Function that outputs the appearance of the statusbar.
 status() {
+
+	echo "$delim"
 
 	# Get the volume with pulsemixer
     if [ "$(pulsemixer --get-mute)" = "1" ]; then
