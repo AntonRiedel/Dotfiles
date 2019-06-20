@@ -3,7 +3,7 @@
 #     File Name           :     autostart.sh
 #     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
 #     Creation Date       :     [2019-05-20 18:16]
-#     Last Modified       :     [2019-06-19 10:36]
+#     Last Modified       :     [2019-06-20 12:01]
 #     Description         :     DWM autostart script (for status configuration)
 ###############################################################################
 
@@ -52,21 +52,11 @@ status() {
 	}
 
 update() {
-	# So all that big status function was just a command that quicking gets
-	# what we want to be the statusbar. This xsetroot command is what sets
-	# it. Note that the tr command replaces newlines with spaces. This is
-	# to prevent some weird issues that cause significant slowing of
-	# everything in dwm. Note entirely sure of the cause, but again, the tr
-	# command easily avoids it.
 	xsetroot -name "$(status | tr '\n' ' ')" &
     }
 
 while :; do
     update
-	# Sleep for a minute after changing the status bar before updating it
-	# again. We run sleep in the background and use wait until it finishes,
-    # because traps can interrupt wait immediately, but they can't do that
-    # with sleep.
 	sleep 1m &
     wait
 done
