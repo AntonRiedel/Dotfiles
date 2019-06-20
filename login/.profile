@@ -3,7 +3,7 @@
 #     File Name           :     environment.sh
 #     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
 #     Creation Date       :     [2019-03-12 16:42]
-#     Last Modified       :     [2019-06-02 18:03]
+#     Last Modified       :     [2019-06-20 15:32]
 #     Description         :     Runs on login
 ###############################################################################
 
@@ -13,7 +13,7 @@ export PATH="$HOME/.local/bin:$PATH"
 export TERMINAL="st"
 
 export EDITOR="nvim"
-export VISUAL=$EDITOR
+export VISUAL="$EDITOR"
 export MYVIMRC="$HOME/.config/nvim/init.vim"
 export MYVIMCONFIG="$HOME/.config/nvim/config"
 
