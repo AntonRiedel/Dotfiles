@@ -3,7 +3,7 @@
 #     File Name           :     lockscreen.sh
 #     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
 #     Creation Date       :     [2019-02-23 19:43]
-#     Last Modified       :     [2019-06-02 17:07]
+#     Last Modified       :     [2019-07-04 15:57]
 #     Description         :     Lock screen and display a distorted screenshot
 #                               of the desktop
 #################################################################################
@@ -16,3 +16,6 @@ rm -f /tmp/locked.png
     convert /tmp/base.png -blur 0x8 -swirl 120 /tmp/locked.png
 
 i3lock -e -f -c 000000 -i /tmp/locked.png
+
+rm /tmp/locked.png
+rm /tmp/base.png

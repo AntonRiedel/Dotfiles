@@ -3,7 +3,7 @@
 #     File Name           :     autostart.sh
 #     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
 #     Creation Date       :     [2019-05-20 18:16]
-#     Last Modified       :     [2019-06-20 12:01]
+#     Last Modified       :     [2019-06-26 14:51]
 #     Description         :     DWM autostart script (for status configuration)
 ###############################################################################
 
@@ -20,7 +20,7 @@ status() {
 
 	# Get the volume with pulsemixer
     if [ "$(pulsemixer --get-mute)" = "1" ]; then
-        echo ""
+        echo "🔇"
     else
         pulsemixer --get-volume | awk '{print " " $1}'
     fi
