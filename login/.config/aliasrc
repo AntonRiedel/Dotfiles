@@ -30,7 +30,7 @@ alias fullclean='make clean && rm -f config.h && git reset --hard origin/master'
 #search and edit a configuration file
 ce() { nvim "$(find $HOME/Dotfiles/* -type f | fzf)"; }
 #connect to known host per ssh
-sshc() { ssh "$(cat $HOME/.ssh/config | grep "Host\ " | awk '{print $2}' | dmenu)"; }
+sshc() { ssh "$(cat $HOME/.ssh/config | grep "Host\ " | awk '{print $2}' | fzf)"; }
 #search and enter a directory (fails if you lack permissions)
 fd() { cd "$(find / -type d 2>/dev/null | fzf)" && pwd && ls; }
 #search for a process and kill it

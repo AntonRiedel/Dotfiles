@@ -14,7 +14,7 @@ You can find configuration files for
 
 as well as some custom scripts (under `scripts`).
 
-These Dotfiles are meant to be deployed with GNU Stow (https://stevenrbaker.com/tech/managing-dotfiles-with-gnu-stow.html).
+These Dotfiles are meant to be deployed with [GNU Stow](https://stevenrbaker.com/tech/managing-dotfiles-with-gnu-stow.html).
 
 Under `old` you can find configuration files for programs I used to use such as:
 
@@ -27,3 +27,5 @@ Under `old` you can find configuration files for programs I used to use such as:
 * ranger (->vifm)
 * zsh (->bash)
 * compton (->xcompmgr)
+
+If you are looking for some awesome Void Linux wallpapers I can suggest [here](https://alkusin.net/voidlinux/en#wallpapers).
