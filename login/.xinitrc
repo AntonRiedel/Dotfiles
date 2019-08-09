@@ -3,7 +3,7 @@
 #     File Name           :     .xinitrc
 #     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
 #     Creation Date       :     [2019-02-23 19:39]
-#     Last Modified       :     [2019-06-20 15:34]
+#     Last Modified       :     [2019-08-05 18:54]
 #     Description         :     Start Xorg
 ###############################################################################
 

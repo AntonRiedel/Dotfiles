@@ -3,7 +3,7 @@
 #     File Name           :     autostart.sh
 #     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
 #     Creation Date       :     [2019-05-20 18:16]
-#     Last Modified       :     [2019-06-26 14:51]
+#     Last Modified       :     [2019-08-09 20:43]
 #     Description         :     DWM autostart script (for status configuration)
 ###############################################################################
 
@@ -20,9 +20,9 @@ status() {
 
 	# Get the volume with pulsemixer
     if [ "$(pulsemixer --get-mute)" = "1" ]; then
-        echo "🔇"
+        echo "MUTE"
     else
-        pulsemixer --get-volume | awk '{print " " $1}'
+        pulsemixer --get-volume | awk '{print "VOL:" $1}'
     fi
 	echo "$delim"
 
@@ -36,15 +36,15 @@ status() {
 	echo "$delim"
 
     if [ -d /sys/class/power_supply/BAT? ]; then
-        acpi -b | awk '{print $3,$4,$5}' | sed -e 's/,//g;;s/Discharging/🔋/;s/Not Charging/🛑/;s/Charging/🔌/;s/Unknown/♻️/;s/Full/⚡/g'
+        acpi -b
     else
         echo "NO BAT"
     fi
     echo "$delim"
 
     # Wifi quality percentage and  icon if ethernet is connected.
-	grep "^\s*w" /proc/net/wireless | awk '{ print "", int($3 * 100 / 70) "%" }'
-	sed "s/down//;s/up//" /sys/class/net/e*/operstate
+	grep "^\s*w" /proc/net/wireless | awk '{ print "WIFI",int($3 * 100 / 70)"%" }'
+	sed "s/down//;s/up/ETH/" /sys/class/net/e*/operstate
     echo "$delim"
 
 	# Date and time.

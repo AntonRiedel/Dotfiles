@@ -3,15 +3,13 @@
 #     File Name           :     environment.sh
 #     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
 #     Creation Date       :     [2019-03-12 16:42]
-#     Last Modified       :     [2019-06-20 15:32]
+#     Last Modified       :     [2019-08-05 18:59]
 #     Description         :     Runs on login
 ###############################################################################
 
 #set environment variables
 export PATH="$HOME/.local/bin:$PATH"
-
 export TERMINAL="st"
-
 export EDITOR="nvim"
 export VISUAL="$EDITOR"
 export MYVIMRC="$HOME/.config/nvim/init.vim"
@@ -33,6 +31,16 @@ export READER2="evince"
 
 #default options for fzf
 export FZF_DEFAULT_OPTS="--reverse --height=40%"
+
+# less/man colors
+export LESS=-R
+export LESS_TERMCAP_mb="$(printf '%b' '[1;31m')"; a="${a%_}"
+export LESS_TERMCAP_md="$(printf '%b' '[1;36m')"; a="${a%_}"
+export LESS_TERMCAP_me="$(printf '%b' '[0m')"; a="${a%_}"
+export LESS_TERMCAP_so="$(printf '%b' '[01;44;33m')"; a="${a%_}"
+export LESS_TERMCAP_se="$(printf '%b' '[0m')"; a="${a%_}"
+export LESS_TERMCAP_us="$(printf '%b' '[1;32m')"; a="${a%_}"
+export LESS_TERMCAP_ue="$(printf '%b' '[0m')"; a="${a%_}"
 
 echo "$0" | grep "bash$" >/dev/null && [ -f $HOME/.bashrc ] && source "$HOME/.bashrc"
 
