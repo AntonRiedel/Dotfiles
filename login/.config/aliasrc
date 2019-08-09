@@ -22,6 +22,11 @@ alias xi="sudo xbps-install -Sv"
 alias xu="sudo xbps-install -Suv"
 alias xr="sudo xbps-remove -Rv"
 alias xq="xbps-query -Rs"
+alias pi="sudo pacman -S"
+alias pu="sudo pacman -Syu"
+alias pr="sudo pacman -Rns"
+alias pq="pacman -Ss"
+
 alias cu="nmcli con up --ask"
 alias vpn="sudo vpnc"
 alias fullclean='make clean && rm -f config.h && git reset --hard origin/master'
