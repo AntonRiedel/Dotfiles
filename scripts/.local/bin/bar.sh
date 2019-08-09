@@ -36,7 +36,7 @@ status() {
 	echo "$delim"
 
     if [ -d /sys/class/power_supply/BAT? ]; then
-        acpi -b
+        acpi -b | awk '{print $3,$4,"("$5")"}' | sed -e 's/,//g'
     else
         echo "NO BAT"
     fi
