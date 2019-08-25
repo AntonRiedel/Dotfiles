@@ -3,7 +3,7 @@
 #     File Name           :     .xinitrc
 #     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
 #     Creation Date       :     [2019-02-23 19:39]
-#     Last Modified       :     [2019-08-05 18:54]
+#     Last Modified       :     [2019-08-25 09:58]
 #     Description         :     Start Xorg
 ###############################################################################
 
@@ -22,7 +22,7 @@ xset -dpms
 xset s off
 
 #Set default desktop layout
-"$HOME/.screenlayout/default"
+$HOME/.screenlayout/default.sh
 
 #Set default wallpaper
 xwallpaper --stretch "$HOME/.config/wallpaper/default"
