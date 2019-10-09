@@ -6,11 +6,13 @@ You can find configuration files for
 * bash (shell)
 * neovim (editor)
 * tmux (screen multiplexer)
-* vifm (file browser)
+* vifm (vim-like file browser)
 * dunst (notification daemon)
 * sxhkd (hotkey daemon)
 * htop (system monitor)
 * neofetch (system information tool)
+* qutebrowser (minimal vim-like web browser)
+* zathura (minimal vim-like pdf viewer)
 
 as well as some custom scripts (under `scripts`).
 
@@ -27,7 +29,6 @@ Under `old` you can find configuration files for programs I used to use such as:
 * ranger (->vifm)
 * zsh (->bash)
 * compton (->xcompmgr)
-
 <!--
 If you are looking for some awesome Void Linux wallpapers I can suggest [here](https://alkusin.net/voidlinux/en#wallpapers).
 -->
