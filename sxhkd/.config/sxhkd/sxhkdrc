@@ -4,7 +4,7 @@ super +  Return
 super + {_,shift} + b
 	{$BROWSER,$BROWSER2}
 super + {_,shift} + n
-	{$TERMINAL -e $FILE,$HOME/.local/bin/nextcloud}
+	{$TERMINAL -e $FILE,$FILE2}
 super + {_,shift} + v
 	{$TERMINAL -e newsboat,$TERMINAL -e calcurse}
 

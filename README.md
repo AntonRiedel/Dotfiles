@@ -1,6 +1,6 @@
 # Dotfiles
 
-My personal Dotfiles which I use across different machines. I run Void Linux as my main operating system with a custom build of dwm as window manager and st as terminal.
+My personal Dotfiles which I use across different machines. I run Arch Linux as my main operating system with a custom build of dwm as window manager and st as terminal.
 You can find configuration files for
 
 * bash (shell)
@@ -28,4 +28,6 @@ Under `old` you can find configuration files for programs I used to use such as:
 * zsh (->bash)
 * compton (->xcompmgr)
 
+<!--
 If you are looking for some awesome Void Linux wallpapers I can suggest [here](https://alkusin.net/voidlinux/en#wallpapers).
+-->

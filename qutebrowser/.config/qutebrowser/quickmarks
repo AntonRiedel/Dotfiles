@@ -9,5 +9,5 @@ tum https://campus.tum.de/tumonline/webnav.ini
 moodle https://www.moodle.tum.de/
 parallel http://parprog.caps.in.tum.de/
 i2dl https://dvl.in.tum.de/teaching/i2dl-ss19/
-pihole http://192.168.1.30:8080/admin/index.php
-server_local https://192.168.1.30/index.php/login
+pihole http://192.168.1.9:8080/admin/index.php
+server_local https://192.168.1.9/index.php/login
