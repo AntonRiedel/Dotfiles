@@ -2,7 +2,7 @@
 "     File Name           :     05.autocommands.vim
 "     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
 "     Creation Date       :     [2019-02-23 19:35]
-"     Last Modified       :     [2019-05-26 14:49]
+"     Last Modified       :     [2019-10-20 22:16]
 "     Description         :     Configuration for autocommands
 "--------------------------------------------------------------------------------
 
@@ -16,4 +16,4 @@ autocmd BufWritePost *.vim source $MYVIMRC
 "autocmd BufWritePost *.c,*.h,*.cpp,*.tex,*.md,*.py,*.sh Neomake
 
 "Clear out build files when leaving .tex document
-autocmd VimLeave *.tex !latexmk -c
+"autocmd VimLeave *.tex !latexmk -c

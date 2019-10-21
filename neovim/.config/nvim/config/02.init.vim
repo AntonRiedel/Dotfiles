@@ -2,7 +2,7 @@
 "     File Name           :     02.init.vim
 "     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
 "     Creation Date       :     [2019-02-23 19:33]
-"     Last Modified       :     [2019-09-02 23:29]
+"     Last Modified       :     [2019-10-20 22:07]
 "     Description         :     Basic configuration for Neovim
 "------------------------------------------------------------------------------
 
@@ -37,4 +37,4 @@ set expandtab
 "Folding
 set foldenable
 set foldmethod=indent
-set foldlevelstart=1
+set foldlevelstart=99

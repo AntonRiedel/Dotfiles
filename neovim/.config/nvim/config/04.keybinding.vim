@@ -2,7 +2,7 @@
 "     File Name           :     04.keybinding.vim
 "     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
 "     Creation Date       :     [2019-02-23 19:34]
-"     Last Modified       :     [2019-05-26 14:48]
+"     Last Modified       :     [2019-10-20 22:15]
 "     Description         :     Configuration for keybindings
 "------------------------------------------------------------------------------
 
@@ -52,18 +52,15 @@ nnoremap <leader>bp :bprevious<CR>
 nnoremap <leader>bd :bdelete!<CR>
 
 "move between tabs
-nnoremap <leader>tt :tabs<CR>
-nnoremap <leader>tn :tabnext<CR>
-nnoremap <leader>tp :tabprevious<CR>
-nnoremap <leader>td :tabclose<CR>
+"nnoremap <leader>tt :tabs<CR>
+"nnoremap <leader>tn :tabnext<CR>
+"nnoremap <leader>tp :tabprevious<CR>
+"nnoremap <leader>td :tabclose<CR>
 
 "spellchecking
 noremap <leader>se :setlocal spell! spelllang=en_us<CR>
 noremap <leader>sd :setlocal spell! spelllang=de_de<CR>
 noremap <leader>ss :set nospell<CR>
-
-"vifm
-nnoremap <leader>r :Vifm.<CR>
 
 "neomake
 nnoremap <leader>nm :Neomake<CR>
@@ -79,7 +76,7 @@ autocmd FileType tex nnoremap <leader>nt :NeoTex<CR>
 autocmd FileType tex nnoremap <leader>nto :NeoTexOn<CR>
 
 "markdown
-autocmd FileType markdown nnoremap <leader>p :!pandoc % --pdf-engine=xelatex -o %:r.pdf<CR>
+autocmd FileType markdown nnoremap <leader>p :!pandoc % --pdf-engine=pdflatex -o %:r.pdf<CR>
 
 "view pdf document
 autocmd FileType tex,markdown nnoremap <leader>pv :silent !$READER %:r.pdf &<CR>
