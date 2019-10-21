@@ -2,7 +2,7 @@
 "     File Name           :     01.plugin.vim
 "     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
 "     Creation Date       :     [2019-02-23 19:31]
-"     Last Modified       :     [2019-10-20 22:06]
+"     Last Modified       :     [2019-10-21 12:37]
 "     Description         :     Configuration for plugins (using vim-plug)
 "------------------------------------------------------------------------------
 
@@ -19,6 +19,7 @@ Plug 'junegunn/fzf.vim'
 
 Plug 'lambdalisue/suda.vim'
 Plug 'godlygeek/tabular'
+Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
 Plug 'shanzi/autoHEADER'
 

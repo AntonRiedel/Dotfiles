@@ -16,12 +16,12 @@ super + {_,shift} + p
 
 ##Email Keybinding
 super + {_,shift} + e
-	{$TERMINAL -e neomutt,mailsync}
+	{$TERMINAL -e neomutt,$TERMINAL -e mailsync}
 
 ##Menu Keybindings
 super + x
 	fin.sh
-super + s
+super + r
 	dmenu_run
 super + g
 	passmenu
