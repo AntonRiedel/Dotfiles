@@ -2,7 +2,7 @@
 "     File Name           :     04.keybinding.vim
 "     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
 "     Creation Date       :     [2019-02-23 19:34]
-"     Last Modified       :     [2019-10-20 22:15]
+"     Last Modified       :     [2019-10-22 13:08]
 "     Description         :     Configuration for keybindings
 "------------------------------------------------------------------------------
 
@@ -40,7 +40,7 @@ endfor
 
 "start terminal in a split at the bottom of the window
 "nnoremap <leader>e :split<bar>terminal<CR><C-w>J:resize10<CR>a
-nnoremap <leader>e :botright :Tnew<CR><C-w>j:resize10<CR>a
+nnoremap <leader>t :botright :Tnew<CR><C-w>j:resize10<CR>a
 
 "enter normal mode in terminal easily
 tnoremap <leader><ESC> <C-\><C-n>
@@ -82,5 +82,5 @@ autocmd FileType markdown nnoremap <leader>p :!pandoc % --pdf-engine=pdflatex -o
 autocmd FileType tex,markdown nnoremap <leader>pv :silent !$READER %:r.pdf &<CR>
 autocmd FileType tex,markdown nnoremap <leader>ppv :silent !$READER2 %:r.pdf &<CR>
 
-"execute python scripts easily
-autocmd FileType python nnoremap <leader>p :T python %<CR>
+"execute cripts easily
+nnoremap <leader>x :!./%<CR>

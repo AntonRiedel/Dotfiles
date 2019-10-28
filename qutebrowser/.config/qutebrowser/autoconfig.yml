@@ -15,7 +15,7 @@ settings:
   content.cookies.store:
     global: false
   content.pdfjs:
-    global: true
+    global: false
   editor.command:
     global:
     - gvim

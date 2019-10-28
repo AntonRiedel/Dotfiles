@@ -2,7 +2,7 @@
 "     File Name           :     01.plugin.vim
 "     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
 "     Creation Date       :     [2019-02-23 19:31]
-"     Last Modified       :     [2019-10-21 12:37]
+"     Last Modified       :     [2019-10-22 12:41]
 "     Description         :     Configuration for plugins (using vim-plug)
 "------------------------------------------------------------------------------
 
@@ -22,10 +22,11 @@ Plug 'godlygeek/tabular'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
 Plug 'shanzi/autoHEADER'
+Plug 'scrooloose/nerdcommenter'
 
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'zchee/deoplete-clang', { 'for': ['.c','.cpp','.h'] }
-"Plug 'zchee/deoplete-jedi', { 'for': ['.py','.ipynb'] }
+Plug 'zchee/deoplete-jedi', { 'for': ['.py','.ipynb'] }
 "Plug 'Valloric/YouCompleteMe', { 'do': './install.py \-\-clang\-completer' }
 "Plug 'vhdirk/vim-cmake', { 'for': ['.c','.cpp','.h'] }
 
@@ -42,4 +43,5 @@ Plug 'donRaphaco/neotex', { 'for': '.tex' }
 
 Plug 'mklabs/vim-cowsay'
 Plug 'fadein/vim-FIGlet'
+
 call plug#end()
