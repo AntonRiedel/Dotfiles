@@ -17,8 +17,8 @@ pgrep -x dmenu && exit
 choice=$(echo "Shutdown\nReboot\nExit\nLock Screen" | dmenu -i -p "Select Option")
 
 case "$choice" in
-Shutdown) ClearCache && shutdown now ;;
-Reboot) ClearCache && reboot ;;
-"Exit") killall Xorg ;;
+Shutdown) ClearCache && /usr/sbin/shutdown now ;;
+Reboot) ClearCache && /usr/sbin/reboot ;;
+"Exit") kill $(ps -e | grep Xorg | awk '{print $1}') ;;
 "Lock Screen") lockscreen.sh ;;
 esac

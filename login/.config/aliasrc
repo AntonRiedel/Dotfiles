@@ -18,18 +18,12 @@ alias diff="$EDITOR -d"
 alias vf="$FILE"
 alias vif="$FILE"
 alias vifm="$FILE"
-alias pi="sudo pacman -S"
-alias pu="sudo pacman -Syu"
-alias pr="sudo pacman -Rns"
-alias pq="pacman -Ss"
-#alias xi="sudo xbps-install -Sv"
-#alias xu="sudo xbps-install -Suv"
-#alias xr="sudo xbps-remove -Rv"
-#alias xq="xbps-query -Rs"
-
+alias ai="sudo apt install"
+alias au="sudo apt update && sudo apt upgrade && sudo apt autoremove"
+alias ar="sudo apt purge"
+alias aq="apt search"
 alias cu="nmcli con up --ask"
-alias vpn="sudo vpnc"
-alias fullclean='make clean && rm -f config.h && git reset --hard origin/master'
+alias vpn="sudo vpnc lrz"
 
 ##custom commands
 #search and edit a configuration file
@@ -38,5 +32,7 @@ ce() { nvim "$(find $HOME/Dotfiles/* -type f | fzf)"; }
 sshc() { ssh "$(cat $HOME/.ssh/config | grep "Host\ " | awk '{print $2}' | fzf)"; }
 #search and enter a directory (fails if you lack permissions)
 fd() { cd "$(find / -type d 2>/dev/null | fzf)" && pwd && ls; }
+#search for all pdf's in current directory and all subdirectories
+pdfs() { zathura $(find $(pwd) -type f -name *.pdf | fzf); }
 #search for a process and kill it
 kp() { kill -s SIGRTMIN+15 "$(ps -e | fzf | awk '{ print $1 }')" 2>/dev/null; }
