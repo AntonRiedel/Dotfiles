@@ -1,9 +1,9 @@
 #! /bin/sh
 #################################################################################
 #     File Name           :     fin.sh
-#     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
+#     Created By          :     Anton Riedel <anton.riedel@tum.de>
 #     Creation Date       :     [2019-02-23 19:42]
-#     Last Modified       :     [2019-08-31 00:48]
+#     Last Modified       :     [2019-11-14 11:44]
 #     Description         :     Shutdown, reboot or kill current i3 instance
 #################################################################################
 
@@ -14,9 +14,10 @@ ClearCache() {
 
 pgrep -x dmenu && exit
 
-choice=$(echo "Shutdown\nReboot\nExit\nLock Screen" | dmenu -i -p "Select Option")
+choice=$(echo "Hibernate\nShutdown\nReboot\nExit\nLock Screen" | dmenu -i -p "Select Option")
 
 case "$choice" in
+Hibernate) sudo /usr/sbin/hibernate ;;
 Shutdown) ClearCache && /usr/sbin/shutdown now ;;
 Reboot) ClearCache && /usr/sbin/reboot ;;
 "Exit") kill $(ps -e | grep Xorg | awk '{print $1}') ;;

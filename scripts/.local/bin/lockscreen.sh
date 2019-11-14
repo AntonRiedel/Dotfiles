@@ -1,7 +1,7 @@
 #! /bin/sh
 #################################################################################
 #     File Name           :     lockscreen.sh
-#     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
+#     Created By          :     Anton Riedel <anton.riedel@tum.de>
 #     Creation Date       :     [2019-02-23 19:43]
 #     Last Modified       :     [2019-07-04 15:57]
 #     Description         :     Lock screen and display a distorted screenshot

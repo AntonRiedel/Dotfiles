@@ -1,6 +1,6 @@
 "------------------------------------------------------------------------------
 "     File Name           :     06.deoplete.vim
-"     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
+"     Created By          :     Anton Riedel <anton.riedel@tum.de>
 "     Creation Date       :     [2019-02-23 19:35]
 "     Last Modified       :     [2019-11-11 14:07]
 "     Description         :     Configuration for deoplete-{clang,jedi}

@@ -1,6 +1,6 @@
 "------------------------------------------------------------------------------
 "     File Name           :     08.neoformat.vim
-"     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
+"     Created By          :     Anton Riedel <anton.riedel@tum.de>
 "     Creation Date       :     [2019-02-23 19:36]
 "     Last Modified       :     [2019-10-20 22:36]
 "     Description         :     Configuration for Neoforamt

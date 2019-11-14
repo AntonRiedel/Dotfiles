@@ -1,6 +1,6 @@
 "------------------------------------------------------------------------------
 "     File Name           :     02.init.vim
-"     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
+"     Created By          :     Anton Riedel <anton.riedel@tum.de>
 "     Creation Date       :     [2019-02-23 19:33]
 "     Last Modified       :     [2019-10-22 12:25]
 "     Description         :     Basic configuration for Neovim

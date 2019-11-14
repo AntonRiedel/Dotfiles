@@ -1,6 +1,6 @@
 "------------------------------------------------------------------------------
 "     File Name           :     07.snippet.vim
-"     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
+"     Created By          :     Anton Riedel <anton.riedel@tum.de>
 "     Creation Date       :     [2019-02-24 10:24]
 "     Last Modified       :     [2019-02-26 15:19]
 "     Description         :     Configuration for snippets (ultisnips)

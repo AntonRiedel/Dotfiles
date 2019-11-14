@@ -1,6 +1,6 @@
 "--------------------------------------------------------------------------------
 "     File Name           :     Dotfiles/neovim/.config/nvim/config/06.youcomplteme.vim
-"     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
+"     Created By          :     Anton Riedel <anton.riedel@tum.de>
 "     Creation Date       :     [2019-02-26 12:09]
 "     Last Modified       :     [2019-02-26 12:14]
 "     Description         :     Configuration for YouComplteMe

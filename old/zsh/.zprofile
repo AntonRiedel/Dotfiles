@@ -1,6 +1,6 @@
 ###############################################################################
 #     File Name           :     .zprofile
-#     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
+#     Created By          :     Anton Riedel <anton.riedel@tum.de>
 #     Creation Date       :     [2019-02-23 19:41]
 #     Last Modified       :     [2019-03-12 17:16]
 #     Description         :     zprofile

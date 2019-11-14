@@ -1,7 +1,7 @@
 #! /bin/sh
 ###############################################################################
 #     File Name           :     autostart.sh
-#     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
+#     Created By          :     Anton Riedel <anton.riedel@tum.de>
 #     Creation Date       :     [2019-05-20 18:16]
 #     Last Modified       :     [2019-08-09 20:43]
 #     Description         :     DWM autostart script (for status configuration)

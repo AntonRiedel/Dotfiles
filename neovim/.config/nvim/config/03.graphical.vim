@@ -1,6 +1,6 @@
 "------------------------------------------------------------------------------
 "     File Name           :     03.graphical.vim
-"     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
+"     Created By          :     Anton Riedel <anton.riedel@tum.de>
 "     Creation Date       :     [2019-02-23 19:34]
 "     Last Modified       :     [2019-10-20 22:07]
 "     Description         :     Configuration for GUI

@@ -1,7 +1,7 @@
 #! /bin/sh
 #################################################################################
 #     File Name           :     screen.sh
-#     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
+#     Created By          :     Anton Riedel <anton.riedel@tum.de>
 #     Creation Date       :     [2019-02-23 19:30]
 #     Last Modified       :     [2019-09-22 13:08]
 #     Description         :     Handle desktop setup

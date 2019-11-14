@@ -1,6 +1,6 @@
 ###############################################################################
 #     File Name           :     .zshrc
-#     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
+#     Created By          :     Anton Riedel <anton.riedel@tum.de>
 #     Creation Date       :     [2019-02-23 19:40]
 #     Last Modified       :     [2019-03-12 18:22]
 #     Description         :     zshrc

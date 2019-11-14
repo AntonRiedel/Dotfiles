@@ -1,6 +1,6 @@
 "------------------------------------------------------------------------------
 "     File Name           :     04.keybinding.vim
-"     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
+"     Created By          :     Anton Riedel <anton.riedel@tum.de>
 "     Creation Date       :     [2019-02-23 19:34]
 "     Last Modified       :     [2019-10-22 13:08]
 "     Description         :     Configuration for keybindings

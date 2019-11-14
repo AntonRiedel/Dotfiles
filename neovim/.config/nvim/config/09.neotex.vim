@@ -1,6 +1,6 @@
 "------------------------------------------------------------------------------
 "     File Name           :     09.neotex.vim
-"     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
+"     Created By          :     Anton Riedel <anton.riedel@tum.de>
 "     Creation Date       :     [2019-02-23 19:37]
 "     Last Modified       :     [2019-02-26 15:20]
 "     Description         :     Configuration for NeoTex

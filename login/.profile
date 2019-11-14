@@ -1,7 +1,7 @@
 #! /bin/sh
 ###############################################################################
 #     File Name           :     environment.sh
-#     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
+#     Created By          :     Anton Riedel <anton.riedel@tum.de>
 #     Creation Date       :     [2019-03-12 16:42]
 #     Last Modified       :     [2019-10-01 22:42]
 #     Description         :     Runs on login

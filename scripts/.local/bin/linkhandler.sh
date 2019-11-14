@@ -1,7 +1,7 @@
 #! /bin/bash
 #################################################################################
 #     File Name           :     linkhandler.sh
-#     Created By          :     Anton Riedel <anton.riedel@hotmail.com>
+#     Created By          :     Anton Riedel <anton.riedel@tum.de>
 #     Creation Date       :     [2019-02-25 18:28]
 #     Last Modified       :     [2019-04-24 20:50]
 #     Description         :     Feed script a url or file location.
