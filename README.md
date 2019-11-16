@@ -1,6 +1,6 @@
 # Dotfiles
 
-My personal Dotfiles which I use across different machines. I run Debian as my main operating system with a custom build of dwm as window manager and st as terminal.
+My personal Dotfiles which I use across different machines. I run Arch Linux as my main operating system with a custom build of dwm as window manager and st as terminal.
 You can find configuration files for
 
 * bash (shell)
