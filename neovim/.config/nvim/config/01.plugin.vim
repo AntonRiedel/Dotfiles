@@ -2,7 +2,7 @@
 "     File Name           :     01.plugin.vim
 "     Created By          :     Anton Riedel <anton.riedel@tum.de>
 "     Creation Date       :     [2019-02-23 19:31]
-"     Last Modified       :     [2019-10-22 12:41]
+"     Last Modified       :     [2019-11-20 12:23]
 "     Description         :     Configuration for plugins (using vim-plug)
 "------------------------------------------------------------------------------
 
@@ -25,16 +25,18 @@ Plug 'shanzi/autoHEADER'
 Plug 'scrooloose/nerdcommenter'
 
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'zchee/deoplete-clang', { 'for': ['.c','.cpp','.h'] }
+Plug 'zchee/deoplete-clang', { 'for': ['.c','.cpp','.h','.hpp'] }
 Plug 'zchee/deoplete-jedi', { 'for': ['.py','.ipynb'] }
 "Plug 'Valloric/YouCompleteMe', { 'do': './install.py \-\-clang\-completer' }
 "Plug 'vhdirk/vim-cmake', { 'for': ['.c','.cpp','.h'] }
 
-Plug 'neomake/neomake'
+"Plug 'neomake/neomake'
+Plug 'dense-analysis/ale'
 Plug 'sbdchd/neoformat'
 
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
+Plug 'vim-scripts/doxygen-support.vim'
 "Plug 'Shougo/neosnippet.vim'
 "Plug 'Shougo/neosnippet-snippets'
 

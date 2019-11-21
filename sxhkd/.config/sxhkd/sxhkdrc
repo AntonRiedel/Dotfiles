@@ -1,12 +1,12 @@
 ##Keybindings for programs
-super +  Return
+super + Return
 	$TERMINAL
 super + {_,shift} + b
 	{$BROWSER,$BROWSER2}
 super + {_,shift} + n
 	{$TERMINAL -e $FILE,$FILE2}
-super + {_,shift} + v
-	{$TERMINAL -e newsboat,$TERMINAL -e calcurse}
+super + v
+	$TERMINAL -e newsboat
 
 ##Media Keybindings
 super + {_,shift} + a

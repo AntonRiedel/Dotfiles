@@ -2,7 +2,7 @@
 "     File Name           :     04.keybinding.vim
 "     Created By          :     Anton Riedel <anton.riedel@tum.de>
 "     Creation Date       :     [2019-02-23 19:34]
-"     Last Modified       :     [2019-10-22 13:08]
+"     Last Modified       :     [2019-11-17 23:25]
 "     Description         :     Configuration for keybindings
 "------------------------------------------------------------------------------
 
@@ -46,7 +46,7 @@ nnoremap <leader>t :botright :Tnew<CR><C-w>j:resize10<CR>a
 tnoremap <leader><ESC> <C-\><C-n>
 
 "move between buffers
-nnoremap <leader>bb :buffers<CR>
+nnoremap <leader>bb :Buffers<CR>
 nnoremap <leader>bn :bnext<CR>
 nnoremap <leader>bp :bprevious<CR>
 nnoremap <leader>bd :bdelete!<CR>
