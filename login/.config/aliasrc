@@ -27,11 +27,11 @@ alias vpn="sudo vpnc lrz"
 
 ##custom commands
 #search and edit a configuration file
-ce() { nvim "$(find $HOME/Dotfiles/* -type f | fzf)"; }
+ce() { $EDITOR "$(find $HOME/Dotfiles/* -type f | fzf)"; }
 #connect to known host per ssh
-sshc() { ssh "$(cat $HOME/.ssh/config | grep "Host\ " | awk '{print $2}' | fzf)"; }
+sshc() { ssh "$(cat $HOME/.ssh/config | grep "^Host\ " | awk '{print $2}' | fzf)"; }
 #search and enter a directory (fails if you lack permissions)
-fd() { cd "$(find / -type d 2>/dev/null | fzf)" && pwd && ls; }
+fd() { cd "$(find $HOME -type d 2>/dev/null | fzf)" && pwd && ls; }
 #search for all pdf's in current directory and all subdirectories
 pdfs() { zathura $(find $(pwd) -type f -name *.pdf | fzf); }
 #search for a process and kill it
