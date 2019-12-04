@@ -2,7 +2,7 @@
 #     File Name           :     alias.sh
 #     Created By          :     Anton Riedel <anton.riedel@tum.de>
 #     Creation Date       :     [2019-03-12 16:54]
-#     Last Modified       :     [2019-05-26 14:20]
+#     Last Modified       :     [2019-12-04 12:01]
 #     Description         :     Aliases for the shell
 ###############################################################################
 
@@ -29,9 +29,9 @@ alias vpn="sudo vpnc lrz"
 #search and edit a configuration file
 ce() { $EDITOR "$(find $HOME/Dotfiles/* -type f | fzf)"; }
 #connect to known host per ssh
-sshc() { ssh "$(cat $HOME/.ssh/config | grep "^Host\ " | awk '{print $2}' | fzf)"; }
+sshc() { ssh "$(grep "^Host\ " $HOME/.ssh/config | awk '{print $2}' | fzf)"; }
 #sshc() { ssh -A -t "$(cat $HOME/.ssh/config | grep "^Host\ " | awk '{print $2}' | fzf)"; }
-#search and enter a directory (fails if you lack permissions)
+#search and enter a subdirectory in your home directory
 fd() { cd "$(find $HOME -type d 2>/dev/null | fzf)" && pwd && ls; }
 #search for all pdf's in current directory and all subdirectories
 pdfs() { zathura $(find $(pwd) -type f -name *.pdf | fzf); }
