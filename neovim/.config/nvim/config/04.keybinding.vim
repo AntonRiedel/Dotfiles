@@ -2,11 +2,11 @@
 "     File Name           :     04.keybinding.vim
 "     Created By          :     Anton Riedel <anton.riedel@tum.de>
 "     Creation Date       :     [2019-02-23 19:34]
-"     Last Modified       :     [2019-11-17 23:25]
+"     Last Modified       :     [2019-12-04 11:49]
 "     Description         :     Configuration for keybindings
 "------------------------------------------------------------------------------
 
-"Quickly open vim config files in split
+"Quickly open neovim config files in buffer
 "init.vim will be automatically sourced if any changes are made
 nnoremap <leader>ev :Files $MYVIMCONFIG<CR>
 
@@ -38,12 +38,11 @@ for dir in ["h", "j", "l", "k"]
     call s:mapMoveToWindowInDirection(dir)
 endfor
 
-"start terminal in a split at the bottom of the window
-"nnoremap <leader>e :split<bar>terminal<CR><C-w>J:resize10<CR>a
-nnoremap <leader>t :botright :Tnew<CR><C-w>j:resize10<CR>a
+"start terminal in a new buffer
+nnoremap <leader>t :terminal<CR>A
 
 "enter normal mode in terminal easily
-tnoremap <leader><ESC> <C-\><C-n>
+tnoremap <ESC><ESC> <C-\><C-n>
 
 "move between buffers
 nnoremap <leader>bb :Buffers<CR>
@@ -51,20 +50,10 @@ nnoremap <leader>bn :bnext<CR>
 nnoremap <leader>bp :bprevious<CR>
 nnoremap <leader>bd :bdelete!<CR>
 
-"move between tabs
-"nnoremap <leader>tt :tabs<CR>
-"nnoremap <leader>tn :tabnext<CR>
-"nnoremap <leader>tp :tabprevious<CR>
-"nnoremap <leader>td :tabclose<CR>
-
 "spellchecking
 noremap <leader>se :setlocal spell! spelllang=en_us<CR>
 noremap <leader>sd :setlocal spell! spelllang=de_de<CR>
 noremap <leader>ss :set nospell<CR>
-
-"neomake
-nnoremap <leader>nm :Neomake<CR>
-let g:neomake_open_list = 2
 
 "neoformat
 nnoremap <leader>nf :Neoformat<CR>
@@ -72,7 +61,7 @@ nnoremap <leader>nf :Neoformat<CR>
 "neotex
 "compile document
 autocmd FileType tex nnoremap <leader>nt :NeoTex<CR>
-"start preview
+"compile document continuously
 autocmd FileType tex nnoremap <leader>nto :NeoTexOn<CR>
 
 "markdown
@@ -82,5 +71,5 @@ autocmd FileType markdown nnoremap <leader>p :!pandoc % --pdf-engine=pdflatex -o
 autocmd FileType tex,markdown nnoremap <leader>pv :silent !$READER %:r.pdf &<CR>
 autocmd FileType tex,markdown nnoremap <leader>ppv :silent !$READER2 %:r.pdf &<CR>
 
-"execute cripts easily
+"execute scripts easily
 nnoremap <leader>x :!./%<CR>

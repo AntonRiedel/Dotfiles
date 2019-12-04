@@ -2,13 +2,13 @@
 "     File Name           :     06.deoplete.vim
 "     Created By          :     Anton Riedel <anton.riedel@tum.de>
 "     Creation Date       :     [2019-02-23 19:35]
-"     Last Modified       :     [2019-11-17 23:09]
+"     Last Modified       :     [2019-12-04 11:51]
 "     Description         :     Configuration for deoplete-{clang,jedi}
 "------------------------------------------------------------------------------
 
 "start deoplete at startup
 let g:deoplete#enable_at_startup = 1
-"change keybinding for goint to previous option in deolete dropdown menu
+"change keybinding for going to previous option in deolete dropdown menu
 "works nicely with
 "<C-n> -> down
 "<C-m> -> up

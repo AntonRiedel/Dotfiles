@@ -1,8 +1,8 @@
 "------------------------------------------------------------------------------
-"     File Name           :     08.neoformat.vim
+"     File Name           :     09.neoformat.vim
 "     Created By          :     Anton Riedel <anton.riedel@tum.de>
 "     Creation Date       :     [2019-02-23 19:36]
-"     Last Modified       :     [2019-10-20 22:36]
+"     Last Modified       :     [2019-12-04 11:53]
 "     Description         :     Configuration for Neoforamt
 "------------------------------------------------------------------------------
 
@@ -13,6 +13,8 @@
     "\ 'stdin': 1
     "\ }
 let g:neoformat_enabled_tex = [ 'latexindent' ]
+
+"astyle
 let g:neoformat_enabled_cpp = [ 'astyle' ]
 
 " Enable alignment if filetype not found

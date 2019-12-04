@@ -21,7 +21,7 @@ super + {_,shift} + e
 ##Menu Keybindings
 super + x
 	fin.sh
-super + r
-	dmenu_run
+super + {_,shift} + r
+	{dmenu_run,screen.sh}
 super + g
 	passmenu

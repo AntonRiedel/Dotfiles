@@ -2,7 +2,7 @@
 "     File Name           :     10.header.vim
 "     Created By          :     Anton Riedel <anton.riedel@tum.de>
 "     Creation Date       :     [2019-02-23 19:37]
-"     Last Modified       :     [2019-11-14 12:07]
+"     Last Modified       :     [2019-12-04 11:53]
 "     Description         :     Configuration for autoHEADER
 "------------------------------------------------------------------------------
 
