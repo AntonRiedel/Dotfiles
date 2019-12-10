@@ -2,7 +2,7 @@
 "     File Name           :     07.lsp.vim
 "     Created By          :     Anton Riedel <anton.riedel@tum.de>
 "     Creation Date       :     [2019-12-03 22:46]
-"     Last Modified       :     [2019-12-04 00:59]
+"     Last Modified       :     [2019-12-10 14:17]
 "     Description         :     Configuration for language server protocol
 "--------------------------------------------------------------------------------
 
@@ -15,5 +15,4 @@ let g:LanguageClient_serverCommands = {
     \ 'sh': ['/usr/bin/bash-language-server'],
     \ }
 
-nnoremap <silent> H :call LanguageClient#textDocument_hover()<CR>
 nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>

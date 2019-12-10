@@ -2,7 +2,7 @@
 #     File Name           :     alias.sh
 #     Created By          :     Anton Riedel <anton.riedel@tum.de>
 #     Creation Date       :     [2019-03-12 16:54]
-#     Last Modified       :     [2019-12-04 12:01]
+#     Last Modified       :     [2019-12-05 08:24]
 #     Description         :     Aliases for the shell
 ###############################################################################
 
@@ -18,12 +18,13 @@ alias diff="$EDITOR -d"
 alias vf="$FILE"
 alias vif="$FILE"
 alias vifm="$FILE"
-alias pi="sudo pacman -S"
-alias pu="sudo pacman -Syu"
-alias pr="sudo pacman -Rns"
-alias pq="pacman -Ss"
+alias pi="yay -S"
+alias pu="yay -Syu"
+alias pr="yay -Rns"
+alias pq="yay -Ss"
 alias cu="nmcli con up --ask"
 alias vpn="sudo vpnc lrz"
+alias make="make -j$(nproc)"
 
 ##custom commands
 #search and edit a configuration file

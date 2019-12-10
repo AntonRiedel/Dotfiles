@@ -2,7 +2,7 @@
 "     File Name           :     03.graphical.vim
 "     Created By          :     Anton Riedel <anton.riedel@tum.de>
 "     Creation Date       :     [2019-02-23 19:34]
-"     Last Modified       :     [2019-10-20 22:07]
+"     Last Modified       :     [2019-12-04 15:06]
 "     Description         :     Configuration for GUI
 "------------------------------------------------------------------------------
 
@@ -30,8 +30,13 @@ set background=dark
 let g:neosolarized_visibility = "high"
 colorscheme NeoSolarized
 
-" lightline
-let g:lightline = {'colorscheme': 'solarized'}
+" lightline and lightline-bufferline
+let g:lightline = {'colorscheme': 'powerline'}
+let g:lightline.tabline          = {'left': [['buffers']], 'right': [['close']]}
+let g:lightline.component_expand = {'buffers': 'lightline#bufferline#buffers'}
+let g:lightline.component_type   = {'buffers': 'tabsel'}
+let g:lightline#bufferline#filename_modifier=':t'
+set showtabline=2
 
 "Signify
 let g:signify_vcx_list = ['git']

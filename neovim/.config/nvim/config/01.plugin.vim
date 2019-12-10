@@ -2,7 +2,7 @@
 "     File Name           :     01.plugin.vim
 "     Created By          :     Anton Riedel <anton.riedel@tum.de>
 "     Creation Date       :     [2019-02-23 19:31]
-"     Last Modified       :     [2019-12-04 11:44]
+"     Last Modified       :     [2019-12-08 22:59]
 "     Description         :     Configuration for plugins (using vim-plug)
 "------------------------------------------------------------------------------
 
@@ -13,6 +13,7 @@ call plug#begin('$HOME/.vim/plugged')
 
 Plug 'iCyMind/NeoSolarized'
 Plug 'itchyny/lightline.vim'
+Plug 'mengelbrecht/lightline-bufferline'
 Plug 'mhinz/vim-signify'
 
 Plug 'junegunn/fzf.vim'
@@ -29,17 +30,15 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'vim-scripts/doxygen-support.vim'
 
 Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do' : 'bash install.sh' }
-
 Plug 'Shougo/deoplete.nvim', { 'do' : ':UpdateRemotePlugins' }
-Plug 'zchee/deoplete-clang', { 'for' : ['.c','.cpp','.h','.hpp'] }
-Plug 'zchee/deoplete-jedi', { 'for' : ['.py','.ipynb'] }
 
 Plug 'sbdchd/neoformat'
 
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
-"Plug 'Shougo/neosnippet.vim'
-"Plug 'Shougo/neosnippet-snippets'
+
+Plug 'ludovicchabant/vim-gutentags'
+Plug 'majutsushi/tagbar'
 
 Plug 'donRaphaco/neotex', { 'for': '.tex' }
 
