@@ -1,8 +1,8 @@
-#Path to oh-my-zshinstallation.
+#Path to oh-my-zsh installation.
 export ZSH=/usr/share/oh-my-zsh
 
 #Load theme
-ZSH_THEME="bira"
+ZSH_THEME="avit"
 
 #Disable automatic update checks
 DISABLE_AUTO_UPDATE="true"
