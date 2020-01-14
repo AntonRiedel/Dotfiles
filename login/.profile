@@ -3,7 +3,7 @@
 #     File Name           :     environment.sh
 #     Created By          :     Anton Riedel <anton.riedel@tum.de>
 #     Creation Date       :     [2019-03-12 16:42]
-#     Last Modified       :     [2019-10-01 22:42]
+#     Last Modified       :     [2020-01-14 20:19]
 #     Description         :     Runs on login
 ###############################################################################
 
@@ -14,6 +14,12 @@ export EDITOR="nvim"
 export VISUAL="$EDITOR"
 export MYVIMRC="$HOME/.config/nvim/init.vim"
 export MYVIMCONFIG="$HOME/.config/nvim/config"
+
+#move as many files from $HOME to $HOME/.config as possible
+export NOTMUCH_CONFIG="$HOME/.config/notmuch-config"
+export PASSWORD_STORE_DIR="$HOME/.local/share/password-store"
+export LESSHISTFILE="-"
+export ZDOTDIR="$HOME/.config/zsh"
 
 #~/.local/bin/vifm is a custom script to launch vifm with image preview
 #it will be started instead of /usr/bin/vifm since it appears first in PATH
@@ -42,8 +48,6 @@ export LESS_TERMCAP_so="$(printf '%b' '[01;44;33m')"; a="${a%_}"
 export LESS_TERMCAP_se="$(printf '%b' '[0m')"; a="${a%_}"
 export LESS_TERMCAP_us="$(printf '%b' '[1;32m')"; a="${a%_}"
 export LESS_TERMCAP_ue="$(printf '%b' '[0m')"; a="${a%_}"
-
-echo "$0" | grep "bash$" >/dev/null && [ -f $HOME/.bashrc ] && source "$HOME/.bashrc"
 
 # Start graphical server if dwm is not already running.
 [ "$(tty)" = "/dev/tty1" ] && ! pgrep -x Xorg >/dev/null && exec startx >&/dev/null

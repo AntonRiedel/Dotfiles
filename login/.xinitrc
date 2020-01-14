@@ -3,7 +3,7 @@
 #     File Name           :     .xinitrc
 #     Created By          :     Anton Riedel <anton.riedel@tum.de>
 #     Creation Date       :     [2019-02-23 19:39]
-#     Last Modified       :     [2019-11-23 12:29]
+#     Last Modified       :     [2020-01-14 20:36]
 #     Description         :     Start Xorg
 ###############################################################################
 
@@ -11,7 +11,7 @@
 if [ "$(hostname)" = "Mars" ];then
     setxkbmap gb
 else
-    setxkbmap de
+    setxkbmap us
 fi
 
 #make capslock useful
@@ -22,7 +22,7 @@ xset -dpms
 xset s off
 
 #Set default desktop layout
-$HOME/.screenlayout/default.sh
+$HOME/.config/screenlayout/default.sh
 
 #Set default wallpaper
 xwallpaper --stretch "$HOME/.config/wallpaper/default"

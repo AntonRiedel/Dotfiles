@@ -2,7 +2,7 @@
 "     File Name           :     01.plugin.vim
 "     Created By          :     Anton Riedel <anton.riedel@tum.de>
 "     Creation Date       :     [2019-02-23 19:31]
-"     Last Modified       :     [2019-12-08 22:59]
+"     Last Modified       :     [2020-01-11 14:28]
 "     Description         :     Configuration for plugins (using vim-plug)
 "------------------------------------------------------------------------------
 
@@ -27,7 +27,9 @@ Plug 'tpope/vim-surround'
 
 Plug 'shanzi/autoHEADER'
 Plug 'scrooloose/nerdcommenter'
-Plug 'vim-scripts/doxygen-support.vim'
+"Plug 'vim-scripts/doxygen-support.vim'
+Plug 'vim-scripts/DoxygenToolkit.vim'
+"Plug 'kkoomen/vim-doge'
 
 Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do' : 'bash install.sh' }
 Plug 'Shougo/deoplete.nvim', { 'do' : ':UpdateRemotePlugins' }

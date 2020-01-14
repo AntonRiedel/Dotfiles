@@ -3,7 +3,7 @@
 My personal Dotfiles which I use across different machines. I run Arch Linux as my main operating system with a custom build of dwm as window manager and st as terminal.
 You can find configuration files for
 
-* bash (shell)
+* zsh (shell)
 * neovim (editor)
 * tmux (screen multiplexer)
 * vifm (vim-like file browser)
@@ -22,12 +22,12 @@ Under `old` you can find configuration files for programs I used to use such as:
 
 * i3 (->dwm)
 * i3bar (->build-in bar of dwm)
+* bash (->zsh)
 * termite (->st)
 * urxvt (->st)
 * xterm (->st)
 * lxterminal (->st)
 * ranger (->vifm)
-* zsh (->bash)
 * compton (->xcompmgr)
 <!--
 If you are looking for some awesome Void Linux wallpapers I can suggest [here](https://alkusin.net/voidlinux/en#wallpapers).

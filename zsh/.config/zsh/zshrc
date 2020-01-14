@@ -1,0 +1,32 @@
+#Path to oh-my-zshinstallation.
+export ZSH=/usr/share/oh-my-zsh
+
+#Load theme
+ZSH_THEME="bira"
+
+#Disable automatic update checks
+DISABLE_AUTO_UPDATE="true"
+
+#Disable automatically setting the window title
+DISABLE_AUTO_TITLE="true"
+
+# Load plugins
+plugins=(git history-substring-search vi-mode)
+
+#Source oh-my-zsh
+source $ZSH/oh-my-zsh.sh
+
+# Set config for history
+setopt share_history
+HISTSIZE=50000
+SAVEHIST=50000
+HISTFILE="$HOME/.config/zsh/zsh_history"
+
+#Use vim keys in tab complete menu
+bindkey -M menuselect 'h' vi-backward-char
+bindkey -M menuselect 'k' vi-up-line-or-history
+bindkey -M menuselect 'l' vi-forward-char
+bindkey -M menuselect 'j' vi-down-line-or-history
+
+#Load aliases
+[ -f "$HOME/.config/zsh/alias.sh" ] && source "$HOME/.config/zsh/alias.sh"

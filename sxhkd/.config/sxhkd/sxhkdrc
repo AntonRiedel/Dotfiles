@@ -7,6 +7,8 @@ super + {_,shift} + n
 	{$TERMINAL -e $FILE,$FILE2}
 super + v
 	$TERMINAL -e newsboat
+super + o
+    xournalpp
 
 ##Media Keybindings
 super + {_,shift} + a

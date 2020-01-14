@@ -15,7 +15,9 @@ settings:
   content.cookies.store:
     global: false
   content.pdfjs:
-    global: false
+    global: true
+  downloads.location.directory:
+    global: /home/anton/nextcloud
   editor.command:
     global:
     - gvim
