@@ -2,7 +2,7 @@
 "     File Name           :     01.plugin.vim
 "     Created By          :     Anton Riedel <anton.riedel@tum.de>
 "     Creation Date       :     [2019-02-23 19:31]
-"     Last Modified       :     [2020-01-11 14:28]
+"     Last Modified       :     [2020-01-22 19:28]
 "     Description         :     Configuration for plugins (using vim-plug)
 "------------------------------------------------------------------------------
 
@@ -14,7 +14,8 @@ call plug#begin('$HOME/.vim/plugged')
 Plug 'iCyMind/NeoSolarized'
 Plug 'itchyny/lightline.vim'
 Plug 'mengelbrecht/lightline-bufferline'
-Plug 'mhinz/vim-signify'
+Plug 'tpope/vim-fugitive'
+"Plug 'mhinz/vim-signify'
 
 Plug 'junegunn/fzf.vim'
 

@@ -10,11 +10,19 @@ super + v
 super + o
     xournalpp
 
+##Bezel Keybindings
+XF86TaskPane
+    thinkpad-rotate flip
+XF86RotateWindows
+    thinkpad-rotate left
+
 ##Media Keybindings
-super + {_,shift} + a
-	{$TERMINAL -e pulsemixer,sound.sh mut}
-super + {_,shift} + p
-	{sound.sh up 10,sound.sh down 10}
+super + a
+	$TERMINAL -e pulsemixer
+XF86AudioMute
+    sound.sh mut
+XF86Audio{LowerVolume,RaiseVolume}
+	{sound.sh down 10,sound.sh up 10}
 
 ##Email Keybinding
 super + {_,shift} + e

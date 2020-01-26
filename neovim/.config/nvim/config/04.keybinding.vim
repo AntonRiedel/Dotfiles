@@ -2,7 +2,7 @@
 "     File Name           :     04.keybinding.vim
 "     Created By          :     Anton Riedel <anton.riedel@tum.de>
 "     Creation Date       :     [2019-02-23 19:34]
-"     Last Modified       :     [2019-12-04 20:04]
+"     Last Modified       :     [2020-01-16 07:40]
 "     Description         :     Configuration for misc keybindings
 "------------------------------------------------------------------------------
 
@@ -20,7 +20,7 @@ cnoremap sw :w suda://%<CR>
 "(source: https://medium.com/@garoth/neovim-terminal-usecases-tricks-8961e5ac19b9)
 
 "start terminal in a new buffer
-nnoremap <leader>t :terminal<CR>A
+"nnoremap <leader>t :terminal<CR>A
 
 "toggle tagbar
 nmap <F8> :TagbarToggle<CR>
@@ -60,5 +60,5 @@ nnoremap <leader>x :!./%<CR>
 "fuzzy finding
 nnoremap <leader>f :Files<CR>
 nnoremap <leader>bb :Buffers<CR>
-nnoremap <leader>ct :Tags<CR>
+nnoremap <leader>t :Tags<CR>
 nnoremap <leader>l :Lines<CR>

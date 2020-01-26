@@ -3,7 +3,7 @@
 #     File Name           :     .xinitrc
 #     Created By          :     Anton Riedel <anton.riedel@tum.de>
 #     Creation Date       :     [2019-02-23 19:39]
-#     Last Modified       :     [2020-01-14 20:36]
+#     Last Modified       :     [2020-01-26 12:10]
 #     Description         :     Start Xorg
 ###############################################################################
 
@@ -42,5 +42,5 @@ sxhkd &
 #you do not need a mouse
 unclutter -idle 2 -jitter 50 -root &
 
-##start Window Manager
+#start Window Manager
 exec dwm
