@@ -4,7 +4,7 @@ super + Return
 super + {_,shift} + b
 	{$BROWSER,$BROWSER2}
 super + {_,shift} + n
-	{$TERMINAL -e $FILE,$FILE2}
+	{$TERMINAL -e $FILE,$TERMINAL -e nextsync.sh}
 super + v
 	$TERMINAL -e newsboat
 super + o
@@ -13,8 +13,10 @@ super + o
 ##Bezel Keybindings
 XF86TaskPane
     thinkpad-rotate flip
+#take a screenshot rather than rotating the screen by 90
 XF86RotateWindows
-    thinkpad-rotate left
+    flameshot gui
+    #thinkpad-rotate left
 
 ##Media Keybindings
 super + a

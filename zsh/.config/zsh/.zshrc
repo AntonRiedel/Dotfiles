@@ -1,5 +1,10 @@
-#!/bin/zsh
-##zshrc
+################################################################################
+#     File Name           :     .zshrc
+#     Created By          :     Anton Riedel <anton.riedel@tum.de>
+#     Creation Date       :     [2019-02-23 19:40]
+#     Last Modified       :     [2020-01-31 13:52]
+#     Description         :     zshrc
+###############################################################################
 
 #prompt
 #PS1="%B[%F{cyan}%n%f@%F{yellow}%M%f] in %F{red}%~%f

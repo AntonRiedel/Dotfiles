@@ -3,7 +3,7 @@
 #     File Name           :     environment.sh
 #     Created By          :     Anton Riedel <anton.riedel@tum.de>
 #     Creation Date       :     [2019-03-12 16:42]
-#     Last Modified       :     [2020-01-14 22:00]
+#     Last Modified       :     [2020-01-31 13:42]
 #     Description         :     Runs on login
 ###############################################################################
 
@@ -24,11 +24,10 @@ export ZDOTDIR="$HOME/.config/zsh"
 #~/.local/bin/vifm is a custom script to launch vifm with image preview
 #it will be started instead of /usr/bin/vifm since it appears first in PATH
 export FILE="$HOME/.local/bin/vifm"
-export FILE2="pcmanfm"
 
 #browser
 export BROWSER="qutebrowser"
-export BROWSER2="firefox"
+export BROWSER2="brave"
 
 #reader for pdf files
 export READER="zathura"
