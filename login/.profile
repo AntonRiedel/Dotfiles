@@ -3,7 +3,7 @@
 #     File Name           :     environment.sh
 #     Created By          :     Anton Riedel <anton.riedel@tum.de>
 #     Creation Date       :     [2019-03-12 16:42]
-#     Last Modified       :     [2020-01-31 13:42]
+#     Last Modified       :     [2020-02-01 21:04]
 #     Description         :     Runs on login
 ###############################################################################
 
@@ -27,7 +27,7 @@ export FILE="$HOME/.local/bin/vifm"
 
 #browser
 export BROWSER="qutebrowser"
-export BROWSER2="brave"
+export BROWSER2="firefox"
 
 #reader for pdf files
 export READER="zathura"
