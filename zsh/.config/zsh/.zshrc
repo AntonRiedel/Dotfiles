@@ -2,7 +2,7 @@
 #     File Name           :     .zshrc
 #     Created By          :     Anton Riedel <anton.riedel@tum.de>
 #     Creation Date       :     [2019-02-23 19:40]
-#     Last Modified       :     [2020-01-31 13:52]
+#     Last Modified       :     [2020-02-06 00:44]
 #     Description         :     zshrc
 ###############################################################################
 
@@ -18,6 +18,14 @@ HISTSIZE=5000
 SAVEHIST=5000
 HISTFILE="$HOME/.config/zsh/zsh_history"
 
+#enable vi mode
+bindkey -v
+export KEYTIMEOUT=1
+
+#switch to vim buffer
+autoload edit-command-line; zle -N edit-command-line
+bindkey '^v' edit-command-line
+
 #Use vim keys in tab complete menu
 autoload -U compinit
 zstyle ':completion:*' menu select
@@ -28,14 +36,14 @@ bindkey -M menuselect 'k' vi-up-line-or-history
 bindkey -M menuselect 'l' vi-forward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
 
+#fix backspace bug
+bindkey "^?" backward-delete-char
+
 #include hidden files in autocomplete:
 _comp_options+=(globdots)
 
 #enable case INsensitive completion
 zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*'
-
-#bind reverse history search to CTRL-R, like in bash
-bindkey '^R' history-incremental-pattern-search-backward
 
 #load additional plugins
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null

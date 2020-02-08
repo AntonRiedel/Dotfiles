@@ -2,7 +2,7 @@
 "     File Name           :     01.plugin.vim
 "     Created By          :     Anton Riedel <anton.riedel@tum.de>
 "     Creation Date       :     [2019-02-23 19:31]
-"     Last Modified       :     [2020-01-31 13:42]
+"     Last Modified       :     [2020-02-05 11:08]
 "     Description         :     Configuration for plugins (using vim-plug)
 "------------------------------------------------------------------------------
 
