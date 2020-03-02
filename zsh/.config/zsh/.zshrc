@@ -2,7 +2,7 @@
 #     File Name           :     .zshrc
 #     Created By          :     Anton Riedel <anton.riedel@tum.de>
 #     Creation Date       :     [2019-02-23 19:40]
-#     Last Modified       :     [2020-02-06 00:44]
+#     Last Modified       :     [2020-02-26 22:46]
 #     Description         :     zshrc
 ###############################################################################
 
@@ -25,6 +25,9 @@ export KEYTIMEOUT=1
 #switch to vim buffer
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^v' edit-command-line
+
+#backward search
+bindkey '^R'    history-incremental-search-backward
 
 #Use vim keys in tab complete menu
 autoload -U compinit
@@ -83,3 +86,5 @@ SPACESHIP_DIR_TRUNC=0
 
 autoload -U promptinit; promptinit
 prompt spaceship
+
+source /home/anton/.config/broot/launcher/bash/br

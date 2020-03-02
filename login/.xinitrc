@@ -3,7 +3,7 @@
 #     File Name           :     .xinitrc
 #     Created By          :     Anton Riedel <anton.riedel@tum.de>
 #     Creation Date       :     [2019-02-23 19:39]
-#     Last Modified       :     [2020-01-31 13:42]
+#     Last Modified       :     [2020-02-19 18:36]
 #     Description         :     Start Xorg
 ###############################################################################
 
@@ -45,5 +45,8 @@ flameshot &
 #you do not need a mouse
 unclutter -idle 2 -jitter 50 -root &
 
+#disable touchscreen and touchpad
+thinkpad-touch off
+thinkpad-touchpad off
 #start Window Manager
 exec dwm

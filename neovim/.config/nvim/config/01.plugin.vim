@@ -2,9 +2,16 @@
 "     File Name           :     01.plugin.vim
 "     Created By          :     Anton Riedel <anton.riedel@tum.de>
 "     Creation Date       :     [2019-02-23 19:31]
-"     Last Modified       :     [2020-02-05 11:08]
+"     Last Modified       :     [2020-02-26 01:35]
 "     Description         :     Configuration for plugins (using vim-plug)
 "------------------------------------------------------------------------------
+
+"automatically install vim-plug and all other plugins if they are missing
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
 
 let g:plug_threads = 2
 let g:plug_timeout = 120

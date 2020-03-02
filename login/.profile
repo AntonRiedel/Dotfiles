@@ -3,7 +3,7 @@
 #     File Name           :     environment.sh
 #     Created By          :     Anton Riedel <anton.riedel@tum.de>
 #     Creation Date       :     [2019-03-12 16:42]
-#     Last Modified       :     [2020-02-08 21:08]
+#     Last Modified       :     [2020-02-20 18:30]
 #     Description         :     Runs on login
 ###############################################################################
 
@@ -21,8 +21,8 @@ export PASSWORD_STORE_DIR="$HOME/.local/share/password-store"
 export LESSHISTFILE="-"
 export ZDOTDIR="$HOME/.config/zsh"
 
-#file browswer (broot, but call as br)
-export FILE="br"
+#file browswer
+export FILE="lf"
 
 #browser
 export BROWSER="qutebrowser"
