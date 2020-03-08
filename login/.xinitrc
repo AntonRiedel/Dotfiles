@@ -3,13 +3,15 @@
 #     File Name           :     .xinitrc
 #     Created By          :     Anton Riedel <anton.riedel@tum.de>
 #     Creation Date       :     [2019-02-23 19:39]
-#     Last Modified       :     [2020-02-19 18:36]
+#     Last Modified       :     [2020-03-08 23:38]
 #     Description         :     Start Xorg
 ###############################################################################
 
 #set keyboard layout
 if [ "$(hostname)" = "Mars" ];then
     setxkbmap gb
+elif [ "$(hostname)" = "Moon" ];then
+    setxkbmap de
 else
     setxkbmap us
 fi

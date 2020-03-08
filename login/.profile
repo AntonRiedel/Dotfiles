@@ -3,7 +3,7 @@
 #     File Name           :     environment.sh
 #     Created By          :     Anton Riedel <anton.riedel@tum.de>
 #     Creation Date       :     [2019-03-12 16:42]
-#     Last Modified       :     [2020-02-20 18:30]
+#     Last Modified       :     [2020-03-02 21:56]
 #     Description         :     Runs on login
 ###############################################################################
 
@@ -35,5 +35,5 @@ export READER2="evince"
 #default options for fzf
 export FZF_DEFAULT_OPTS="--reverse --height=40%"
 
-# Start graphical server if dwm is not already running.
+# Start graphical server if Xorg is not already running.
 [ "$(tty)" = "/dev/tty1" ] && ! pgrep -x Xorg >/dev/null && exec startx >&/dev/null
