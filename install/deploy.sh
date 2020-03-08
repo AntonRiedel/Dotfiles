@@ -3,7 +3,7 @@
 #     File Name           :     setup.sh
 #     Created By          :     Anton Riedel <anton.riedel@tum.de>
 #     Creation Date       :     [2020-02-01 12:34]
-#     Last Modified       :     [2020-03-08 23:39]
+#     Last Modified       :     [2020-03-09 00:47]
 #     Description         :     My deloyment script. Run on a fresh Arch Install
 ###############################################################################
 
@@ -20,9 +20,9 @@ yay -S --needed - < packages.install
 
 #deploy config file with stow
 cd ..
-rm -rf ../.*
+rm -rf ../.*[!.]
 mkdir -p ../.local/bin ../.config
-stow login sxhkd scripts dunst tmux zsh wallpapter zathura qutebrowser neofetch neovim htop
+stow login sxhkd scripts dunst tmux zsh wallpaper zathura qutebrowser neofetch neovim htop
 cd install
 
 #download source for suckless utilities and install them
