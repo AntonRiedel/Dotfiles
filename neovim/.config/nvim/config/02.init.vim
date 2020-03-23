@@ -2,7 +2,7 @@
 "     File Name           :     02.init.vim
 "     Created By          :     Anton Riedel <anton.riedel@tum.de>
 "     Creation Date       :     [2019-02-23 19:33]
-"     Last Modified       :     [2019-10-22 12:25]
+"     Last Modified       :     [2020-03-23 12:34]
 "     Description         :     Basic configuration for Neovim
 "------------------------------------------------------------------------------
 
@@ -26,6 +26,7 @@ set smartindent
 set ignorecase
 set incsearch
 set hlsearch
+set smartcase
 
 "Tabs
 set tabstop=4

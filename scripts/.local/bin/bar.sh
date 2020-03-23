@@ -3,8 +3,8 @@
 #     File Name           :     autostart.sh
 #     Created By          :     Anton Riedel <anton.riedel@tum.de>
 #     Creation Date       :     [2019-05-20 18:16]
-#     Last Modified       :     [2019-08-09 20:43]
-#     Description         :     DWM autostart script (for status configuration)
+#     Last Modified       :     [2020-03-18 12:04]
+#     Description         :     DWM status bar
 ###############################################################################
 
 # Handle SIGTRAP signals sent by refbar to update the status bar immediately.
@@ -32,9 +32,9 @@ status() {
 
     # Show RAM usage
     free -h | awk '/^Mem:/ {print $3 "/" $2}'
-	# Will show remaining battery power
 	echo "$delim"
 
+	# Show remaining battery power
     if [ -d /sys/class/power_supply/BAT? ]; then
         acpi -b | awk '{print $3,$4,"("$5")"}' | sed -e 's/,//g'
     else
@@ -42,12 +42,12 @@ status() {
     fi
     echo "$delim"
 
-    # Wifi quality percentage and  icon if ethernet is connected.
+    # Show wifi quality percentage
 	grep "^\s*w" /proc/net/wireless | awk '{ print "WIFI",int($3 * 100 / 70)"%" }'
 	sed "s/down//;s/up/ETH/" /sys/class/net/e*/operstate
     echo "$delim"
 
-	# Date and time.
+	# Show date and time
 	date '+%Y %b %d (%a) %I:%M%p'
 	}
 
