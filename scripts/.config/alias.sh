@@ -1,10 +1,9 @@
-###############################################################################
-#     File Name           :     alias.sh
-#     Created By          :     Anton Riedel <anton.riedel@tum.de>
-#     Creation Date       :     [2019-03-12 16:54]
-#     Last Modified       :     [2020-02-23 02:04]
-#     Description         :     Aliases for the shell
-###############################################################################
+#!/bin/sh
+# File              : alias.sh
+# Author            : Anton Riedel <anton.riedel@tum.de>
+# Date              : 24.03.2020
+# Last Modified Date: 24.03.2020
+# Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 ##aliases
 alias ls="ls --color=auto"
@@ -34,4 +33,4 @@ fd() { cd "$(find $HOME -type d 2>/dev/null | fzf  --prompt="Jump to Dir: ")" &&
 #search through history with fzf
 hs() {echo "$(cat $HOME/.config/zsh/zsh_history | sort -u | fzf)"}
 #search for a process and kill it
-kp() { kill "$(ps -e | fzf | awk '{ print $1 }')" 2>/dev/null; }
+kp() { kill -s SIGKILL "$(ps -e | fzf | awk '{ print $1 }')" 2>/dev/null; }

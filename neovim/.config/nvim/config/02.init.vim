@@ -1,23 +1,23 @@
-"------------------------------------------------------------------------------
-"     File Name           :     02.init.vim
-"     Created By          :     Anton Riedel <anton.riedel@tum.de>
-"     Creation Date       :     [2019-02-23 19:33]
-"     Last Modified       :     [2020-03-23 12:34]
-"     Description         :     Basic configuration for Neovim
-"------------------------------------------------------------------------------
+" File              : 02.init.vim
+" Author            : Anton Riedel <anton.riedel@tum.de>
+" Date              : 24.03.2020
+" Last Modified Date: 24.03.2020
+" Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 "Misc
-set backspace=indent,eol,start
 let mapleader=" "
+
+set backspace=indent,eol,start
 set clipboard=unnamedplus
 set mouse=a
+
 set fileencoding=utf-8
 set fileformat=unix
-filetype on
-filetype plugin on
 filetype plugin indent on
+
 set nobackup
 set noswapfile
+
 set wrap
 set linebreak
 set smartindent

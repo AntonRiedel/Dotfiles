@@ -1,10 +1,8 @@
-"------------------------------------------------------------------------------
-"     File Name           :     09.neoformat.vim
-"     Created By          :     Anton Riedel <anton.riedel@tum.de>
-"     Creation Date       :     [2019-02-23 19:36]
-"     Last Modified       :     [2019-12-04 19:33]
-"     Description         :     Configuration for Neoforamt
-"------------------------------------------------------------------------------
+" File              : 09.neoformat.vim
+" Author            : Anton Riedel <anton.riedel@tum.de>
+" Date              : 24.03.2020
+" Last Modified Date: 24.03.2020
+" Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 "tex
 let g:neoformat_enabled_tex = [ 'latexindent' ]

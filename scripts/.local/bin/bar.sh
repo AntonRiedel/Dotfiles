@@ -1,11 +1,9 @@
-#! /bin/sh
-###############################################################################
-#     File Name           :     autostart.sh
-#     Created By          :     Anton Riedel <anton.riedel@tum.de>
-#     Creation Date       :     [2019-05-20 18:16]
-#     Last Modified       :     [2020-03-18 12:04]
-#     Description         :     DWM status bar
-###############################################################################
+#!/bin/sh
+# File              : bar.sh
+# Author            : Anton Riedel <anton.riedel@tum.de>
+# Date              : 24.03.2020
+# Last Modified Date: 24.03.2020
+# Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 # Handle SIGTRAP signals sent by refbar to update the status bar immediately.
 trap 'update' 5

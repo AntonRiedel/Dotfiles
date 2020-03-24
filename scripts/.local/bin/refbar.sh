@@ -1,10 +1,8 @@
-#! /bin/sh
-###############################################################################
-#     File Name           :     refbar.sh
-#     Created By          :     Anton Riedel <anton.riedel@tum.de>
-#     Creation Date       :     [2019-06-18 18:39]
-#     Last Modified       :     [2019-06-18 19:04]
-#     Description         :     Refresh statusbar in dwm
-###############################################################################
+#!/bin/sh
+# File              : refbar.sh
+# Author            : Anton Riedel <anton.riedel@tum.de>
+# Date              : 24.03.2020
+# Last Modified Date: 24.03.2020
+# Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 pkill -SIGTRAP bar.sh

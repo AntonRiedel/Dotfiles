@@ -1,11 +1,9 @@
-#! /bin/sh
-###############################################################################
-#     File Name           :     sync.sh
-#     Created By          :     Anton Riedel <anton.riedel@tum.de>
-#     Creation Date       :     [2020-01-04 00:20]
-#     Last Modified       :     [2020-02-03 14:54]
-#     Description         :      
-###############################################################################
+#!/bin/sh
+# File              : nextsync.sh
+# Author            : Anton Riedel <anton.riedel@tum.de>
+# Date              : 24.03.2020
+# Last Modified Date: 24.03.2020
+# Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 #credentials
 user="anton"

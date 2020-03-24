@@ -1,11 +1,9 @@
-#! /bin/sh
-#################################################################################
-#     File Name           :     sound.sh
-#     Created By          :     Anton Riedel <anton.riedel@tum.de>
-#     Creation Date       :     [2019-02-23 19:46]
-#     Last Modified       :     [2019-06-18 19:15]
-#     Description         :     Audio interface (uses pulsemixer and i3)
-#################################################################################
+#!/bin/sh
+# File              : sound.sh
+# Author            : Anton Riedel <anton.riedel@tum.de>
+# Date              : 24.03.2020
+# Last Modified Date: 24.03.2020
+# Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 [ -z "$2" ] && num="2" || num="$2"
 

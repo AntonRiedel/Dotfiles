@@ -1,10 +1,8 @@
-"------------------------------------------------------------------------------
-"     File Name           :     init.vim
-"     Created By          :     Anton Riedel <anton.riedel@tum.de>
-"     Creation Date       :     [2019-02-23 23:57]
-"     Last Modified       :     [2019-03-14 23:28]
-"     Description         :     Central config file for neovim
-"------------------------------------------------------------------------------
+" File              : init.vim
+" Author            : Anton Riedel <anton.riedel@tum.de>
+" Date              : 24.03.2020
+" Last Modified Date: 24.03.2020
+" Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 "split configuration across serveral files
 for config in split(glob('$HOME/.config/nvim/config/*.vim'), '\n')

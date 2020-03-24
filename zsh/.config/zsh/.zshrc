@@ -1,10 +1,9 @@
-################################################################################
-#     File Name           :     .zshrc
-#     Created By          :     Anton Riedel <anton.riedel@tum.de>
-#     Creation Date       :     [2019-02-23 19:40]
-#     Last Modified       :     [2020-02-26 22:46]
-#     Description         :     zshrc
-###############################################################################
+#!/bin/zsh
+# File              : .zshrc
+# Author            : Anton Riedel <anton.riedel@tum.de>
+# Date              : 24.03.2020
+# Last Modified Date: 24.03.2020
+# Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 #prompt
 #PS1="%B[%F{cyan}%n%f@%F{yellow}%M%f] in %F{red}%~%f

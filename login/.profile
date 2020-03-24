@@ -1,11 +1,9 @@
-#! /bin/sh
-###############################################################################
-#     File Name           :     environment.sh
-#     Created By          :     Anton Riedel <anton.riedel@tum.de>
-#     Creation Date       :     [2019-03-12 16:42]
-#     Last Modified       :     [2020-03-02 21:56]
-#     Description         :     Runs on login
-###############################################################################
+#!/bin/sh
+# File              : .profile
+# Author            : Anton Riedel <anton.riedel@tum.de>
+# Date              : 24.03.2020
+# Last Modified Date: 24.03.2020
+# Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 #set environment variables
 export PATH="$HOME/.local/bin:$PATH"

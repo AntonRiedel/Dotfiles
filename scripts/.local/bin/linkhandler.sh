@@ -1,15 +1,9 @@
-#! /bin/bash
-#################################################################################
-#     File Name           :     linkhandler.sh
-#     Created By          :     Anton Riedel <anton.riedel@tum.de>
-#     Creation Date       :     [2019-02-25 18:28]
-#     Last Modified       :     [2019-04-24 20:50]
-#     Description         :     Feed script a url or file location.
-#								If an image, it will view in sxiv,
-#								if a video or gif, it will view in mpv
-#								if a music file or pdf, it will download,
-#								otherwise it opens link in browser.
-#################################################################################
+#!/bin/sh
+# File              : linkhandler.sh
+# Author            : Anton Riedel <anton.riedel@tum.de>
+# Date              : 24.03.2020
+# Last Modified Date: 24.03.2020
+# Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 if [[ -z "$1" ]]; then
     "$BROWSER"

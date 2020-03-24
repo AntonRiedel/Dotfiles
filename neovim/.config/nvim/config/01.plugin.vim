@@ -1,22 +1,21 @@
-"------------------------------------------------------------------------------
-"     File Name           :     01.plugin.vim
-"     Created By          :     Anton Riedel <anton.riedel@tum.de>
-"     Creation Date       :     [2019-02-23 19:31]
-"     Last Modified       :     [2020-02-26 01:35]
-"     Description         :     Configuration for plugins (using vim-plug)
-"------------------------------------------------------------------------------
+" File              : 01.plugin.vim
+" Author            : Anton Riedel <anton.riedel@tum.de>
+" Date              : 24.03.2020
+" Last Modified Date: 24.03.2020
+" Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 "automatically install vim-plug and all other plugins if they are missing
-if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+if ! filereadable(expand('~/.config/nvim/autoload/plug.vim'))
+    echo "Downloading junegunn/vim-plug to manage plugins..."
+    silent !mkdir -p ~/.config/nvim/autoload/
+    silent !curl "https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim" > ~/.config/nvim/autoload/plug.vim
+    autocmd VimEnter * PlugInstall
 endif
 
-let g:plug_threads = 2
+let g:plug_threads = 4
 let g:plug_timeout = 120
 
-call plug#begin('$HOME/.vim/plugged')
+call plug#begin('~/.config/nvim/plugged')
 
 Plug 'iCyMind/NeoSolarized'
 Plug 'itchyny/lightline.vim'
@@ -33,11 +32,14 @@ Plug 'godlygeek/tabular'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
 
-Plug 'shanzi/autoHEADER'
+"Plug 'shanzi/autoHEADER'
+Plug 'alpertuna/vim-header'
 Plug 'scrooloose/nerdcommenter'
 "Plug 'vim-scripts/doxygen-support.vim'
 Plug 'vim-scripts/DoxygenToolkit.vim'
 "Plug 'kkoomen/vim-doge'
+"
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do' : 'bash install.sh' }
 Plug 'Shougo/deoplete.nvim', { 'do' : ':UpdateRemotePlugins' }

@@ -1,11 +1,9 @@
-#! /bin/sh
-#################################################################################
-#     File Name           :     screen.sh
-#     Created By          :     Anton Riedel <anton.riedel@tum.de>
-#     Creation Date       :     [2019-02-23 19:30]
-#     Last Modified       :     [2020-01-14 20:29]
-#     Description         :     Handle desktop setup
-#################################################################################
+#!/bin/sh
+# File              : screen.sh
+# Author            : Anton Riedel <anton.riedel@tum.de>
+# Date              : 24.03.2020
+# Last Modified Date: 24.03.2020
+# Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 pgrep -x dmenu && exit
 

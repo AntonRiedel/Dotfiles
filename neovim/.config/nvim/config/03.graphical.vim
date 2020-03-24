@@ -1,10 +1,8 @@
-"------------------------------------------------------------------------------
-"     File Name           :     03.graphical.vim
-"     Created By          :     Anton Riedel <anton.riedel@tum.de>
-"     Creation Date       :     [2019-02-23 19:34]
-"     Last Modified       :     [2020-02-05 11:08]
-"     Description         :     Configuration for GUI
-"------------------------------------------------------------------------------
+" File              : 03.graphical.vim
+" Author            : Anton Riedel <anton.riedel@tum.de>
+" Date              : 24.03.2020
+" Last Modified Date: 24.03.2020
+" Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 " UI Layout
 set number

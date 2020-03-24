@@ -1,11 +1,9 @@
-#! /bin/sh
-#################################################################################
-#     File Name           :     fin.sh
-#     Created By          :     Anton Riedel <anton.riedel@tum.de>
-#     Creation Date       :     [2019-02-23 19:42]
-#     Last Modified       :     [2020-02-11 10:47]
-#     Description         :     Shutdown, reboot or kill current i3 instance
-#################################################################################
+#!/bin/sh
+# File              : fin.sh
+# Author            : Anton Riedel <anton.riedel@tum.de>
+# Date              : 24.03.2020
+# Last Modified Date: 24.03.2020
+# Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 ClearCache() {
     history -c

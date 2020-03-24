@@ -1,10 +1,8 @@
-"--------------------------------------------------------------------------------
-"     File Name           :     07.lsp.vim
-"     Created By          :     Anton Riedel <anton.riedel@tum.de>
-"     Creation Date       :     [2019-12-03 22:46]
-"     Last Modified       :     [2020-02-26 10:32]
-"     Description         :     Configuration for language server protocol
-"--------------------------------------------------------------------------------
+" File              : 07.lsp.vim
+" Author            : Anton Riedel <anton.riedel@tum.de>
+" Date              : 24.03.2020
+" Last Modified Date: 24.03.2020
+" Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 set hidden
 let g:LanguageClient_serverCommands = {

@@ -1,12 +1,9 @@
-#! /bin/sh
-#################################################################################
-#     File Name           :     lockscreen.sh
-#     Created By          :     Anton Riedel <anton.riedel@tum.de>
-#     Creation Date       :     [2019-02-23 19:43]
-#     Last Modified       :     [2020-03-02 21:50]
-#     Description         :     Lock screen and display a distorted screenshot
-#                               of the desktop
-#################################################################################
+#!/bin/sh
+# File              : lockscreen.sh
+# Author            : Anton Riedel <anton.riedel@tum.de>
+# Date              : 24.03.2020
+# Last Modified Date: 24.03.2020
+# Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 rm -f /tmp/*.png
 

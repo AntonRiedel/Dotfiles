@@ -1,11 +1,9 @@
-#! /bin/sh
-###############################################################################
-#     File Name           :     .xinitrc
-#     Created By          :     Anton Riedel <anton.riedel@tum.de>
-#     Creation Date       :     [2019-02-23 19:39]
-#     Last Modified       :     [2020-03-08 23:38]
-#     Description         :     Start Xorg
-###############################################################################
+#!/bin/sh
+# File              : .xinitrc
+# Author            : Anton Riedel <anton.riedel@tum.de>
+# Date              : 24.03.2020
+# Last Modified Date: 24.03.2020
+# Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 #set keyboard layout
 if [ "$(hostname)" = "Mars" ];then
@@ -47,8 +45,9 @@ flameshot &
 #you do not need a mouse
 unclutter -idle 2 -jitter 50 -root &
 
-#disable touchscreen and touchpad
+#disable touchscreen and touchpad on X220
 thinkpad-touch off
 thinkpad-touchpad off
+
 #start Window Manager
 exec dwm

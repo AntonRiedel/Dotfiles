@@ -1,10 +1,8 @@
-"------------------------------------------------------------------------------
-"     File Name           :     04.keybinding.vim
-"     Created By          :     Anton Riedel <anton.riedel@tum.de>
-"     Creation Date       :     [2019-02-23 19:34]
-"     Last Modified       :     [2020-01-16 07:40]
-"     Description         :     Configuration for misc keybindings
-"------------------------------------------------------------------------------
+" File              : 04.keybinding.vim
+" Author            : Anton Riedel <anton.riedel@tum.de>
+" Date              : 24.03.2020
+" Last Modified Date: 24.03.2020
+" Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 "Quickly open neovim config files in buffer
 "init.vim will be automatically sourced if any changes are made
@@ -13,8 +11,16 @@ nnoremap <leader>ev :Files $MYVIMCONFIG<CR>
 "escape insert mode easily
 inoremap jj <ESC>
 
+"shortcutting split navigation
+	map <C-h> <C-w>h
+	map <C-j> <C-w>j
+	map <C-k> <C-w>k
+	map <C-l> <C-w>l
+
 "write file with sudo (using suda plugin)
 cnoremap sw :w suda://%<CR>
+"smart edit for sudo
+let g:suda_smart_edit = 1
 
 "move between splits (even if there is a terminal running)
 "(source: https://medium.com/@garoth/neovim-terminal-usecases-tricks-8961e5ac19b9)
