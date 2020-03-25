@@ -2,10 +2,10 @@
 # File              : sound.sh
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 24.03.2020
-# Last Modified Date: 24.03.2020
+# Last Modified Date: 25.03.2020
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
-[ -z "$2" ] && num="2" || num="$2"
+[ -z "$2" ] && num="5" || num="$2"
 
 case "$1" in
 u*) pulsemixer --change-volume +"$num" ;;

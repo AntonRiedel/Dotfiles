@@ -1,10 +1,8 @@
-#! /bin/sh
-###############################################################################
-#     File Name           :     getPackages.sh
-#     Created By          :     Anton Riedel <anton.riedel@tum.de>
-#     Creation Date       :     [2020-01-31 21:14]
-#     Last Modified       :     [2020-03-02 21:42]
-#     Description         :      
-###############################################################################
+#!/bin/sh
+# File              : getPackages.sh
+# Author            : Anton Riedel <anton.riedel@tum.de>
+# Date              : 25.03.2020
+# Last Modified Date: 25.03.2020
+# Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 pacman -Qeq > packages.install

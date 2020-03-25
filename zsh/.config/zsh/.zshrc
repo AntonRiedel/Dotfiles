@@ -2,12 +2,12 @@
 # File              : .zshrc
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 24.03.2020
-# Last Modified Date: 24.03.2020
+# Last Modified Date: 25.03.2020
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 #prompt
-#PS1="%B[%F{cyan}%n%f@%F{yellow}%M%f] in %F{red}%~%f
-#%F{magenta}->%f%b "
+PS1="%B[%F{cyan}%n%f@%F{yellow}%M%f] in %F{red}%~%f
+%F{magenta}>%f%b "
 
 #set shell options
 setopt share_history autocd
@@ -51,39 +51,39 @@ zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
 
 #Load aliases
-[ -f "$HOME/.config/alias.sh" ] && source "$HOME/.config/alias.sh"
+[ -f "$HOME/.config/aliasrc" ] && source "$HOME/.config/aliasrc"
 
-#spaceship prompt
-autoload -U colors && colors
-#define order
-SPACESHIP_PROMPT_ORDER=(
-  user          # Username section
-  host          # Hostname section
-  dir           # Current directory section
-  git           # Git section (git_branch + git_status)
-  venv          # virtualenv section
-  conda         # conda virtualenv section
-  pyenv         # Pyenv section
-  line_sep      # Line break
-  jobs          # Background jobs indicator
-  char          # Prompt character
-)
-#customize the prompt
-SPACESHIP_PROMPT_ADD_NEWLINE=false
-SPACESHIP_PROMPT_SEPARATE_LINE=true
-SPACESHIP_PROMPT_FIRST_PREFIX_SHOW=true
-SPACESHIP_PROMPT_PREFIXES_SHOW=true
-SPACESHIP_PROMPT_SUFFIXES_SHOW=true
-SPACESHIP_USER_PREFIX=[
-SPACESHIP_USER_SHOW=always
-SPACESHIP_USER_SUFFIX=''
-SPACESHIP_HOST_PREFIX=@
-SPACESHIP_HOST_SHOW=always
-SPACESHIP_HOST_SUFFIX=]
-SPACESHIP_DIR_PREFIX=' in '
-SPACESHIP_DIR_TRUNC=0
+##spaceship prompt
+#autoload -U colors && colors
+##define order
+#SPACESHIP_PROMPT_ORDER=(
+  #user          # Username section
+  #host          # Hostname section
+  #dir           # Current directory section
+  #git           # Git section (git_branch + git_status)
+  #venv          # virtualenv section
+  #conda         # conda virtualenv section
+  #pyenv         # Pyenv section
+  #line_sep      # Line break
+  #jobs          # Background jobs indicator
+  #char          # Prompt character
+#)
+##customize the prompt
+#SPACESHIP_PROMPT_ADD_NEWLINE=false
+#SPACESHIP_PROMPT_SEPARATE_LINE=true
+#SPACESHIP_PROMPT_FIRST_PREFIX_SHOW=true
+#SPACESHIP_PROMPT_PREFIXES_SHOW=true
+#SPACESHIP_PROMPT_SUFFIXES_SHOW=true
+#SPACESHIP_USER_PREFIX=[
+#SPACESHIP_USER_SHOW=always
+#SPACESHIP_USER_SUFFIX=''
+#SPACESHIP_HOST_PREFIX=@
+#SPACESHIP_HOST_SHOW=always
+#SPACESHIP_HOST_SUFFIX=]
+#SPACESHIP_DIR_PREFIX=' in '
+#SPACESHIP_DIR_TRUNC=0
 
-autoload -U promptinit; promptinit
-prompt spaceship
+#autoload -U promptinit; promptinit
+#prompt spaceship
 
-source /home/anton/.config/broot/launcher/bash/br
+#source /home/anton/.config/broot/launcher/bash/br

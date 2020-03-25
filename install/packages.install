@@ -1,3 +1,9 @@
+#!/bin/sh
+# File              : packages.install
+# Author            : Anton Riedel <anton.riedel@tum.de>
+# Date              : 25.03.2020
+# Last Modified Date: 25.03.2020
+# Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 abook
 acpi
 arandr
@@ -10,13 +16,14 @@ biber
 binutils
 bison
 boost
-broot
 clang
 cmake
 cmake-language-server
 cowsay
 ctags
 dash
+dashbinsh
+davfs2
 dosfstools
 doxygen
 dunst
@@ -91,7 +98,6 @@ rdesktop
 scrot
 sed
 simple-mtpfs
-spaceship-prompt-git
 stow
 sudo
 sxhkd
@@ -116,6 +122,7 @@ tigervnc
 timeshift
 tmux
 ttf-hack
+ttf-joypixels
 unclutter
 unzip
 vi
