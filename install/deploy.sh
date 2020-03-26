@@ -2,7 +2,7 @@
 # File              : deploy.sh
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 25.03.2020
-# Last Modified Date: 25.03.2020
+# Last Modified Date: 26.03.2020
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 #download and install yay-bin

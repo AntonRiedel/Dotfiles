@@ -1,12 +1,8 @@
-"------------------------------------------------------------------------------
-"     File Name           :     06.deoplete.vim
-"     Created By          :     Anton Riedel <anton.riedel@tum.de>
-"     Creation Date       :     [2019-02-23 19:35]
-"     Last Modified       :     [2020-03-24 18:36]
-"     Description         :     Configuration for deoplete-{clang,jedi}
-"------------------------------------------------------------------------------
-
-let g:python_host_prog="/usr/bin/python"
+" File              : 06.deoplete.vim
+" Author            : Anton Riedel <anton.riedel@tum.de>
+" Date              : 26.03.2020
+" Last Modified Date: 26.03.2020
+" Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 "start deoplete at startup
 let g:deoplete#enable_at_startup = 1

@@ -21,17 +21,19 @@ XF86RotateWindows
     #thinkpad-rotate left
 
 ##Media Keybindings
-super + a
-	$TERMINAL -e pulsemixer
+super + {_,shift} + a
+	{$TERMINAL -e pulsemixer,sound.sh mute}
 XF86AudioMute
     sound.sh mut
 XF86Audio{LowerVolume,RaiseVolume}
+	{sound.sh down 10,sound.sh up 10}
+super + {_,shift} + p
 	{sound.sh down 10,sound.sh up 10}
 
 ##Menu Keybindings
 super + x
 	fin.sh
 super + {_,shift} + r
-	{dmenu_run,screen.sh}
+    {dmenu_run -i -F -p "Run: ",screen.sh}
 super + g
 	passmenu

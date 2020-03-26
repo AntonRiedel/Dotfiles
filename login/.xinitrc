@@ -2,7 +2,7 @@
 # File              : .xinitrc
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 24.03.2020
-# Last Modified Date: 24.03.2020
+# Last Modified Date: 26.03.2020
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 #set keyboard layout
@@ -28,7 +28,7 @@ $HOME/.config/screenlayout/default.sh
 xwallpaper --stretch "$HOME/.config/wallpaper/default"
 
 #activate statusbar
-bar.sh &
+dwmblocks &
 
 #start compositor
 xcompmgr &

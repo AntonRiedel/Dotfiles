@@ -2,7 +2,7 @@
 # File              : aliasrc
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 24.03.2020
-# Last Modified Date: 25.03.2020
+# Last Modified Date: 26.03.2020
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 ##aliases
@@ -13,6 +13,7 @@ alias pdf2="$READER2"
 alias v="$EDITOR"
 alias vi="$EDITOR"
 alias vim="$EDITOR"
+alias vb="$EDITOR -u NONE"
 alias gs="git status"
 alias ga="git add"
 alias gc="git commit"

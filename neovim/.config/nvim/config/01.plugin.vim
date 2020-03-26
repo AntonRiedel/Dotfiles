@@ -1,7 +1,7 @@
 " File              : 01.plugin.vim
 " Author            : Anton Riedel <anton.riedel@tum.de>
 " Date              : 24.03.2020
-" Last Modified Date: 24.03.2020
+" Last Modified Date: 26.03.2020
 " Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 "automatically install vim-plug and all other plugins if they are missing
@@ -43,7 +43,6 @@ Plug 'vim-scripts/DoxygenToolkit.vim'
 
 Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do' : 'bash install.sh' }
 Plug 'Shougo/deoplete.nvim', { 'do' : ':UpdateRemotePlugins' }
-
 Plug 'sbdchd/neoformat'
 
 Plug 'SirVer/ultisnips'

@@ -1,8 +1,8 @@
 #!/bin/sh
 # File              : packages.install
 # Author            : Anton Riedel <anton.riedel@tum.de>
-# Date              : 25.03.2020
-# Last Modified Date: 25.03.2020
+# Date              : 26.03.2020
+# Last Modified Date: 26.03.2020
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 abook
 acpi
@@ -23,7 +23,6 @@ cowsay
 ctags
 dash
 dashbinsh
-davfs2
 dosfstools
 doxygen
 dunst
@@ -54,6 +53,8 @@ isync
 lf-bin
 libnotify
 libtool
+libxft-bgra
+linux
 linux-firmware
 linux-lts
 linux-lts-headers
@@ -112,6 +113,7 @@ texlive-formatsextra
 texlive-games
 texlive-humanities
 texlive-latexextra
+texlive-latexindent-meta
 texlive-music
 texlive-pictures
 texlive-pstricks
@@ -120,12 +122,14 @@ texlive-science
 thinkpad-scripts
 tigervnc
 timeshift
+tlp
 tmux
 ttf-hack
 ttf-joypixels
 unclutter
 unzip
 vi
+vidir
 vim
 vpnc
 w3m
