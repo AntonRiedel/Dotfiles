@@ -2,7 +2,7 @@
 # File              : .profile
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 24.03.2020
-# Last Modified Date: 25.03.2020
+# Last Modified Date: 26.03.2020
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 #set environment variables
@@ -18,6 +18,7 @@ export NOTMUCH_CONFIG="$HOME/.config/notmuch-config"
 export PASSWORD_STORE_DIR="$HOME/.local/share/password-store"
 export LESSHISTFILE="-"
 export ZDOTDIR="$HOME/.config/zsh"
+export GNUPGHOME="$HOME/.config/gnupg"
 
 #file browswer
 export FILE="lf"
