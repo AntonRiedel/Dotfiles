@@ -28,7 +28,7 @@ XF86AudioMute
 XF86Audio{LowerVolume,RaiseVolume}
 	{sound.sh down 10,sound.sh up 10}
 super + {_,shift} + p
-	{sound.sh down 10,sound.sh up 10}
+	{sound.sh up 10,sound.sh dowm 10}
 
 ##Menu Keybindings
 super + x
