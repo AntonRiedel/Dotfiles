@@ -1,9 +1,10 @@
+<!--
 File              : README.md
 Author            : Anton Riedel <anton.riedel@tum.de>
 Date              : 25.03.2020
-Last Modified Date: 25.03.2020
+Last Modified Date: 27.03.2020
 Last Modified By  : Anton Riedel <anton.riedel@tum.de>
-
+-->
 # Dotfiles
 
 My personal Dotfiles which I use across different machines. I run Arch Linux as my main operating system with a custom build of dwm as window manager and st as terminal.
