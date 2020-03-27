@@ -2,7 +2,7 @@
 # File              : .xinitrc
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 24.03.2020
-# Last Modified Date: 26.03.2020
+# Last Modified Date: 27.03.2020
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 #set keyboard layout
@@ -40,7 +40,7 @@ dunst &
 sxhkd &
 
 #start screenshot utility
-flameshot &
+#flameshot &
 
 #you do not need a mouse
 unclutter -idle 2 -jitter 50 -root &

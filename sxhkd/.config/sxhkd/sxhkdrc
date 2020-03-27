@@ -11,22 +11,24 @@ super + v
 	$TERMINAL -e newsboat
 super + o
     xournalpp
-
-##Bezel Keybindings
+super + {_,shift} + y
+    {flameshot &,killall flameshot && xsetroot -name "--RESET--"}
+##Bezel Keybindings for X220
 XF86TaskPane
     thinkpad-rotate flip
 #take a screenshot rather than rotating the screen by 90
 XF86RotateWindows
-    flameshot gui
-    #thinkpad-rotate left
+    thinkpad-rotate left
 
 ##Media Keybindings
-super + {_,shift} + a
-	{$TERMINAL -e pulsemixer,sound.sh mute}
+#only working for X220
 XF86AudioMute
     sound.sh mut
 XF86Audio{LowerVolume,RaiseVolume}
 	{sound.sh down 10,sound.sh up 10}
+#generice
+super + {_,shift} + a
+	{$TERMINAL -e pulsemixer,sound.sh mute}
 super + {_,shift} + p
 	{sound.sh up 10,sound.sh dowm 10}
 

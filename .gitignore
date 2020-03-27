@@ -3,6 +3,6 @@
 *tags*
 *history
 *zcompdump*
-tmux/.config/tmux/plugins/*
+tmux/.config/tmux/plugins/
 neovim/.config/nvim/autoload/
 neovim/.config/nvim/plugged/
