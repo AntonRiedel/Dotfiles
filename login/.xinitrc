@@ -39,9 +39,6 @@ dunst &
 #set window manager agnostic keybindings
 sxhkd &
 
-#start screenshot utility
-#flameshot &
-
 #you do not need a mouse
 unclutter -idle 2 -jitter 50 -root &
 
