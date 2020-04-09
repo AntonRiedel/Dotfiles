@@ -1,7 +1,7 @@
 " File              : 01.plugin.vim
 " Author            : Anton Riedel <anton.riedel@tum.de>
 " Date              : 24.03.2020
-" Last Modified Date: 26.03.2020
+" Last Modified Date: 30.03.2020
 " Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 "automatically install vim-plug and all other plugins if they are missing
@@ -20,6 +20,7 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'iCyMind/NeoSolarized'
 Plug 'itchyny/lightline.vim'
 Plug 'mengelbrecht/lightline-bufferline'
+
 Plug 'tpope/vim-fugitive'
 Plug 'mhinz/vim-signify'
 
@@ -27,7 +28,10 @@ Plug 'junegunn/fzf.vim'
 
 Plug 'lambdalisue/suda.vim'
 
-Plug 'godlygeek/tabular'
+Plug 'unblevable/quick-scope'
+
+Plug 'junegunn/vim-easy-align'
+"Plug 'godlygeek/tabular'
 
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'

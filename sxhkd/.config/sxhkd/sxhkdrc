@@ -1,3 +1,70 @@
+#BSPWM Bindings
+# Quit bspwm
+super + shift + Escape
+  prompt "Are you sure you would like to quit this Xsession" "bspc quit"
+
+# Restart bspwm
+super + shift + w
+  bspc wm -r
+
+# Kill Window
+super + shift + c
+  xdo close
+
+# Focus on window in direction
+super + {h,j,k,l}
+    bspc node -f {west,south,north,east}
+
+#	Send window to desktop
+super + shift + {0-9}
+  bspc node -d {0-9}
+
+# Send window to desktop and swap to desktop
+super + control + {0-9}
+  bspc node -d {0-9} && bspunhide && bspc desktop -f {0-9}
+
+# Rotate the tree from the current nodes parent
+#super + control + {Right, Left}
+  #bspc node @parent -C {forward, backward}
+
+# Flip the tree from the current nodes parent
+super + control + {h,j,k,l}
+  bspc node @parent -F {vertical,horizontal,horizontal,vertical}
+
+# Toggle fullscreen on and off
+super + f
+  bspfullscreen
+
+# Toggle floating on and off
+super + space
+  bspc node focused.tiled -t floating || bspc node focused.floating -t tiled
+
+# Swap window with direction
+super + shift + {h,j,k,l}
+    bspc node -s {west,south,north,east}
+
+# Focus on desktop
+super + {0-9}
+    bspc desktop -f {0-9}
+
+# Cycle through desktops
+super + alt + {Left, Right}
+  bspc desktop -f {prev, next}
+
+# Expand a window by moving one of its side outward
+ctrl + alt + {h,j,k,l}
+    bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+  #xdo resize {-w -20, -h +20, -h -20, -w +20}
+
+# Contract a window by moving one of its side inward
+ctrl + alt + shift + {h,j,k,l}
+    bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
+  #xdo resize {-w +20, -h -20, -h +20, -w -20}
+
+# Move a floating window
+ctrl + alt + {Left,Right,Up,Down}
+  xdo move {-x -20, -x +20, -y -20, -y +20}
+
 ##Keybindings for programs
 super + Return
 	$TERMINAL
@@ -12,7 +79,7 @@ super + v
 super + o
     xournalpp
 super + {_,shift} + y
-    {flameshot &,killall flameshot && xsetroot -name "--RESET--"}
+    touch.sh {setup,reset}
 ##Bezel Keybindings for X220
 XF86TaskPane
     thinkpad-rotate flip

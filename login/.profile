@@ -2,12 +2,12 @@
 # File              : .profile
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 24.03.2020
-# Last Modified Date: 26.03.2020
+# Last Modified Date: 08.04.2020
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 #set environment variables
 export PATH="$HOME/.local/bin:$PATH"
-export TERMINAL="st"
+export TERMINAL="alacritty"
 export EDITOR="nvim"
 export VISUAL="$EDITOR"
 export MYVIMRC="$HOME/.config/nvim/init.vim"
@@ -29,7 +29,7 @@ export BROWSER2="firefox"
 
 #reader for pdf files
 export READER="zathura"
-export READER2="evince"
+export READER2="qpdfview"
 
 #default options for fzf
 export FZF_DEFAULT_OPTS="--reverse --height=40%"

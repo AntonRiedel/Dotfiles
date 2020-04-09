@@ -1,11 +1,6 @@
-#!/bin/sh
-# File              : packages.install
-# Author            : Anton Riedel <anton.riedel@tum.de>
-# Date              : 28.03.2020
-# Last Modified Date: 28.03.2020
-# Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 abook
 acpi
+alacritty
 arandr
 astyle
 autoconf
@@ -16,6 +11,8 @@ biber
 binutils
 bison
 boost
+bspwm
+cellwriter
 clang
 cmake
 cmake-language-server
@@ -26,13 +23,14 @@ dashbinsh
 dosfstools
 doxygen
 dunst
-evince
+easystroke
 fakeroot
 figlet
 file
 findutils
 firefox
 flameshot
+flatpak
 flex
 fortran-language-server
 fuse2
@@ -86,6 +84,7 @@ pass
 patch
 pdfjs
 pkgconf
+polybar
 pulseaudio-alsa
 pulsemixer
 python-language-server
@@ -95,6 +94,7 @@ python-pipenv
 python-pynvim
 python-scipy
 python-sympy
+qpdfview
 qutebrowser
 rdesktop
 scrot
@@ -139,10 +139,12 @@ which
 xclip
 xcompmgr
 xdiskusage
+xdo
 xf86-video-intel
 xorg-server
 xorg-xinit
 xorg-xsetroot
+xorgproto
 xournalpp
 xwallpaper
 yapf

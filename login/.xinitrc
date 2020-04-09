@@ -2,7 +2,7 @@
 # File              : .xinitrc
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 24.03.2020
-# Last Modified Date: 27.03.2020
+# Last Modified Date: 09.04.2020
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 #set keyboard layout
@@ -28,7 +28,7 @@ $HOME/.config/screenlayout/default.sh
 xwallpaper --stretch "$HOME/.config/wallpaper/default"
 
 #activate statusbar
-dwmblocks &
+#dwmblocks &
 
 #start compositor
 xcompmgr &
@@ -39,12 +39,16 @@ dunst &
 #set window manager agnostic keybindings
 sxhkd &
 
-#you do not need a mouse
-unclutter -idle 2 -jitter 50 -root &
-
-#disable touchscreen and touchpad on X220
+#disable touchscreen and touchpad on X220 (meaning only the pen input and trackpoint work)
 thinkpad-touch off
 thinkpad-touchpad off
 
+#you do not need a mouse
+unclutter --timeout 2 --jitter 100 --ignore-scrolling &
+
+#launch bar
+polybar bar &
+
 #start Window Manager
-exec dwm
+exec bspwm
+#exec dwm

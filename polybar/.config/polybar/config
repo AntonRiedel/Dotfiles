@@ -1,0 +1,166 @@
+; vim:ft=dosini
+; File              : config
+; Author            : Anton Riedel <anton.riedel@tum.de>
+; Date              : 08.04.2020
+; Last Modified Date: 09.04.2020
+; Last Modified By  : Anton Riedel <anton.riedel@tum.de>
+
+[colors]
+background = #1d1f21
+background-wm = #444
+background-alt = #2d2d2d
+foreground = #d8dee9
+foreground-alt = #555
+primary = #3c71ea
+secondary = #f2e635
+alert = #ed0b0b
+
+[bar/bar]
+monitor = ${env:MONITOR:LVDS1}
+monitor-fallback =
+monitor-strict = false
+monitor-exact = true
+#override-redirect = true
+wm-restack = bspwm
+enable-ipc = true
+fixed-center = false
+bottom = false
+separator =
+#dim-value = 1.0
+
+width = 100%
+height = 24
+offset-x = 0
+offset-y = 0
+radius = 0.0
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 3
+line-color = #f00
+
+padding = 0
+module-margin-left = 0
+module-margin-right = 1
+
+font-0 = Hack:pixelsize=10;
+font-1 = JoyPixels:style=Regular:scale=10;
+
+modules-left = bspwm xwindow
+modules-right = cpu-temperature memory battery wifi time
+
+tray-position = right
+tray-padding = 1
+tray-background = ${colors.background-alt}
+tray-offset-x = 0
+tray-offset-y = 0
+tray-scale = 1.0
+
+scroll-up = bspwm-desknext
+scroll-down = bspwm-deskprev
+
+cursor-click = pointer
+cursor-scroll = default
+
+[module/xwindow]
+type = internal/xwindow
+label = %title:0:30:...%
+
+format-underline =
+format-background =
+format-padding =
+
+[module/bspwm]
+type = internal/bspwm
+
+label-focused = %name%
+label-focused-background = ${colors.background-wm}
+label-focused-underline = ${colors.primary}
+label-focused-padding = 1
+
+label-occupied = %name%
+label-occupied-padding = 1
+
+label-urgent = %name%!
+label-urgent-background = ${colors.alert}
+label-urgent-padding = 1
+
+label-empty = %name%
+label-empty-foreground = ${colors.foreground-alt}
+label-empty-padding = 1
+
+format-underline =
+format-background =
+format-padding =
+
+; Separator in between workspaces
+; label-separator = |
+
+[module/memory]
+type = custom/script
+exec = free -h | awk '/^Mem:/ {print $3 "/" $2}'
+label = "%output%"
+interval = 10
+format-prefix = "🧠 "
+
+[module/wifi]
+type = custom/script
+exec = grep "^\s*w" /proc/net/wireless | awk '{ print "📶",int($3 * 100 / 70)"%" }' ; sed "s/down//;s/up/🌐/" /sys/class/net/e*/operstate
+label = "%output%"
+
+[module/cpu-temperature]
+type = custom/script
+exec = sensors | awk '/Core 0/ {print $3}'
+label = "%output%"
+interval = 10
+format-prefix = "🖥 "
+
+[module/battery]
+type = custom/script
+exec = [ -d /sys/class/power_supply/BAT? ] && acpi -b | awk '{print $3,$4,"("$5")"}' | sed -e 's/,//g' || echo "-"
+label = "%output%"
+interval = 30
+format-prefix = "🔋 "
+
+[module/time]
+type = custom/script
+exec = date '+%d/%m/%Y %H:%M'
+label = "%output%"
+interval = 5
+
+format-connected-underline = #55aa55
+format-connected-prefix = " "
+format-connected-prefix-foreground = ${colors.foreground-alt}
+label-connected = %local_ip%
+
+format-disconnected =
+;format-disconnected = <label-disconnected>
+;format-disconnected-underline = ${self.format-connected-underline}
+;label-disconnected = %ifname% disconnected
+;label-disconnected-foreground = ${colors.foreground-alt}
+
+[settings]
+format-foreground =
+format-underline = #268bd2
+format-background = ${colors.background-alt}
+format-padding = 1
+format-overline =
+format-spacing =
+format-margin =
+format-offset =
+screenchange-reload = true
+;compositing-background = xor
+;compositing-background = screen
+;compositing-foreground = source
+;compositing-border = over
+pseudo-transparency = true
+#throttle-output = 5
+#throttle-output-for = 10
+#throttle-input-for = 30
+
+[global/wm]
+margin-top = 0
+margin-bottom = 0
+
+; vim:ft=dosini

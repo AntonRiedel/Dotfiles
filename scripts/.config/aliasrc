@@ -2,7 +2,7 @@
 # File              : aliasrc
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 24.03.2020
-# Last Modified Date: 26.03.2020
+# Last Modified Date: 07.04.2020
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 ##aliases
@@ -21,12 +21,14 @@ alias gac="git commit -a"
 alias gch="git checkout"
 alias gb="git branch"
 alias pi="yay -S"
-alias pu="yay -Syu"
+alias pu="yay -Syu && flatpak update"
 alias pr="yay -Rns"
 alias pq="yay -Ss"
+alias po="yay -Rns $(yay -Qtdq)"
 alias cu="nmcli con up --ask"
 alias vpn="sudo vpnc lrz"
 alias make="make -j$(nproc)"
+alias screen="xinput --map-to-output 'Wacom ISDv4 E6 Pen Pen (0)' LVDS1"
 
 ##custom shell functions (a.k.a. fun with fzf)
 #search and edit a configuration file
@@ -36,6 +38,6 @@ sshc() { ssh "$(grep "^Host\ " $HOME/.ssh/config | awk '{print $2}' | fzf --prom
 #search and enter a subdirectory in your home directory
 fd() { cd "$(find $HOME -type d 2>/dev/null | fzf  --prompt="Jump to Dir: ")" && pwd && ls; }
 #search through history with fzf
-hs() {echo "$(cat $HOME/.config/zsh/zsh_history | sort -u | fzf)"}
+hs() {echo "$(cat $HOME/.config/zsh/zsh_history | sort -u | fzf)" ;}
 #search for a process and kill it
 kp() { kill -s SIGKILL "$(ps -e | fzf --prompt="Job to kill: " | awk '{ print $1 }')" 2>/dev/null; }
