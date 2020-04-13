@@ -2,7 +2,7 @@
 ; File              : config
 ; Author            : Anton Riedel <anton.riedel@tum.de>
 ; Date              : 08.04.2020
-; Last Modified Date: 09.04.2020
+; Last Modified Date: 12.04.2020
 ; Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 [colors]
@@ -21,7 +21,8 @@ monitor-fallback =
 monitor-strict = false
 monitor-exact = true
 #override-redirect = true
-wm-restack = bspwm
+;wm-restack = bspwm
+wm-restack = qtile
 enable-ipc = true
 fixed-center = false
 bottom = false
@@ -47,8 +48,8 @@ module-margin-right = 1
 font-0 = Hack:pixelsize=10;
 font-1 = JoyPixels:style=Regular:scale=10;
 
-modules-left = bspwm xwindow
-modules-right = cpu-temperature memory battery wifi time
+modules-left = qtile xwindow
+modules-right = cpu memory battery wifi time
 
 tray-position = right
 tray-padding = 1
@@ -57,8 +58,8 @@ tray-offset-x = 0
 tray-offset-y = 0
 tray-scale = 1.0
 
-scroll-up = bspwm-desknext
-scroll-down = bspwm-deskprev
+;scroll-up = bspwm-desknext
+;scroll-down = bspwm-deskprev
 
 cursor-click = pointer
 cursor-scroll = default
@@ -71,8 +72,8 @@ format-underline =
 format-background =
 format-padding =
 
-[module/bspwm]
-type = internal/bspwm
+[module/qtile]
+type = internal/qtile
 
 label-focused = %name%
 label-focused-background = ${colors.background-wm}
@@ -97,6 +98,13 @@ format-padding =
 ; Separator in between workspaces
 ; label-separator = |
 
+[module/cpu]
+type = custom/script
+exec = sensors | awk '/Core 0/ {print $3}'
+label = "%output%"
+interval = 10
+format-prefix = "🖥 "
+
 [module/memory]
 type = custom/script
 exec = free -h | awk '/^Mem:/ {print $3 "/" $2}'
@@ -108,13 +116,6 @@ format-prefix = "🧠 "
 type = custom/script
 exec = grep "^\s*w" /proc/net/wireless | awk '{ print "📶",int($3 * 100 / 70)"%" }' ; sed "s/down//;s/up/🌐/" /sys/class/net/e*/operstate
 label = "%output%"
-
-[module/cpu-temperature]
-type = custom/script
-exec = sensors | awk '/Core 0/ {print $3}'
-label = "%output%"
-interval = 10
-format-prefix = "🖥 "
 
 [module/battery]
 type = custom/script
@@ -129,17 +130,6 @@ exec = date '+%d/%m/%Y %H:%M'
 label = "%output%"
 interval = 5
 
-format-connected-underline = #55aa55
-format-connected-prefix = " "
-format-connected-prefix-foreground = ${colors.foreground-alt}
-label-connected = %local_ip%
-
-format-disconnected =
-;format-disconnected = <label-disconnected>
-;format-disconnected-underline = ${self.format-connected-underline}
-;label-disconnected = %ifname% disconnected
-;label-disconnected-foreground = ${colors.foreground-alt}
-
 [settings]
 format-foreground =
 format-underline = #268bd2
@@ -150,14 +140,6 @@ format-spacing =
 format-margin =
 format-offset =
 screenchange-reload = true
-;compositing-background = xor
-;compositing-background = screen
-;compositing-foreground = source
-;compositing-border = over
-pseudo-transparency = true
-#throttle-output = 5
-#throttle-output-for = 10
-#throttle-input-for = 30
 
 [global/wm]
 margin-top = 0

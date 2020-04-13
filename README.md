@@ -2,14 +2,17 @@
 File              : README.md
 Author            : Anton Riedel <anton.riedel@tum.de>
 Date              : 25.03.2020
-Last Modified Date: 27.03.2020
+Last Modified Date: 13.04.2020
 Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 -->
+
 # Dotfiles
 
-My personal Dotfiles which I use across different machines. I run Arch Linux as my main operating system with a custom build of dwm as window manager and st as terminal.
+My personal Dotfiles which I use across different machines. I run Arch Linux as my main operating system with qtile as window manager and alacritty as terminal.
 You can find configuration files for
 
+- qtile(tiling window manager)
+- alacritty (terminal)
 - zsh (shell)
 - neovim (editor)
 - tmux (screen multiplexer)
@@ -27,17 +30,19 @@ These Dotfiles are meant to be deployed with [GNU Stow](https://stevenrbaker.com
 
 Under `old` you can find configuration files for programs I used to use such as:
 
-- i3 (->dwm)
-- i3bar (->build-in bar of dwm)
+- i3 (->qtile)
+- i3bar (->build-in bar of qtile)
+- bspwm (-> qtile)
 - bash (->zsh)
-- termite (->st)
-- urxvt (->st)
-- xterm (->st)
-- lxterminal (->st)
+- termite (->alacritty)
+- urxvt (->alacritty)
+- xterm (->alacritty)
+- lxterminal (->alacritty)
 - ranger (->lf)
 - vifm (->lf)
 - nnn (->lf)
 - compton (->xcompmgr)
+
 <!--
 If you are looking for some awesome Void Linux wallpapers I can suggest [here](https://alkusin.net/voidlinux/en#wallpapers).
 -->

@@ -11,12 +11,10 @@ biber
 binutils
 bison
 boost
-bspwm
 cellwriter
 clang
 cmake
 cmake-language-server
-cowsay
 ctags
 dash
 dashbinsh
@@ -25,7 +23,6 @@ doxygen
 dunst
 easystroke
 fakeroot
-figlet
 file
 findutils
 firefox
@@ -62,6 +59,7 @@ m4
 make
 man-db
 mlocate
+mosh
 mpv
 msmtp
 mtr
@@ -71,6 +69,7 @@ neovim
 networkmanager
 newsboat
 nextcloud-client
+nfs-utils
 nm-connection-editor
 notmuch
 ntfs-3g
@@ -84,17 +83,17 @@ pass
 patch
 pdfjs
 pkgconf
-polybar
-pulseaudio-alsa
 pulsemixer
 python-language-server
 python-matplotlib
 python-numpy
 python-pipenv
+python-psutil
 python-pynvim
 python-scipy
 python-sympy
 qpdfview
+qtile
 qutebrowser
 rdesktop
 scrot

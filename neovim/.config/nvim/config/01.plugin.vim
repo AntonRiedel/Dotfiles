@@ -1,7 +1,7 @@
 " File              : 01.plugin.vim
 " Author            : Anton Riedel <anton.riedel@tum.de>
 " Date              : 24.03.2020
-" Last Modified Date: 30.03.2020
+" Last Modified Date: 12.04.2020
 " Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 "automatically install vim-plug and all other plugins if they are missing
@@ -56,8 +56,5 @@ Plug 'ludovicchabant/vim-gutentags'
 Plug 'majutsushi/tagbar'
 
 Plug 'donRaphaco/neotex', { 'for': '.tex' }
-
-Plug 'mklabs/vim-cowsay'
-Plug 'fadein/vim-FIGlet'
 
 call plug#end()
