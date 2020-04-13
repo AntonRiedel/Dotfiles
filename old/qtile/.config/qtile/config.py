@@ -52,6 +52,9 @@ keys = [
     #toggle floating
     Key([mod], "space", lazy.window.toggle_floating()),
 
+    #toggle fullscreen
+    Key([mod], "f", lazy.window.toggle_fullscreen()),
+
     #kill a window
     Key([mod, "shift"], "c", lazy.window.kill()),
 

@@ -8,10 +8,9 @@ Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 # Dotfiles
 
-My personal Dotfiles which I use across different machines. I run Arch Linux as my main operating system with qtile as window manager and alacritty as terminal.
+My personal Dotfiles which I use across different machines. I run Arch Linux as my main operating system with a custom build of dwm as window manager.
 You can find configuration files for
 
-- qtile(tiling window manager)
 - alacritty (terminal)
 - zsh (shell)
 - neovim (editor)
@@ -30,9 +29,10 @@ These Dotfiles are meant to be deployed with [GNU Stow](https://stevenrbaker.com
 
 Under `old` you can find configuration files for programs I used to use such as:
 
-- i3 (->qtile)
-- i3bar (->build-in bar of qtile)
-- bspwm (-> qtile)
+- qtile(->dwm)
+- bspwm (-> dwm)
+- i3 (->dwm)
+- i3bar (->dwmblocks)
 - bash (->zsh)
 - termite (->alacritty)
 - urxvt (->alacritty)

@@ -21,10 +21,10 @@ setxkbmap -option caps:escape
 xset -dpms
 xset s off
 
-#Set default desktop layout
+#set default screen setup
 $HOME/.config/screenlayout/default.sh
 
-#Set default wallpaper
+#set default wallpaper
 xwallpaper --stretch "$HOME/.config/wallpaper/default"
 
 #start compositor
@@ -43,6 +43,8 @@ thinkpad-touchpad off
 #you do not need a mouse
 unclutter --timeout 2 --jitter 100 --ignore-scrolling &
 
-#start Window Manager (use dbus-launch to set environment variables correctly; prevents some programs from taking forever to start)
-#exec qtile
-dbus-launch --exit-with-session qtile
+#launch statusbar
+dwmblocks &
+
+#start Window Manager
+exec dwm

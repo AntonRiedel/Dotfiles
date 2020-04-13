@@ -6,3 +6,4 @@
 tmux/.config/tmux/plugins/
 neovim/.config/nvim/autoload/
 neovim/.config/nvim/plugged/
+*pycache*
