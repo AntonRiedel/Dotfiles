@@ -2,7 +2,7 @@
 # File              : bspwmrc
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 08.04.2020
-# Last Modified Date: 10.04.2020
+# Last Modified Date: 15.04.2020
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 #startup programs are launched in $HOME/.xinitrc like sxhkd and ploybar

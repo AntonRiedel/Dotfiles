@@ -2,7 +2,7 @@
 # File              : aliasrc
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 24.03.2020
-# Last Modified Date: 07.04.2020
+# Last Modified Date: 16.04.2020
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 ##aliases
@@ -24,7 +24,7 @@ alias pi="yay -S"
 alias pu="yay -Syu && flatpak update"
 alias pr="yay -Rns"
 alias pq="yay -Ss"
-alias po="yay -Rns $(yay -Qtdq)"
+alias po="yay -Rns $(yay -Qdt)"
 alias cu="nmcli con up --ask"
 alias vpn="sudo vpnc lrz"
 alias make="make -j$(nproc)"

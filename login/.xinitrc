@@ -2,7 +2,7 @@
 # File              : .xinitrc
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 24.03.2020
-# Last Modified Date: 13.04.2020
+# Last Modified Date: 18.04.2020
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 #set keyboard layout
@@ -38,7 +38,7 @@ sxhkd &
 
 #disable touchscreen and touchpad on X220 (meaning only pen and trackpoint work)
 thinkpad-touch off
-thinkpad-touchpad off
+#thinkpad-touchpad off
 
 #you do not need a mouse
 unclutter --timeout 2 --jitter 100 --ignore-scrolling &

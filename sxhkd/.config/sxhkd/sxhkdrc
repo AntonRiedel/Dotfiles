@@ -1,4 +1,4 @@
-##Keybindings for programs
+#keybindings for programs
 super + Return
 	$TERMINAL
 super + {_,shift} + b
@@ -13,26 +13,26 @@ super + o
     xournalpp
 super + {_,shift} + y
     touch.sh {setup,reset}
-##Bezel Keybindings for X220
+
+#bezel keybindings for X220
 XF86TaskPane
     thinkpad-rotate flip
-#take a screenshot rather than rotating the screen by 90
 XF86RotateWindows
     thinkpad-rotate left
 
-##Media Keybindings
+#media Keybindings
 #only working for X220
 XF86AudioMute
     sound.sh mut
 XF86Audio{LowerVolume,RaiseVolume}
 	{sound.sh down 10,sound.sh up 10}
-#generice
+#generic
 super + {_,shift} + a
 	{$TERMINAL -e pulsemixer,sound.sh mute}
 super + {_,shift} + p
 	{sound.sh up 10,sound.sh dowm 10}
 
-##Menu Keybindings
+#menu keybindings
 super + x
 	fin.sh
 super + {_,shift} + r

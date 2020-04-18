@@ -3,7 +3,7 @@
 # File              : config.py
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 12.04.2020
-# Last Modified Date: 13.04.2020
+# Last Modified Date: 16.04.2020
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 #import libraries
@@ -20,19 +20,12 @@ keys = [
     #setup for tile layout
 
     #resize the master/stack panes
-    Key(
-        [mod],
-        "l",
-        lazy.layout.increase_ratio().when('tile'),
-    ),
-    Key([mod], "h",
-        lazy.layout.decrease_ratio().when('tile')),
+    Key([mod], "l", lazy.layout.increase_ratio()),
+    Key([mod], "h", lazy.layout.decrease_ratio()),
 
     #move windows in the stack upward/downward
-    Key([mod, "shift"], "l",
-        lazy.layout.decrease_nmaster().when('tile')),
-    Key([mod, "shift"], "h",
-        lazy.layout.increase_nmaster().when('tile')),
+    Key([mod, "shift"], "l", lazy.layout.decrease_nmaster()),
+    Key([mod, "shift"], "h", lazy.layout.increase_nmaster()),
 
     #shift focus in the stack upward/downwar
     Key([mod], "j", lazy.layout.down()),
@@ -59,7 +52,7 @@ keys = [
     Key([mod, "shift"], "c", lazy.window.kill()),
 
     #restart qtile
-    # Key([mod, "control"], "r", lazy.restart()),
+    Key([mod, "control"], "r", lazy.restart())
     #crashes
 ]
 
@@ -83,6 +76,7 @@ layouts = [
     layout.tile.Tile(ratio=0.55,
                      border_width=2,
                      margin=4,
+                     shift_window=True,
                      border_focus="#ff0000"),
     layout.Max()
 ]

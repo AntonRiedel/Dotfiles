@@ -2,7 +2,7 @@
 ; File              : config
 ; Author            : Anton Riedel <anton.riedel@tum.de>
 ; Date              : 08.04.2020
-; Last Modified Date: 12.04.2020
+; Last Modified Date: 15.04.2020
 ; Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 [colors]
@@ -48,7 +48,7 @@ module-margin-right = 1
 font-0 = Hack:pixelsize=10;
 font-1 = JoyPixels:style=Regular:scale=10;
 
-modules-left = qtile xwindow
+modules-left = bspwm xwindow
 modules-right = cpu memory battery wifi time
 
 tray-position = right
@@ -72,8 +72,8 @@ format-underline =
 format-background =
 format-padding =
 
-[module/qtile]
-type = internal/qtile
+[module/bspwm]
+type = internal/bspwm
 
 label-focused = %name%
 label-focused-background = ${colors.background-wm}

@@ -1,7 +1,7 @@
 " File              : 03.graphical.vim
 " Author            : Anton Riedel <anton.riedel@tum.de>
 " Date              : 24.03.2020
-" Last Modified Date: 30.03.2020
+" Last Modified Date: 14.04.2020
 " Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 "UI Layout
@@ -20,6 +20,8 @@ set laststatus=2
 set lazyredraw
 set showmatch
 set colorcolumn=80
+set cursorline
+set cursorcolumn
 
 "quick-scope
 let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']

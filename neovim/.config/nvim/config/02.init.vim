@@ -1,7 +1,7 @@
 " File              : 02.init.vim
 " Author            : Anton Riedel <anton.riedel@tum.de>
 " Date              : 24.03.2020
-" Last Modified Date: 24.03.2020
+" Last Modified Date: 16.04.2020
 " Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 "Misc
@@ -24,9 +24,9 @@ set smartindent
 
 "Searching
 set ignorecase
+set smartcase
 set incsearch
 set hlsearch
-set smartcase
 
 "Tabs
 set tabstop=4

@@ -1,5 +1,5 @@
 server https://sgrastar.ddns.net/nextcloud/index.php/login?clear=1
-server_local https://192.168.1.24/nextcloud/index.php/login
+server_local https://192.168.1.28/nextcloud/index.php/login
 pihole http://192.168.1.9:8080/admin/index.php
 cip https://wiki.tum.de/display/tuphcip/CIP-Pool+TUM+Physikdepartment
 fopra https://www.ph.tum.de/academics/org/labs/fopra/?language=en
