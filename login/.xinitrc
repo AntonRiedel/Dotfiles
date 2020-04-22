@@ -2,7 +2,7 @@
 # File              : .xinitrc
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 24.03.2020
-# Last Modified Date: 18.04.2020
+# Last Modified Date: 20.04.2020
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 #set keyboard layout
@@ -44,7 +44,7 @@ thinkpad-touch off
 unclutter --timeout 2 --jitter 100 --ignore-scrolling &
 
 #launch statusbar
-dwmblocks &
+baraction.sh &
 
 #start Window Manager
 exec dwm

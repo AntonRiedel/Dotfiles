@@ -2,16 +2,15 @@
 File              : README.md
 Author            : Anton Riedel <anton.riedel@tum.de>
 Date              : 25.03.2020
-Last Modified Date: 18.04.2020
+Last Modified Date: 22.04.2020
 Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 -->
 
 # Dotfiles
 
-My personal Dotfiles which I use across different machines. I run Arch Linux as my main operating system with a custom build of dwm as window manager.
+My personal Dotfiles which I use across different machines. I run Arch Linux as my main operating system with a custom build of dwm as window manager and st as my terminal.
 You can find configuration files for
 
-- alacritty (terminal)
 - zsh (shell)
 - neovim (editor)
 - tmux (screen multiplexer)
@@ -34,10 +33,11 @@ Under `old` you can find configuration files for programs I used to use such as:
 - i3 (->dwm)
 - i3bar (->dwmblocks)
 - bash (->zsh)
-- termite (->alacritty)
-- urxvt (->alacritty)
-- xterm (->alacritty)
-- lxterminal (->alacritty)
+- termite (->st)
+- urxvt (->st)
+- xterm (->st)
+- lxterminal (->st)
+- alacritty (->st)
 - ranger (->lf)
 - vifm (->lf)
 - nnn (->lf)

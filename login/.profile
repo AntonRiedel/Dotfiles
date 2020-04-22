@@ -2,12 +2,12 @@
 # File              : .profile
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 24.03.2020
-# Last Modified Date: 08.04.2020
+# Last Modified Date: 22.04.2020
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 #set environment variables
 export PATH="$HOME/.local/bin:$PATH"
-export TERMINAL="alacritty"
+export TERMINAL="st"
 export EDITOR="nvim"
 export VISUAL="$EDITOR"
 export MYVIMRC="$HOME/.config/nvim/init.vim"
