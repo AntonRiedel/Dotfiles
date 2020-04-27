@@ -2,7 +2,7 @@
 # File              : sound.sh
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 24.03.2020
-# Last Modified Date: 18.04.2020
+# Last Modified Date: 27.04.2020
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 [ -z "$2" ] && num="10" || num="$2"
@@ -13,5 +13,5 @@ d*) pulsemixer --change-volume -"$num" ;;
 m*) pulsemixer --toggle-mute ;;
 esac
 
-#update statusbar by sending signal 10 do dwmblocks
-#pkill -RTMIN+10 dwmblocks
+#update statusbar by sending signal 5 to bar.sh; trap is handling the signal
+pkill --signal 5 bar.sh

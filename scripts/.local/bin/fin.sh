@@ -2,7 +2,7 @@
 # File              : fin.sh
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 24.03.2020
-# Last Modified Date: 22.04.2020
+# Last Modified Date: 27.04.2020
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 ClearCache() {
@@ -15,8 +15,7 @@ ClearCache() {
            $HOME/.rdesktop \
            $HOME/.pki \
            $HOME/.fltk \
-           $HOME/.screenlayout \
-           $HOME/.cellwriter
+           $HOME/.screenlayout
 }
 
 pgrep -x dmenu && exit

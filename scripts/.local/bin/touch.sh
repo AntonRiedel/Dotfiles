@@ -2,7 +2,7 @@
 # File              : touch.sh
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 04.04.2020
-# Last Modified Date: 20.04.2020
+# Last Modified Date: 27.04.2020
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 if [ "$1" = "setup" ]; then
@@ -15,6 +15,7 @@ elif [ "$1" = "reset" ];then
     killall easystroke 2>/dev/null
     killall cellwriter 2>/dev/null
     xsetroot -name "--RESET--"
+    pkill --signal 5 bar.sh
     notify-send -t 1500 "Touchscreen reset" "Kill flameshot\nKill easystroke\nKill cellwriter"
 else
     notify-send "touch.sh" "Invalid argument"

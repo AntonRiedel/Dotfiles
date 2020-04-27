@@ -2,7 +2,7 @@
 # File              : deploy.sh
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 25.03.2020
-# Last Modified Date: 26.03.2020
+# Last Modified Date: 27.04.2020
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 #download and install yay-bin
@@ -16,29 +16,37 @@ rm -rf yay-bin
 yay -Syu
 yay -S --needed - < packages.install
 
+#install flatpaks
+flatpak install $(cat flatpaks.install)
+
 #deploy config file with stow
 rm -rf $HOME/.*[!.]
 mkdir -p $HOME/.local/bin $HOME/.config
-stow --dir=$HOME/Dotfiles login sxhkd scripts dunst tmux zsh wallpaper zathura qutebrowser neofetch neovim htop
+stow -d $HOME/Dotfiles -t $HOME $(find $HOME/Dotfiles -maxdepth 1 -type d ! \( -path $HOME/Dotfiles -o -name old -o -name install -o -name .git \) | cut --delimiter=/ -f 5)
 
 #download source for suckless utilities and install them
-git clone --single-branch --branch my_dwm https://github.com/AntonRiedel/dwm
+mkdir $HOME/repos
+cd $HOME/repos
+
+git clone https://github.com/AntonRiedel/dwm
 cd dwm
+git checkout my_dwm
 make
 sudo make install
 cd ..
-rm -rf dwm
 
-git clone --single-branch --branch my_dmenu https://github.com/AntonRiedel/dmenu
+git clone https://github.com/AntonRiedel/dmenu
 cd dmenu
+git checkout my_dmenu
 make
 sudo make install
 cd ..
-rm -rf dmenu
 
-git clone --single-branch --branch my_st https://github.com/AntonRiedel/st
+git clone https://github.com/AntonRiedel/st
 cd st
+git checkout my_st
 make
 sudo make install
 cd ..
-rm -rf st
+
+cd $HOME/Dotfiles

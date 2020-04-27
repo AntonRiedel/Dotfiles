@@ -1,13 +1,13 @@
 server https://sgrastar.ddns.net/nextcloud/index.php/login?clear=1
 server_local https://192.168.31.1/nextcloud/index.php/login
-pihole http://192.168.1.9:8080/admin/index.php
 cip https://wiki.tum.de/display/tuphcip/CIP-Pool+TUM+Physikdepartment
 fopra https://www.ph.tum.de/academics/org/labs/fopra/?language=en
 moodle https://www.moodle.tum.de/
 mail https://xmail.mwn.de/owa/auth/logon.aspx?url=https%3A%2F%2Fxmail.mwn.de%2Fowa%2F%23authRedirect%3Dtrue&reason=0
-gr http://www.t30d.ph.tum.de/
 noip https://www.noip.com/
 libreboot https://libreboot.org/docs/gnulinux/grub_cbfs.html
-group https://www.groups.ph.tum.de/t70/teaching/ws-1920-group-theory/
 tap https://tap.ads.mwn.de/#!/login
 campus https://campus.tum.de/tumonline/webnav.ini
+HighEnergyPhysics https://abilandz.gitbook.io/ph8124/v/SS2020/trivia
+gitlab_lrz https://gitlab.lrz.de/users/sign_in
+cuda http://users.ph.tum.de/srecksie/lehre/cuda.html

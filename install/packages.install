@@ -12,6 +12,7 @@ binutils
 bison
 boost
 cellwriter
+cgdb
 clang
 cmake
 cmake-language-server
@@ -45,7 +46,8 @@ i3lock
 imagemagick
 intel-ucode
 isync
-joplin
+joplin-appimg
+jupyterlab
 lf-bin
 libnotify
 libtool
@@ -89,12 +91,10 @@ python-language-server
 python-matplotlib
 python-numpy
 python-pipenv
-python-psutil
 python-pynvim
 python-scipy
 python-sympy
 qpdfview
-qtile
 qutebrowser
 rdesktop
 scrot

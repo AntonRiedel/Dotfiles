@@ -11,11 +11,11 @@ settings:
   completion.web_history.max_items:
     global: 0
   content.cookies.accept:
-    global: no-3rdparty
+    global: all
   content.cookies.store:
     global: false
   content.pdfjs:
-    global: true
+    global: false
   downloads.location.directory:
     global: /home/anton/nextcloud
   editor.command:
