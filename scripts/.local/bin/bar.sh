@@ -37,7 +37,7 @@ status() {
 
 	#show remaining battery power
     if [ -d /sys/class/power_supply/BAT? ]; then
-        acpi -b | awk '{print $3 $4 "("$5")"}' | sed -e 's/,//g; s/Charging/🔌/g; s/Discharging/🔋/g; s/Unknown/♻️/g'
+        acpi -b | awk '{print $3 $4 "("$5")"}' | sed -e 's/,//g; s/Charging/🔌/g; s/Full/⚡/g; s/Discharging/🔋/g; s/Unknown/♻️/g'
     else
         echo "⛽"
     fi
