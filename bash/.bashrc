@@ -1,7 +1,13 @@
+#!/bin/sh
+# File              : .bashrc
+# Author            : Anton Riedel <anton.riedel@tum.de>
+# Date              : 28.04.2020
+# Last Modified Date: 28.04.2020
+# Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 ###############################################################################
-#     File Name           :     .bashrc
+#     File              : .bashrc
 #     Created By          :     Anton Riedel <anton.riedel@tum.de>
-#     Creation Date       :     [2019-02-23 19:40]
+#     Creation Date              :     [2019-02-23 19:40]
 #     Last Modified       :     [2019-12-04 12:02]
 #     Description         :     bashrc
 ###############################################################################
@@ -14,6 +20,7 @@ set -o vi
 #infinite history
 HISTFILESIZE=
 HISTSIZE=
+
 #ignore repeated commands
 export HISTCONTROL=ignoredups
 
@@ -21,4 +28,4 @@ export HISTCONTROL=ignoredups
 export PS1="\[$(tput bold)\]\[$(tput setaf 1)\][\[$(tput setaf 3)\]\u\[$(tput setaf 2)\]@\[$(tput setaf 28)\]\h \[$(tput setaf 5)\]\W\[$(tput setaf 1)\]]\[$(tput setaf 7)\]\\$ \[$(tput sgr0)\]"
 
 #aliases
-[ -f "$HOME/.config/alias.sh" ] && source "$HOME/.config/alias.sh"
+[ -f "$HOME/.config/aliasrc" ] && source "$HOME/.config/aliasrc"

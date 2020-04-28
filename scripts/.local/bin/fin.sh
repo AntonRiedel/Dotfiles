@@ -2,7 +2,7 @@
 # File              : fin.sh
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 24.03.2020
-# Last Modified Date: 27.04.2020
+# Last Modified Date: 28.04.2020
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 ClearCache() {
@@ -15,6 +15,10 @@ ClearCache() {
            $HOME/.rdesktop \
            $HOME/.pki \
            $HOME/.fltk \
+           $HOME/.jupyter \
+           $HOME/.ipython \
+           $HOME/.cellwriter \
+           $HOME/.easystroke \
            $HOME/.screenlayout
 }
 

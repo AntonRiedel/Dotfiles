@@ -2,7 +2,7 @@
 # File              : aliasrc
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 24.03.2020
-# Last Modified Date: 27.04.2020
+# Last Modified Date: 28.04.2020
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 ##aliases
@@ -37,7 +37,5 @@ ce() { $EDITOR "$(find $HOME/Dotfiles/* -type f | fzf --prompt="Edit config file
 sshc() { ssh "$(grep "^Host\ " $HOME/.ssh/config | awk '{print $2}' | fzf --prompt="Connect to host: ")"; }
 #search and enter a subdirectory in your home directory
 fd() { cd "$(find $HOME -type d 2>/dev/null | fzf  --prompt="Jump to Dir: ")" && pwd && ls; }
-#search through history with fzf
-hs() {echo "$(cat $HOME/.config/zsh/zsh_history | sort -u | fzf)" ;}
 #search for a process and kill it
 kp() { kill -s SIGKILL "$(ps -e | fzf --prompt="Job to kill: " | awk '{ print $1 }')" 2>/dev/null; }
