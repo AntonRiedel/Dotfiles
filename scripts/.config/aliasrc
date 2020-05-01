@@ -2,32 +2,33 @@
 # File              : aliasrc
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 24.03.2020
-# Last Modified Date: 28.04.2020
+# Last Modified Date: 01.05.2020
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 ##aliases
-alias ls="ls --color=auto"
-alias ll="ls -al -h --color=auto"
-alias pdf="$READER"
-alias pdf2="$READER2"
-alias v="$EDITOR"
-alias vi="$EDITOR"
-alias vim="$EDITOR"
-alias vb="$EDITOR -u NONE"
-alias g="git"
-alias gs="git status"
-alias ga="git add"
-alias gc="git commit"
-alias gch="git checkout"
-alias gb="git branch"
-alias pi="yay -S"
-alias pu="yay -Syu && flatpak update"
-alias pr="yay -Rns"
-alias pq="yay -Ss"
-alias cu="nmcli con up --ask"
-alias vpn="sudo vpnc lrz"
-alias make="make -j$(nproc)"
-alias screen="xinput --map-to-output 'Wacom ISDv4 E6 Pen Pen (0)' LVDS1"
+alias ls='ls --color=auto'
+alias ll='ls -alh --color=auto'
+alias pdf='$READER'
+alias pdf2='$READER2'
+alias v='$EDITOR'
+alias vi='$EDITOR'
+alias vim='$EDITOR'
+alias vb='$EDITOR -u NONE'
+alias g='git'
+alias gs='git status'
+alias ga='git add'
+alias gc='git commit'
+alias gch='git checkout'
+alias gb='git branch'
+alias pi='yay -S'
+alias pu='yay -Syu && flatpak update'
+alias pr='yay -Rns'
+alias po='yay -Rns $(yay -Qtdq)'
+alias pq='yay -Ss'
+alias cu='nmcli con up --ask'
+alias vpn='sudo vpnc lrz'
+alias make='make -j$(nproc)'
+alias screen='xinput --map-to-output "Wacom ISDv4 E6 Pen Pen (0)" LVDS1'
 
 
 ##custom shell functions (a.k.a. fun with fzf)
