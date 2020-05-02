@@ -11,7 +11,6 @@ biber
 binutils
 bison
 boost
-cellwriter
 cgdb
 clang
 cmake
@@ -22,7 +21,7 @@ dashbinsh
 dosfstools
 doxygen
 dunst
-easystroke
+easystroke-git
 fakeroot
 file
 findutils
@@ -70,12 +69,15 @@ neofetch
 neomutt
 neovim
 networkmanager
+networkmanager-openconnect
+networkmanager-vpnc
 newsboat
 nextcloud-client
 nfs-utils
 nm-connection-editor
 notmuch
 ntfs-3g
+openconnect
 openmp
 openssh
 pacman
@@ -101,6 +103,7 @@ qutebrowser
 rdesktop
 scrot
 sed
+shellcheck
 stow
 sudo
 sxhkd
