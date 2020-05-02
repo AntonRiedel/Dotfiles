@@ -7,7 +7,7 @@
 
 #set environment variables
 export PATH="$HOME/.local/bin:$PATH"
-[ "$(hostname)" = "Mars" ] && export TERMINAL="st" ; export LIBGL_ALWAYS_SOFTWARE=1 || export TERMINAL="alacritty"
+[ "$(hostname)" = "Mars" ] && export TERMINAL="st" && export LIBGL_ALWAYS_SOFTWARE=1 || export TERMINAL="alacritty"
 #export TERMINAL="st"
 #export TERMINAL="alacritty"
 export EDITOR="nvim"
