@@ -2,7 +2,7 @@
 # File              : fin.sh
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 24.03.2020
-# Last Modified Date: 28.04.2020
+# Last Modified Date: 07.05.2020
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 ClearCache() {
@@ -17,7 +17,6 @@ ClearCache() {
            $HOME/.fltk \
            $HOME/.jupyter \
            $HOME/.ipython \
-           $HOME/.cellwriter \
            $HOME/.easystroke \
            $HOME/.screenlayout
 }
@@ -32,3 +31,5 @@ case "$choice" in
 "Exit") killall Xorg ;;
 "Lock Screen") lockscreen.sh ;;
 esac
+
+exit 0
