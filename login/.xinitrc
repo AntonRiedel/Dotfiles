@@ -25,7 +25,7 @@ xset s off
 $HOME/.config/screenlayout/default.sh
 
 #set default wallpaper
-xwallpaper --stretch "$HOME/.config/wallpaper/default"
+xwallpaper --stretch "$HOME/nextcloud/wallpaper/default"
 
 #start compositor
 xcompmgr &
