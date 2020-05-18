@@ -37,6 +37,7 @@ gcc
 gcc-fortran
 gettext
 git
+gperftools
 grep
 groff
 grub

@@ -2,7 +2,7 @@
 # File              : screen.sh
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 24.03.2020
-# Last Modified Date: 27.04.2020
+# Last Modified Date: 07.05.2020
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 pgrep -x dmenu && exit
@@ -17,3 +17,5 @@ xwallpaper --stretch $HOME/.config/wallpaper/default
 setxkbmap us
 setxkbmap -option caps:escape
 xinput --map-to-output 'Wacom ISDv4 E6 Pen Pen (0)' LVDS1
+
+exit 0

@@ -1,13 +1,13 @@
-#!/bin/sh
+#!/bin/bash
 # File              : linkhandler.sh
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 24.03.2020
-# Last Modified Date: 24.03.2020
+# Last Modified Date: 10.05.2020
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 if [[ -z "$1" ]]; then
     "$BROWSER"
-    exit
+    exit 1
 fi
 
 case "$1" in
@@ -40,3 +40,5 @@ case "$1" in
     fi
     ;;
 esac
+
+exit 0
