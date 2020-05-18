@@ -11,7 +11,7 @@ layout=$(ls $HOME/.config/screenlayout | dmenu -F -i -p "Where are you?")
 
 $HOME/.config/screenlayout/$layout
 
-xwallpaper --stretch $HOME/nextcloud/wallpaper/default
+xwallpaper --stretch $WALLPAPER
 
 #clean up
 setxkbmap us
