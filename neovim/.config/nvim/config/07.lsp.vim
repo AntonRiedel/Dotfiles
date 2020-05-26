@@ -6,7 +6,7 @@
 
 set hidden
 let g:LanguageClient_serverCommands = {
-    \ 'python': ['/usr/bin/pyls'],
+    \ 'python': ['pyls'],
     \ 'cpp': ['/usr/bin/clangd'],
     \ 'c': ['/usr/bin/clangd'],
     \ 'fortran': ['/usr/bin/fortls'],

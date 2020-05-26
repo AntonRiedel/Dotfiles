@@ -42,3 +42,5 @@ My Saved Places.
 ]tags*
 ].out*
 ].o*
+].clangd
+]compile_commands.json

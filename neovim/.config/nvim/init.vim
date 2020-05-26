@@ -5,6 +5,9 @@
 " Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 "split configuration across serveral files
+
+if !exists('g:vscode')
 for config in split(glob('$HOME/.config/nvim/config/*.vim'), '\n')
     exe 'source' config
 endfor
+endif

@@ -7,6 +7,7 @@ autoconf
 automake
 base
 bash-language-server
+bear
 biber
 binutils
 bison
@@ -57,6 +58,8 @@ linux
 linux-firmware
 linux-lts
 linux-lts-headers
+lldb
+llvm
 lynx
 m4
 make
@@ -70,7 +73,6 @@ neofetch
 neomutt
 neovim
 networkmanager
-networkmanager-openconnect
 networkmanager-vpnc
 newsboat
 nextcloud-client
@@ -78,7 +80,6 @@ nfs-utils
 nm-connection-editor
 notmuch
 ntfs-3g
-openconnect
 openmp
 openssh
 pacman
@@ -96,7 +97,9 @@ python-language-server
 python-matplotlib
 python-numpy
 python-pipenv
+python-pylint
 python-pynvim
+python-rope
 python-scipy
 python-sympy
 qpdfview
@@ -135,8 +138,8 @@ ttf-joypixels
 unclutter
 unzip
 vi
-vidir
 vim
+vimv-git
 vpnc
 w3m
 wget

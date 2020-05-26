@@ -56,5 +56,4 @@ Plug 'ludovicchabant/vim-gutentags'
 Plug 'majutsushi/tagbar'
 
 Plug 'donRaphaco/neotex', { 'for': '.tex' }
-
 call plug#end()
