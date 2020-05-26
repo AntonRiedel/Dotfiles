@@ -9,3 +9,4 @@ neovim/.config/nvim/plugged/
 *pycache*
 *zcompdump*
 *zsh_history*
+qutebrowser/.config/qutebrowser/qsettings/
