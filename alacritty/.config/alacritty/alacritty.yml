@@ -1,6 +1,6 @@
 # File              : alacritty.yml
 # Author            : Anton Riedel <anton.riedel@tum.de>
-# Date              : 08.04.2020
+
 # Last Modified Date: 30.04.2020
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
@@ -540,10 +540,10 @@ key_bindings:
   - { key: C,        mods: Control|Shift, action: Copy             }
   #- { key: Insert,   mods: Shift,         action: PasteSelection   }
   #- { key: Key0,     mods: Control,       action: ResetFontSize    }
-  - { key: I,   mods: Control,       action: IncreaseFontSize }
-  - { key: E,      mods: Control,       action: ResetFontSize }
+  - { key: I,        mods: Control|Shift, action: IncreaseFontSize }
+  - { key: E,        mods: Control|Shift, action: ResetFontSize    }
   #- { key: Subtract, mods: Control,       action: DecreaseFontSize }
-  - { key: D,    mods: Control,       action: DecreaseFontSize }
+  - { key: D,        mods: Control|Shift, action: DecreaseFontSize }
 
   # (Windows only)
   #- { key: Return,   mods: Alt,           action: ToggleFullscreen }

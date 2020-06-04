@@ -16,6 +16,7 @@ cgdb
 clang
 cmake
 cmake-language-server
+cmus
 ctags
 dash
 dashbinsh
@@ -82,6 +83,8 @@ notmuch
 ntfs-3g
 openmp
 openssh
+opus-tools
+opustags
 pacman
 pacutils
 pandoc
@@ -107,7 +110,6 @@ qutebrowser
 rdesktop
 scrot
 sed
-shellcheck
 stow
 sudo
 sxhkd
@@ -137,6 +139,7 @@ ttf-hack
 ttf-joypixels
 unclutter
 unzip
+valgrind
 vi
 vim
 vimv-git

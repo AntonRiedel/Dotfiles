@@ -30,6 +30,7 @@ alias nmu='nmcli con up --ask'
 alias nmd='nmcli con down'
 alias make='make -j$(nproc)'
 alias screen='xinput --map-to-output "Wacom ISDv4 E6 Pen Pen (0)" LVDS1'
+alias yt="youtube-dl -x -f bestaudio/best"
 
 
 ##custom shell functions (a.k.a. fun with fzf)

@@ -14,12 +14,15 @@ else
     setxkbmap us
 fi
 
-#make capslock useful
+#capslock: useless key in a great location; let's make it great
 setxkbmap -option caps:escape
 
 #prevent screen from blanking
 xset -dpms
 xset s off
+
+#change your life
+xset r rate 300 50
 
 #set default screen setup
 $HOME/.config/screenlayout/default.sh
