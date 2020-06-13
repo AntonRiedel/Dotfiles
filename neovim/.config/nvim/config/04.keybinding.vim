@@ -4,7 +4,7 @@
 " Last Modified Date: 24.03.2020
 " Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
-"Quickly open neovim config files in buffer
+"Quickly open neovim config files in new buffer
 "init.vim will be automatically sourced if any changes are made
 nnoremap <leader>ev :Files $MYVIMCONFIG<CR>
 
@@ -12,15 +12,14 @@ nnoremap <leader>ev :Files $MYVIMCONFIG<CR>
 inoremap jj <ESC>
 
 "shortcutting split navigation
-	map <C-h> <C-w>h
-	map <C-j> <C-w>j
-	map <C-k> <C-w>k
-	map <C-l> <C-w>l
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
 
-"write file with sudo (using suda plugin)
-cnoremap sw :w suda://%<CR>
-"smart edit for sudo
-let g:suda_smart_edit = 1
+"no longer necessary with suda smart edit
+"write file with sudo (using suda plugin) 
+"cnoremap sw :w suda://%<CR>
 
 "move between splits (even if there is a terminal running)
 "(source: https://medium.com/@garoth/neovim-terminal-usecases-tricks-8961e5ac19b9)
@@ -30,6 +29,9 @@ let g:suda_smart_edit = 1
 
 "toggle tagbar
 nmap <F8> :TagbarToggle<CR>
+
+"toggle floatterm window
+let g:floaterm_keymap_toggle = '<F12>'
 
 "enter normal mode in terminal easily
 tnoremap <ESC><ESC> <C-\><C-n>

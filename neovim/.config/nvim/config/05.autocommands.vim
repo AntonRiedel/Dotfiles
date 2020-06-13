@@ -12,6 +12,7 @@ autocmd BufWritePre *.c,*.h,*.cpp,*.hpp,CMakeLists.txt,*.tex,*.md,*.py,*.sh Neof
 
 "Update header
 autocmd BufWritePre *.c,*.h,*.cpp,*.hpp,CMakeLists.txt,*.tex,*.py,*.sh AddHeader
+
 "Clear out build files when leaving .tex document
 autocmd VimLeave *.tex !latexmk -c
 

@@ -4,3 +4,5 @@
 [core]
 	editor = $EDITOR
 	pager = less
+[pull]
+	rebase = false

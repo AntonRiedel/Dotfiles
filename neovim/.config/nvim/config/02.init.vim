@@ -7,6 +7,9 @@
 "Misc
 let mapleader=" "
 
+"faster startup?
+let g:python3_host_prog='/usr/bin/python'
+
 set backspace=indent,eol,start
 set clipboard=unnamedplus
 set mouse=a
@@ -15,6 +18,7 @@ set fileencoding=utf-8
 set fileformat=unix
 filetype plugin indent on
 
+"nuisance
 set nobackup
 set noswapfile
 

@@ -5,21 +5,26 @@
 " Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 "automatically install vim-plug and all other plugins if they are missing
-if ! filereadable(expand('~/.config/nvim/autoload/plug.vim'))
+if ! filereadable(expand('~/.local/share/nvim/autoload/plug.vim'))
     echo "Downloading junegunn/vim-plug to manage plugins..."
-    silent !mkdir -p ~/.config/nvim/autoload/
-    silent !curl "https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim" > ~/.config/nvim/autoload/plug.vim
+    silent !mkdir -p ~/.local/share/nvim/autoload/
+    silent !curl "https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim" > ~/.local/share/nvim/autoload/plug.vim
     autocmd VimEnter * PlugInstall
 endif
 
 let g:plug_threads = 4
 let g:plug_timeout = 120
 
-call plug#begin('~/.config/nvim/plugged')
+call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'iCyMind/NeoSolarized'
 Plug 'itchyny/lightline.vim'
 Plug 'mengelbrecht/lightline-bufferline'
+
+Plug 'voldikss/vim-floaterm'
+
+Plug 'skywind3000/asynctasks.vim'
+Plug 'skywind3000/asyncrun.vim'
 
 Plug 'tpope/vim-fugitive'
 Plug 'mhinz/vim-signify'
@@ -56,4 +61,5 @@ Plug 'ludovicchabant/vim-gutentags'
 Plug 'majutsushi/tagbar'
 
 Plug 'donRaphaco/neotex', { 'for': '.tex' }
+
 call plug#end()

@@ -7,7 +7,6 @@ autoconf
 automake
 base
 bash-language-server
-bear
 biber
 binutils
 bison
@@ -73,6 +72,7 @@ mtr
 neofetch
 neomutt
 neovim
+neovim-remote
 networkmanager
 networkmanager-vpnc
 newsboat
@@ -93,6 +93,7 @@ pandoc-crossref
 pass
 patch
 pdfjs
+perf
 pkgconf
 pulseaudio-alsa
 pulsemixer

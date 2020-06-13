@@ -29,6 +29,6 @@ settings:
     global: about:blank
   url.searchengines:
     global:
-      DEFAULT: https://duckduckgo.com/?q={}
+      DEFAULT: https://searx.info/?q={}
   url.start_pages:
     global: about:blank
