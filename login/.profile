@@ -37,7 +37,7 @@ export READER2="qpdfview"
 export FZF_DEFAULT_OPTS="--reverse --height=40%"
 
 #wallpaper
-export WALLPAPER="$HOME/nextcloud/wallpaper/llvm.png"
+export WALLPAPER="$HOME/nextcloud/wallpaper/arch4.png"
 
 # Start graphical server if Xorg is not already running.
 [ "$(tty)" = "/dev/tty1" ] && ! pgrep -x Xorg >/dev/null && exec startx >&/dev/null

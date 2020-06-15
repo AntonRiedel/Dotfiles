@@ -5,10 +5,10 @@
 " Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 "automatically install vim-plug and all other plugins if they are missing
-if ! filereadable(expand('~/.local/share/nvim/autoload/plug.vim'))
+if ! filereadable(expand('~/.local/share/nvim/site/autoload/plug.vim'))
     echo "Downloading junegunn/vim-plug to manage plugins..."
-    silent !mkdir -p ~/.local/share/nvim/autoload/
-    silent !curl "https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim" > ~/.local/share/nvim/autoload/plug.vim
+    silent !mkdir -p ~/.local/share/nvim/site/autoload/
+    silent !curl "https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim" > ~/.local/share/nvim/site/autoload/plug.vim
     autocmd VimEnter * PlugInstall
 endif
 

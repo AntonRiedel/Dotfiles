@@ -12,7 +12,7 @@ let g:LanguageClient_serverCommands = {
     \ 'fortran': ['/usr/bin/fortls'],
     \ 'cmake': ['/usr/bin/cmake-language-server'],
     \ 'tex': ['/usr/bin/texlab'],
-    \ 'sh': ['/usr/bin/bash-language-server'],
+    \ 'sh': ['/usr/bin/bash-language-server','start'],
     \ }
 
 nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>

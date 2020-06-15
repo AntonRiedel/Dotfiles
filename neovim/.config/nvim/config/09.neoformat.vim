@@ -17,7 +17,10 @@ let g:neoformat_enabled_tex = [ 'latexindent' ]
 let g:neoformat_enabled_cpp = [ 'astyle' ]
 
 "python
-let g:neoformat_enabled_python = [ 'yapf' ]
+let g:neoformat_enabled_python = [ 'black' ]
+
+"shell
+let g:neoformat_enabled_sh = [ 'shfmt' ]
 
 " Enable alignment if filetype not found
 let g:neoformat_basic_format_align = 1

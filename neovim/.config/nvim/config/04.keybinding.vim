@@ -7,9 +7,10 @@
 "Quickly open neovim config files in new buffer
 "init.vim will be automatically sourced if any changes are made
 nnoremap <leader>ev :Files $MYVIMCONFIG<CR>
+nnoremap <leader>sv :source $MYVIMRC<CR>
 
 "escape insert mode easily
-inoremap jj <ESC>
+inoremap jk <ESC>
 
 "shortcutting split navigation
 map <C-h> <C-w>h
@@ -37,8 +38,8 @@ let g:floaterm_keymap_toggle = '<F12>'
 tnoremap <ESC><ESC> <C-\><C-n>
 
 "move between buffers
-nnoremap <leader>bn :bnext<CR>
-nnoremap <leader>bp :bprevious<CR>
+nnoremap <Tab> :bnext<CR>
+nnoremap <S-Tab> :bprevious<CR>
 nnoremap <leader>bd :bdelete!<CR>
 
 "spellchecking
@@ -70,3 +71,8 @@ nnoremap <leader>f :Files<CR>
 nnoremap <leader>bb :Buffers<CR>
 nnoremap <leader>t :Tags<CR>
 nnoremap <leader>l :Lines<CR>
+
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
