@@ -17,7 +17,8 @@ let g:plug_timeout = 120
 
 call plug#begin('~/.local/share/nvim/plugged')
 
-Plug 'iCyMind/NeoSolarized'
+"Plug 'iCyMind/NeoSolarized'
+Plug 'sjl/badwolf'
 Plug 'itchyny/lightline.vim'
 Plug 'mengelbrecht/lightline-bufferline'
 
@@ -47,9 +48,8 @@ Plug 'scrooloose/nerdcommenter'
 "Plug 'vim-scripts/doxygen-support.vim'
 Plug 'vim-scripts/DoxygenToolkit.vim'
 "Plug 'kkoomen/vim-doge'
-"
-"Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do' : 'bash install.sh' }
 Plug 'Shougo/deoplete.nvim', { 'do' : ':UpdateRemotePlugins' }
 Plug 'sbdchd/neoformat'

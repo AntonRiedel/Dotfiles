@@ -12,10 +12,12 @@ binutils
 bison
 boost
 cgdb
+cheat
 clang
 cmake
 cmake-language-server
 cmus
+compiledb
 ctags
 dash
 dashbinsh
@@ -24,6 +26,7 @@ doxygen
 dunst
 easystroke-git
 fakeroot
+figlet
 file
 findutils
 firefox
@@ -36,6 +39,7 @@ fzf
 gawk
 gcc
 gcc-fortran
+gcc-go
 gettext
 git
 gperftools
@@ -64,6 +68,7 @@ lynx
 m4
 make
 man-db
+matplotlib-cpp-git
 mlocate
 mosh
 mpv
@@ -97,6 +102,7 @@ perf
 pkgconf
 pulseaudio-alsa
 pulsemixer
+python-black
 python-language-server
 python-matplotlib
 python-numpy
@@ -160,8 +166,7 @@ xorg-xsetroot
 xorgproto
 xournalpp
 xwallpaper
-yapf
-yay-bin
+yay
 youtube-dl
 zathura
 zathura-pdf-poppler

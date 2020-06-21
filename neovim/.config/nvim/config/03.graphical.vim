@@ -36,8 +36,9 @@ augroup END
 set termguicolors
 syntax enable
 set background=dark
-let g:neosolarized_visibility = "high"
-colorscheme NeoSolarized
+"let g:neosolarized_visibility = "high"
+"colorscheme NeoSolarized
+colorscheme badwolf
 
 "lightline and lightline-bufferline
 let g:lightline = {'colorscheme': 'powerline'}

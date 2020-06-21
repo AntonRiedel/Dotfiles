@@ -5,16 +5,27 @@
 " Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 "Reload init.vim if a config file gets changed
-autocmd BufWritePost *.vim source $MYVIMRC
+augroup Vimrc
+    autocmd!
+    autocmd BufWritePost *.vim source $MYVIMRC
+augroup END
 
-"Autoformat
-autocmd BufWritePre *.c,*.h,*.cpp,*.hpp,CMakeLists.txt,*.tex,*.md,*.py,*.sh Neoformat
-
-"Update header
-autocmd BufWritePre *.c,*.h,*.cpp,*.hpp,CMakeLists.txt,*.tex,*.py,*.sh AddHeader
+"Autoformat before wrting
+"Update header before writing
+"augroup Format
+    "autocmd!
+    "autocmd BufWritePre *.c,*.h,*.cpp,*.hpp,CMakeLists.txt,*.tex,*.md,*.py,*.sh Neoformat
+    "autocmd BufWritePre *.c,*.h,*.cpp,*.hpp,CMakeLists.txt,*.tex,*.md,*.py,*.sh AddHeader
+"augroup END
 
 "Clear out build files when leaving .tex document
-autocmd VimLeave *.tex !latexmk -c
+augroup Latex
+    autocmd!
+    autocmd VimLeave *.tex !latexmk -c
+augroup END
 
 "Disables automatic commenting on newline:
-autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+augroup All
+    autocmd!
+    autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+augroup END

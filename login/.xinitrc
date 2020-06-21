@@ -31,7 +31,7 @@ $HOME/.config/screenlayout/default.sh
 xwallpaper --stretch $WALLPAPER
 
 #start compositor
-xcompmgr &
+#xcompmgr &
 
 #start notification daemon
 dunst &
