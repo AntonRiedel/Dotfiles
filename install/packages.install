@@ -11,6 +11,7 @@ biber
 binutils
 bison
 boost
+catch2
 cgdb
 cheat
 clang
@@ -86,6 +87,7 @@ nfs-utils
 nm-connection-editor
 notmuch
 ntfs-3g
+opendoas
 openmp
 openssh
 opus-tools

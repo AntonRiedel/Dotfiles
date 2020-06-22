@@ -2,7 +2,7 @@
 # File              : bar.sh
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 27.04.2020
-# Last Modified Date: 07.05.2020
+# Last Modified Date: 22.06.2020
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 #handle SIGTRAP signals to update the status bar
@@ -17,25 +17,25 @@ time=10
 #function that outputs the appearance of the statusbar
 status() {
 
-	echo "$delim"
+    echo "$delim"
 
-	#get the volume with pulsemixer
+    #get the volume with pulsemixer
     if [ "$(pulsemixer --get-mute)" = "1" ]; then
         echo "🔇"
     else
         pulsemixer --get-volume | awk '{print "🔊" $1}'
     fi
-	echo "$delim"
+    echo "$delim"
 
     #show the cpu temperature
     sensors | awk '/Core 0/ {print "🔥" $3}'
-	echo "$delim"
+    echo "$delim"
 
     #show RAM usage
     free -h | awk '/^Mem:/ {print "💾" $3 "/" $2}'
-	echo "$delim"
+    echo "$delim"
 
-	#show remaining battery power
+    #show remaining battery power
     if [ -d /sys/class/power_supply/BAT? ]; then
         acpi -b | awk '{print $3 $4 "("$5")"}' | sed -e 's/,//g; s/Charging/🔌/g; s/Full/⚡/g; s/Discharging/🔋/g; s/Unknown/♻️/g'
     else
@@ -44,18 +44,18 @@ status() {
     echo "$delim"
 
     #wifi quality percentage
-	grep "^\s*w" /proc/net/wireless | awk '{ print "📶",int($3 * 100 / 70)"%" }'
-	sed "s/down//;s/up/🌐/" /sys/class/net/e*/operstate
+    grep "^\s*w" /proc/net/wireless | awk '{ print "📶",int($3 * 100 / 70)"%" }'
+    sed "s/down//;s/up/🌐/" /sys/class/net/e*/operstate
     echo "$delim"
 
-	# Date and time.
+    # Date and time.
     echo "📅"
-	date '+%Y %b %d (%a) %I:%M%p'
-	}
+    date '+%Y %b %d (%a) %I:%M%p'
+}
 
 update() {
-	xsetroot -name "$(status | tr -d '\n')" &
-    }
+    xsetroot -name "$(status | tr -d '\n')" &
+}
 
 while :; do
     update

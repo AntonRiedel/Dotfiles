@@ -45,8 +45,8 @@ Plug 'tpope/vim-surround'
 "Plug 'shanzi/autoHEADER'
 Plug 'alpertuna/vim-header'
 Plug 'scrooloose/nerdcommenter'
-"Plug 'vim-scripts/doxygen-support.vim'
 Plug 'vim-scripts/DoxygenToolkit.vim'
+"Plug 'vim-scripts/doxygen-support.vim'
 "Plug 'kkoomen/vim-doge'
 
 "Plug 'neoclide/coc.nvim', {'branch': 'release'}

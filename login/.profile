@@ -7,9 +7,9 @@
 
 #set environment variables
 export PATH="$HOME/.local/bin:$PATH"
-[ "$(hostname)" = "Mars" ] && export TERMINAL="st" && export LIBGL_ALWAYS_SOFTWARE=1 || export TERMINAL="alacritty"
+[ "$(hostname)" = "Mars" ] && export LIBGL_ALWAYS_SOFTWARE=1
+export TERMINAL="alacritty"
 #export TERMINAL="st"
-#export TERMINAL="alacritty"
 export EDITOR="nvim"
 export VISUAL="$EDITOR"
 export MYVIMRC="$HOME/.config/nvim/init.vim"
@@ -37,7 +37,7 @@ export READER2="qpdfview"
 export FZF_DEFAULT_OPTS="--reverse --height=40%"
 
 #wallpaper
-export WALLPAPER="$HOME/nextcloud/wallpaper/arch4.png"
+export WALLPAPER="$HOME/nextcloud/wallpaper/llvm.png"
 
 # Start graphical server if Xorg is not already running.
-[ "$(tty)" = "/dev/tty1" ] && ! pgrep -x Xorg >/dev/null && exec startx >&/dev/null
+[ "$(tty)" = "/dev/tty1" ] && ! pgrep -x Xorg &>/dev/null && exec startx &>/dev/null
