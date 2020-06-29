@@ -9,7 +9,7 @@ settings:
   backend:
     global: webengine
   colors.webpage.bg:
-    global: black
+    global: white
   colors.webpage.darkmode.algorithm:
     global: lightness-cielab
   colors.webpage.darkmode.contrast:
@@ -18,6 +18,12 @@ settings:
     global: true
   colors.webpage.darkmode.grayscale.all:
     global: true
+  colors.webpage.darkmode.policy.images:
+    global: smart
+  colors.webpage.darkmode.threshold.background:
+    global: 0
+  colors.webpage.darkmode.threshold.text:
+    global: 256
   colors.webpage.prefers_color_scheme_dark:
     global: true
   completion.web_history.max_items:

@@ -31,7 +31,7 @@ $HOME/.config/screenlayout/default.sh
 xwallpaper --stretch $WALLPAPER
 
 #start compositor
-#xcompmgr &
+xcompmgr &
 
 #start notification daemon
 dunst &
@@ -40,7 +40,7 @@ dunst &
 sxhkd &
 
 #disable touchscreen and touchpad on X220 (meaning only pen and trackpoint work)
-thinkpad-touch off
+#thinkpad-touch off
 #thinkpad-touchpad off
 
 #you do not need a mouse

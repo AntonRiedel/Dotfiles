@@ -1,6 +1,5 @@
 abook
 acpi
-alacritty
 arandr
 astyle
 autoconf
@@ -11,9 +10,7 @@ biber
 binutils
 bison
 boost
-catch2
 cgdb
-cheat
 clang
 cmake
 cmake-language-server
@@ -22,7 +19,6 @@ compiledb
 ctags
 dash
 dashbinsh
-dosfstools
 doxygen
 dunst
 easystroke-git
@@ -63,15 +59,11 @@ linux
 linux-firmware
 linux-lts
 linux-lts-headers
-lldb
-llvm
 lynx
 m4
 make
 man-db
-matplotlib-cpp-git
 mlocate
-mosh
 mpv
 msmtp
 mtr
@@ -86,7 +78,6 @@ nextcloud-client
 nfs-utils
 nm-connection-editor
 notmuch
-ntfs-3g
 opendoas
 openmp
 openssh
@@ -124,7 +115,6 @@ stow
 sudo
 sxhkd
 sxiv
-tcc
 texinfo
 texlab
 texlive-bibtexextra
@@ -143,6 +133,7 @@ texlive-science
 thinkpad-scripts
 tigervnc
 timeshift
+tldr
 tlp
 tmux
 ttf-hack
@@ -160,7 +151,6 @@ which
 xclip
 xcompmgr
 xdiskusage
-xdo
 xf86-video-intel
 xorg-server
 xorg-xinit
@@ -175,4 +165,4 @@ zathura-pdf-poppler
 zathura-ps
 zip
 zsh
-zsh-fast-syntax-highlighting
+zsh-syntax-highlighting

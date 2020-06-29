@@ -8,6 +8,8 @@
 ##aliases
 alias ls='ls --color=auto'
 alias ll='ls -alh --color=auto'
+alias grep='grep --color=auto'
+alias cp='rsync -auvPr'
 alias pdf='$READER'
 alias pdf2='$READER2'
 alias v='$EDITOR'

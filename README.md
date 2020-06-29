@@ -8,7 +8,7 @@ Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 # Dotfiles
 
-My personal Dotfiles which I use across different machines. I run Arch Linux as my main operating system with a custom build of dwm as window manager and st as my terminal.
+My personal Dotfiles which I use across different machines. I run Arch Linux as my main operating system with a custom build of dwm and st as window manager and as terminal respectively.
 You can find configuration files for
 
 - zsh (shell)

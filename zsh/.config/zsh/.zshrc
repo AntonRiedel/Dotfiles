@@ -48,7 +48,7 @@ _comp_options+=(globdots)
 zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*'
 
 #load additional plugins
-source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh 2>/dev/null
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
 
 #Load aliases
 [ -f "$HOME/.config/aliasrc" ] && source "$HOME/.config/aliasrc"
@@ -57,16 +57,16 @@ source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.
 #autoload -U colors && colors
 ##define order
 #SPACESHIP_PROMPT_ORDER=(
-  #user          # Username section
-  #host          # Hostname section
-  #dir           # Current directory section
-  #git           # Git section (git_branch + git_status)
-  #venv          # virtualenv section
-  #conda         # conda virtualenv section
-  #pyenv         # Pyenv section
-  #line_sep      # Line break
-  #jobs          # Background jobs indicator
-  #char          # Prompt character
+#user          # Username section
+#host          # Hostname section
+#dir           # Current directory section
+#git           # Git section (git_branch + git_status)
+#venv          # virtualenv section
+#conda         # conda virtualenv section
+#pyenv         # Pyenv section
+#line_sep      # Line break
+#jobs          # Background jobs indicator
+#char          # Prompt character
 #)
 ##customize the prompt
 #SPACESHIP_PROMPT_ADD_NEWLINE=false
