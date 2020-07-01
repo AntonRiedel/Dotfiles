@@ -74,7 +74,7 @@ Deploy_config_remote() {
     ln -sf $DotDir/bash/.bashrc $HOME/.bashrc
     ln -sf $DotDir/bash/.bash_profile $HOME/.bash_profile
     ln -sf $DotDir/login/.profile $HOME/.profile
-    ln -sf $DotDir/scirpts/.config/aliasrc $HOME/.config/aliasrc
+    ln -sf $DotDir/scripts/.config/aliasrc $HOME/.config/aliasrc
     ln -sf $DotDir/git/.gitconfig $HOME/.gitconfig
     ln -sf $DotDir/tmux/.tmux.conf $HOME/.tmux.conf
 
