@@ -3,9 +3,6 @@
 *tags*
 *history
 *zcompdump*
-tmux/.config/tmux/plugins/
-neovim/.config/nvim/autoload/
-neovim/.config/nvim/plugged/
 *pycache*
 *zcompdump*
 *zsh_history*
