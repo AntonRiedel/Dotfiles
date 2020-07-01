@@ -67,17 +67,18 @@ Deploy_config_remote() {
     #make directories for scirpts and config files
     mkdir -p $HOME/.local/bin $HOME/.config
 
-    wget https://github.com/neovim/neovim/releases/download/v0.4.3/nvim.appimage
-    chmod +x nvim.appimage
-    mv nvim.appimage $HOME/.local/bin/nvim
+    #wget https://github.com/neovim/neovim/releases/download/v0.4.3/nvim.appimage
+    #chmod +x nvim.appimage
+    #mv nvim.appimage $HOME/.local/bin/nvim
 
     ln -sf $DotDir/bash/.bashrc $HOME/.bashrc
     ln -sf $DotDir/bash/.bash_profile $HOME/.bash_profile
     ln -sf $DotDir/login/.profile $HOME/.profile
+    ln -sf $DotDir/scirpts/.config/aliasrc $HOME/.config/aliasrc
     ln -sf $DotDir/git/.gitconfig $HOME/.gitconfig
     ln -sf $DotDir/tmux/.tmux.conf $HOME/.tmux.conf
 
-    ln -sf $DotDir/nvim/.config/nvim $HOME/.config/nvim
+    ln -sf $DotDir/neovim/.config/nvim $HOME/.config/nvim
 
     return 0
 }
