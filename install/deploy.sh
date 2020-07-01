@@ -67,13 +67,17 @@ Deploy_config_remote() {
     #make directories for scirpts and config files
     mkdir -p $HOME/.local/bin $HOME/.config
 
-    ln -s $DotDir/bash/.bashrc $HOME/.bashrc
-    ln -s $DotDir/bash/.bash_profile $HOME/.bash_profile
-    ln -s $DotDir/login/.profile $HOME/.profile
-    ln -s $DotDir/git/.gitconfig $HOME/.gitconfig
-    ln -s $DotDir/tmux/.tmux.conf $HOME/.tmux.conf
+    wget https://github.com/neovim/neovim/releases/download/v0.4.3/nvim.appimage
+    chmod +x nvim.appimage
+    mv nvim.appimage $HOME/.local/bin/nvim
 
-    ln -s $DotDir/nvim/.config/nvim $HOME/.config/nvim
+    ln -sf $DotDir/bash/.bashrc $HOME/.bashrc
+    ln -sf $DotDir/bash/.bash_profile $HOME/.bash_profile
+    ln -sf $DotDir/login/.profile $HOME/.profile
+    ln -sf $DotDir/git/.gitconfig $HOME/.gitconfig
+    ln -sf $DotDir/tmux/.tmux.conf $HOME/.tmux.conf
+
+    ln -sf $DotDir/nvim/.config/nvim $HOME/.config/nvim
 
     return 0
 }
@@ -122,7 +126,8 @@ Error() {
     -a Install everything
     -p Install packages specified py package.install
     -f Install flatpaks specified by flatpak.install
-    -d Deploy config files
+    -d Deploy all config files
+    -r Deploy selected config files
     -s Install suckless utilities"
 }
 
@@ -132,15 +137,15 @@ Error() {
 #set directory
 DotDir=$(dirname $PWD)
 
-while getopts "apfds" opt; do
+while getopts "arpfds" opt; do
     case $opt in
     a)
         echo "Install everything"
         Install_yay
-        #Install_packages
-        #Install_flatpaks
-        #Install_suckless
-        #Deploy_config_all
+        Install_packages
+        Install_flatpaks
+        Install_suckless
+        Deploy_config_all
         ;;
     p)
         echo "Install packages"
@@ -153,6 +158,10 @@ while getopts "apfds" opt; do
     d)
         echo "Deploy all config files"
         #Deploy_config_all
+        ;;
+    r)
+        echo "Install selected config files"
+        Deploy_config_remote
         ;;
     s)
         echo "Install suckless programs"
