@@ -2,7 +2,7 @@
 # File              : deploy.sh
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 25.03.2020
-# Last Modified Date: 01.07.2020
+# Last Modified Date: 02.07.2020
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 Install_yay() {

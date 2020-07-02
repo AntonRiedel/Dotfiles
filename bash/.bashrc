@@ -23,3 +23,6 @@ export PS1="\[$(tput bold)\]\[$(tput setaf 1)\][\[$(tput setaf 3)\]\u\[$(tput se
 
 #aliases
 [ -f "$HOME/.config/aliasrc" ] && source "$HOME/.config/aliasrc"
+
+#remote specifig config
+[ -f "$HOME/.bashrc_remote" ] && source "$HOME/.bashrc_remote"
