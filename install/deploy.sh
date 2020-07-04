@@ -83,6 +83,21 @@ Deploy_config_remote() {
     return 0
 }
 
+Install_nvim_local() {
+    #install neovim locally if it is not installed in the base system
+
+    cd $HOME/.local/bin
+    wget https://github.com/neovim/neovim/releases/download/v0.4.3/nvim.appimage
+    mv nvim.appimage nvim
+    chmod u+x nvim
+
+    pip3 install --user neovim neovim-remote
+
+    cd $DotDir
+
+    return 0
+}
+
 Install_suckless() {
     #download source for suckless utilities and install them
 
@@ -163,6 +178,7 @@ while getopts "arpfds" opt; do
     r)
         echo "Install selected config files"
         Deploy_config_remote
+        Install_nvim_local
         ;;
     s)
         echo "Install suckless programs"
