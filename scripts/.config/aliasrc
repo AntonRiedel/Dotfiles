@@ -39,7 +39,7 @@ alias yt="youtube-dl -x -f bestaudio/best"
 #search and edit a configuration file
 ce() { $EDITOR "$(find $HOME/Dotfiles/* -type f | fzf --prompt="Edit config file: ")"; }
 #connect to known host via ssh
-sshc() { ssh "$(grep "^Host\ " $HOME/.ssh/config | awk '{print $2}' | fzf --prompt="Connect to host: ")"; }
+sshc() { ssh "$(grep "^Host " $HOME/.ssh/config | awk '{print $2}' | fzf --prompt="Connect to host: ")"; }
 #search and enter a subdirectory in your home directory
 fd() { cd "$(find $HOME -type d 2>/dev/null | fzf  --prompt="Jump to Dir: ")" && pwd && ls; }
 #search for a process and kill it

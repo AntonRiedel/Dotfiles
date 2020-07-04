@@ -6,3 +6,4 @@
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 source $HOME/.profile
+source $HOME/.config/zsh/.zshrc
