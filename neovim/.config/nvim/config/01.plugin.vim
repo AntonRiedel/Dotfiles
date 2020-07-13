@@ -49,9 +49,9 @@ Plug 'vim-scripts/DoxygenToolkit.vim'
 "Plug 'vim-scripts/doxygen-support.vim'
 "Plug 'kkoomen/vim-doge'
 
-"Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do' : 'bash install.sh' }
-Plug 'Shougo/deoplete.nvim', { 'do' : ':UpdateRemotePlugins' }
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do' : 'bash install.sh' }
+"Plug 'Shougo/deoplete.nvim', { 'do' : ':UpdateRemotePlugins' }
 Plug 'sbdchd/neoformat'
 
 Plug 'SirVer/ultisnips'

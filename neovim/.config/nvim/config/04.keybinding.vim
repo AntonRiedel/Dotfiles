@@ -70,7 +70,7 @@ nnoremap <leader>x :!./%<CR>
 nnoremap <leader>f :Files<CR>
 nnoremap <leader>bb :Buffers<CR>
 nnoremap <leader>t :Tags<CR>
-nnoremap <leader>l :Lines<CR>
+nnoremap <leader>l :BLines<CR>
 
 " Start interactive EasyAlign in visual mode (e.g. vipga)
 xmap ga <Plug>(EasyAlign)

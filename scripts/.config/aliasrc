@@ -22,11 +22,11 @@ alias ga='git add'
 alias gc='git commit'
 alias gch='git checkout'
 alias gb='git branch'
-alias pi='yay --sudo doas -S'
-alias pu='yay --sudo doas -Syu && flatpak update'
-alias pr='yay --sudo doas -Rns'
-alias po='yay --sudo doas -Rns $(yay -Qtdq)'
-alias pc='yay --sudo doas -Scc'
+alias pi='yay -S'
+alias pu='yay -Syu && flatpak update'
+alias pr='yay -Rnsc'
+alias po='yay -Rnsc $(yay -Qtdq)'
+alias pc='yay -Scc'
 alias pq='yay -Ss'
 alias nmu='nmcli con up --ask'
 alias nmd='nmcli con down'
@@ -39,7 +39,7 @@ alias yt="youtube-dl -x -f bestaudio/best"
 #search and edit a configuration file
 ce() { $EDITOR "$(find $HOME/Dotfiles/* -type f | fzf --prompt="Edit config file: ")"; }
 #connect to known host via ssh
-sshc() { ssh "$(grep "^Host " $HOME/.ssh/config | awk '{print $2}' | fzf --prompt="Connect to host: ")"; }
+sshc() { ssh "$(grep "^Host " $HOME/.ssh/config | grep -v "git" | awk '{print $2}' | fzf --prompt="Connect to host: ")"; }
 #search and enter a subdirectory in your home directory
 fd() { cd "$(find $HOME -type d 2>/dev/null | fzf  --prompt="Jump to Dir: ")" && pwd && ls; }
 #search for a process and kill it

@@ -32,7 +32,7 @@ augroup qs_colors
   autocmd ColorScheme * highlight QuickScopeSecondary guifg='#5fffff' gui=underline ctermfg=81 cterm=underline
 augroup END
 
-"NeoSolarized
+"color scheme
 set termguicolors
 syntax enable
 set background=dark
@@ -51,4 +51,3 @@ set showtabline=2
 "Signify
 let g:signify_vcx_list = ['git']
 let g:signify_realtime = 1
-

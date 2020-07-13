@@ -11,12 +11,21 @@ bind 'set completion-ignore-case on'
 stty -ixon
 set -o vi
 
-#infinite history
-HISTFILESIZE=
-HISTSIZE=
+##history setup
+#do not duplicate commands
+HISTCONTROL=ignoreboth
 
-#ignore repeated commands
-export HISTCONTROL=ignoredups
+# append to the history file, don't overwrite it
+shopt -s histappend
+# append and reload the history after each command
+PROMPT_COMMAND="history -a; history -n"
+
+# ignore certain commands from the history
+HISTIGNORE="ls:ll:cd:pwd:bg:fg:fd:history:clear"
+
+#set history length
+HISTSIZE=10000
+HISTFILESIZE=10000
 
 #commandline prompt
 export PS1="\[$(tput bold)\]\[$(tput setaf 1)\][\[$(tput setaf 3)\]\u\[$(tput setaf 2)\]@\[$(tput setaf 28)\]\h \[$(tput setaf 5)\]\W\[$(tput setaf 1)\]]\[$(tput setaf 7)\]\\$ \[$(tput sgr0)\]"

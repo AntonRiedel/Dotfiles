@@ -15,7 +15,7 @@ augroup END
 augroup Format
     autocmd!
     autocmd BufWritePre *.c,*.h,*.cpp,*.hpp,CMakeLists.txt,*.tex,*.md,*.py,*.sh Neoformat
-    autocmd BufWritePre *.c,*.h,*.cpp,*.hpp,CMakeLists.txt,*.tex,*.md,*.py,*.sh AddHeader
+    "autocmd BufWritePre *.c,*.h,*.cpp,*.hpp,CMakeLists.txt,*.tex,*.md,*.py,*.sh AddHeader
 augroup END
 
 "Clear out build files when leaving .tex document
