@@ -18,7 +18,6 @@ filetype plugin indent on
 "nuisance
 set nobackup
 set noswapfile
-
 set wrap
 set linebreak
 set smartindent

@@ -9,31 +9,20 @@
 nnoremap <leader>ev :Files $MYVIMCONFIG<CR>
 nnoremap <leader>sv :source $MYVIMRC<CR>
 
-"escape insert mode easily
-inoremap jk <ESC>
+"write more easily
+nnoremap  <leader>w :w<CR>
 
 "shortcutting split navigation
-map <C-h> <C-w>h
-map <C-j> <C-w>j
-map <C-k> <C-w>k
-map <C-l> <C-w>l
-
-"no longer necessary with suda smart edit
-"write file with sudo (using suda plugin) 
-"cnoremap sw :w suda://%<CR>
-
-"move between splits (even if there is a terminal running)
-"(source: https://medium.com/@garoth/neovim-terminal-usecases-tricks-8961e5ac19b9)
-
-"start terminal in a new buffer
-"nnoremap <leader>t :terminal<CR>A
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
 
 "toggle tagbar
-nmap <F8> :TagbarToggle<CR>
+nnoremap <F8> :TagbarToggle<CR>
 
 "toggle floatterm window
-let g:floaterm_keymap_toggle = '<F12>'
-inoremap <F12> <ESC>:FloatermToggle<CR>
+let g:floaterm_keymap_toggle = '<leader>t'
 
 "enter normal mode in terminal easily
 tnoremap <ESC><ESC> <C-\><C-n>
@@ -70,10 +59,9 @@ nnoremap <leader>x :!./%<CR>
 "fuzzy finding
 nnoremap <leader>f :Files<CR>
 nnoremap <leader>bb :Buffers<CR>
-nnoremap <leader>t :Tags<CR>
 nnoremap <leader>l :BLines<CR>
 
 " Start interactive EasyAlign in visual mode (e.g. vipga)
-xmap ga <Plug>(EasyAlign)
+xnoremap ga <Plug>(EasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
-nmap ga <Plug>(EasyAlign)
+nnoremap ga <Plug>(EasyAlign)

@@ -11,6 +11,7 @@ set ruler
 set showcmd
 set showmode
 set cursorline
+set cursorcolumn
 set splitbelow
 set splitright
 set wildmenu
@@ -21,7 +22,6 @@ set lazyredraw
 set showmatch
 set colorcolumn=80
 set cursorline
-set cursorcolumn
 
 "quick-scope
 let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
@@ -41,11 +41,11 @@ set background=dark
 colorscheme badwolf
 
 "lightline and lightline-bufferline
-let g:lightline = {'colorscheme': 'powerline'}
-let g:lightline.tabline          = {'left': [['buffers']], 'right': [['close']]}
-let g:lightline.component_expand = {'buffers': 'lightline#bufferline#buffers'}
-let g:lightline.component_type   = {'buffers': 'tabsel'}
-let g:lightline#bufferline#filename_modifier=':t'
+let g:lightline                              = {'colorscheme': 'powerline'}
+let g:lightline.tabline                      = {'left': [['buffers']], 'right': [['close']]}
+let g:lightline.component_expand             = {'buffers': 'lightline#bufferline#buffers'}
+let g:lightline.component_type               = {'buffers': 'tabsel'}
+let g:lightline#bufferline#filename_modifier = ':t'
 set showtabline=2
 
 "Signify

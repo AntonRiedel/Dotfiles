@@ -1,3 +1,10 @@
+" File              : 06.coc.vim
+" Author            : Anton Riedel <anton.riedel@tum.de>
+" Date              : 29.07.2020
+" Last Modified Date: 29.07.2020
+" Last Modified By  : Anton Riedel <anton.riedel@tum.de>
+
+"coc-extensions
 let g:coc_global_extensions = [
 \ 'coc-clangd',
 \ 'coc-cmake',
@@ -11,12 +18,7 @@ let g:coc_global_extensions = [
 \ ]
 
 
-" Use tab for trigger completion with characters ahead and navigate.
-"inoremap <silent><expr> <TAB>
-      "\ pumvisible() ? "\<C-n>" :
-      "\ <SID>check_back_space() ? "\<TAB>" :
-      "\ coc#refresh()
-"inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+"use C-j/k to switch between completion options
 inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<C-k>"
 inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : "\<C-j>"
 
@@ -24,9 +26,6 @@ function! s:check_back_space() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
-
-" Use <c-space> to trigger completion.
-inoremap <silent><expr> <c-space> coc#refresh()
 
 " Use <cr> to confirm completion, `<C-g>u` means break undo chain at current
 " position. Coc only does snippet and additional edit on confirm.
@@ -37,10 +36,10 @@ else
 endif
 
 " GoTo code navigation.
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
+nnoremap <silent> gd <Plug>(coc-definition)
+nnoremap <silent> gy <Plug>(coc-type-definition)
+nnoremap <silent> gi <Plug>(coc-implementation)
+nnoremap <silent> gr <Plug>(coc-references)
 
 " Use K to show documentation in preview window.
 nnoremap <silent> K :call <SID>show_documentation()<CR>

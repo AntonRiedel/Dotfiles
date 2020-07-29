@@ -7,4 +7,4 @@
 let g:tex_flavor="latex"
 "pdflatex is not properly working (on Parabola GNU/Linux), therefore
 "let g:neotex_pdflatex_alternative="xelatex"
-let g:neotex_delay="200"
+let g:neotex_delay="500"
