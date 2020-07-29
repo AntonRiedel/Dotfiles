@@ -33,6 +33,7 @@ nmap <F8> :TagbarToggle<CR>
 
 "toggle floatterm window
 let g:floaterm_keymap_toggle = '<F12>'
+inoremap <F12> <ESC>:FloatermToggle<CR>
 
 "enter normal mode in terminal easily
 tnoremap <ESC><ESC> <C-\><C-n>

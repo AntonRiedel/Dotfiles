@@ -57,6 +57,6 @@ settings:
     global: about:blank
   url.searchengines:
     global:
-      DEFAULT: https://searx.info/?q={}
+      DEFAULT: https://searx.fmac.xyz/?q={}
   url.start_pages:
     global: about:blank

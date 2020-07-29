@@ -13,8 +13,8 @@ PS1="%B[%F{cyan}%n%f@%F{yellow}%M%f] in %F{red}%~%f
 setopt share_history autocd
 
 # Set config for history
-HISTSIZE=5000
-SAVEHIST=5000
+HISTSIZE=10000
+SAVEHIST=10000
 HISTFILE="$HOME/.config/zsh/zsh_history"
 
 #enable vi mode

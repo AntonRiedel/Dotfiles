@@ -27,6 +27,8 @@ Plug 'voldikss/vim-floaterm'
 Plug 'skywind3000/asynctasks.vim'
 Plug 'skywind3000/asyncrun.vim'
 
+"Plug 'airblade/vim-rooter'
+
 Plug 'tpope/vim-fugitive'
 Plug 'mhinz/vim-signify'
 
@@ -53,6 +55,8 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do' : 'bash install.sh' }
 "Plug 'Shougo/deoplete.nvim', { 'do' : ':UpdateRemotePlugins' }
 Plug 'sbdchd/neoformat'
+
+"Plug 'puremourning/vimspector'
 
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
