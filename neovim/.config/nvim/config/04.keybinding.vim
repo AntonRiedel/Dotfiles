@@ -22,7 +22,7 @@ nnoremap <C-l> <C-w>l
 nnoremap <F8> :TagbarToggle<CR>
 
 "toggle floatterm window
-let g:floaterm_keymap_toggle = '<leader>t'
+nnoremap <leader>t :FloatermToggle<CR>
 
 "enter normal mode in terminal easily
 tnoremap <ESC><ESC> <C-\><C-n>

@@ -13,6 +13,9 @@ let g:neoformat_enabled_tex = [ 'latexindent' ]
     "\ 'stdin': 1
     "\ }
 
+"c
+let g:neoformat_enabled_c = [ 'astyle' ]
+
 "cpp
 let g:neoformat_enabled_cpp = [ 'astyle' ]
 
@@ -21,6 +24,7 @@ let g:neoformat_enabled_python = [ 'black' ]
 
 "shell
 let g:neoformat_enabled_sh = [ 'shfmt' ]
+let g:shfmt_opt="-ci"
 
 " Enable alignment if filetype not found
 let g:neoformat_basic_format_align = 1

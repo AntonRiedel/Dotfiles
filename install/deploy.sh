@@ -2,7 +2,7 @@
 # File              : deploy.sh
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 25.03.2020
-# Last Modified Date: 04.07.2020
+# Last Modified Date: 08.08.2020
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 Install_yay() {
@@ -35,7 +35,7 @@ Install_packages() {
 Install_flatpaks() {
     #install flatpaks
 
-    echo "May fail if you update/installed a kernel"
+    echo "May fail if you update/installed a kernel previously"
     [ -z $(which flatpak) ] && echo "flatpak is not installed. Aborting..." && return 1
     #flatpak install $(cat flatpaks.install)
     flatpak install $(cat flatpaks.install)
@@ -67,10 +67,7 @@ Deploy_config_remote() {
     #make directories for scirpts and config files
     mkdir -p $HOME/.local/bin $HOME/.config
 
-    #wget https://github.com/neovim/neovim/releases/download/v0.4.3/nvim.appimage
-    #chmod +x nvim.appimage
-    #mv nvim.appimage $HOME/.local/bin/nvim
-
+    #create symlinks
     ln -sf $DotDir/bash/.bashrc $HOME/.bashrc
     ln -sf $DotDir/bash/.bash_profile $HOME/.bash_profile
     ln -sf $DotDir/login/.profile $HOME/.profile
@@ -86,10 +83,14 @@ Deploy_config_remote() {
 Install_nvim_local() {
     #install neovim locally if it is not installed in the base system
 
-    cd $HOME/.local/bin
-    wget https://github.com/neovim/neovim/releases/download/v0.4.3/nvim.appimage
-    mv nvim.appimage nvim
-    chmod u+x nvim
+    if [ ! -f /usr/bin/nvim ]; then
+        cd $HOME/.local/bin
+        wget https://github.com/neovim/neovim/releases/download/stable/nvim.appimage
+        mv nvim.appimage nvim
+        chmod u+x nvim
+    else
+        echo "Neovim is installed on the system"
+    fi
 
     pip3 install --user neovim neovim-remote
 
@@ -155,38 +156,38 @@ DotDir=$(dirname $PWD)
 
 while getopts "arpfds" opt; do
     case $opt in
-    a)
-        echo "Install everything"
-        Install_yay
-        Install_packages
-        Install_flatpaks
-        Install_suckless
-        Deploy_config_all
-        ;;
-    p)
-        echo "Install packages"
-        Install_packages
-        ;;
-    f)
-        echo "Install flatpaks"
-        Install_flatpaks
-        ;;
-    d)
-        echo "Deploy all config files"
-        Deploy_config_all
-        ;;
-    r)
-        echo "Install selected config files"
-        Deploy_config_remote
-        Install_nvim_local
-        ;;
-    s)
-        echo "Install suckless programs"
-        Install_suckless
-        ;;
-    \?)
-        Error
-        ;;
+        a)
+            echo "Install everything"
+            Install_yay
+            Install_packages
+            Install_flatpaks
+            Install_suckless
+            Deploy_config_all
+            ;;
+        p)
+            echo "Install packages"
+            Install_packages
+            ;;
+        f)
+            echo "Install flatpaks"
+            Install_flatpaks
+            ;;
+        d)
+            echo "Deploy all config files"
+            Deploy_config_all
+            ;;
+        r)
+            echo "Install selected config files"
+            Deploy_config_remote
+            Install_nvim_local
+            ;;
+        s)
+            echo "Install suckless programs"
+            Install_suckless
+            ;;
+        \?)
+            Error
+            ;;
     esac
 
 done

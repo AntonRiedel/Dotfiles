@@ -2,6 +2,7 @@ abook
 acpi
 alacritty
 arandr
+astyle
 autoconf
 automake
 base
@@ -103,7 +104,6 @@ qpdfview
 qutebrowser
 rdesktop
 root
-rtv
 scrot
 sed
 shfmt
@@ -153,6 +153,7 @@ xf86-video-intel
 xorg-server
 xorg-util-macros
 xorg-xinit
+xorg-xkill
 xorg-xsetroot
 xorgproto
 xournalpp
