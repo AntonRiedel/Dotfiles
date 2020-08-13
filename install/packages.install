@@ -73,6 +73,7 @@ nextcloud-client
 nfs-utils
 nm-connection-editor
 notmuch
+npm
 openmp
 openssh
 opus-tools
@@ -99,6 +100,7 @@ python-pynvim
 python-rope
 python-scipy
 python-sympy
+python-unidecode
 qpdf
 qpdfview
 qutebrowser
@@ -158,7 +160,6 @@ xorg-xsetroot
 xorgproto
 xournalpp
 xwallpaper
-yarn
 yay-bin
 youtube-dl
 zathura
