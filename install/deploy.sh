@@ -2,7 +2,7 @@
 # File              : deploy.sh
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 25.03.2020
-# Last Modified Date: 08.08.2020
+# Last Modified Date: 21.08.2020
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 Install_yay() {
@@ -74,6 +74,7 @@ Deploy_config_remote() {
     ln -sf $DotDir/scripts/.config/aliasrc $HOME/.config/aliasrc
     ln -sf $DotDir/git/.gitconfig $HOME/.gitconfig
     ln -sf $DotDir/tmux/.tmux.conf $HOME/.tmux.conf
+    ln -sf $DotDir/tmux/.config/tmuxp $HOME/.config/tmuxp
 
     ln -sf $DotDir/neovim/.config/nvim $HOME/.config/nvim
 
