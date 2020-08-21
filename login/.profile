@@ -23,7 +23,7 @@ export ZDOTDIR="$HOME/.config/zsh"
 export GNUPGHOME="$HOME/.config/gnupg"
 
 #file browswer
-export FILE="lf"
+#export FILE="lf"
 
 #browser
 export BROWSER="qutebrowser"

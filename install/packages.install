@@ -6,6 +6,7 @@ astyle
 autoconf
 automake
 base
+bash-language-server
 biber
 binutils
 bison
@@ -15,6 +16,7 @@ clang
 cmake
 cmus
 compiledb
+cscope
 ctags
 dash
 dashbinsh

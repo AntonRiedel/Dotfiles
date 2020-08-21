@@ -17,21 +17,37 @@ let g:plug_timeout = 120
 
 call plug#begin('~/.local/share/nvim/plugged')
 
-"Plug 'iCyMind/NeoSolarized'
+"grahpical
 Plug 'sjl/badwolf'
+
 Plug 'itchyny/lightline.vim'
 Plug 'mengelbrecht/lightline-bufferline'
+
+Plug 'mhinz/vim-signify'
+
+"coding support
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+
+Plug 'sbdchd/neoformat'
+
+Plug 'tpope/vim-fugitive'
 
 Plug 'voldikss/vim-floaterm'
 
 Plug 'skywind3000/asynctasks.vim'
 Plug 'skywind3000/asyncrun.vim'
 
-"Plug 'airblade/vim-rooter'
+Plug 'ludovicchabant/vim-gutentags'
+Plug 'majutsushi/tagbar'
 
-Plug 'tpope/vim-fugitive'
-Plug 'mhinz/vim-signify'
+Plug 'donRaphaco/neotex', { 'for': '.tex' }
 
+Plug 'scrooloose/nerdcommenter'
+Plug 'vim-scripts/DoxygenToolkit.vim'
+
+"misc
 Plug 'junegunn/fzf.vim'
 
 Plug 'lambdalisue/suda.vim'
@@ -39,31 +55,23 @@ Plug 'lambdalisue/suda.vim'
 Plug 'unblevable/quick-scope'
 
 Plug 'junegunn/vim-easy-align'
-"Plug 'godlygeek/tabular'
 
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
 
-"Plug 'shanzi/autoHEADER'
 Plug 'alpertuna/vim-header'
-Plug 'scrooloose/nerdcommenter'
-Plug 'vim-scripts/DoxygenToolkit.vim'
+
+"Plug 'vimwiki/vimwiki'
+
+"old
+"Plug 'shanzi/autoHEADER'
+"Plug 'godlygeek/tabular'
 "Plug 'vim-scripts/doxygen-support.vim'
 "Plug 'kkoomen/vim-doge'
-
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"Plug 'iCyMind/NeoSolarized'
+"Plug 'airblade/vim-rooter'
 "Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do' : 'bash install.sh' }
 "Plug 'Shougo/deoplete.nvim', { 'do' : ':UpdateRemotePlugins' }
-Plug 'sbdchd/neoformat'
-
 "Plug 'puremourning/vimspector'
-
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
-
-Plug 'ludovicchabant/vim-gutentags'
-Plug 'majutsushi/tagbar'
-
-Plug 'donRaphaco/neotex', { 'for': '.tex' }
 
 call plug#end()

@@ -28,4 +28,5 @@ augroup END
 augroup All
     autocmd!
     autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+    autocmd InsertEnter * :norm zz
 augroup END
