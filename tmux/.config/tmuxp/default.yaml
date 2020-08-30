@@ -1,0 +1,14 @@
+session_name: default
+windows:
+    - window_name: htop
+      shell_command_before:
+          - cd $HOME
+      panes:
+          - shell_command:
+              htop
+    - window_name: systemd
+      shell_command_before:
+          - cd $HOME
+      panes:
+          - shell_command:
+              watch df -h

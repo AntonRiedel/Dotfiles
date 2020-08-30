@@ -12,9 +12,8 @@ let g:coc_global_extensions = [
 \ 'coc-sh',
 \ 'coc-texlab',
 \ 'coc-vimlsp',
-\ 'coc-snippets',
-\ 'coc-json',
-\ 'coc-markdownlint'
+\ 'coc-markdownlint',
+\ 'coc-snippets'
 \ ]
 
 

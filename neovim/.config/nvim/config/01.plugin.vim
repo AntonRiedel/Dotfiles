@@ -13,7 +13,7 @@ if ! filereadable(expand('~/.local/share/nvim/site/autoload/plug.vim'))
 endif
 
 let g:plug_threads = 4
-let g:plug_timeout = 120
+let g:plug_timeout = 180
 
 call plug#begin('~/.local/share/nvim/plugged')
 
@@ -26,7 +26,10 @@ Plug 'mengelbrecht/lightline-bufferline'
 Plug 'mhinz/vim-signify'
 
 "coding support
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'Shougo/deoplete.nvim', { 'do' : ':UpdateRemotePlugins' }
+Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do' : 'bash install.sh' }
+Plug 'deoplete-plugins/deoplete-jedi'
+Plug 'davidhalter/jedi-vim'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
@@ -64,14 +67,15 @@ Plug 'alpertuna/vim-header'
 "Plug 'vimwiki/vimwiki'
 
 "old
+"Plug 'ycm-core/YouCompleteMe', { 'do': './install.py --all' }
 "Plug 'shanzi/autoHEADER'
 "Plug 'godlygeek/tabular'
 "Plug 'vim-scripts/doxygen-support.vim'
 "Plug 'kkoomen/vim-doge'
 "Plug 'iCyMind/NeoSolarized'
 "Plug 'airblade/vim-rooter'
-"Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do' : 'bash install.sh' }
-"Plug 'Shougo/deoplete.nvim', { 'do' : ':UpdateRemotePlugins' }
 "Plug 'puremourning/vimspector'
-
+"Plug 'neovim/nvim-lsp'
+"Plug 'dense-analysis/ale'
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
