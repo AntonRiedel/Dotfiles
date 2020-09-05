@@ -6,7 +6,7 @@
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 #set environment variables
-export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.local/bin:$HOME/.local/share/nvim/plugged/fzf/bin:$PATH"
 [ "$(hostname)" = "Mars" ] && export LIBGL_ALWAYS_SOFTWARE=1
 export TERMINAL="alacritty"
 #export TERMINAL="st"

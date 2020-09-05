@@ -51,6 +51,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'vim-scripts/DoxygenToolkit.vim'
 
 "misc
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
 Plug 'lambdalisue/suda.vim'
