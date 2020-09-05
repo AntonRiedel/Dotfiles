@@ -1,6 +1,6 @@
 #additional options for bash shell
 TAB:menu-complete
-set menu-complete-display-prefix on
+set menu-complete-display-prefix On
 set colored-stats On
 set completion-ignore-case On
 set completion-prefix-display-length 3

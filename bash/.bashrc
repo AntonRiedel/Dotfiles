@@ -9,22 +9,24 @@
 shopt -s autocd
 stty -ixon
 set -o vi
+complete -c man which whereis
+complete -cf sudo
 
 ##history setup
 #do not duplicate commands
-HISTCONTROL=ignoreboth
+export HISTCONTROL=ignoreboth
 
 # append to the history file, don't overwrite it
 shopt -s histappend
 # append and reload the history after each command
-PROMPT_COMMAND="history -a; history -n"
+export PROMPT_COMMAND="history -a; history -n"
 
 # ignore certain commands from the history
-HISTIGNORE="ls:ll:cd:pwd:bg:fg:fd:history:clear"
+export HISTIGNORE="ls:ll:cd:pwd:bg:fg:fd:history:clear"
 
 #set history length
-HISTSIZE=10000
-HISTFILESIZE=10000
+export HISTSIZE=10000
+export HISTFILESIZE=10000
 
 #commandline prompt
 export PS1="\[$(tput bold)\]\[$(tput setaf 1)\][\[$(tput setaf 3)\]\u\[$(tput setaf 2)\]@\[$(tput setaf 28)\]\h \[$(tput setaf 5)\]\W\[$(tput setaf 1)\]]\[$(tput setaf 7)\]
