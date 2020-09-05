@@ -2,7 +2,7 @@
 # File              : deploy.sh
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 25.03.2020
-# Last Modified Date: 21.08.2020
+# Last Modified Date: 05.09.2020
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 Install_yay() {
@@ -70,6 +70,7 @@ Deploy_config_remote() {
     #create symlinks
     ln -sf $DotDir/bash/.bashrc $HOME/.bashrc
     ln -sf $DotDir/bash/.bash_profile $HOME/.bash_profile
+    ln -sf $DotDir/bash/.inputrc $HOME/.inputrc
     ln -sf $DotDir/login/.profile $HOME/.profile
     ln -sf $DotDir/scripts/.config/aliasrc $HOME/.config/aliasrc
     ln -sf $DotDir/git/.gitconfig $HOME/.gitconfig
