@@ -20,8 +20,10 @@ cscope
 ctags
 dash
 dashbinsh
+dosfstools
 doxygen
 dunst
+dvtm
 fakeroot
 file
 findutils
@@ -31,7 +33,6 @@ flameshot
 flatpak
 flex
 fuse2
-fzf
 gawk
 gcc
 gettext
@@ -75,16 +76,12 @@ nextcloud-client
 nfs-utils
 nm-connection-editor
 notmuch
-npm
 openmp
 openssh
 opus-tools
 opustags
 pacman
 pacutils
-pandoc
-pandoc-citeproc
-pandoc-crossref
 pass
 patch
 pdfjs
@@ -93,6 +90,7 @@ pkgconf
 pulseaudio-alsa
 pulsemixer
 python-black
+python-jedi-git
 python-language-server
 python-matplotlib
 python-numpy
@@ -105,7 +103,6 @@ python-sympy
 python-unidecode
 qpdf
 qpdfview
-qutebrowser
 rdesktop
 root
 scrot
@@ -168,5 +165,3 @@ zathura
 zathura-pdf-poppler
 zathura-ps
 zip
-zsh
-zsh-syntax-highlighting

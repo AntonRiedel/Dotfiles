@@ -26,8 +26,8 @@ export GNUPGHOME="$HOME/.config/gnupg"
 #export FILE="lf"
 
 #browser
-export BROWSER="qutebrowser"
-export BROWSER2="firefox"
+export BROWSER="firefox"
+#export BROWSER="qutebrowser"
 
 #reader for pdf files
 export READER="zathura"

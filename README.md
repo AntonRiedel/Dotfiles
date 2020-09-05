@@ -2,7 +2,7 @@
 File              : README.md
 Author            : Anton Riedel <anton.riedel@tum.de>
 Date              : 25.03.2020
-Last Modified Date: 13.08.2020
+Last Modified Date: 05.09.2020
 Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 -->
 
@@ -12,7 +12,7 @@ My personal Dotfiles which I use across different machines. I run Arch Linux as 
 You can find configuration files for
 
 - alacritty (terminal emulator)
-- zsh (shell)
+- bash (shell)
 - neovim (editor)
 - tmux (screen multiplexer)
 - dunst (notification daemon)
@@ -33,7 +33,7 @@ Under `old` you can find configuration files for programs I used to use such as:
 - bspwm (-> dwm)
 - i3 (->dwm)
 - i3bar (->dwmblocks)
-- bash (->zsh)
+- zsh (->bash)
 - termite (->alacritty)
 - urxvt (->alacritty)
 - xterm (->alacritty)
