@@ -64,6 +64,12 @@ Deploy_config_remote() {
 
     echo "Install selected config files to $HOME"
 
+    echo "Install all config files to $HOME"
+    echo "WARNING! All hidden files in $HOME will be deleted"
+
+    #clean $HOME
+    rm -rf $HOME/.*[!.]
+
     #make directories for scirpts and config files
     mkdir -p $HOME/.local/bin $HOME/.config
 
