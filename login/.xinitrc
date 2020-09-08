@@ -6,9 +6,9 @@
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 #set keyboard layout
-if [ "$(hostname)" = "Mars" ];then
+if [ "$(hostname)" = "Mars" ]; then
     setxkbmap gb
-elif [ "$(hostname)" = "Moon" ];then
+elif [ "$(hostname)" = "Moon" ]; then
     setxkbmap de
 else
     setxkbmap us
@@ -24,7 +24,7 @@ xset s off
 #change your life
 xset r rate 300 50
 
-#set default screen setup
+#set default screenlayout
 $HOME/.config/screenlayout/default.sh
 
 #set default wallpaper

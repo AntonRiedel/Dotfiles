@@ -13,9 +13,9 @@ PS1="%B[%F{cyan}%n%f@%F{yellow}%M%f] in %F{red}%~%f
 setopt share_history autocd
 
 # Set config for history
-HISTSIZE=10000
-SAVEHIST=10000
-HISTFILE="$HOME/.config/zsh/zsh_history"
+export HISTSIZE=10000
+export SAVEHIST=10000
+export HISTFILE="$HOME/.config/zsh/zsh_history"
 
 #enable vi mode
 bindkey -v

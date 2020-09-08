@@ -43,4 +43,4 @@ sshc() { ssh "$(grep "^Host " $HOME/.ssh/config | grep -v "git" | awk '{print $2
 #search and enter a subdirectory in your home directory
 fd() { cd "$(find $HOME -type d 2>/dev/null | fzf  --prompt="Jump to Dir: ")" && pwd && ls; }
 #search for a process and kill it
-kp() { kill -s SIGKILL "$(ps -e | fzf --prompt="Job to kill: " | awk '{ print $1 }')" 2>/dev/null; }
+kp() { kill -s SIGKILL "$(ps aux | fzf --prompt="Job to kill: " | awk '{ print $2 }')" 2>/dev/null; }
