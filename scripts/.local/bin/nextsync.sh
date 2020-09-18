@@ -6,13 +6,15 @@
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 #credentials
-user="anton"
-password="$(pass sun/nextcloud/anton)"
-dir="$HOME/nextcloud"
+User="anton"
+Password="$(pass sun/nextcloud/anton)"
+Dir="$HOME/nextcloud"
 #server="https://mylittleserver.ddns.net"
-server="https://sgrastar.ddns.net/nextcloud"
+Server="https://sgrastar.ddns.net/nextcloud"
+
+mkdir -p $Dir
 
 #sync files
-nextcloudcmd --user $user --password $password --exclude $HOME/.config/Nextcloud/sync-exclude.lst $dir $server
+nextcloudcmd --user $User --password $Password --exclude $HOME/.config/Nextcloud/sync-exclude.lst $Dir $Server
 
 exit 0

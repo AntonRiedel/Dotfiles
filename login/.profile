@@ -22,12 +22,9 @@ export LESSHISTFILE="-"
 export ZDOTDIR="$HOME/.config/zsh"
 export GNUPGHOME="$HOME/.config/gnupg"
 
-#file browswer
-#export FILE="lf"
-
 #browser
-export BROWSER="firefox"
-#export BROWSER="qutebrowser"
+export BROWSER="qutebrowser"
+export BROWSER2="firefox"
 
 #reader for pdf files
 export READER="zathura"
@@ -39,5 +36,5 @@ export FZF_DEFAULT_OPTS="--reverse --height=40%"
 #wallpaper
 export WALLPAPER="$HOME/nextcloud/wallpaper/arch4.png"
 
-# Start graphical server if Xorg is not already running.
-[ "$(tty)" = "/dev/tty1" ] && ! pgrep -x Xorg &>/dev/null && exec startx &>/dev/null
+#start Xorg on tty1
+[ "$(tty)" = "/dev/tty1" ] && exec startx &>/dev/null

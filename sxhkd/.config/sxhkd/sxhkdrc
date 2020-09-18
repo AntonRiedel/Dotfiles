@@ -6,7 +6,7 @@ super + {_,shift} + b
 super + n
 	$TERMINAL -e nextsync.sh
 super + {_,shift} + e
-	{$TERMINAL -e neomutt,mailsync}
+	$TERMINAL -e {neomutt,mw sync}
 super + v
 	$TERMINAL -e newsboat
 super + o

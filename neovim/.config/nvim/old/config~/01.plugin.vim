@@ -1,7 +1,7 @@
 " File              : 01.plugin.vim
 " Author            : Anton Riedel <anton.riedel@tum.de>
 " Date              : 24.03.2020
-" Last Modified Date: 12.04.2020
+" Last Modified Date: 18.09.2020
 " Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 "automatically install vim-plug and all other plugins if they are missing
@@ -51,7 +51,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'vim-scripts/DoxygenToolkit.vim'
 
 "misc
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() --bin } }
 Plug 'junegunn/fzf.vim'
 
 Plug 'lambdalisue/suda.vim'

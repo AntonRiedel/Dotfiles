@@ -46,8 +46,8 @@ settings:
     global: /home/anton/nextcloud
   editor.command:
     global:
-    - gvim
-    - -f
+    - alacritty
+    - -e nvim
     - '{file}'
     - -c
     - normal {line}G{column0}l
