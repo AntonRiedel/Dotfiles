@@ -23,13 +23,17 @@ Plug 'itchyny/lightline.vim'
 Plug 'vimwiki/vimwiki'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 "add support for more plugins
 "silent! call repeat#set("\<Plug>MyWonderfulMap",v:count)
+Plug 'airblade/vim-gitgutter'
 Plug 'alpertuna/vim-header'
 Plug 'jiangmiao/auto-pairs'
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/completion-nvim'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 Plug 'junegunn/fzf', { 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
 call plug#end()

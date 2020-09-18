@@ -1,7 +1,7 @@
 " File              : settings.vim
 " Author            : Anton Riedel <anton.riedel@tum.de>
 " Date              : 14.09.2020
-" Last Modified Date: 14.09.2020
+" Last Modified Date: 18.09.2020
 " Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 "
 "global setting
@@ -29,3 +29,8 @@ set list                          " make whitespace appear
 set number                        " print line number
 set relativenumber                " print relative line number
 set cursorline cursorcolumn       " spot the cursor easier
+let g:python3_host_prog="/usr/bin/python3"
+let g:loaded_python_provider = 0
+let g:loaded_ruby_provider = 0
+let g:loaded_node_provider = 0
+let g:loaded_perl_provider = 0
