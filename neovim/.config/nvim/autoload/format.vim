@@ -1,11 +1,11 @@
 " File              : format.vim
 " Author            : Anton Riedel <anton.riedel@tum.de>
 " Date              : 17.09.2020
-" Last Modified Date: 17.09.2020
+" Last Modified Date: 19.09.2020
 " Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 "format any file if formatprg is properly set
-function! format#Format()
+function! format#Format() abort
     if &modified
         "save current cursor position
         let cursor_pos = getpos('.')

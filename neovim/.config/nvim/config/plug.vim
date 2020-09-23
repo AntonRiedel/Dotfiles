@@ -1,7 +1,7 @@
 " File              : plug.vim
 " Author            : Anton Riedel <anton.riedel@tum.de>
 " Date              : 14.09.2020
-" Last Modified Date: 18.09.2020
+" Last Modified Date: 22.09.2020
 " Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 "plugin manager setup
@@ -32,8 +32,11 @@ Plug 'alpertuna/vim-header'
 Plug 'jiangmiao/auto-pairs'
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/completion-nvim'
+" Plug 'nvim-lua/diagnostic-nvim'
+" Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'junegunn/fzf', { 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
+Plug 'sbdchd/neoformat'
 call plug#end()

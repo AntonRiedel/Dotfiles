@@ -1,14 +1,17 @@
 " File              : keybindings.vim
 " Author            : Anton Riedel <anton.riedel@tum.de>
 " Date              : 14.09.2020
-" Last Modified Date: 18.09.2020
+" Last Modified Date: 23.09.2020
 " Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 "global keybindings
 let mapleader=' '
 
 "self-explanatory convenience mappings
-inoremap jj <Esc>
+nnoremap jj <Nop>
+nnoremap kk <Nop>
+nnoremap ll <Nop>
+nnoremap hh <Nop>
 vnoremap ; :
 vnoremap : ;
 nnoremap ; :
@@ -18,23 +21,23 @@ nnoremap : ;
 tnoremap <Esc> <C-\><C-n>
 autocmd TermOpen * startinsert
 
-"h-j-k-l mode-agnostic means of switching windows
-tnoremap <c-h> <c-\><c-n><c-w>h
-tnoremap <c-j> <c-\><c-n><c-w>j
-tnoremap <c-k> <c-\><c-n><c-w>k
-tnoremap <c-l> <c-\><c-n><c-w>l
-inoremap <c-h> <Esc><c-w>h
-inoremap <c-j> <Esc><c-w>j
-inoremap <c-k> <Esc><c-w>k
-inoremap <c-l> <Esc><c-w>l
-vnoremap <c-h> <Esc><c-w>h
-vnoremap <c-j> <Esc><c-w>j
-vnoremap <c-k> <Esc><c-w>k
-vnoremap <c-l> <Esc><c-w>l
-nnoremap <c-h> <c-w>h
-nnoremap <c-j> <c-w>j
-nnoremap <c-k> <c-w>k
-nnoremap <c-l> <c-w>l  
+"h-j-k-l mode-agnostiM means of switching windows
+tnoremap <M-h> <c-\><c-n><c-w>h
+tnoremap <M-j> <c-\><c-n><c-w>j
+tnoremap <M-k> <c-\><c-n><c-w>k
+tnoremap <M-l> <c-\><c-n><c-w>l
+inoremap <M-h> <Esc><c-w>h
+inoremap <M-j> <Esc><c-w>j
+inoremap <M-k> <Esc><c-w>k
+inoremap <M-l> <Esc><c-w>l
+vnoremap <M-h> <Esc><c-w>h
+vnoremap <M-j> <Esc><c-w>j
+vnoremap <M-k> <Esc><c-w>k
+vnoremap <M-l> <Esc><c-w>l
+nnoremap <M-h> <c-w>h
+nnoremap <M-j> <c-w>j
+nnoremap <M-k> <c-w>k
+nnoremap <M-l> <c-w>l
 
 "open terminal in a split to the left
 nnoremap <leader>tv :vsplit term://bash<CR>
