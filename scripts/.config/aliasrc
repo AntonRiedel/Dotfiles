@@ -2,7 +2,7 @@
 # File              : aliasrc
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 24.03.2020
-# Last Modified Date: 23.09.2020
+# Last Modified Date: 27.09.2020
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 ##aliases
@@ -23,7 +23,8 @@ alias gc='git commit'
 alias gch='git checkout'
 alias gb='git branch'
 alias pi='yay -S'
-alias pu='yay -Syu && $EDITOR +PlugUpgrade +PlugUpdate +quita'
+alias pu='yay -Syu'
+# alias pu='yay -Syu && $EDITOR +PlugUpgrade +PlugUpdate +quita'
 alias pr='yay -Rnsc'
 alias po='yay -Rnsc $(yay -Qtdq) || echo "no orphanes found"'
 alias pc='yay -Scc'
@@ -36,10 +37,11 @@ alias yt="youtube-dl -x -f bestaudio/best"
 
 ##custom shell functions (a.k.a. fun with fzf)
 #search and edit a configuration file
-ce() { $EDITOR "$(rg --files --hidden $HOME/Dotfiles | fzf --prompt="Edit config file: ")"; }
+ce() { $EDITOR "$(find $HOME/Dotfiles -type f | fzf --prompt="Edit config file: ")"; }
+# ce() { $EDITOR "$(rg --files --hidden $HOME/Dotfiles | fzf --prompt="Edit config file: ")"; }
 #connect to known host via ssh
 sshc() { ssh "$(grep "^Host " $HOME/.ssh/config | grep -v "git" | awk '{print $2}' | fzf --prompt="Connect to host: ")"; }
 #search and enter a subdirectory in your home directory
-fd() { cd "$(find $HOME -type d 2>/dev/null | fzf --prompt="Jump to Dir: ")" && pwd && ls; }
+fd() { cd "$(find $HOME -type d | fzf --prompt="Jump to Dir: ")" && pwd && ls; }
 #search for a process and kill it
 kp() { kill -s SIGKILL "$(ps aux | fzf --prompt="Job to kill: " | awk '{ print $2 }')" 2>/dev/null; }

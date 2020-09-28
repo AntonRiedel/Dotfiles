@@ -15,7 +15,6 @@ setopt share_history autocd
 # Set config for history
 export HISTSIZE=10000
 export SAVEHIST=10000
-export HISTFILE="$HOME/.config/zsh/zsh_history"
 
 #enable vi mode
 bindkey -v

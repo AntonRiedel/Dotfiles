@@ -2,20 +2,25 @@
 # File              : .xinitrc
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 24.03.2020
-# Last Modified Date: 27.04.2020
+# Last Modified Date: 25.09.2020
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 #set keyboard layout
 if [ "$(hostname)" = "Mars" ]; then
-    setxkbmap gb
+	setxkbmap gb
 elif [ "$(hostname)" = "Moon" ]; then
-    setxkbmap de
+	setxkbmap de
 else
-    setxkbmap us
+	setxkbmap us
 fi
 
 #capslock: useless key in a great location; let's make it great
-setxkbmap -option caps:escape
+#Old trick: map capslock to escape
+#setxkbmap -option caps:escape
+
+#New trick: map capslock to escape when pressed alone and to crtl when pressed in combination with another key
+setxkbmap -option ctrl:nocaps
+xcape -e 'Control_L=Escape'
 
 #prevent screen from blanking
 xset -dpms

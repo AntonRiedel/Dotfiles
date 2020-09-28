@@ -16,6 +16,7 @@ setlocal equalprg=latexindent
 "autoformat files on save
 augroup Format
     autocmd!
+    autocmd BufWritePre * AddHeader
     autocmd BufWritePre * undojoin | Neoformat
     autocmd VimLeave * :!latexmk -C
 augroup END
