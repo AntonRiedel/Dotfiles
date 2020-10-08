@@ -1,7 +1,7 @@
 " File              : netrw.vim
 " Author            : Anton Riedel <anton.riedel@tum.de>
 " Date              : 14.09.2020
-" Last Modified Date: 14.09.2020
+" Last Modified Date: 08.10.2020
 " Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 "config for netrw (-> best open with :Lexplore)

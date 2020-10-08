@@ -1,7 +1,7 @@
 " File              : cpp.vim
 " Author            : Anton Riedel <anton.riedel@tum.de>
 " Date              : 16.09.2020
-" Last Modified Date: 21.09.2020
+" Last Modified Date: 08.10.2020
 " Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 "settings for cpp files

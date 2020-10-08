@@ -1,24 +1,26 @@
 " File              : keybindings.vim
 " Author            : Anton Riedel <anton.riedel@tum.de>
 " Date              : 14.09.2020
-" Last Modified Date: 23.09.2020
+" Last Modified Date: 08.10.2020
 " Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 "global keybindings
 let mapleader=' '
 
 "self-explanatory convenience mappings
-nnoremap jj <Nop>
-nnoremap kk <Nop>
-nnoremap ll <Nop>
-nnoremap hh <Nop>
 vnoremap ; :
 vnoremap : ;
 nnoremap ; :
 nnoremap : ;
 
+"get ridd of bad habits
+" nnoremap jj <Nop>
+" nnoremap kk <Nop>
+" nnoremap ll <Nop>
+" nnoremap hh <Nop>
+
 "terminal mode
-tnoremap <Esc> <C-\><C-n>
+tnoremap <expr> <Esc> (&filetype == "fzf") ? "<Esc>" : "<c-\><c-n>"
 autocmd TermOpen * startinsert
 
 "h-j-k-l mode-agnostiM means of switching windows
@@ -40,18 +42,17 @@ nnoremap <M-k> <c-w>k
 nnoremap <M-l> <c-w>l
 
 "open terminal in a split to the left
-nnoremap <leader>tv :vsplit term://bash<CR>
+nnoremap <leader>tv :vsplit Terminal<CR>
 "open terminal in a split to down
-nnoremap <leader>th :split term://bash<CR>
+nnoremap <leader>th :split Terminal<CR>
 "source init.vim after making changes
 nnoremap <leader>sv :source $MYVIMRC<CR>
 "edit config file in a split
 nnoremap <leader>ev :Files $HOME/.config/nvim/<CR>
 "open up file tree
-" nnoremap <leader>pv :wincmd v<bar> :Lexplore <bar> :vertical resize 25<CR>
 nnoremap <leader>pv :Lexplore<CR>
 
-"setup for neovim's builtin lsp
+"keybinds for neovim's builtin lsp
 nnoremap <silent> <leader>ld  <cmd>lua vim.lsp.buf.definition()<CR>
 nnoremap <silent> <leader>lh  <cmd>lua vim.lsp.buf.hover()<CR>
 nnoremap <silent> <leader>li  <cmd>lua vim.lsp.buf.implementation()<CR>

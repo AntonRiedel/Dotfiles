@@ -3,7 +3,7 @@
 " Date              : 14.09.2020
 " Last Modified Date: 18.09.2020
 " Last Modified By  : Anton Riedel <anton.riedel@tum.de>
-"
+
 "global setting
 filetype plugin indent on         " Add filetype, plugin, and indent support
 syntax on                         " Turn on syntax highlighting
@@ -29,8 +29,8 @@ set list                          " make whitespace appear
 set number                        " print line number
 set relativenumber                " print relative line number
 set cursorline cursorcolumn       " spot the cursor easier
-let g:python3_host_prog="/usr/bin/python3"
-let g:loaded_python_provider = 0
-let g:loaded_ruby_provider = 0
-let g:loaded_node_provider = 0
-let g:loaded_perl_provider = 0
+let g:python3_host_prog="/usr/bin/python3" " set python interpreter for better startup time
+let g:loaded_python_provider=0    " dont use python2
+let g:loaded_ruby_provider=0      " dont use ruby
+let g:loaded_node_provider=0      " dont use node
+let g:loaded_perl_provider=0      " dont use perl

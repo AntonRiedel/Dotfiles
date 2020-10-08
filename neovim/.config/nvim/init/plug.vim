@@ -1,7 +1,7 @@
 " File              : plug.vim
 " Author            : Anton Riedel <anton.riedel@tum.de>
 " Date              : 14.09.2020
-" Last Modified Date: 22.09.2020
+" Last Modified Date: 08.10.2020
 " Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 "plugin manager setup
@@ -27,13 +27,13 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 "add support for more plugins
 "silent! call repeat#set("\<Plug>MyWonderfulMap",v:count)
-Plug 'airblade/vim-gitgutter'
+Plug 'mhinz/vim-signify'
 Plug 'alpertuna/vim-header'
 Plug 'jiangmiao/auto-pairs'
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/completion-nvim'
-" Plug 'nvim-lua/diagnostic-nvim'
-" Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'nvim-lua/diagnostic-nvim'
+Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'junegunn/fzf', { 'do': './install --bin' }
