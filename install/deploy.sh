@@ -112,7 +112,7 @@ Install_nvim_local() {
 
 		tar xvpf ripgrep-12.1.1-x86_64-unknown-linux-musl.tar.gz
 		mv ripgrep-12.1.1-x86_64-unknown-linux-musl/rg rg
-		rm ripgrep-12.1.1-x86_64-unknown-linux-musl.tar.gz
+		rm ripgrep-12.1.1-x86_64-unknown-linux-musl
 		cd $DotDir
 	else
 		echo "Ripgrep is installed on the system"
