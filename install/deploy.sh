@@ -2,7 +2,7 @@
 # File              : deploy.sh
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 25.03.2020
-# Last Modified Date: 18.09.2020
+# Last Modified Date: 09.10.2020
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 #include dowloading languageserver binaries
@@ -25,12 +25,11 @@ Install_yay() {
 Install_packages() {
 	#install packages as given by package.install
 
-	echo "Install all packages given by packages.install"
+	echo "Install all packages given by packages.install (this includes AUR packages)"
 
 	#update base system first, then install the packages
 	[ -z $(which yay) ] && echo "yay is not installed. Aborting..." && return 1
-	yay -Syu
-	yay -S --needed - <packages.install
+	yay -Syu --needed - <packages.install
 
 	return 0
 }
@@ -38,9 +37,8 @@ Install_packages() {
 Install_flatpaks() {
 	#install flatpaks
 
-	echo "May fail if you update/installed a kernel previously"
+	echo "May fail if you updated/installed a kernel previously"
 	[ -z $(which flatpak) ] && echo "flatpak is not installed. Aborting..." && return 1
-	#flatpak install $(cat flatpaks.install)
 	flatpak install $(cat flatpaks.install)
 
 	return 0
@@ -49,40 +47,40 @@ Install_flatpaks() {
 Deploy_config_all() {
 	#deploy all config files with stow
 
-	echo "Install all config files to $HOME"
-	echo "WARNING! All hidden files in $HOME will be deleted"
+	[ -z $(which stow) ] && echo "stow is not installed. Aborting ..."
 
 	#clean $HOME
+	echo "Install all config files to $HOME"
+	echo "WARNING! All hidden files in $HOME will be deleted"
 	rm -rf $HOME/.*[!.]
 
 	#make directories for scirpts and config files
-	mkdir -p $HOME/.local/bin $HOME/.config
+	mkdir -p $HOME/.local/{bin,share} $HOME/.config
 	stow -d $DotDir -t $HOME $(find $DotDir -maxdepth 1 -type d ! \( -path $DotDir -o -name old -o -name install -o -name .git \) -exec basename {} \;)
 
 	return 0
 }
 
 Deploy_config_remote() {
-	#deploy selected config files for a remote server
+	#deploy selected config files for a remote server without stow
 
 	echo "Install selected config files to $HOME"
 
-	echo "Install all config files to $HOME"
 	echo "WARNING! All hidden files in $HOME will be deleted"
 
 	#clean $HOME
 	rm -rf $HOME/.*[!.]
 
 	#make directories for scirpts and config files
-	mkdir -p $HOME/.local/bin $HOME/.config
+	mkdir -p $HOME/.local/{bin,share} $HOME/.config
 
 	#create symlinks
 	ln -sf $DotDir/bash/.bashrc $HOME/.bashrc
 	ln -sf $DotDir/bash/.bash_profile $HOME/.bash_profile
-	ln -sf $DotDir/bash/.inputrc $HOME/.inputrc
+	ln -sf $DotDir/bash/.config/inputrc $HOME/.config/inputrc
 	ln -sf $DotDir/login/.profile $HOME/.profile
 	ln -sf $DotDir/scripts/.config/aliasrc $HOME/.config/aliasrc
-	ln -sf $DotDir/git/.gitconfig $HOME/.gitconfig
+	ln -sf $DotDir/git/.config/config $HOME/.config/git/config
 	ln -sf $DotDir/tmux/.tmux.conf $HOME/.tmux.conf
 	ln -sf $DotDir/tmux/.config/tmuxp $HOME/.config/tmuxp
 
@@ -95,17 +93,32 @@ Install_nvim_local() {
 	#install neovim locally if it is not installed in the base system
 
 	if [ ! -f /usr/bin/nvim ]; then
+		echo "Installing neovim"
+		mkdir -p $HOME/.local/bin
 		cd $HOME/.local/bin
 		wget https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage
 		mv nvim.appimage nvim
 		chmod u+x nvim
+		cd $DotDir
 	else
 		echo "Neovim is installed on the system"
 	fi
 
-	pip3 install --user neovim neovim-remote
+	if [ ! -f /usr/bin/rg ]; then
+		echo "Installing ripgrep"
+		mkdir -p $HOME/.local/bin
+		cd $HOME/.local/bin
+		wget https://github.com/BurntSushi/ripgrep/releases/download/12.1.1/ripgrep-12.1.1-x86_64-unknown-linux-musl.tar.gz
 
-	cd $DotDir
+		tar xvpf ripgrep-12.1.1-x86_64-unknown-linux-musl.tar.gz
+		mv ripgrep-12.1.1-x86_64-unknown-linux-musl/rg rg
+		cd $DotDir
+	else
+		echo "Ripgrep is installed on the system"
+	fi
+
+	pip3 install --user neovim
+	nvim +PlugUpdate +q! +q!
 
 	return 0
 }
@@ -148,7 +161,7 @@ Install_suckless() {
 	return 0
 }
 
-Error() {
+Info() {
 	#display error message
 	echo "Invalid input. Supply one or more of the following options:
     -a Install everything
@@ -160,9 +173,9 @@ Error() {
 }
 
 #protect against no flags
-[ $# -eq 0 ] && Error
+[ $# -eq 0 ] && Info
 
-#set directory
+#set root of dotfiles directory
 DotDir=$(dirname $PWD)
 
 while getopts "arpfds" opt; do
@@ -188,7 +201,7 @@ while getopts "arpfds" opt; do
 		Deploy_config_all
 		;;
 	r)
-		echo "Install selected config files"
+		echo "Deploy selected config files for remote servers"
 		Deploy_config_remote
 		Install_nvim_local
 		;;
@@ -197,7 +210,7 @@ while getopts "arpfds" opt; do
 		Install_suckless
 		;;
 	\?)
-		Error
+		Info
 		;;
 	esac
 

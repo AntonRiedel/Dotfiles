@@ -2,7 +2,7 @@
 # File              : .profile
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 24.03.2020
-# Last Modified Date: 08.10.2020
+# Last Modified Date: 09.10.2020
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 #add $HOME/.local/bin to PATH as well as the path to the fzf binary; convinient on host where I cannot install fzf systemwide
@@ -36,7 +36,7 @@ export PASSWORD_STORE_DIR="${XDG_DATA_HOME}/password-store"
 export HISTFILE="${XDG_DATA_HOME}/history"
 export LESSHISTFILE="-"
 
-#default options for fzf
+#options for fzf
 export FZF_DEFAULT_OPTS="--reverse --height=40%"
 export FZF_DEFAULT_COMMAND="rg --files"
 

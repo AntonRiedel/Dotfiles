@@ -2,7 +2,7 @@
 # File              : .xinitrc
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 24.03.2020
-# Last Modified Date: 25.09.2020
+# Last Modified Date: 08.10.2020
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 #set keyboard layout

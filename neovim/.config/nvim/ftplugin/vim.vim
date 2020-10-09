@@ -7,5 +7,4 @@
 augroup Format
     autocmd!
     autocmd BufWritePre * AddHeader
-    autocmd BufWritePre * undojoin | Neoformat
 augroup END
