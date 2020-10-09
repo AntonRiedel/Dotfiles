@@ -112,13 +112,14 @@ Install_nvim_local() {
 
 		tar xvpf ripgrep-12.1.1-x86_64-unknown-linux-musl.tar.gz
 		mv ripgrep-12.1.1-x86_64-unknown-linux-musl/rg rg
+		rm ripgrep-12.1.1-x86_64-unknown-linux-musl.tar.gz
 		cd $DotDir
 	else
 		echo "Ripgrep is installed on the system"
 	fi
 
 	pip3 install --user neovim
-	nvim +PlugUpdate +q! +q!
+	nvim
 
 	return 0
 }
@@ -163,13 +164,15 @@ Install_suckless() {
 
 Info() {
 	#display error message
-	echo "Invalid input. Supply one or more of the following options:
-    -a Install everything
-    -p Install packages specified py package.install
-    -f Install flatpaks specified by flatpak.install
-    -d Deploy all config files
-    -r Deploy selected config files
-    -s Install suckless utilities"
+	cat <<'EOF'
+Supply one or more of the following options:
+-a Install everything
+-p Install packages specified py package.install
+-f Install flatpaks specified by flatpak.install
+-d Deploy all config files
+-r Deploy selected config files for remote servers
+-s Install suckless utilities"
+EOF
 }
 
 #protect against no flags
