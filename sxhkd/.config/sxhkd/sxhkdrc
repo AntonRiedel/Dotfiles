@@ -11,8 +11,6 @@ super + v
 	$TERMINAL -e newsboat
 super + o
     xournalpp
-super + {_,shift} + y
-    touch.sh {setup,reset}
 
 #bezel keybindings for X220
 XF86TaskPane
@@ -39,3 +37,5 @@ super + {_,shift} + r
     {dmenu_run -i -F -p "Run: ",screen.sh}
 super + g
 	passmenu -i
+super + y
+    flameshot gui

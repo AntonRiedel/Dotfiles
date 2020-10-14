@@ -1,19 +1,25 @@
 #!/bin/sh
 # File              : lockscreen.sh
 # Author            : Anton Riedel <anton.riedel@tum.de>
-# Date              : 24.03.2020
-# Last Modified Date: 07.05.2020
+# Date              : 13.10.2020
+# Last Modified Date: 13.10.2020
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
-rm -f /tmp/*.png
+#clean up
+rm -f /tmp/flameshot*png
 
-# If `imagemagick` is not installed, use a blank screen.
-[ -f /usr/bin/convert ] &&
-    scrot -m -z  /tmp/screen.png &&
-    convert /tmp/screen.png -blur 0x8 -swirl 120 /tmp/locked.png
+#take a screenshot of the entire desktop and save it under /tmp
+#it will be called 'flameshot-someNumbers.png'
+flameshot full -p /tmp
 
-i3lock -e -f -c 000000 -i /tmp/locked.png
+sleep 1
 
-rm -f /tmp/locked.png
+find /tmp -type f -name "flameshot*png" -exec mv {} /tmp/screen.png \;
+
+convert /tmp/screen.png -blur 0x8 -swirl 120 /tmp/locked.png
+
+i3lock -i /tmp/locked.png
+
+rm /tmp/locked.png /tmp/screen.png
 
 exit 0

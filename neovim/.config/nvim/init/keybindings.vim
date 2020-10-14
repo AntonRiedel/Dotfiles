@@ -1,7 +1,7 @@
 " File              : keybindings.vim
 " Author            : Anton Riedel <anton.riedel@tum.de>
 " Date              : 14.09.2020
-" Last Modified Date: 08.10.2020
+" Last Modified Date: 13.10.2020
 " Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 "global keybindings
@@ -51,6 +51,9 @@ nnoremap <leader>sv :source $MYVIMRC<CR>
 nnoremap <leader>ev :Files $HOME/.config/nvim/<CR>
 "open up file tree
 nnoremap <leader>pv :Lexplore<CR>
+"delete visual selection and replace it the content of the unnamed register
+"i.e. whatever you yanked last
+vnoremap <leader>p "_dP
 
 "keybinds for neovim's builtin lsp
 nnoremap <silent> <leader>ld  <cmd>lua vim.lsp.buf.definition()<CR>

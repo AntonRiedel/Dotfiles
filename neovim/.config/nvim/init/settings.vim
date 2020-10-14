@@ -1,7 +1,7 @@
 " File              : settings.vim
 " Author            : Anton Riedel <anton.riedel@tum.de>
 " Date              : 14.09.2020
-" Last Modified Date: 09.10.2020
+" Last Modified Date: 10.10.2020
 " Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 "global setting
@@ -34,3 +34,4 @@ let g:loaded_python_provider=0    " dont use python2
 let g:loaded_ruby_provider=0      " dont use ruby
 let g:loaded_node_provider=0      " dont use node
 let g:loaded_perl_provider=0      " dont use perl
+set grepprg=rg\ --vimgrep\ --smart-case

@@ -17,7 +17,7 @@ cmus
 cronie-openrc
 ctags
 dashbinsh
-dunst
+eigen
 entr
 fakeroot
 file
@@ -42,7 +42,6 @@ i3lock
 imagemagick
 intel-ucode
 jupyterlab
-libnotify
 libtool
 libxft-bgra-git
 libxinerama
@@ -95,7 +94,6 @@ python-wheel
 qutebrowser
 ripgrep
 rsync
-scrot
 sed
 shfmt
 stow

@@ -1,7 +1,7 @@
 " File              : plug.vim
 " Author            : Anton Riedel <anton.riedel@tum.de>
 " Date              : 14.09.2020
-" Last Modified Date: 09.10.2020
+" Last Modified Date: 10.10.2020
 " Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 "plugin manager setup
@@ -31,6 +31,7 @@ Plug 'mhinz/vim-signify'
 Plug 'alpertuna/vim-header'
 Plug 'jiangmiao/auto-pairs'
 Plug 'wincent/loupe'
+Plug 'wincent/ferret'
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/completion-nvim'
 Plug 'nvim-lua/diagnostic-nvim'

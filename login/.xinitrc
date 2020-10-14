@@ -2,7 +2,7 @@
 # File              : .xinitrc
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 24.03.2020
-# Last Modified Date: 08.10.2020
+# Last Modified Date: 13.10.2020
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 #set keyboard layout
@@ -38,8 +38,8 @@ xwallpaper --stretch $WALLPAPER
 #start compositor
 xcompmgr &
 
-#start notification daemon
-dunst &
+#screenshots
+flameshot &
 
 #set window manager agnostic keybindings
 sxhkd &
