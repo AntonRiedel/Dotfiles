@@ -2,7 +2,7 @@
 # File              : .xinitrc
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 24.03.2020
-# Last Modified Date: 13.10.2020
+# Last Modified Date: 22.10.2020
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 #set keyboard layout
@@ -19,8 +19,8 @@ fi
 #setxkbmap -option caps:escape
 
 #New trick: map capslock to escape when pressed alone and to crtl when pressed in combination with another key
-setxkbmap -option ctrl:nocaps
-xcape -e 'Control_L=Escape'
+setxkbmap -option ctrl:nocaps #map capslock to CRTL
+xcape -e 'Control_L=Escape'   #map CRTL to escape when pressed on its own
 
 #prevent screen from blanking
 xset -dpms

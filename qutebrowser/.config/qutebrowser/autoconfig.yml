@@ -9,7 +9,7 @@ settings:
   backend:
     global: webengine
   colors.webpage.bg:
-    global: white
+    global: lightblue
   colors.webpage.darkmode.algorithm:
     global: lightness-cielab
   colors.webpage.darkmode.contrast:

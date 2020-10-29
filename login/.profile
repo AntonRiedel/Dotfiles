@@ -2,7 +2,7 @@
 # File              : .profile
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 24.03.2020
-# Last Modified Date: 09.10.2020
+# Last Modified Date: 16.10.2020
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 #add $HOME/.local/bin to PATH as well as the path to the fzf binary; convinient on host where I cannot install fzf systemwide
@@ -41,7 +41,7 @@ export FZF_DEFAULT_OPTS="--reverse --height=40%"
 export FZF_DEFAULT_COMMAND="rg --files"
 
 #set default wallpaper
-export WALLPAPER="${HOME}/nextcloud/wallpaper/arch4.png"
+export WALLPAPER="${HOME}/nextcloud/wallpaper/arch12.jpg"
 
 #start Xorg on tty1
 [ "$(tty)" = "/dev/tty1" ] && exec startx &>/dev/null

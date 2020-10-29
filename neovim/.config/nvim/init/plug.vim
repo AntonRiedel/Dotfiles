@@ -1,7 +1,7 @@
 " File              : plug.vim
 " Author            : Anton Riedel <anton.riedel@tum.de>
 " Date              : 14.09.2020
-" Last Modified Date: 10.10.2020
+" Last Modified Date: 25.10.2020
 " Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 "plugin manager setup

@@ -1,7 +1,7 @@
 " File              : lsp.vim
 " Author            : Anton Riedel <anton.riedel@tum.de>
 " Date              : 14.09.2020
-" Last Modified Date: 08.10.2020
+" Last Modified Date: 23.10.2020
 " Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 "start language server
@@ -32,11 +32,12 @@ EOF
 lua <<EOF
 require'nvim-treesitter.configs'.setup {
   ensure_installed = { "bash", "c", "cpp", "python" } ,
-  highlight = { enable = true, },
+  highlight = { enable = true },
+  indent = { enable = true },
   refactor = {
     highlight_definitions = { enable = true },
-    highlight_current_scope = { enable = true },
-  },
+    highlight_current_scope = { enable = true }
+  }
 }
 EOF
 

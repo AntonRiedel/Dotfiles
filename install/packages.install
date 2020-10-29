@@ -91,6 +91,7 @@ python-pynvim
 python-rope
 python-scipy
 python-wheel
+qpdfview
 qutebrowser
 ripgrep
 rsync
