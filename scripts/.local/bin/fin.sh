@@ -2,7 +2,7 @@
 # File              : fin.sh
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 24.03.2020
-# Last Modified Date: 30.10.2020
+# Last Modified Date: 08.11.2020
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 ClearCache() {
@@ -18,6 +18,7 @@ ClearCache() {
 		$HOME/.jupyter \
 		$HOME/.ipython \
 		$HOME/.clangd \
+		$HOME/.cgdb \
 		$HOME/.dbus \
 		$HOME/.root* \
 		$HOME/.screenlayout

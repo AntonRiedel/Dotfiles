@@ -1,32 +1,16 @@
 " File              : lsp.vim
 " Author            : Anton Riedel <anton.riedel@tum.de>
-" Date              : 14.09.2020
-" Last Modified Date: 23.10.2020
+" Date              : 23.11.2020
+" Last Modified Date: 25.11.2020
 " Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
-"start language server
-lua << EOF
-local on_attach_vim = function(client)
-  require'completion'.on_attach(client)
-  require'diagnostic'.on_attach(client)
-end
-require'nvim_lsp'.clangd.setup{on_attach=on_attach_vim}
-require'nvim_lsp'.pyls.setup{on_attach=on_attach_vim}
-require'nvim_lsp'.texlab.setup{on_attach=on_attach_vim}
-require'nvim_lsp'.bashls.setup{on_attach=on_attach_vim}
-EOF
+"lsp setup
 
-" require'nvim_lsp'.cmake.setup{ on_attach=require'completion'.on_attach }
-" lua require'nvim_lsp'.clangd.setup{ on_attach=require'completion'.on_attach }
-" lua require'nvim_lsp'.pyls.setup{ on_attach=require'completion'.on_attach }
-" lua require'nvim_lsp'.texlab.setup{ on_attach=require'completion'.on_attach }
-" lua require'nvim_lsp'.bashls.setup{ on_attach=require'completion'.on_attach }
-" lua require'nvim_lsp'.cmake.setup{ on_attach=require'completion'.on_attach }
-" lua require'nvim_lsp'.clangd.setup{ on_attach=require'diagnostic'.on_attach }
-" lua require'nvim_lsp'.pyls.setup{ on_attach=require'diagnostic'.on_attach }
-" lua require'nvim_lsp'.texlab.setup{ on_attach=require'diagnostic'.on_attach }
-" lua require'nvim_lsp'.bashls.setup{ on_attach=require'diagnostic'.on_attach }
-" lua require'nvim_lsp'.cmake.setup{ on_attach=require'diagnostic'.on_attach }
+lua require'lspconfig'.pyls.setup{on_attach=require'completion'.on_attach}
+lua require'lspconfig'.clangd.setup{on_attach=require'completion'.on_attach}
+lua require'lspconfig'.bashls.setup{on_attach=require'completion'.on_attach}
+lua require'lspconfig'.texlab.setup{on_attach=require'completion'.on_attach}
+lua require'lspconfig'.fortls.setup{on_attach=require'completion'.on_attach}
 
 "treesitter config
 lua <<EOF
@@ -50,7 +34,28 @@ let g:completion_enable_snippet = 'UltiSnips'
 let g:completion_enable_auto_popup = 1
 let g:completion_enable_auto_paren = 1
 let g:completion_matching_ignore_case = 1
-let g:completion_trigger_character = []
 let g:completion_trigger_keyword_length=1
-let g:diagnostic_enable_virtual_text = 1
-let g:neoformat_try_formatprg = 1
+"let g:completion_trigger_character = []
+
+"keybinds for lsp
+inoremap <expr> <C-n> pumvisible() ? "\<C-n>" : "\<C-n>"
+inoremap <expr> <C-p> pumvisible() ? "\<C-p>" : "\<C-n>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<S-tab>"
+
+nnoremap <silent> <leader>ld  <cmd>lua vim.lsp.buf.definition()<CR>
+nnoremap <silent> <leader>lh  <cmd>lua vim.lsp.buf.hover()<CR>
+nnoremap <silent> <leader>li  <cmd>lua vim.lsp.buf.implementation()<CR>
+nnoremap <silent> <leader>lr  <cmd>lua vim.lsp.buf.references()<CR>
+nnoremap <silent> <leader>lrn <cmd>lua vim.lsp.buf.rename()<CR>
+
+"keybindings for diagnostics
+nnoremap <silent> <leader>dn <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
+nnoremap <silent> <leader>dp <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
+
+" nnoremap <silent> <leader>ls  <cmd>lua vim.lsp.buf.signature_help()<CR>
+" nnoremap <silent> <leader>lt  <cmd>lua vim.lsp.buf.type_definition()<CR>
+" nnoremap <silent> <leader>ldd <cmd>lua vim.lsp.buf.declaration()<CR>
+" nnoremap <silent> g0    <cmd>lua vim.lsp.buf.document_symbol()<CR>
+" nnoremap <silent> gW    <cmd>lua vim.lsp.buf.workspace_symbol()<CR>
+" nnoremap <silent> <leader>nf    <cmd>lua vim.lsp.buf.formatting()<CR>

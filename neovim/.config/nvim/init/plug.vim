@@ -1,7 +1,7 @@
 " File              : plug.vim
 " Author            : Anton Riedel <anton.riedel@tum.de>
-" Date              : 14.09.2020
-" Last Modified Date: 25.10.2020
+" Date              : 23.11.2020
+" Last Modified Date: 26.11.2020
 " Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 "plugin manager setup
@@ -18,7 +18,7 @@ let g:plug_threads=4
 let g:plug_timeout=180
 
 call plug#begin('$HOME/.local/share/nvim/plugged')
-Plug 'overcache/NeoSolarized'
+Plug 'gruvbox-community/gruvbox'
 Plug 'itchyny/lightline.vim'
 Plug 'vimwiki/vimwiki'
 Plug 'tpope/vim-surround'
@@ -30,15 +30,19 @@ Plug 'tpope/vim-repeat'
 Plug 'mhinz/vim-signify'
 Plug 'alpertuna/vim-header'
 Plug 'jiangmiao/auto-pairs'
-Plug 'wincent/loupe'
-Plug 'wincent/ferret'
+" Plug 'wincent/loupe'
+" Plug 'wincent/ferret'
+
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/completion-nvim'
-Plug 'nvim-lua/diagnostic-nvim'
 Plug 'nvim-treesitter/nvim-treesitter'
+
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
-Plug 'junegunn/fzf', { 'do': './install --bin' }
+
+Plug 'puremourning/vimspector'
+Plug 'szw/vim-maximizer'
+"
 Plug 'junegunn/fzf.vim'
 Plug 'sbdchd/neoformat'
 call plug#end()

@@ -1,6 +1,6 @@
-" File              : cpp.vim
+" File              : c.vim
 " Author            : Anton Riedel <anton.riedel@tum.de>
-" Date              : 16.09.2020
+" Date              : 11.11.2020
 " Last Modified Date: 11.11.2020
 " Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
@@ -11,8 +11,7 @@ setlocal tabstop=2
 setlocal shiftwidth=2
 
 "set make program
-" setlocal makeprg=cmake\ --build\ build
-setlocal makeprg=mkdir\ -p\ build\ &&\ cmake\ -S\ \.\ -B\ build\ &&\ cmake\ --build\ build
+setlocal makeprg=make
 
 "set format program
 setlocal formatprg=clang-format

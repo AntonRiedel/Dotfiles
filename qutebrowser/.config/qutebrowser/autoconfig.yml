@@ -6,57 +6,5 @@
 
 config_version: 2
 settings:
-  backend:
-    global: webengine
-  colors.webpage.bg:
-    global: lightblue
-  colors.webpage.darkmode.algorithm:
-    global: lightness-cielab
-  colors.webpage.darkmode.contrast:
-    global: 0.0
-  colors.webpage.darkmode.enabled:
-    global: true
-  colors.webpage.darkmode.grayscale.all:
-    global: true
-  colors.webpage.darkmode.policy.images:
-    global: smart
-  colors.webpage.darkmode.threshold.background:
-    global: 0
-  colors.webpage.darkmode.threshold.text:
-    global: 256
-  colors.webpage.prefers_color_scheme_dark:
-    global: true
-  completion.web_history.max_items:
-    global: 0
-  content.cookies.accept:
-    global: all
-  content.cookies.store:
-    global: false
-  content.geolocation:
-    global: false
   content.pdfjs:
-    global: true
-  content.persistent_storage:
     global: false
-  content.private_browsing:
-    global: true
-  content.user_stylesheets:
-    global: null
-  downloads.location.directory:
-    global: /home/anton/nextcloud
-  editor.command:
-    global:
-    - alacritty
-    - -e nvim
-    - '{file}'
-    - -c
-    - normal {line}G{column0}l
-  tabs.show:
-    global: always
-  url.default_page:
-    global: about:blank
-  url.searchengines:
-    global:
-      DEFAULT: https://searx.fmac.xyz/?q={}
-  url.start_pages:
-    global: about:blank

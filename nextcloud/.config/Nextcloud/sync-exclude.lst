@@ -44,3 +44,4 @@ My Saved Places.
 ].o*
 ].clangd
 ]compile_commands.json
+*autosave*

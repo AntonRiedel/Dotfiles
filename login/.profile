@@ -2,11 +2,11 @@
 # File              : .profile
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 24.03.2020
-# Last Modified Date: 16.10.2020
+# Last Modified Date: 18.11.2020
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 #add $HOME/.local/bin to PATH as well as the path to the fzf binary; convinient on host where I cannot install fzf systemwide
-export PATH="${HOME}/.local/bin:${HOME}/.local/share/nvim/plugged/fzf/bin:${PATH}"
+export PATH="${HOME}/.local/bin:${PATH}"
 
 #set default applications
 export TERMINAL="alacritty"
@@ -27,7 +27,6 @@ export XDG_CACHE_HOME="${HOME}/.cache"
 
 #remove as many config files from $HOME as possible
 export MYVIMRC="${XDG_CONFIG_HOME}/nvim/init.vim"
-export MYVIMINIT="${XDG_CONFIG_HOME}/nvim/init"
 export INPUTRC="${XDG_CONFIG_HOME}/inputrc"
 export NOTMUCH_CONFIG="${XDG_CONFIG_HOME}/notmuch-config"
 export ZDOTDIR="${XDG_CONFIG_HOME}/zsh"
@@ -41,7 +40,7 @@ export FZF_DEFAULT_OPTS="--reverse --height=40%"
 export FZF_DEFAULT_COMMAND="rg --files"
 
 #set default wallpaper
-export WALLPAPER="${HOME}/nextcloud/wallpaper/arch12.jpg"
+export WALLPAPER="${HOME}/nextcloud/wallpaper/arch4.png"
 
 #start Xorg on tty1
 [ "$(tty)" = "/dev/tty1" ] && exec startx &>/dev/null

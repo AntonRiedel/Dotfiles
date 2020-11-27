@@ -3,8 +3,8 @@ super + Return
 	$TERMINAL
 super + {_,shift} + b
 	{$BROWSER,$BROWSER2}
-super + n
-	$TERMINAL -e nextsync.sh
+# super + n
+# 	$TERMINAL -e nextsync.sh
 super + {_,shift} + e
 	$TERMINAL -e {neomutt,mw sync}
 super + v
@@ -13,9 +13,9 @@ super + o
     xournalpp
 
 #bezel keybindings for X220
-XF86TaskPane
+@XF86TaskPane
     thinkpad-rotate flip
-XF86RotateWindows
+@XF86RotateWindows
     thinkpad-rotate left
 
 #media Keybindings
