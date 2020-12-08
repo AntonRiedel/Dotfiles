@@ -1,7 +1,7 @@
 " File              : init.vim
 " Author            : Anton Riedel <anton.riedel@tum.de>
 " Date              : 24.03.2020
-" Last Modified Date: 23.11.2020
+" Last Modified Date: 04.12.2020
 " Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 "split configuration across serveral files

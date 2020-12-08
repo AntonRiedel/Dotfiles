@@ -1,7 +1,7 @@
 " File              : cpp.vim
 " Author            : Anton Riedel <anton.riedel@tum.de>
 " Date              : 16.09.2020
-" Last Modified Date: 11.11.2020
+" Last Modified Date: 04.12.2020
 " Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 "settings for cpp files
@@ -18,9 +18,9 @@ setlocal makeprg=mkdir\ -p\ build\ &&\ cmake\ -S\ \.\ -B\ build\ &&\ cmake\ --bu
 setlocal formatprg=clang-format
 setlocal equalprg=clang-format
 
-"autoformat files on save
-" augroup Format
-"     autocmd!
-"     autocmd BufWritePre * AddHeader
-"     autocmd BufWritePre * undojoin | Neoformat
-" augroup END
+" autoformat files on save
+augroup Format
+    autocmd!
+    autocmd BufWritePre * AddHeader
+    autocmd BufWritePre * undojoin | Neoformat
+augroup END

@@ -1,7 +1,7 @@
 " File              : lsp.vim
 " Author            : Anton Riedel <anton.riedel@tum.de>
 " Date              : 23.11.2020
-" Last Modified Date: 25.11.2020
+" Last Modified Date: 07.12.2020
 " Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 "lsp setup
@@ -10,20 +10,14 @@ lua require'lspconfig'.pyls.setup{on_attach=require'completion'.on_attach}
 lua require'lspconfig'.clangd.setup{on_attach=require'completion'.on_attach}
 lua require'lspconfig'.bashls.setup{on_attach=require'completion'.on_attach}
 lua require'lspconfig'.texlab.setup{on_attach=require'completion'.on_attach}
-lua require'lspconfig'.fortls.setup{on_attach=require'completion'.on_attach}
 
 "treesitter config
-lua <<EOF
-require'nvim-treesitter.configs'.setup {
-  ensure_installed = { "bash", "c", "cpp", "python" } ,
-  highlight = { enable = true },
-  indent = { enable = true },
-  refactor = {
-    highlight_definitions = { enable = true },
-    highlight_current_scope = { enable = true }
-  }
-}
-EOF
+lua require'nvim-treesitter.configs'.setup { ensure_installed = { "bash", "c", "cpp", "python" } , highlight = { enable = true }, }
+" indent = { enable = true },
+" refactor = {
+"   highlight_definitions = { enable = true },
+"   highlight_current_scope = { enable = true }
+" }
 
 "generic options
 set completeopt=menuone,noinsert,noselect

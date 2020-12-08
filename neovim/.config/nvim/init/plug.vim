@@ -1,7 +1,7 @@
 " File              : plug.vim
 " Author            : Anton Riedel <anton.riedel@tum.de>
 " Date              : 23.11.2020
-" Last Modified Date: 26.11.2020
+" Last Modified Date: 07.12.2020
 " Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 "plugin manager setup
@@ -35,7 +35,8 @@ Plug 'jiangmiao/auto-pairs'
 
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/completion-nvim'
-Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+" Plug 'sheerun/vim-polyglot'
 
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'

@@ -29,7 +29,7 @@ Install_packages() {
 
 	#update base system first, then install the packages
 	[ -z $(which yay) ] && echo "yay is not installed. Aborting..." && return 1
-	yay -Syu --needed - <packages.install
+	yay -Syu --noconfirm --needed - <packages.install
 
 	return 0
 }

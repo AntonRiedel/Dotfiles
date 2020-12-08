@@ -2,10 +2,10 @@
 # File              : screen.sh
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 24.03.2020
-# Last Modified Date: 18.05.2020
+# Last Modified Date: 30.11.2020
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
-pgrep -x dmenu && exit
+pgrep -x dmenu && exit 1
 
 #choose a layout with dmenu
 layout=$(ls $HOME/.config/screenlayout | dmenu -F -i -p "Where are you?")

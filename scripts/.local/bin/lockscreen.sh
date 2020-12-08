@@ -2,7 +2,7 @@
 # File              : lockscreen.sh
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 13.10.2020
-# Last Modified Date: 13.10.2020
+# Last Modified Date: 30.11.2020
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 #clean up
@@ -12,6 +12,7 @@ rm -f /tmp/flameshot*png
 #it will be called 'flameshot-someNumbers.png'
 flameshot full -p /tmp
 
+#wait for flameshot to take the screenshot
 sleep 1
 
 find /tmp -type f -name "flameshot*png" -exec mv {} /tmp/screen.png \;
