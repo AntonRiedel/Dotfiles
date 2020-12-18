@@ -2,7 +2,7 @@
 # File              : .profile
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 24.03.2020
-# Last Modified Date: 03.12.2020
+# Last Modified Date: 18.12.2020
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 #add $HOME/.local/bin to PATH as well as the path to the fzf binary; convinient on host where I cannot install fzf systemwide
@@ -17,8 +17,8 @@ export BROWSER="qutebrowser"
 export BROWSER2="firefox-nightly"
 export READER="zathura"
 export READER2="qpdfview"
-#make alacritty work on my X200
-[ "$(hostname)" = "Mars" ] && export LIBGL_ALWAYS_SOFTWARE=1
+#make alacritty work on X200
+[ "$(cat /etc/hostname)" = "Mars" ] && export LIBGL_ALWAYS_SOFTWARE=1
 
 #XDG
 export XDG_CONFIG_HOME="${HOME}/.config"

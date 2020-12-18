@@ -2,7 +2,7 @@
 # File              : aliasrc
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 24.03.2020
-# Last Modified Date: 19.11.2020
+# Last Modified Date: 17.12.2020
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 ##aliases
@@ -33,18 +33,42 @@ alias pc='yay -Scc'
 alias pq='yay -Ss'
 alias nmu='nmcli con up --ask'
 alias nmd='nmcli con down'
-alias make='make -j$(nproc)'
 alias screen='xinput --map-to-output "Wacom ISDv4 E6 Pen Pen (0)" LVDS1'
-alias yt="youtube-dl -x -f bestaudio/best"
 
 ##custom shell functions (a.k.a. fun with fzf)
 #search and edit a configuration file
-ce() { $EDITOR "$(find $HOME/Dotfiles -type f -not -path "*/old/*" | fzf --prompt="Edit config file: ")"; }
+ce() {
+    $EDITOR "$(find $HOME/Dotfiles -type f -not -path "*/old/*" | fzf --prompt="Edit config file: ")"
+    return 0
+}
 #connect to known host via ssh
-sshc() { ssh "$(grep "^Host " $HOME/.ssh/config | grep -v "git" | awk '{print $2}' | fzf --prompt="Connect to host: ")"; }
+sshc() {
+    ssh "$(grep "^Host " $HOME/.ssh/config | grep -v "git" | awk '{print $2}' | fzf --prompt="Connect to host: ")"
+    return 0
+}
 #search and enter a subdirectory in your home directory
-fd() { cd "$(find $HOME -type d -not -path "*/old/*" | fzf --prompt="Jump to Dir: ")" && pwd && ls; }
+fd() {
+    cd "$(find $HOME -type d -not -path "*/old/*" | fzf --prompt="Jump to Dir: ")"
+    pwd
+    ls
+    return 0
+}
 #search for a process and kill it
-kp() { kill -s SIGKILL "$(ps aux | fzf --prompt="Job to kill: " | awk '{ print $2 }')" 2>/dev/null; }
+kp() {
+    kill -s SIGKILL "$(ps aux | fzf --prompt="Job to kill: " | awk '{ print $2 }')" 2>/dev/null
+    return 0
+}
+##other convenient functions
 #start tor
-tor() { cd $HOME/.local/share/tor/ && ./start-tor-browser.desktop && cd -; }
+tor() {
+    cd $HOME/.local/share/tor/
+    ./start-tor-browser.desktop
+    cd -
+    return 0
+}
+#copy a file to clipboard
+ctc() {
+    [ ! -f "$1" ] && echo "Needs a file as argument" && return 1
+    xclip -selection clipboard $1
+    return 0
+}

@@ -2,7 +2,7 @@
 # File              : .bashrc
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 28.04.2020
-# Last Modified Date: 09.10.2020
+# Last Modified Date: 17.12.2020
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 #misc settings for bash shell
@@ -29,7 +29,7 @@ export HISTSIZE=10000
 export HISTFILESIZE=10000
 
 #commandline prompt
-export PS1="\[$(tput bold)\]\[$(tput setaf 1)\][\[$(tput setaf 3)\]\u\[$(tput setaf 2)\]@\[$(tput setaf 28)\]\h \[$(tput setaf 5)\]\W\[$(tput setaf 1)\]]\[$(tput setaf 7)\]
+export PS1="\[$(tput bold)\]\[$(tput setaf 1)\][\[$(tput setaf 3)\]\u\[$(tput setaf 2)\]@\[$(tput setaf 28)\]\h\[$(tput setaf 1)\]]\[$(tput setaf 7)\] \[$(tput setaf 5)\]\w
 > \[$(tput sgr0)\]"
 
 #aliases

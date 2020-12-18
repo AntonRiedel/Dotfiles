@@ -2,7 +2,7 @@
 # File              : music.sh
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 08.06.2020
-# Last Modified Date: 05.12.2020
+# Last Modified Date: 17.12.2020
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 #check for arguments
@@ -47,21 +47,21 @@ while read Song; do
     echo "Song: $Song"
 
     #find the corresponding file
-    File="$(basename "$(find ./$Dir -maxdepth 1 -iname "${Match}*")")"
-    echo "$File"
+    File="$(basename "$(find . -type f -maxdepth 1 -iname "${Match}.*")")"
+    echo "File: $File"
 
     #if the file is not .opus, convert it and remove the original
     [[ ! "$File" =~ "opus" ]] && ffmpeg -nostdin -y -i "$File" "${File/.*/.opus}" && rm "$File" && File="${File/.*/.opus}"
-    echo "$File"
+    echo "File: $File"
 
     #create a save title for the file of the song
     Title="$(echo "$Song" | iconv -cf UTF-8 -t ASCII//TRANSLIT | tr -d '[:punct:]' | tr '[:upper:]' '[:lower:]' | tr ' ' '_' | sed "s/-\+/-/g;s/\(^-\|-\$\)//g")"
 
     #tag the file with meta data
     echo "Tagging $Song"
-    opustags -i "$File" -s TITLE="$Title" -s ARTIST="$Band" -s ALBUM="$Album" -s TRACK="$Counter" -s TOTAL="$Total" -s YEAR="$Year"
+    opustags -i "$File" -s TITLE="$Song" -s ARTIST="$Band" -s ALBUM="$Album" -s TRACK="$Counter" -s TOTAL="$Total" -s DATE="$Year"
 
-    mv "$File" "$Dir/${Match}_${Title}.opus"
+    mv "$File" "${Dir}/${Match}_${Title}.opus"
 
     ((Counter += 1))
 

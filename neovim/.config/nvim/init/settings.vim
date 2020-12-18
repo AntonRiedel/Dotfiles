@@ -1,7 +1,7 @@
 " File              : settings.vim
 " Author            : Anton Riedel <anton.riedel@tum.de>
 " Date              : 14.09.2020
-" Last Modified Date: 04.12.2020
+" Last Modified Date: 11.12.2020
 " Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 "global setting
@@ -44,7 +44,7 @@ set termguicolors " use truecolor
 set showtabline=2 " always show tab page labels
 colorscheme gruvbox " grubvbox colorscheme
 set background=dark " use dark variant
-
+            
 "config for netrw (-> best open with :Lexplore)
 let g:netrw_liststyle=3             "list files with tree style
 let g:netrw_banner=0                "remoeve annyoing banner
