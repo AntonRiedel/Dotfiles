@@ -43,4 +43,4 @@ export FZF_DEFAULT_COMMAND="rg --files"
 export WALLPAPER="${HOME}/nextcloud/wallpaper/arch12.jpg"
 
 #start Xorg on tty1
-[ "$(tty)" = "/dev/tty1" ] && exec startx &>/dev/null
+[ "$(tty)" = "/dev/tty1" ] && [ $(which dwm) ] && exec startx &>/dev/null
