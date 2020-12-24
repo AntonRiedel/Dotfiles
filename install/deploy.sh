@@ -80,7 +80,6 @@ Deploy_config_remote() {
     ln -sf $DotDir/bash/.config/inputrc $HOME/.config/inputrc
     ln -sf $DotDir/login/.profile $HOME/.profile
     ln -sf $DotDir/scripts/.config/aliasrc $HOME/.config/aliasrc
-    ln -sf $DotDir/git/.config/config $HOME/.config/git/config
     ln -sf $DotDir/tmux/.tmux.conf $HOME/.tmux.conf
     ln -sf $DotDir/tmux/.config/tmuxp $HOME/.config/tmuxp
 
