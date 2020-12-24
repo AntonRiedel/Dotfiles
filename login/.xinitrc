@@ -2,16 +2,16 @@
 # File              : .xinitrc
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 24.03.2020
-# Last Modified Date: 22.10.2020
+# Last Modified Date: 24.12.2020
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 #set keyboard layout
 if [ "$(hostname)" = "Mars" ]; then
-	setxkbmap gb
+    setxkbmap gb
 elif [ "$(hostname)" = "Moon" ]; then
-	setxkbmap de
+    setxkbmap de
 else
-	setxkbmap us
+    setxkbmap us
 fi
 
 #capslock: useless key in a great location; let's make it great
