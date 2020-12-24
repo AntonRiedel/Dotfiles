@@ -72,7 +72,7 @@ Deploy_config_remote() {
     rm -rf $HOME/.*[!.]
 
     #make directories for scirpts and config files
-    mkdir -p $HOME/.local/{bin,share} $HOME/.config
+    mkdir -p $HOME/.local/bin $HOME/.local/share/share $HOME/.config
 
     #create symlinks
     ln -sf $DotDir/bash/.bashrc $HOME/.bashrc
