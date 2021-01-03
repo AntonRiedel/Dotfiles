@@ -1,7 +1,7 @@
 " File              : settings.vim
 " Author            : Anton Riedel <anton.riedel@tum.de>
 " Date              : 14.09.2020
-" Last Modified Date: 11.12.2020
+" Last Modified Date: 30.12.2020
 " Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 "global setting
@@ -55,10 +55,10 @@ let g:netrw_winsize = 25            "let netrew only take 25% of the screen
 let mapleader=' '
 
 "self-explanatory convenience mappings
-vnoremap ; :
-vnoremap : ;
-nnoremap ; :
-nnoremap : ;
+" vnoremap ; :
+" vnoremap : ;
+" nnoremap ; :
+" nnoremap : ;
 
 "get ridd of bad habits
 " nnoremap jj <Nop>
