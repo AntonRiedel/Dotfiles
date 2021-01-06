@@ -2,7 +2,7 @@
 # File              : deploy.sh
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 25.03.2020
-# Last Modified Date: 24.12.2020
+# Last Modified Date: 06.01.2021
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 #include dowloading languageserver binaries
@@ -34,15 +34,15 @@ Install_packages() {
     return 0
 }
 
-Install_flatpaks() {
-    #install flatpaks
+#Install_flatpaks() {
+#    #install flatpaks
 
-    echo "May fail if you updated/installed a kernel previously"
-    [ -z $(which flatpak) ] && echo "flatpak is not installed. Aborting..." && return 1
-    flatpak install $(cat flatpaks.install)
+#    echo "May fail if you updated/installed a kernel previously"
+#    [ -z $(which flatpak) ] && echo "flatpak is not installed. Aborting..." && return 1
+#    flatpak install $(cat flatpaks.install)
 
-    return 0
-}
+#    return 0
+#}
 
 Deploy_config_all() {
     #deploy all config files with stow
@@ -74,14 +74,13 @@ Deploy_config_remote() {
     #make directories for scirpts and config files
     mkdir -p $HOME/.local/bin $HOME/.local/share/share $HOME/.config
 
-    #create symlinks
+    #create symlinks (stow and zsh may not be installed)
     ln -sf $DotDir/bash/.bashrc $HOME/.bashrc
     ln -sf $DotDir/bash/.bash_profile $HOME/.bash_profile
     ln -sf $DotDir/bash/.config/inputrc $HOME/.config/inputrc
     ln -sf $DotDir/login/.profile $HOME/.profile
     ln -sf $DotDir/scripts/.config/aliasrc $HOME/.config/aliasrc
     ln -sf $DotDir/tmux/.tmux.conf $HOME/.tmux.conf
-    ln -sf $DotDir/tmux/.config/tmuxp $HOME/.config/tmuxp
 
     return 0
 }
@@ -130,7 +129,6 @@ Info() {
 Supply one or more of the following options:
 -a Install everything
 -p Install packages specified py package.install
--f Install flatpaks specified by flatpak.install
 -d Deploy all config files
 -r Deploy selected config files for remote servers
 -s Install suckless utilities"
@@ -149,17 +147,12 @@ while getopts "arpfds" opt; do
         echo "Install everything"
         Install_yay
         Install_packages
-        Install_flatpaks
         Install_suckless
         Deploy_config_all
         ;;
     p)
         echo "Install packages"
         Install_packages
-        ;;
-    f)
-        echo "Install flatpaks"
-        Install_flatpaks
         ;;
     d)
         echo "Deploy all config files"

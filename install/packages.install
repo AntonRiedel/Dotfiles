@@ -46,6 +46,7 @@ i3lock
 imagemagick
 intel-ucode
 jupyterlab
+jupyterlab_pygments
 libtool
 libxft-bgra-git
 libxinerama
