@@ -8,7 +8,7 @@ Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 # Dotfiles
 
-My personal Dotfiles which I use across different machines. I run Artix as my main operating system with a custom build of dwm as window manager.
+My personal Dotfiles which I use across different machines. I run Arch Linux as my main operating system with a custom build of dwm as window manager.
 You can find configuration files for
 
 - alacritty (terminal emulator)
@@ -16,7 +16,6 @@ You can find configuration files for
 - bash (shell)
 - neovim (editor)
 - tmux (screen multiplexer)
-- dunst (notification daemon)
 - sxhkd (hotkey daemon)
 - htop (system monitor)
 - qutebrowser (minimal vim-like web browser)
@@ -42,7 +41,4 @@ Under `old` you can find configuration files for programs I used to use such as:
 - nnn
 - lf
 - compton (->xcompmgr)
-
-<!--
-If you are looking for some awesome Void Linux wallpapers I can suggest [here](https://alkusin.net/voidlinux/en#wallpapers).
--->
+- dunst

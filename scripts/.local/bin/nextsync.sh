@@ -13,7 +13,7 @@ User="anton"
 Password="$(pass sun/nextcloud/anton)"
 Dir="$HOME/nextcloud"
 #server="https://mylittleserver.ddns.net"
-Server="https://sgrastar.ddns.net/nextcloud"
+Server="https://sgrastar.strangled.net/nextcloud"
 
 mkdir -p $Dir
 
