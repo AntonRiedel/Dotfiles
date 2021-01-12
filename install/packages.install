@@ -54,6 +54,7 @@ make
 man-db
 mpv
 mtr
+mutt-wizard-git
 neofetch
 neomutt
 neovim
@@ -107,7 +108,7 @@ texlive-pictures
 texlive-pstricks
 texlive-publishers
 texlive-science
-thunderbird
+thinkpad-scripts
 tigervnc
 timeshift-bin
 tlp
@@ -126,12 +127,12 @@ xclip
 xcompmgr
 xf86-video-intel
 xorg-server
-xorg-xhost
 xorg-xinit
 xorg-xkill
 xorg-xsetroot
 xournalpp
 xwallpaper
+yapf
 yay-bin
 youtube-dl
 zathura
