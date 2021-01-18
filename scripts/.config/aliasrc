@@ -2,7 +2,7 @@
 # File              : aliasrc
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 24.03.2020
-# Last Modified Date: 24.12.2020
+# Last Modified Date: 18.01.2021
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 ##aliases
@@ -29,7 +29,7 @@ alias pi='yay -S'
 alias pu='yay -Syu'
 # alias pu='yay -Syu && $EDITOR +PlugUpgrade +PlugUpdate +quita'
 alias pr='yay -Rnsc'
-alias po='yay -Rnsc $(yay -Qtdq) || echo "no orphanes found"'
+alias po='yay -Rnsc $(yay -Qtdq) 2>/dev/null || echo "no orphanes found"'
 alias pc='yay -Scc'
 alias pq='yay -Ss'
 alias nmu='nmcli con up --ask'
@@ -52,6 +52,11 @@ fd() {
     cd "$(find $HOME -type d -not -path "*/old/*" | fzf --prompt="Jump to Dir: ")"
     pwd
     ls
+    return 0
+}
+#search and open a file in your home directory
+ff() {
+    xdg-open "$(find $HOME -type f -not -path "*/old/*" | fzf --prompt="Open file: ")"
     return 0
 }
 #search for a process and kill it

@@ -2,7 +2,7 @@
 # File              : .profile
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 24.03.2020
-# Last Modified Date: 10.01.2021
+# Last Modified Date: 11.01.2021
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 #add $HOME/.local/bin to PATH as well as the path to the fzf binary; convinient on host where I cannot install fzf systemwide
@@ -37,7 +37,6 @@ export LESSHISTFILE="-"
 
 #options for fzf
 export FZF_DEFAULT_OPTS="--reverse --height=40%"
-export FZF_DEFAULT_COMMAND="rg --files"
 
 #set default wallpaper
 export WALLPAPER="${HOME}/nextcloud/wallpaper/arch12.jpg"

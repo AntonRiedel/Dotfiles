@@ -2,7 +2,7 @@
 # File              : fin.sh
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 24.03.2020
-# Last Modified Date: 30.11.2020
+# Last Modified Date: 10.01.2021
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 ClearCache() {
@@ -32,11 +32,11 @@ choice=$(echo "Shutdown\nReboot\nExit\nLock Screen" | dmenu -F -i -l 4 -p "Selec
 case "$choice" in
 "Shutdown")
     ClearCache
-    if grep -q 'Artix' /etc/os-release; then
-        sudo /usr/bin/poweroff
-    else
-        sudo /usr/bin/shutdown now
-    fi
+    # if grep -q 'Artix' /etc/os-release; then
+    #     sudo /usr/bin/poweroff
+    # else
+    sudo /usr/bin/shutdown now
+    # fi
     ;;
 "Reboot") ClearCache && sudo /usr/bin/reboot ;;
 "Exit") killall Xorg ;;

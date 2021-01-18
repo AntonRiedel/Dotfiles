@@ -1,4 +1,4 @@
-server https://sgrastar.ddns.net/nextcloud/index.php/login?clear=1
+server https://sgrastar.strangled.net/nextcloud/index.php/login?clear=1
 server_local https://192.168.31.1/nextcloud/index.php/login
 cip https://wiki.tum.de/display/tuphcip/CIP-Pool+TUM+Physikdepartment
 fopra https://www.ph.tum.de/academics/org/labs/fopra/?language=en
@@ -13,3 +13,5 @@ gitlab_lrz https://gitlab.lrz.de/users/sign_in
 cuda http://users.ph.tum.de/srecksie/lehre/cuda.html
 cheatsheet https://raw.githubusercontent.com/qutebrowser/qutebrowser/master/doc/img/cheatsheet-big.png
 pdg https://pdg.lbl.gov/
+freedns https://freedns.afraid.org/
+scihub https://sci-hub.do/
