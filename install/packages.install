@@ -70,6 +70,7 @@ openssh
 opus-tools
 opusfile
 pacman
+pandoc-bin
 pass
 patch
 pdfjs
@@ -103,6 +104,7 @@ texlive-formatsextra
 texlive-games
 texlive-humanities
 texlive-latexextra
+texlive-latexindent-meta
 texlive-music
 texlive-pictures
 texlive-pstricks
@@ -117,6 +119,7 @@ ttf-hack
 ttf-joypixels
 unclutter
 unzip
+vidir
 vim
 vpnc
 w3m

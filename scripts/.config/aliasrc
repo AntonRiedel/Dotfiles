@@ -2,7 +2,7 @@
 # File              : aliasrc
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 24.03.2020
-# Last Modified Date: 18.01.2021
+# Last Modified Date: 22.01.2021
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 ##aliases
@@ -44,7 +44,7 @@ ce() {
 }
 #connect to known host via ssh
 sshc() {
-    ssh "$(grep "^Host " $HOME/.ssh/config | grep -v "git" | awk '{print $2}' | fzf --prompt="Connect to host: ")"
+    ssh "$(grep -r "^Host " $HOME/.ssh/ | grep -v "git" | awk '{print $2}' | fzf --prompt="Connect to host: ")"
     return 0
 }
 #search and enter a subdirectory in your home directory
