@@ -2,7 +2,7 @@
 # File              : fin.sh
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 24.03.2020
-# Last Modified Date: 10.01.2021
+# Last Modified Date: 26.01.2021
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 ClearCache() {
@@ -22,6 +22,8 @@ ClearCache() {
         $HOME/.cgdb \
         $HOME/.dbus \
         $HOME/.root* \
+        $HOME/.ansible \
+        $HOME/.android \
         $HOME/.screenlayout
 }
 
@@ -30,14 +32,7 @@ pgrep -x dmenu && exit 1
 choice=$(echo "Shutdown\nReboot\nExit\nLock Screen" | dmenu -F -i -l 4 -p "Select Option:")
 
 case "$choice" in
-"Shutdown")
-    ClearCache
-    # if grep -q 'Artix' /etc/os-release; then
-    #     sudo /usr/bin/poweroff
-    # else
-    sudo /usr/bin/shutdown now
-    # fi
-    ;;
+"Shutdown") ClearCache && sudo /usr/bin/shutdown now ;;
 "Reboot") ClearCache && sudo /usr/bin/reboot ;;
 "Exit") killall Xorg ;;
 "Lock Screen") lockscreen.sh ;;

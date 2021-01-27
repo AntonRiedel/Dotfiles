@@ -2,7 +2,7 @@
 # File              : .profile
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 24.03.2020
-# Last Modified Date: 11.01.2021
+# Last Modified Date: 26.01.2021
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 #add $HOME/.local/bin to PATH as well as the path to the fzf binary; convinient on host where I cannot install fzf systemwide
@@ -14,7 +14,7 @@ export TERMINAL="alacritty"
 export EDITOR="nvim"
 export VISUAL="${EDITOR}"
 export BROWSER="qutebrowser"
-export BROWSER2="firefox"
+export BROWSER2="librewolf"
 export READER="zathura"
 export READER2="qpdfview"
 #make alacritty work on X200

@@ -1,7 +1,7 @@
 " File              : keybindings.vim
 " Author            : Anton Riedel <anton.riedel@tum.de>
 " Date              : 14.09.2020
-" Last Modified Date: 13.10.2020
+" Last Modified Date: 26.01.2021
 " Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 "global keybindings

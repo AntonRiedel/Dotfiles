@@ -2,7 +2,7 @@
 # File              : aliasrc
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 24.03.2020
-# Last Modified Date: 22.01.2021
+# Last Modified Date: 26.01.2021
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 ##aliases
@@ -44,7 +44,23 @@ ce() {
 }
 #connect to known host via ssh
 sshc() {
-    ssh "$(grep -r "^Host " $HOME/.ssh/ | grep -v "git" | awk '{print $2}' | fzf --prompt="Connect to host: ")"
+    # choose a host from all known hosts
+    Host="$(grep -r "^Host " $HOME/.ssh/ | grep -v "git\|\*" | awk '{print $2}' | fzf --prompt="Connect to host: ")"
+
+    if grep -q "sun" <<<"$Host"; then
+        #key with passphrase; hence we need sshpass -P
+        export SSHPASS="$(pass sun/key)"
+        sshpass -P "passphrase" -e ssh "$Host"
+    elif grep -q "cip\|t30\|cont\|mini\|foyer" <<<"$Host"; then
+        #need password for the jumphost cipgate
+        export SSHPASS="$(pass email/tum)"
+        sshpass -e ssh "$Host"
+    else
+        #all other
+        ssh "$Host"
+    fi
+    export SSHPASS=""
+
     return 0
 }
 #search and enter a subdirectory in your home directory

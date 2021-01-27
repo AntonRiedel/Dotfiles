@@ -6,7 +6,7 @@
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 #prompt
-PS1="%B[%F{cyan}%n%f@%F{yellow}%M%f] in %F{red}%~%f
+PS1="%B[%F{cyan}%n%f@%F{yellow}%M%f] %F{red}%~%f
 %F{magenta}>%f%b "
 
 #set shell options

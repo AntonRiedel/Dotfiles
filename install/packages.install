@@ -19,6 +19,7 @@ cmake
 cmus
 ctags
 dashbinsh
+dosfstools
 efibootmgr
 fakeroot
 file
@@ -69,6 +70,7 @@ openmp
 openssh
 opus-tools
 opusfile
+opustags
 pacman
 pandoc-bin
 pass
@@ -89,8 +91,10 @@ qpdfview
 qutebrowser
 rdesktop
 rsync
+scrcpy
 sed
 shfmt
+sshpass
 stow
 sudo
 sxhkd
