@@ -6,5 +6,21 @@
 
 config_version: 2
 settings:
+  colors.webpage.darkmode.enabled:
+    global: true
+  completion.open_categories:
+    global:
+    - searchengines
+    - quickmarks
+    - bookmarks
+  completion.web_history.max_items:
+    global: 0
   content.pdfjs:
     global: false
+  url.default_page:
+    global: about:blank
+  url.searchengines:
+    global:
+      DEFAULT: https://searx.envs.net/?q={}
+  url.start_pages:
+    global: about:blank
