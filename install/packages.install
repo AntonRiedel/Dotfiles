@@ -24,7 +24,6 @@ efibootmgr
 fakeroot
 file
 findutils
-firefox
 flake8
 flameshot
 flex
@@ -44,6 +43,7 @@ i3lock
 imagemagick
 intel-ucode
 jupyterlab
+librewolf-bin
 libtool
 libxft-bgra-git
 linux
