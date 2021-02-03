@@ -10,7 +10,7 @@ PS1="%B[%F{cyan}%n%f@%F{yellow}%M%f] %F{red}%~%f
 %F{magenta}>%f%b "
 
 #set shell options
-setopt share_history autocd
+setopt share_history HIST_IGNORE_ALL_DUPS autocd
 
 # Set config for history
 export HISTSIZE=10000

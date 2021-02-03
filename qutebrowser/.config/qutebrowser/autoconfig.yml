@@ -15,8 +15,12 @@ settings:
     - bookmarks
   completion.web_history.max_items:
     global: 0
+  content.blocking.method:
+    global: both
   content.pdfjs:
-    global: false
+    global: true
+  downloads.location.directory:
+    global: /home/anton/nextcloud/
   url.default_page:
     global: about:blank
   url.searchengines:

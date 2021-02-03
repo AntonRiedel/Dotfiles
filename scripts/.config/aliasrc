@@ -2,7 +2,7 @@
 # File              : aliasrc
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 24.03.2020
-# Last Modified Date: 26.01.2021
+# Last Modified Date: 03.02.2021
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 ##aliases
@@ -25,12 +25,13 @@ alias ga='git add'
 alias gc='git commit'
 alias gch='git checkout'
 alias gb='git branch'
-alias pi='yay -S'
-alias pu='yay -Syu'
+alias pi='yay --sudo doas -S'
+alias pu='yay --sudo doas -Syu'
 # alias pu='yay -Syu && $EDITOR +PlugUpgrade +PlugUpdate +quita'
-alias pr='yay -Rnsc'
-alias po='yay -Rnsc $(yay -Qtdq) 2>/dev/null || echo "no orphanes found"'
-alias pc='yay -Scc'
+alias sudo="doas"
+alias pr='yay --sudo doas -Rnsc'
+alias po='yay ---sudo doas Rnsc $(yay -Qtdq) 2>/dev/null || echo "no orphanes found"'
+alias pc='yay ---sudo doas Scc'
 alias pq='yay -Ss'
 alias nmu='nmcli con up --ask'
 alias nmd='nmcli con down'

@@ -2,7 +2,7 @@
 # File              : fin.sh
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 24.03.2020
-# Last Modified Date: 26.01.2021
+# Last Modified Date: 03.02.2021
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 ClearCache() {
@@ -32,8 +32,8 @@ pgrep -x dmenu && exit 1
 choice=$(echo "Shutdown\nReboot\nExit\nLock Screen" | dmenu -F -i -l 4 -p "Select Option:")
 
 case "$choice" in
-"Shutdown") ClearCache && sudo /usr/bin/shutdown now ;;
-"Reboot") ClearCache && sudo /usr/bin/reboot ;;
+"Shutdown") ClearCache && doas /usr/bin/shutdown now ;;
+"Reboot") ClearCache && doas /usr/bin/reboot ;;
 "Exit") killall Xorg ;;
 "Lock Screen") lockscreen.sh ;;
 esac
