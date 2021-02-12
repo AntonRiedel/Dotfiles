@@ -8,7 +8,7 @@ super + {_,shift} + b
 super + {_,shift} + e
 	$TERMINAL -e {neomutt,mw sync}
 super + v
-	$TERMINAL -e newsboat
+ 	$TERMINAL -e newsboat
 super + o
     xournalpp
 

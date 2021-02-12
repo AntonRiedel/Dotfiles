@@ -2,7 +2,7 @@
 # File              : aliasrc
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 24.03.2020
-# Last Modified Date: 03.02.2021
+# Last Modified Date: 12.02.2021
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 ##aliases
@@ -25,14 +25,22 @@ alias ga='git add'
 alias gc='git commit'
 alias gch='git checkout'
 alias gb='git branch'
-alias pi='yay --sudo doas -S'
-alias pu='yay --sudo doas -Syu'
-# alias pu='yay -Syu && $EDITOR +PlugUpgrade +PlugUpdate +quita'
-alias sudo="doas"
-alias pr='yay --sudo doas -Rnsc'
-alias po='yay ---sudo doas Rnsc $(yay -Qtdq) 2>/dev/null || echo "no orphanes found"'
-alias pc='yay ---sudo doas Scc'
-alias pq='yay -Ss'
+if [ "$(cat /etc/hostname)" = "sun" ]; then
+    alias pu='apt update && apt upgrade && apt autoremove'
+    alias pi='apt install'
+    alias pr='apt autoremove'
+    alias pq='apt search'
+else
+    alias sudo='doas'
+    #alias pu='yay -Syu && $EDITOR +PlugUpgrade +PlugUpdate +quita'
+    alias pi='yay --sudo doas -S'
+    alias pu='yay --sudo doas -Syu'
+    alias yay='yay --sudo doas'
+    alias pr='yay --sudo doas -Rnsc'
+    alias po='yay ---sudo doas Rnsc $(yay -Qtdq) 2>/dev/null || echo "no orphanes found"'
+    alias pc='yay ---sudo doas Scc'
+    alias pq='yay -Ss'
+fi
 alias nmu='nmcli con up --ask'
 alias nmd='nmcli con down'
 alias screen='xinput --map-to-output "Wacom ISDv4 E6 Pen Pen (0)" LVDS1'

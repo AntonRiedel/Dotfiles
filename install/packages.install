@@ -60,12 +60,14 @@ neofetch
 neomutt
 neovim
 networkmanager
+networkmanager-openvpn
 networkmanager-vpnc
 newsboat
 nextcloud-client
 nfs-utils
 nm-connection-editor
 notmuch
+opendoas
 openmp
 openssh
 opus-tools
@@ -79,6 +81,7 @@ pdfjs
 pkgconf
 pulseaudio
 pulsemixer
+python-adblock
 python-language-server
 python-matplotlib
 python-numpy
@@ -96,7 +99,6 @@ sed
 shfmt
 sshpass
 stow
-sudo
 sxhkd
 sxiv
 texinfo
