@@ -2,7 +2,7 @@
 # File              : aliasrc
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 24.03.2020
-# Last Modified Date: 12.02.2021
+# Last Modified Date: 28.02.2021
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 ##aliases
@@ -10,8 +10,8 @@ alias ls='ls --color=auto'
 alias ll='ls -alh --color=auto'
 alias grep='grep --color=auto'
 alias cp='rsync -uvrP'
-#alias scp='rsync -uvrzP'
-alias scp='rsync -uvrzP --zc=zlib'
+alias scp='rsync -uvrzP'
+#alias scp='rsync -uvrzP --zc=zlib'
 alias pdf='$READER'
 alias pdf2='$READER2'
 alias latexmk='latexmk -pdf'
@@ -25,7 +25,7 @@ alias ga='git add'
 alias gc='git commit'
 alias gch='git checkout'
 alias gb='git branch'
-if [ "$(cat /etc/hostname)" = "sun" ]; then
+if [ "$(cat /etc/hostname 2>/dev/null)" = "sun" ]; then
     alias pu='sudo apt update && sudo apt upgrade && sudo apt autoremove'
     alias pi='sudo apt install'
     alias pr='sudo apt autoremove'
@@ -43,7 +43,7 @@ else
 fi
 alias nmu='nmcli con up --ask'
 alias nmd='nmcli con down'
-alias screen='xinput --map-to-output "Wacom ISDv4 E6 Pen Pen (0)" LVDS1'
+alias screen='xinput --map-to-output "Wacom ISDv4 E6 Pen Pen (0)" LVDS1 --map-to-output "Wacom ISDv4 E6 Pen Eraser (0)" LVDS1'
 
 ##custom shell functions (a.k.a. fun with fzf)
 #search and edit a configuration file
@@ -89,17 +89,9 @@ kp() {
     kill -s SIGKILL "$(ps aux | fzf --prompt="Job to kill: " | awk '{ print $2 }')" 2>/dev/null
     return 0
 }
-##other convenient functions
-#start tor
-tor() {
-    cd $HOME/.local/share/tor/
-    ./start-tor-browser.desktop
-    cd -
-    return 0
-}
-#copy a file to clipboard
+#copy a file in the current directory to clipboard
 ctc() {
-    [ ! -f "$1" ] && echo "Needs a file as argument" && return 1
-    xclip -selection clipboard $1
+    File="$(find . -maxdepth 1 -type f | fzf --prompt="Copy file to clipboard: ")"
+    xclip -selection clipboard $File
     return 0
 }

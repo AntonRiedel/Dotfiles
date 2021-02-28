@@ -2,7 +2,7 @@
 # File              : .profile
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 24.03.2020
-# Last Modified Date: 26.01.2021
+# Last Modified Date: 28.02.2021
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 #add $HOME/.local/bin to PATH as well as the path to the fzf binary; convinient on host where I cannot install fzf systemwide
@@ -11,14 +11,14 @@ export PATH="${HOME}/.local/bin:${PATH}"
 #set default applications
 export TERMINAL="alacritty"
 #export TERMINAL="st"
-export EDITOR="nvim"
+[ "$(which nvim)" ] && export EDITOR="nvim" || export EDITOR="vim"
 export VISUAL="${EDITOR}"
 export BROWSER="qutebrowser"
 export BROWSER2="librewolf"
 export READER="zathura"
 export READER2="qpdfview"
 #make alacritty work on X200
-[ "$(cat /etc/hostname)" = "Mars" ] && export LIBGL_ALWAYS_SOFTWARE=1
+[ "$(cat /etc/hostname 2>/dev/null)" = "Mars" ] && export LIBGL_ALWAYS_SOFTWARE=1
 
 #XDG
 export XDG_CONFIG_HOME="${HOME}/.config"
@@ -39,7 +39,7 @@ export LESSHISTFILE="-"
 export FZF_DEFAULT_OPTS="--reverse --height=40%"
 
 #set default wallpaper
-export WALLPAPER="${HOME}/nextcloud/wallpaper/arch12.jpg"
+export WALLPAPER="${HOME}/nextcloud/wallpaper/arch4.png"
 
 #start Xorg on tty1
-[ "$(tty)" = "/dev/tty1" ] && [ $(which dwm) ] && exec startx &>/dev/null
+[ "$(tty)" = "/dev/tty1" ] && [ "$(which dwm)" ] && exec startx &>/dev/null

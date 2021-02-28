@@ -1,7 +1,7 @@
 " File              : plug.vim
 " Author            : Anton Riedel <anton.riedel@tum.de>
 " Date              : 23.11.2020
-" Last Modified Date: 07.12.2020
+" Last Modified Date: 13.02.2021
 " Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 "plugin manager setup
@@ -45,5 +45,7 @@ Plug 'puremourning/vimspector'
 Plug 'szw/vim-maximizer'
 "
 Plug 'junegunn/fzf.vim'
+Plug 'junegunn/vim-easy-align'
 Plug 'sbdchd/neoformat'
+
 call plug#end()

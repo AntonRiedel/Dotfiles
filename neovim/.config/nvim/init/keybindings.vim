@@ -1,7 +1,7 @@
 " File              : keybindings.vim
 " Author            : Anton Riedel <anton.riedel@tum.de>
 " Date              : 14.09.2020
-" Last Modified Date: 26.01.2021
+" Last Modified Date: 13.02.2021
 " Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 "global keybindings
@@ -40,6 +40,10 @@ nnoremap <M-h> <c-w>h
 nnoremap <M-j> <c-w>j
 nnoremap <M-k> <c-w>k
 nnoremap <M-l> <c-w>l
+
+"easy-align
+xmap ga <Plug>(EasyAlign)
+nmap ga <Plug>(EasyAlign)
 
 "open terminal in a split to the left
 nnoremap <leader>tv :vsplit Terminal<CR>
