@@ -1,7 +1,0 @@
-#!/bin/bash
-# File              : setTERM.sh
-# Author            : Anton Riedel <anton.riedel@tum.de>
-# Date              : 29.04.2020
-# Last Modified Date: 29.04.2020
-# Last Modified By  : Anton Riedel <anton.riedel@tum.de>
-scp /usr/share/terminfo/a/alacritty USER@HOSR:HOME/.terminfo/a/alacritty

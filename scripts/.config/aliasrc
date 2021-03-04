@@ -2,7 +2,7 @@
 # File              : aliasrc
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 24.03.2020
-# Last Modified Date: 28.02.2021
+# Last Modified Date: 04.03.2021
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 ##aliases
@@ -25,21 +25,19 @@ alias ga='git add'
 alias gc='git commit'
 alias gch='git checkout'
 alias gb='git branch'
-if [ "$(cat /etc/hostname 2>/dev/null)" = "sun" ]; then
+if [ "$(cat /etc/hostname 2>/dev/null)" = "Saturn" ]; then
+    alias pi='yay -S'
+    alias pu='yay -Syu'
+    #alias pu='yay -Syu && $EDITOR +PlugUpgrade +PlugUpdate +quita'
+    alias pr='yay -Rnsc'
+    alias po='yay Rnsc $(yay -Qtdq) 2>/dev/null || echo "no orphanes found"'
+    alias pc='yay Scc'
+    alias pq='yay -Ss'
+elif [ "$(cat /etc/hostname 2>/dev/null)" = "sun" ]; then
     alias pu='sudo apt update && sudo apt upgrade && sudo apt autoremove'
     alias pi='sudo apt install'
     alias pr='sudo apt autoremove'
     alias pq='sudo apt search'
-else
-    alias sudo='doas'
-    #alias pu='yay -Syu && $EDITOR +PlugUpgrade +PlugUpdate +quita'
-    alias pi='yay --sudo doas -S'
-    alias pu='yay --sudo doas -Syu'
-    alias yay='yay --sudo doas'
-    alias pr='yay --sudo doas -Rnsc'
-    alias po='yay ---sudo doas Rnsc $(yay -Qtdq) 2>/dev/null || echo "no orphanes found"'
-    alias pc='yay ---sudo doas Scc'
-    alias pq='yay -Ss'
 fi
 alias nmu='nmcli con up --ask'
 alias nmd='nmcli con down'
