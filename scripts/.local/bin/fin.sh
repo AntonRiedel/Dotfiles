@@ -2,7 +2,7 @@
 # File              : fin.sh
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 24.03.2020
-# Last Modified Date: 04.03.2021
+# Last Modified Date: 10.04.2021
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 ClearCache() {
@@ -14,12 +14,16 @@ ClearCache() {
         $HOME/.*thumb* \
         $HOME/.rdesktop \
         $HOME/.var \
+        $HOME/.vnc \
+        $HOME/.w3m \
         $HOME/.pki \
         $HOME/.fltk \
         $HOME/.jupyter \
         $HOME/.ipython \
+        $HOME/.ipynb* \
         $HOME/.clangd \
         $HOME/.cgdb \
+        $HOME/.texlive \
         $HOME/.dbus \
         $HOME/.root* \
         $HOME/.ansible \

@@ -7,7 +7,7 @@ mail https://mail.tum.de/owa/auth/logon.aspx?url=https%3A%2F%2Fmail.tum.de%2Fowa
 noip https://www.noip.com/
 libgen http://gen.lib.rus.ec/
 libreboot https://libreboot.org/docs/gnulinux/grub_cbfs.html
-tap https://tap.ads.mwn.de/#!/login
+tap https://tap.ads.mwn.de/login
 campus https://campus.tum.de/tumonline/webnav.ini
 gitlab_lrz https://gitlab.lrz.de/users/sign_in
 cuda http://users.ph.tum.de/srecksie/lehre/cuda.html
@@ -19,4 +19,7 @@ envs https://envs.net/
 syncshare https://syncandshare.lrz.de/login
 ktas https://transfer.ktas.ph.tum.de/
 webdisk https://webdisk.mwn.de/Default.aspx?ReturnUrl=%2F
-fan https://www.fanfiction.net/s/13721498/6/The-Last-Crouch
+cernbox https://cernbox.cern.ch/index.php/s/uz5XpmlOTYk8pKV
+tumpc https://wiki.tum.de/pages/viewpage.action?pageId=4304822
+sun https://sun.nudel.lan:9090/
+getJournal javascript:void(location.href='https://eaccess.ub.tum.de/login?url='+location.href)

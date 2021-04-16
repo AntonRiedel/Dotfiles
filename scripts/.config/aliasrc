@@ -2,14 +2,13 @@
 # File              : aliasrc
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 24.03.2020
-# Last Modified Date: 04.03.2021
+# Last Modified Date: 16.04.2021
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 ##aliases
 alias ls='ls --color=auto'
 alias ll='ls -alh --color=auto'
 alias grep='grep --color=auto'
-alias cp='rsync -uvrP'
 alias scp='rsync -uvrzP'
 #alias scp='rsync -uvrzP --zc=zlib'
 alias pdf='$READER'
@@ -25,7 +24,12 @@ alias ga='git add'
 alias gc='git commit'
 alias gch='git checkout'
 alias gb='git branch'
-if [ "$(cat /etc/hostname 2>/dev/null)" = "Saturn" ]; then
+if [ "$(cat /etc/hostname 2>/dev/null)" = "sun" ]; then
+    alias pu='sudo apt update && sudo apt upgrade && sudo apt autoremove'
+    alias pi='sudo apt install'
+    alias pr='sudo apt purge'
+    alias pq='apt search'
+else
     alias pi='yay -S'
     alias pu='yay -Syu'
     #alias pu='yay -Syu && $EDITOR +PlugUpgrade +PlugUpdate +quita'
@@ -33,11 +37,6 @@ if [ "$(cat /etc/hostname 2>/dev/null)" = "Saturn" ]; then
     alias po='yay Rnsc $(yay -Qtdq) 2>/dev/null || echo "no orphanes found"'
     alias pc='yay Scc'
     alias pq='yay -Ss'
-elif [ "$(cat /etc/hostname 2>/dev/null)" = "sun" ]; then
-    alias pu='sudo apt update && sudo apt upgrade && sudo apt autoremove'
-    alias pi='sudo apt install'
-    alias pr='sudo apt autoremove'
-    alias pq='sudo apt search'
 fi
 alias nmu='nmcli con up --ask'
 alias nmd='nmcli con down'
@@ -58,8 +57,8 @@ sshc() {
         #key with passphrase; hence we need sshpass -P
         export SSHPASS="$(pass sun/key)"
         sshpass -P "passphrase" -e ssh "$Host"
-    elif grep -q "cip\|t30\|cont\|mini\|foyer" <<<"$Host"; then
-        #need password for the jumphost cipgate
+    elif grep -q "cipgate\|t30" <<<"$Host"; then
+        #need password for cipgate t30gate
         export SSHPASS="$(pass email/tum)"
         sshpass -e ssh "$Host"
     else

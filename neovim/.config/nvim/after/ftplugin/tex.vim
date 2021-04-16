@@ -1,7 +1,7 @@
 " File              : tex.vim
 " Author            : Anton Riedel <anton.riedel@tum.de>
 " Date              : 16.09.2020
-" Last Modified Date: 21.09.2020
+" Last Modified Date: 10.04.2021
 " Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 "settings for tex files
@@ -12,6 +12,10 @@ setlocal makeprg=latexmk\ -pdf
 "set format program
 setlocal formatprg=latexindent
 setlocal equalprg=latexindent
+
+" activate spell checking
+setlocal spelllang=en_us
+setlocal spell
 
 "autoformat files on save
 augroup Format

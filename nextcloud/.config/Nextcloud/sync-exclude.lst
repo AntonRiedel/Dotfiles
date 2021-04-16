@@ -37,8 +37,7 @@ System Volume Information
 .nfs*
 My Saved Places.
 \#*#
-].git*
-].ipynb*
+.git/*
 ]tags*
 ].out*
 ].o*

@@ -1,54 +1,24 @@
 " File              : keybindings.vim
 " Author            : Anton Riedel <anton.riedel@tum.de>
 " Date              : 14.09.2020
-" Last Modified Date: 13.02.2021
+" Last Modified Date: 23.03.2021
 " Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 "global keybindings
 let mapleader=' '
 
-"self-explanatory convenience mappings
-vnoremap ; :
-vnoremap : ;
-nnoremap ; :
-nnoremap : ;
-
-"get ridd of bad habits
-" nnoremap jj <Nop>
-" nnoremap kk <Nop>
-" nnoremap ll <Nop>
-" nnoremap hh <Nop>
-
 "terminal mode
 tnoremap <expr> <Esc> (&filetype == "fzf") ? "<Esc>" : "<c-\><c-n>"
 autocmd TermOpen * startinsert
 
-"h-j-k-l mode-agnostiM means of switching windows
-tnoremap <M-h> <c-\><c-n><c-w>h
-tnoremap <M-j> <c-\><c-n><c-w>j
-tnoremap <M-k> <c-\><c-n><c-w>k
-tnoremap <M-l> <c-\><c-n><c-w>l
-inoremap <M-h> <Esc><c-w>h
-inoremap <M-j> <Esc><c-w>j
-inoremap <M-k> <Esc><c-w>k
-inoremap <M-l> <Esc><c-w>l
-vnoremap <M-h> <Esc><c-w>h
-vnoremap <M-j> <Esc><c-w>j
-vnoremap <M-k> <Esc><c-w>k
-vnoremap <M-l> <Esc><c-w>l
-nnoremap <M-h> <c-w>h
-nnoremap <M-j> <c-w>j
-nnoremap <M-k> <c-w>k
-nnoremap <M-l> <c-w>l
-
 "easy-align
-xmap ga <Plug>(EasyAlign)
-nmap ga <Plug>(EasyAlign)
+xnoremap ga <Plug>(EasyAlign)
+nnoremap ga <Plug>(EasyAlign)
 
 "open terminal in a split to the left
-nnoremap <leader>tv :vsplit Terminal<CR>
+nnoremap <leader>tv :vsplit<CR>:terminal<CR>
 "open terminal in a split to down
-nnoremap <leader>th :split Terminal<CR>
+nnoremap <leader>th :split<CR>:terminal<CR>
 "source init.vim after making changes
 nnoremap <leader>sv :source $MYVIMRC<CR>
 "edit config file in a split
@@ -58,6 +28,8 @@ nnoremap <leader>pv :Lexplore<CR>
 "delete visual selection and replace it the content of the unnamed register
 "i.e. whatever you yanked last
 vnoremap <leader>p "_dP
+
+nnoremap <leader>bb :Buffers<CR>
 
 "keybinds for neovim's builtin lsp
 nnoremap <silent> <leader>ld  <cmd>lua vim.lsp.buf.definition()<CR>

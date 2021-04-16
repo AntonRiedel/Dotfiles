@@ -74,7 +74,6 @@ opus-tools
 opusfile
 opustags
 pacman
-pandoc-bin
 pass
 patch
 pdfjs
@@ -87,18 +86,21 @@ python-matplotlib
 python-numpy
 python-pipenv
 python-pynvim
+python-pywinrm
 python-scipy
 python-sympy
 qpdf
 qpdfview
 qutebrowser
 rdesktop
+root
 rsync
 scrcpy
 sed
 shfmt
 sshpass
 stow
+sudo
 sxhkd
 sxiv
 texinfo
@@ -121,6 +123,7 @@ tigervnc
 timeshift-bin
 tlp
 tmux
+tree-sitter
 ttf-hack
 ttf-joypixels
 unclutter

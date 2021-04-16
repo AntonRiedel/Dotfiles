@@ -1,7 +1,7 @@
 " File              : settings.vim
 " Author            : Anton Riedel <anton.riedel@tum.de>
 " Date              : 14.09.2020
-" Last Modified Date: 30.12.2020
+" Last Modified Date: 05.04.2021
 " Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 "global setting
@@ -39,6 +39,8 @@ set grepprg=rg\ --vimgrep\ --smart-case " use ripgrep for grepping
 autocmd BufRead,BufNewFile *.h,*.c set filetype=c " fix filetype for .c and .h files
 autocmd TermOpen * startinsert    " start terminal in insert mode
 
+let g:tex_flavor='tex'
+
 "global graphical settings
 set termguicolors " use truecolor
 set showtabline=2 " always show tab page labels
@@ -66,19 +68,19 @@ let mapleader=' '
 " nnoremap ll <Nop>
 " nnoremap hh <Nop>
 
-"handle escape from fzf promt gracefully
-tnoremap <expr> <Esc> (&filetype == "fzf") ? "<Esc>" : "<c-\><c-n>"
+""handle escape from fzf promt gracefully
+"tnoremap <expr> <Esc> (&filetype == "fzf") ? "<Esc>" : "<c-\><c-n>"
 
-"open terminal in a split to the left
-nnoremap <leader>tv :vsplit<CR>:terminal<CR>
-"open terminal in a split to down
-nnoremap <leader>th :split<CR>:terminal<CR>
-"source init.vim after making changes
-nnoremap <leader>sv :source $MYVIMRC<CR>
-"edit config file in a new buffer
-nnoremap <leader>ev :Files $HOME/.config/nvim/<CR>
-"toggle filetree with netrw
-nnoremap <leader>pv :Lexplore<CR>
-"delete visual selection and replace it the content of the unnamed register
-"i.e. whatever you yanked last
-vnoremap <leader>p "_dP
+""open terminal in a split to the left
+"nnoremap <leader>tv :vsplit<CR>:terminal<CR>
+""open terminal in a split to down
+"nnoremap <leader>th :split<CR>:terminal<CR>
+""source init.vim after making changes
+"nnoremap <leader>sv :source $MYVIMRC<CR>
+""edit config file in a new buffer
+"nnoremap <leader>ev :Files $HOME/.config/nvim/<CR>
+""toggle filetree with netrw
+"nnoremap <leader>pv :Lexplore<CR>
+""delete visual selection and replace it the content of the unnamed register
+""i.e. whatever you yanked last
+"vnoremap <leader>p "_dP

@@ -1,8 +1,8 @@
-#!/bin/sh
+#!/bin/bash
 # File              : deploy.sh
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 25.03.2020
-# Last Modified Date: 06.01.2021
+# Last Modified Date: 12.03.2021
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 #include dowloading languageserver binaries
@@ -56,7 +56,7 @@ Deploy_config_all() {
 
     #make directories for scirpts and config files
     mkdir -p $HOME/.local/{bin,share} $HOME/.config
-    stow -d $DotDir -t $HOME $(find $DotDir -maxdepth 1 -type d ! \( -path $DotDir -o -name old -o -name install -o -name .git \) -exec basename {} \;)
+    stow -d $DotDir -t $HOME $(find $DotDir -maxdepth 1 -type d ! \( -path $DotDir -o -name old -o -name install -o -name .git \) -exec basename '{}' +)
 
     return 0
 }

@@ -1,7 +1,7 @@
 " File              : python.vim
 " Author            : Anton Riedel <anton.riedel@tum.de>
 " Date              : 16.09.2020
-" Last Modified Date: 08.10.2020
+" Last Modified Date: 24.03.2021
 " Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 "settings for python files
@@ -22,4 +22,5 @@ augroup Format
     autocmd!
     autocmd BufWritePre * AddHeader
     autocmd BufWritePre * undojoin | Neoformat
+    autocmd BufWritePost * edit
 augroup END
