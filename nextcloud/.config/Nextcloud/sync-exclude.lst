@@ -3,6 +3,7 @@
 ;; Date              : 26.04.2020
 ;; Last Modified Date: 26.04.2020
 ;; Last Modified By  : Anton Riedel <anton.riedel@tum.de>
+
 *~
 ~$*
 .~lock.*
@@ -36,8 +37,7 @@ System Volume Information
 *.unison
 .nfs*
 My Saved Places.
-\#*#
-.git/*
+].git*
 ]tags*
 ].out*
 ].o*

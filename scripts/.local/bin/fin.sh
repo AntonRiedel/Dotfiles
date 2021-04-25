@@ -2,33 +2,35 @@
 # File              : fin.sh
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 24.03.2020
-# Last Modified Date: 10.04.2021
+# Last Modified Date: 23.04.2021
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 ClearCache() {
-    rm -rf \
-        $HOME/.cache/* \
-        $HOME/.*history \
-        $HOME/.*hst* \
-        $HOME/.*bookmark* \
-        $HOME/.*thumb* \
-        $HOME/.rdesktop \
-        $HOME/.var \
-        $HOME/.vnc \
-        $HOME/.w3m \
-        $HOME/.pki \
-        $HOME/.fltk \
-        $HOME/.jupyter \
-        $HOME/.ipython \
-        $HOME/.ipynb* \
-        $HOME/.clangd \
-        $HOME/.cgdb \
-        $HOME/.texlive \
-        $HOME/.dbus \
-        $HOME/.root* \
-        $HOME/.ansible \
-        $HOME/.android \
-        $HOME/.screenlayout
+	rm -rf \
+		$HOME/.cache/* \
+		$HOME/.*history \
+		$HOME/.*hst* \
+		$HOME/.*hist* \
+		$HOME/.*bookmark* \
+		$HOME/.*thumb* \
+		$HOME/.rdesktop \
+		$HOME/.var \
+		$HOME/.vnc \
+		$HOME/.parallel \
+		$HOME/.w3m \
+		$HOME/.pki \
+		$HOME/.fltk \
+		$HOME/.jupyter \
+		$HOME/.ipython \
+		$HOME/.ipynb* \
+		$HOME/.clangd \
+		$HOME/.cgdb \
+		$HOME/.texlive \
+		$HOME/.dbus \
+		$HOME/.root* \
+		$HOME/.ansible \
+		$HOME/.android \
+		$HOME/.screenlayout
 }
 
 pgrep -x dmenu && exit 1

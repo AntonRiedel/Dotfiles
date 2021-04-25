@@ -24,6 +24,7 @@ efibootmgr
 fakeroot
 file
 findutils
+firefox-nightly
 flake8
 flameshot
 flex
@@ -42,8 +43,8 @@ htop
 i3lock
 imagemagick
 intel-ucode
+jupyter-metakernel
 jupyterlab
-librewolf-bin
 libtool
 libxft-bgra-git
 linux
@@ -74,6 +75,9 @@ opus-tools
 opusfile
 opustags
 pacman
+pacman-contrib
+pandoc-bin
+parallel
 pass
 patch
 pdfjs
@@ -83,6 +87,7 @@ pulsemixer
 python-adblock
 python-language-server
 python-matplotlib
+python-numba
 python-numpy
 python-pipenv
 python-pynvim
@@ -95,6 +100,7 @@ qutebrowser
 rdesktop
 root
 rsync
+rustup
 scrcpy
 sed
 shfmt
@@ -123,6 +129,7 @@ tigervnc
 timeshift-bin
 tlp
 tmux
+tmuxp
 tree-sitter
 ttf-hack
 ttf-joypixels

@@ -1,7 +1,7 @@
 " File              : lsp.vim
 " Author            : Anton Riedel <anton.riedel@tum.de>
 " Date              : 23.11.2020
-" Last Modified Date: 07.12.2020
+" Last Modified Date: 24.04.2021
 " Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 "lsp setup
@@ -12,7 +12,7 @@ lua require'lspconfig'.bashls.setup{on_attach=require'completion'.on_attach}
 lua require'lspconfig'.texlab.setup{on_attach=require'completion'.on_attach}
 
 "treesitter config
-lua require'nvim-treesitter.configs'.setup { ensure_installed = { "bash", "c", "cpp", "python" } , highlight = { enable = true }, }
+lua require'nvim-treesitter.configs'.setup { ensure_installed = { "bash", "c", "cpp", "python","lua" } , highlight = { enable = true }, }
 " indent = { enable = true },
 " refactor = {
 "   highlight_definitions = { enable = true },
