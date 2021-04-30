@@ -107,6 +107,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/anton/.local/share/nvim/site/pack/packer/start/packer.nvim"
   },
+  ultisnips = {
+    loaded = true,
+    path = "/home/anton/.local/share/nvim/site/pack/packer/start/ultisnips"
+  },
   ["vim-commentary"] = {
     loaded = true,
     path = "/home/anton/.local/share/nvim/site/pack/packer/start/vim-commentary"
@@ -126,6 +130,10 @@ _G.packer_plugins = {
   ["vim-signify"] = {
     loaded = true,
     path = "/home/anton/.local/share/nvim/site/pack/packer/start/vim-signify"
+  },
+  ["vim-snippets"] = {
+    loaded = true,
+    path = "/home/anton/.local/share/nvim/site/pack/packer/start/vim-snippets"
   },
   ["vim-surround"] = {
     loaded = true,

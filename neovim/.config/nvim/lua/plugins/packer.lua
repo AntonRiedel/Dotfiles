@@ -2,7 +2,7 @@
 File              : packer.lua
 Author            : Anton Riedel <anton.riedel@tum.de>
 Date              : 25.04.2021
-Last Modified Date: 26.04.2021
+Last Modified Date: 30.04.2021
 Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 --]] --
 return require('packer').startup(function()
@@ -28,4 +28,6 @@ return require('packer').startup(function()
     use {'neovim/nvim-lspconfig'}
     use {'nvim-lua/completion-nvim'}
     use {'nvim-treesitter/nvim-treesitter'}
+    use {'SirVer/ultisnips'}
+    use {'honza/vim-snippets'}
 end)

@@ -2,7 +2,7 @@
 File              : settings.lua
 Author            : Anton Riedel <anton.riedel@tum.de>
 Date              : 25.04.2021
-Last Modified Date: 26.04.2021
+Last Modified Date: 30.04.2021
 Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 --]] --
 vim.g.python3_host_prog = '/usr/bin/python3'
