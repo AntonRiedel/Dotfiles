@@ -5,6 +5,7 @@ Date              : 25.04.2021
 Last Modified Date: 30.04.2021
 Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 --]] --
+-- external programs
 vim.g.python3_host_prog = '/usr/bin/python3'
 -- not needed
 vim.g.loaded_python_provider = 0
@@ -18,14 +19,13 @@ vim.cmd 'autocmd TermOpen * startinsert'
 -- fix tex filetype
 vim.g.tex_flavor = 'tex'
 
-vim.o.termguicolors = true
-vim.o.showtabline = 2
-
 -- misc
 vim.o.shell = '/usr/bin/bash'
 vim.o.tabstop = 4
 vim.wo.list = true
 vim.o.clipboard = 'unnamedplus'
+vim.o.termguicolors = true
+vim.o.showtabline = 2
 
 -- search
 vim.o.ignorecase = true

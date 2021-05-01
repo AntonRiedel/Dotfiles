@@ -18,7 +18,7 @@ return require('packer').startup(function()
     use {'vimwiki/vimwiki'}
     use {'jiangmiao/auto-pairs'}
     use {'itchyny/lightline.vim'}
-    use {'junegunn/fzf'}
+    -- use {'junegunn/fzf'}
 
     -- development
     use {'alpertuna/vim-header'}
@@ -28,6 +28,9 @@ return require('packer').startup(function()
     use {'neovim/nvim-lspconfig'}
     use {'nvim-lua/completion-nvim'}
     use {'nvim-treesitter/nvim-treesitter'}
-    use {'SirVer/ultisnips'}
-    use {'honza/vim-snippets'}
+    use {
+        'nvim-telescope/telescope.nvim',
+        requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
+    }
+    use {'SirVer/ultisnips', requires = {'honza/vim-snippets'}}
 end)

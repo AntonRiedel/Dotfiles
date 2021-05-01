@@ -79,10 +79,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/anton/.local/share/nvim/site/pack/packer/start/completion-nvim"
   },
-  fzf = {
-    loaded = true,
-    path = "/home/anton/.local/share/nvim/site/pack/packer/start/fzf"
-  },
   gruvbox = {
     loaded = true,
     path = "/home/anton/.local/share/nvim/site/pack/packer/start/gruvbox"
@@ -106,6 +102,18 @@ _G.packer_plugins = {
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/anton/.local/share/nvim/site/pack/packer/start/packer.nvim"
+  },
+  ["plenary.nvim"] = {
+    loaded = true,
+    path = "/home/anton/.local/share/nvim/site/pack/packer/start/plenary.nvim"
+  },
+  ["popup.nvim"] = {
+    loaded = true,
+    path = "/home/anton/.local/share/nvim/site/pack/packer/start/popup.nvim"
+  },
+  ["telescope.nvim"] = {
+    loaded = true,
+    path = "/home/anton/.local/share/nvim/site/pack/packer/start/telescope.nvim"
   },
   ultisnips = {
     loaded = true,

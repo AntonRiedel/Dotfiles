@@ -2,7 +2,7 @@
 File              : lsp.lua
 Author            : Anton Riedel <anton.riedel@tum.de>
 Date              : 26.04.2021
-Last Modified Date: 26.04.2021
+Last Modified Date: 30.04.2021
 Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 --]] --
 require'lspconfig'.pyls.setup {on_attach = require'completion'.on_attach}
