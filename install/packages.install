@@ -50,6 +50,7 @@ libxft-bgra-git
 linux
 linux-firmware
 linux-lts
+lua-format
 lynx
 m4
 make
