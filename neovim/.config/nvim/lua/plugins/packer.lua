@@ -2,9 +2,21 @@
 File              : packer.lua
 Author            : Anton Riedel <anton.riedel@tum.de>
 Date              : 25.04.2021
-Last Modified Date: 30.04.2021
+Last Modified Date: 09.05.2021
 Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 --]] --
+-- install packer if it is not installed already
+local install_path = vim.fn.stdpath('data') ..
+                         '/site/pack/packer/start/packer.nvim'
+
+if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
+    vim.fn.system({
+        'git', 'clone', 'https://github.com/wbthomason/packer.nvim',
+        install_path
+    })
+    vim.api.nvim_command 'packloadall'
+end
+
 return require('packer').startup(function()
 
     -- Packer can manage itself as an optional plugin

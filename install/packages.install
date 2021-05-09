@@ -34,6 +34,7 @@ gawk
 gcc
 gettext
 git
+git-latexdiff
 grep
 groff
 grub
@@ -43,7 +44,6 @@ htop
 i3lock
 imagemagick
 intel-ucode
-jupyter-metakernel
 jupyterlab
 libtool
 libxft-bgra-git
@@ -69,21 +69,19 @@ nextcloud-client
 nfs-utils
 nm-connection-editor
 notmuch
-opendoas
 openmp
 openssh
 opus-tools
 opusfile
 opustags
 pacman
-pacman-contrib
 pandoc-bin
 parallel
 pass
 patch
 pdfjs
+pipewire-pulse
 pkgconf
-pulseaudio
 pulsemixer
 python-adblock
 python-language-server
@@ -131,6 +129,7 @@ timeshift-bin
 tlp
 tmux
 tmuxp
+trackma
 tree-sitter
 ttf-hack
 ttf-joypixels

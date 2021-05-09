@@ -34,7 +34,7 @@ else
     alias pu='yay -Syu'
     #alias pu='yay -Syu && $EDITOR +PlugUpgrade +PlugUpdate +quita'
     alias pr='yay -Rnsc'
-    alias po='yay Rnsc $(yay -Qtdq) 2>/dev/null || echo "no orphanes found"'
+    alias po='yay -Qtdq | yay -Rns - 2>/dev/null || echo "No orphanes found'
     alias pc='yay Scc'
     alias pq='yay -Ss'
 fi
