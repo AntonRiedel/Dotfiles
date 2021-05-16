@@ -1,80 +1,71 @@
 !!XTerm Settings
-xterm*background:   #002b36
 xterm*faceName: Hack
-xterm*faceSize: 16
-xterm*font: xft:hack:size=16, \
-                          xft:Emojione Color:size=16
-                          xterm*renderFont: true
-                          xterm*visualBell: true
-                          xterm*vt100.locale: true
-                          xterm*savelines: 10000
-                          xterm*vt100.selectToClipboard: true
-                          xterm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
-                          xterm*utf8: true
-                          xterm*metaSendsEscape: true
-                          xterm*termName: xterm-256color
-                          xterm*scaleHeight: 1.1
-                          !!Make backspace behave
-                          xterm*vt100.backarrowKey: false
-                          xterm*ttyModes: erase ^?
-                          !!Set Shift Ctrl c for copy and Shift Ctrl v for paste
-                          *vt100.translations: #override \n\
-                              Ctrl Shift <Key>C: copy-selection(CLIPBOARD) \n\
-                              Ctrl Shift <Key>V: insert-selection(CLIPBOARD)
+xterm*faceSize: 22
+/* xterm*font: xft:Hack:size=22 */
+!,xft:Emojione Color:size=16
+xterm*renderFont: true
+xterm*visualBell: false
+xterm*vt100.locale: true
+xterm*savelines: 10000
+xterm*vt100.selectToClipboard: true
+xterm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
+xterm*utf8: true
+xterm*metaSendsEscape: true
+xterm*termName: xterm-256color
+xterm*scaleHeight: 1.1
+!!Make backspace behave
+xterm*vt100.backarrowKey: false
+xterm*ttyModes: erase ^?
+!!Set Shift Ctrl c for copy and Shift Ctrl v for paste
+*vt100.translations: #override \n\
+	Ctrl Shift <Key>C: copy-selection(CLIPBOARD) \n\
+	Ctrl Shift <Key>V: insert-selection(CLIPBOARD)
 
-!! Color settings (terminal.sexy)
-    ! special
-    *.foreground:   #93a1a1
-    *.background:   #002b36
-    *.cursorColor:  #93a1a1
+!gruvbox
+! hard contrast: *background: #1d2021
+*background: #282828
+! soft contrast: *background: #32302f
+*foreground: #ebdbb2
+! Black + DarkGrey
+*color0:  #282828
+*color8:  #928374
+! DarkRed + Red
+*color1:  #cc241d
+*color9:  #fb4934
+! DarkGreen + Green
+*color2:  #98971a
+*color10: #b8bb26
+! DarkYellow + Yellow
+*color3:  #d79921
+*color11: #fabd2f
+! DarkBlue + Blue
+*color4:  #458588
+*color12: #83a598
+! DarkMagenta + Magenta
+*color5:  #b16286
+*color13: #d3869b
+! DarkCyan + Cyan
+*color6:  #689d6a
+*color14: #8ec07c
+! LightGrey + White
+*color7:  #a89984
+*color15: #ebdbb2
 
-    ! black
-    *.color0:       #002b36
-    *.color8:       #657b83
-
-    ! red
-    *.color1:       #dc322f
-    *.color9:       #dc322f
-
-    ! green
-    *.color2:       #859900
-    *.color10:      #859900
-
-    ! yellow
-    *.color3:       #b58900
-    *.color11:      #b58900
-
-    ! blue
-    *.color4:       #268bd2
-    *.color12:      #268bd2
-
-    ! magenta
-    *.color5:       #6c71c4
-    *.color13:      #6c71c4
-
-    ! cyan
-    *.color6:       #2aa198
-    *.color14:      #2aa198
-
-    ! white
-    *.color7:       #93a1a1
-    *.color15:      #fdf6e3
-
-    !!Urxvt Settings copy/paste Ctrl+Alt+c/v
-    !for transperancy
-    !urxvt.depth: 32
-    !urxvt.background: [80]#002b36
-    !!Misc Settings
-    !urxvt.font: xft:hack:size=16, \
-                               !            xft:EmojiOne:size16
-                               !urxvt.loginShell: false
-                               !urxvt.visualBell: true
-                               !urxvt.scrollBar: false
-                               !!Extensions
-                               !urxvt.perl-ext-common: default,resize-font,keyboard-select
-                               !!keyboard-select:
-                               !urxvt.keysym.M-Escape: perl:keyboard-select:activate
-                               !urxvt.keyboard-select.clipboard: true
-                               !!resize-font
-                               !urxvt.resize-font.smaller: C-Down
-                               !urxvt.resize-font.bigger: C-Up
+!!Urxvt Settings copy/paste Ctrl+Alt+c/v
+!for transperancy
+!urxvt.depth: 32
+!urxvt.background: [80]#002b36
+!!Misc Settings
+!urxvt.font: xft:hack:size=16, \
+!            xft:EmojiOne:size16
+!urxvt.loginShell: false
+!urxvt.visualBell: true
+!urxvt.scrollBar: false
+!!Extensions
+!urxvt.perl-ext-common: default,resize-font,keyboard-select
+!!keyboard-select:
+!urxvt.keysym.M-Escape: perl:keyboard-select:activate
+!urxvt.keyboard-select.clipboard: true
+!!resize-font
+!urxvt.resize-font.smaller: C-Down
+!urxvt.resize-font.bigger: C-Up

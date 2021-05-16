@@ -2,7 +2,7 @@
 File              : settings.lua
 Author            : Anton Riedel <anton.riedel@tum.de>
 Date              : 25.04.2021
-Last Modified Date: 30.04.2021
+Last Modified Date: 09.05.2021
 Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 --]] --
 -- external programs
@@ -21,6 +21,7 @@ vim.g.tex_flavor = 'tex'
 
 -- misc
 vim.o.shell = '/usr/bin/bash'
+vim.o.hidden = true
 vim.o.tabstop = 4
 vim.wo.list = true
 vim.o.clipboard = 'unnamedplus'

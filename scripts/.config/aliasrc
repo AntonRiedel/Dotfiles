@@ -2,7 +2,7 @@
 # File              : aliasrc
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 24.03.2020
-# Last Modified Date: 16.04.2021
+# Last Modified Date: 16.05.2021
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 ##aliases
@@ -24,19 +24,19 @@ alias ga='git add'
 alias gc='git commit'
 alias gch='git checkout'
 alias gb='git branch'
-if [ "$(cat /etc/hostname 2>/dev/null)" = "sun" ]; then
-    alias pu='sudo apt update && sudo apt upgrade && sudo apt autoremove'
-    alias pi='sudo apt install'
-    alias pr='sudo apt purge'
-    alias pq='apt search'
-else
-    alias pi='yay -S'
-    alias pu='yay -Syu'
-    #alias pu='yay -Syu && $EDITOR +PlugUpgrade +PlugUpdate +quita'
-    alias pr='yay -Rnsc'
-    alias po='yay -Qtdq | yay -Rns - 2>/dev/null || echo "No orphanes found'
-    alias pc='yay Scc'
-    alias pq='yay -Ss'
+if grep -q "Arch Linux" /etc/os-release; then
+	alias pi='yay -S'
+	alias pu='yay -Syu'
+	alias pr='yay -Rnsc'
+	alias po='yay -Qtdq | yay -Rns -'
+	alias pc='yay Scc'
+	alias pq='yay -Ss'
+fi
+if grep -q "Debian\|Ubuntu" /etc/os-release; then
+	alias pu='sudo apt update && sudo apt upgrade && sudo apt autoremove'
+	alias pi='sudo apt install'
+	alias pr='sudo apt purge'
+	alias pq='apt search'
 fi
 alias nmu='nmcli con up --ask'
 alias nmd='nmcli con down'
@@ -45,50 +45,50 @@ alias screen='xinput --map-to-output "Wacom ISDv4 E6 Pen Pen (0)" LVDS1 --map-to
 ##custom shell functions (a.k.a. fun with fzf)
 #search and edit a configuration file
 ce() {
-    $EDITOR "$(find $HOME/Dotfiles -type f -not -path "*/old/*" | fzf --prompt="Edit config file: ")"
-    return 0
+	$EDITOR "$(find $HOME/Dotfiles -type f -not -path "*/old/*" | fzf --prompt="Edit config file: ")"
+	return 0
 }
 #connect to known host via ssh
 sshc() {
-    # choose a host from all known hosts
-    Host="$(grep -r "^Host " $HOME/.ssh/ | grep -v "git\|\*" | awk '{print $2}' | fzf --prompt="Connect to host: ")"
+	# choose a host from all known hosts
+	Host="$(grep -r "^Host " $HOME/.ssh/config.d | grep -v "git\|\*" | awk '{print $2}' | fzf --prompt="Connect to host: ")"
 
-    if grep -q "sun" <<<"$Host"; then
-        #key with passphrase; hence we need sshpass -P
-        export SSHPASS="$(pass sun/key)"
-        sshpass -P "passphrase" -e ssh "$Host"
-    elif grep -q "cipgate\|t30" <<<"$Host"; then
-        #need password for cipgate t30gate
-        export SSHPASS="$(pass email/tum)"
-        sshpass -e ssh "$Host"
-    else
-        #all other
-        ssh "$Host"
-    fi
-    export SSHPASS=""
+	if grep -q "sun" <<<"$Host"; then
+		#key with passphrase; hence we need sshpass -P
+		export SSHPASS="$(pass sun/key)"
+		sshpass -P "passphrase" -e ssh "$Host"
+	elif grep -q "cipgate\|jump\|t30" <<<"$Host"; then
+		#need password for cipgate and t30gate
+		export SSHPASS="$(pass email/tum)"
+		sshpass -e ssh "$Host"
+	else
+		#all other
+		ssh "$Host"
+	fi
+	export SSHPASS=""
 
-    return 0
+	return 0
 }
 #search and enter a subdirectory in your home directory
 fd() {
-    cd "$(find $HOME -type d -not -path "*/old/*" | fzf --prompt="Jump to Dir: ")"
-    pwd
-    ls
-    return 0
+	cd "$(find $HOME -type d -not -path "*/old/*" | fzf --prompt="Jump to Dir: ")"
+	pwd
+	ls
+	return 0
 }
 #search and open a file in your home directory
 ff() {
-    xdg-open "$(find $HOME -type f -not -path "*/old/*" | fzf --prompt="Open file: ")"
-    return 0
+	xdg-open "$(find $HOME -type f -not -path "*/old/*" | fzf --prompt="Open file: ")"
+	return 0
 }
 #search for a process and kill it
 kp() {
-    kill -s SIGKILL "$(ps aux | fzf --prompt="Job to kill: " | awk '{ print $2 }')" 2>/dev/null
-    return 0
+	kill -s SIGKILL "$(ps aux | fzf --prompt="Job to kill: " | awk '{ print $2 }')" 2>/dev/null
+	return 0
 }
 #copy a file in the current directory to clipboard
 ctc() {
-    File="$(find . -maxdepth 1 -type f | fzf --prompt="Copy file to clipboard: ")"
-    xclip -selection clipboard $File
-    return 0
+	File="$(find . -maxdepth 1 -type f | fzf --prompt="Copy file to clipboard: ")"
+	xclip -selection clipboard $File
+	return 0
 }

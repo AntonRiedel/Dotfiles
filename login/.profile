@@ -2,7 +2,7 @@
 # File              : .profile
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 24.03.2020
-# Last Modified Date: 20.04.2021
+# Last Modified Date: 11.05.2021
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 #add $HOME/.local/bin to PATH as well as the path to the fzf binary; convinient on host where I cannot install fzf systemwide

@@ -1,17 +1,17 @@
-#!/bin/sh
+!/bin/sh
 # File              : .xinitrc
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 24.03.2020
-# Last Modified Date: 09.03.2021
+# Last Modified Date: 12.05.2021
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 #set keyboard layout
 if [ "$(hostname)" = "Mars" ]; then
-    setxkbmap gb
+	setxkbmap gb
 elif [ "$(hostname)" = "Moon" ]; then
-    setxkbmap de
+	setxkbmap de
 else
-    setxkbmap us
+	setxkbmap us
 fi
 
 #capslock: useless key in a great location; let's make it great
@@ -55,4 +55,5 @@ unclutter --timeout 2 --jitter 100 --ignore-scrolling &
 bar.sh &
 
 #start Window Manager
-exec dwm
+exec awesome
+# exec dwm
