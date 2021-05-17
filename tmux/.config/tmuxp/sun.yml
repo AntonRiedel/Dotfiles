@@ -5,18 +5,21 @@ windows:
       panes:
           - shell_command:
               htop
-    - window_name: zfs
-      panes:
-          - shell_command:
-              watch zpool status
     - window_name: temp
       panes:
           - shell_command:
               watch -td 'sensors | grep "C\|fan"'
-    - window_name: disk
+    - window_name: horse
+      start_directory: $HOME/horse
+      shell_command_before: pipenv shell
       panes:
           - shell_command:
-              watch df -h
+              ping -c1 horse
+    - window_name: vagrant
+      start_directory: $HOME/vagrant
+      panes:
+          - shell_command:
+              ls
     - window_name: dev
       panes:
           - shell_command:
