@@ -14,6 +14,7 @@ bison
 boost
 btrfs-progs
 cgdb
+cifs-utils
 clang
 cmake
 cmus
@@ -21,6 +22,7 @@ ctags
 dashbinsh
 dosfstools
 efibootmgr
+entr
 fakeroot
 file
 findutils
@@ -44,7 +46,7 @@ htop
 i3lock
 imagemagick
 intel-ucode
-jupyterlab
+jupyter-notebook
 libtool
 libxft-bgra-git
 linux
@@ -55,6 +57,7 @@ lynx
 m4
 make
 man-db
+moreutils
 mpv
 mtr
 mutt-wizard-git
@@ -135,7 +138,6 @@ ttf-hack
 ttf-joypixels
 unclutter
 unzip
-vidir
 vim
 vpnc
 w3m
@@ -150,6 +152,7 @@ xorg-xinit
 xorg-xkill
 xorg-xsetroot
 xournalpp
+xterm
 xwallpaper
 yapf
 yay-bin

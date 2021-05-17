@@ -3,7 +3,7 @@
 # File              : config.py
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 12.04.2020
-# Last Modified Date: 16.04.2020
+# Last Modified Date: 17.05.2021
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 #import libraries
@@ -24,16 +24,16 @@ keys = [
     Key([mod], "h", lazy.layout.decrease_ratio()),
 
     #move windows in the stack upward/downward
-    Key([mod, "shift"], "l", lazy.layout.decrease_nmaster()),
-    Key([mod, "shift"], "h", lazy.layout.increase_nmaster()),
+    # Key([mod, "shift"], "l", lazy.layout.decrease_nmaster()),
+    # Key([mod, "shift"], "h", lazy.layout.increase_nmaster()),
 
     #shift focus in the stack upward/downwar
     Key([mod], "j", lazy.layout.down()),
     Key([mod], "k", lazy.layout.up()),
 
     #shuffel windows in the stack upward/downward
-    Key([mod, "shift"], "j", lazy.layout.shuffle_up()),
-    Key([mod, "shift"], "k", lazy.layout.shuffle_down()),
+    # Key([mod, "shift"], "j", lazy.layout.shuffle_up()),
+    # Key([mod, "shift"], "k", lazy.layout.shuffle_down()),
 
     #switch focus to next/previous monitor
     Key([mod], "period", lazy.next_screen()),
@@ -52,8 +52,7 @@ keys = [
     Key([mod, "shift"], "c", lazy.window.kill()),
 
     #restart qtile
-    Key([mod, "control"], "r", lazy.restart())
-    #crashes
+    Key([mod], "Escape", lazy.restart())
 ]
 
 #NOTE: keybindings for programs are handled by sxhkd

@@ -55,5 +55,4 @@ unclutter --timeout 2 --jitter 100 --ignore-scrolling &
 bar.sh &
 
 #start Window Manager
-exec awesome
-# exec dwm
+exec dwm
