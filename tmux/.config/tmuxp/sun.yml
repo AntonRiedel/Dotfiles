@@ -1,32 +1,23 @@
 session_name: default
+start_directory: $HOME
 windows:
     - window_name: sys
-      shell_command_before:
-          - cd $HOME
       panes:
           - shell_command:
               htop
     - window_name: zfs
-      shell_command_before:
-          - cd $HOME
       panes:
           - shell_command:
               watch zpool status
     - window_name: temp
-      shell_command_before:
-          - cd $HOME
       panes:
           - shell_command:
               watch -td 'sensors | grep "C\|fan"'
     - window_name: disk
-      shell_command_before:
-          - cd $HOME
       panes:
           - shell_command:
               watch df -h
     - window_name: dev
-      shell_command_before:
-          - cd $HOME
       panes:
           - shell_command:
               echo "new session, get to work!"
