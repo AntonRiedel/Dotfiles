@@ -2,7 +2,7 @@
 # File              : deploy.sh
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 25.03.2020
-# Last Modified Date: 09.05.2021
+# Last Modified Date: 17.05.2021
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 #include dowloading languageserver binaries
@@ -73,12 +73,13 @@ Deploy_config_remote() {
 	mkdir -p $HOME/.local/bin $HOME/.local/share/share $HOME/.config
 
 	#create symlinks (stow and zsh may not be installed)
-	ln -sf $1/bash/.bashrc $HOME/.bashrc
-	ln -sf $1/bash/.bash_profile $HOME/.bash_profile
-	ln -sf $1/bash/.config/inputrc $HOME/.config/inputrc
-	ln -sf $1/login/.profile $HOME/.profile
-	ln -sf $1/scripts/.config/aliasrc $HOME/.config/aliasrc
-	ln -sf $1/tmux/.tmux.conf $HOME/.tmux.conf
+	ln -sf $DotDir/bash/.bashrc $HOME/.bashrc
+	ln -sf $DotDir/bash/.bash_profile $HOME/.bash_profile
+	ln -sf $DotDir/bash/.config/inputrc $HOME/.config/inputrc
+	ln -sf $DotDir/login/.profile $HOME/.profile
+	ln -sf $DotDir/scripts/.config/aliasrc $HOME/.config/aliasrc
+	ln -sf $DotDir/tmux/.tmux.conf $HOME/.tmux.conf
+	ln -sf $DotDir/tmux/.config/tmuxp $HOME/.tmuxp
 
 	return 0
 }
