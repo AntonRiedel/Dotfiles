@@ -15,7 +15,7 @@ You can find configuration files for
 - zsh (shell)
 - bash (shell)
 - neovim (editor)
-- tmux (screen multiplexer)
+- tmux (terminal multiplexer)
 - sxhkd (hotkey daemon)
 - htop (system monitor)
 - qutebrowser (minimal vim-like web browser)
@@ -23,12 +23,13 @@ You can find configuration files for
 
 as well as some custom scripts under `scripts`.
 
-These Dotfiles are meant to be deployed with [GNU Stow](https://stevenrbaker.com/tech/managing-dotfiles-with-gnu-stow.html).
+These Dotfiles are meant to be deployed with [GNU Stow](https://www.gnu.org/software/stow/).
 There is a corresponding script for deployment under `install`.
 
 Under `old` you can find configuration files for programs I used to use such as:
 
-- qtile(->dwm)
+- awesome (->dwm)
+- qtile (->dwm)
 - bspwm (-> dwm)
 - i3 (->dwm)
 - i3bar (->custom script)
