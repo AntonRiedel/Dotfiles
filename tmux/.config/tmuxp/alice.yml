@@ -1,0 +1,30 @@
+session_name: AliPhysics
+shell_command_before:
+  - cd $ALICE
+windows:
+  - window_name: htop
+    panes:
+      - shell_command:
+        - htop
+  - window_name: dev
+    focus: true
+    panes:
+      - shell_command:
+        - alienv enter AliPhysics/latest
+        - source ~/.bash_profile
+        - cd $ALIC/AliPhysics
+  - window_name: compiling
+    panes:
+      - shell_command:
+        - sleep 1
+        - alienv enter AliPhysics/latest
+        - source ~/.bash_profile
+        - cd $ALICE/sw/BUILD/AliPhysics-latest-master/AliPhysics
+        - find $ALICE/AliPhysics/PWG/FLOW | entr -c make install -j16
+  - window_name: steering
+    panes:
+      - shell_command:
+        - sleep 2
+        - alienv enter AliPhysics/latest
+        - source ~/.bash_profile
+        - cd $ALICE_ANALYSIS
