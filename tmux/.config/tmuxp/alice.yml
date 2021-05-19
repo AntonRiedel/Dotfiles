@@ -20,7 +20,7 @@ windows:
         - alienv enter AliPhysics/latest
         - source ~/.bash_profile
         - cd $ALICE/sw/BUILD/AliPhysics-latest-master/AliPhysics
-        - find $ALICE/AliPhysics/PWG/FLOW | entr -c make install -j16
+        - find $ALICE/AliPhysics/PWG/FLOW | entr -c make install -j$(nproc)
   - window_name: steering
     panes:
       - shell_command:
