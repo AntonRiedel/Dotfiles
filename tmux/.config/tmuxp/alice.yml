@@ -12,7 +12,7 @@ windows:
       - shell_command:
         - alienv enter AliPhysics/latest
         - source ~/.bash_profile
-        - cd $ALIC/AliPhysics
+        - cd $ALICE/AliPhysics
   - window_name: compiling
     panes:
       - shell_command:
