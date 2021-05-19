@@ -2,7 +2,7 @@
 # File              : deploy.sh
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 25.03.2020
-# Last Modified Date: 17.05.2021
+# Last Modified Date: 19.05.2021
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 #include dowloading languageserver binaries
@@ -27,8 +27,8 @@ Install_packages() {
 
 	echo "Install all packages given by packages.install (this includes AUR packages)"
 
-	#update base system first, then install the packages
 	[ -z $(which yay) ] && echo "yay is not installed. Aborting..." && return 1
+
 	yay -Syu --noconfirm --needed - <packages.install
 
 	return 0
@@ -47,10 +47,9 @@ Install_packages() {
 Deploy_config_all() {
 	#deploy all config files with stow
 
-	[ -z $(which stow) ] && echo "stow is not installed. Aborting ..." && return 1
-
-	#clean $HOME
 	echo "Install all config files to $HOME"
+
+	[ -z $(which stow) ] && echo "stow is not installed. Aborting ..." && return 1
 
 	#make directories for scirpts and config files
 	mkdir -p $HOME/.local/{bin,share} $HOME/.config
@@ -64,15 +63,10 @@ Deploy_config_remote() {
 
 	echo "Install selected config files to $HOME"
 
-	echo "WARNING! All hidden files in $HOME will be deleted"
-
-	#clean $HOME
-	# rm -rf $HOME/.*[!.]
-
 	#make directories for scirpts and config files
-	mkdir -p $HOME/.local/bin $HOME/.local/share/share $HOME/.config
+	mkdir -p $HOME/.local/bin $HOME/.local/share $HOME/.config
 
-	#create symlinks (stow and zsh may not be installed)
+	#create symlinks
 	ln -sf $DotDir/bash/.bashrc $HOME/.bashrc
 	ln -sf $DotDir/bash/.bash_profile $HOME/.bash_profile
 	ln -sf $DotDir/bash/.config/inputrc $HOME/.config/inputrc
@@ -80,12 +74,13 @@ Deploy_config_remote() {
 	ln -sf $DotDir/scripts/.config/aliasrc $HOME/.config/aliasrc
 	ln -sf $DotDir/tmux/.tmux.conf $HOME/.tmux.conf
 	ln -sf $DotDir/tmux/.config/tmuxp $HOME/.tmuxp
+	ln -sf $DotDir/git/.config/git $HOME/.config/git
 
 	return 0
 }
 
 Install_suckless() {
-	#download source for suckless utilities and install them
+	#download custom suckless utilities and install them
 
 	#make a directory for personal repos
 	echo "Cleaning out $HOME/repos"
