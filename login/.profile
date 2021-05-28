@@ -2,10 +2,10 @@
 # File              : .profile
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 24.03.2020
-# Last Modified Date: 16.05.2021
+# Last Modified Date: 22.05.2021
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
-#add $HOME/.local/bin to PATH as well as the path to the fzf binary; convinient on host where I cannot install fzf systemwide
+#add $HOME/.local/bin to PATH
 export PATH="${HOME}/.local/bin:${PATH}"
 
 #set default applications
@@ -13,8 +13,8 @@ export TERMINAL="alacritty"
 #export TERMINAL="st"
 [ "$(which nvim)" ] && export EDITOR="nvim" || export EDITOR="vim"
 export VISUAL="${EDITOR}"
-export BROWSER="firefox-nightly"
-export BROWSER2="qutebrowser"
+export BROWSER="qutebrowser"
+export BROWSER2="firefox-nightly"
 export READER="zathura"
 export READER2="qpdfview"
 #make alacritty work on X200
@@ -37,7 +37,7 @@ export LESSHISTFILE="-"
 export CARGO_HOME="${XDG_DATA_HOME}/cargo"
 export RUSTUP_HOME="${XDG_DATA_HOME}/rustup"
 
-#options for fzf
+#default options for fzf
 export FZF_DEFAULT_OPTS="--reverse --height=40%"
 
 #set default wallpaper

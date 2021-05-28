@@ -2,7 +2,7 @@
 # File              : aliasrc
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 24.03.2020
-# Last Modified Date: 16.05.2021
+# Last Modified Date: 22.05.2021
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 ##aliases
@@ -62,7 +62,7 @@ sshc() {
 		export SSHPASS="$(pass email/tum)"
 		sshpass -e ssh "$Host"
 	else
-		#all other
+		#all others normally do not need a password
 		ssh "$Host"
 	fi
 	export SSHPASS=""
@@ -86,7 +86,7 @@ kp() {
 	kill -s SIGKILL "$(ps aux | fzf --prompt="Job to kill: " | awk '{ print $2 }')" 2>/dev/null
 	return 0
 }
-#copy a file in the current directory to clipboard
+#copy a content of file in the current directory to clipboard
 ctc() {
 	File="$(find . -maxdepth 1 -type f | fzf --prompt="Copy file to clipboard: ")"
 	xclip -selection clipboard $File
