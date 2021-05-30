@@ -1,5 +1,6 @@
 #additional options for bash shell
 TAB:menu-complete
+C-l:clear-screen
 set menu-complete-display-prefix On
 set colored-stats On
 set completion-ignore-case On
