@@ -2,16 +2,20 @@
 File              : lsp.lua
 Author            : Anton Riedel <anton.riedel@tum.de>
 Date              : 26.04.2021
-Last Modified Date: 30.04.2021
+Last Modified Date: 30.05.2021
 Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 --]] --
 require'lspconfig'.pyls.setup {on_attach = require'completion'.on_attach}
 require'lspconfig'.clangd.setup {on_attach = require'completion'.on_attach}
 require'lspconfig'.bashls.setup {on_attach = require'completion'.on_attach}
 require'lspconfig'.texlab.setup {on_attach = require'completion'.on_attach}
+require'lspconfig'.rust_analyzer.setup {
+    on_attach = require'completion'.on_attach
+}
+-- require'lspconfig'.sumneko_lua.setup {on_attach = require'completion'.on_attach}
 
 require'nvim-treesitter.configs'.setup {
-    ensure_installed = {"bash", "c", "cpp", "python", "lua"},
+    ensure_installed = {"bash", "c", "cpp", "python", "rust", "lua"},
     highlight = {enable = true}
 }
 
