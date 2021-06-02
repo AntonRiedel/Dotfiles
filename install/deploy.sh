@@ -2,22 +2,22 @@
 # File              : deploy.sh
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 25.03.2020
-# Last Modified Date: 19.05.2021
+# Last Modified Date: 02.06.2021
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 #include dowloading languageserver binaries
 #https://github.com/latex-lsp/texlab/releases/download/v2.2.0/texlab-x86_64-linux.tar.gz
 
-Install_yay() {
-	#download and install yay-bin
+Install_AURHelper() {
+	#download and install ${AURHelper}-bin
 
-	echo "Installing yay-bin as a wrapper for pacman"
+	echo "Installing ${AURHelper}-bin as a wrapper for pacman"
 
-	git clone https://aur.archlinux.org/yay-bin.git
-	cd yay-bin
+	git clone "https://aur.archlinux.org/${AURHelper}-bin.git"
+	cd "${AURHelper}-bin"
 	makepkg -si
 	cd ..
-	rm -rf yay-bin
+	rm -rf "${AURHelper}-bin"
 
 	return 0
 }
@@ -27,11 +27,17 @@ Install_packages() {
 
 	echo "Install all packages given by packages.install (this includes AUR packages)"
 
-	[ -z $(which yay) ] && echo "yay is not installed. Aborting..." && return 1
+	[ -z $(which $AURHelper) ] && echo "$AURHelper is not installed. Aborting..." && return 1
 
-	yay -Syu --noconfirm --needed - <packages.install
+	$AURHelper -Syu --noconfirm --needed - <packages.install
 
 	return 0
+}
+
+Get_Packages() {
+	# generate file of all installed packages
+	echo "Get all explicitly installed packages and write them to packages.install"
+	$AURHelper -Qeq >packages.install
 }
 
 #Install_flatpaks() {
@@ -123,6 +129,7 @@ Info() {
 Supply one or more of the following options:
 -a Install everything
 -p Install packages specified py package.install
+-g Generate package.install
 -d Deploy all config files
 -r Deploy selected config files for remote servers
 -s Install suckless utilities"
@@ -133,13 +140,16 @@ EOF
 [ $# -eq 0 ] && Info
 
 #set root of dotfiles directory
-DotDir=$(dirname $PWD)
+DotDir="$(dirname $PWD)"
 
-while getopts "arpfds" opt; do
+#set aur helper to use
+AURHelper="paru"
+
+while getopts "apgdrs" opt; do
 	case $opt in
 	a)
 		echo "Install everything"
-		Install_yay
+		Install_AURHelper
 		Install_packages
 		Install_suckless
 		Deploy_config_all
@@ -147,6 +157,10 @@ while getopts "arpfds" opt; do
 	p)
 		echo "Install packages"
 		Install_packages
+		;;
+	g)
+		echo "Get all installed packages"
+		Get_Packages
 		;;
 	d)
 		echo "Deploy all config files"

@@ -4,6 +4,7 @@ alacritty
 android-tools
 ansible
 arandr
+auto-cpufreq
 autoconf
 automake
 base
@@ -47,6 +48,7 @@ i3lock
 imagemagick
 intel-ucode
 jupyter-notebook
+jupyterlab
 libtool
 libxft-bgra-git
 linux
@@ -60,7 +62,7 @@ man-db
 moreutils
 mpv
 mtr
-mutt-wizard-git
+mutt-wizard
 neofetch
 neomutt
 neovim
@@ -80,6 +82,7 @@ opustags
 pacman
 pandoc-bin
 parallel
+paru-bin
 pass
 patch
 pdfjs
@@ -89,7 +92,6 @@ pulsemixer
 python-adblock
 python-language-server
 python-matplotlib
-python-numba
 python-numpy
 python-pipenv
 python-pynvim
@@ -102,10 +104,12 @@ qutebrowser
 rdesktop
 root
 rsync
+rust-analyzer
 rustup
 scrcpy
 sed
 shfmt
+sshfs
 sshpass
 stow
 sudo
@@ -152,10 +156,8 @@ xorg-xinit
 xorg-xkill
 xorg-xsetroot
 xournalpp
-xterm
 xwallpaper
 yapf
-yay-bin
 youtube-dl
 zathura
 zathura-pdf-poppler

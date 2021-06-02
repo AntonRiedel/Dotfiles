@@ -2,7 +2,7 @@
 # File              : aliasrc
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 24.03.2020
-# Last Modified Date: 22.05.2021
+# Last Modified Date: 02.06.2021
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 ##aliases
@@ -25,14 +25,19 @@ alias gc='git commit'
 alias gch='git checkout'
 alias gb='git branch'
 if grep -q "Arch Linux" /etc/os-release; then
-	alias pi='yay -S'
-	alias pu='yay -Syu'
-	alias pr='yay -Rnsc'
-	alias po='yay -Qtdq | yay -Rns -'
-	alias pc='yay Scc'
-	alias pq='yay -Ss'
-fi
-if grep -q "Debian\|Ubuntu" /etc/os-release; then
+	alias pi='paru -S'
+	alias pu='paru -Syu'
+	alias pr='paru -Rnsc'
+	alias po='paru -Qtdq | paru -Rns -'
+	alias pc='paru Scc'
+	alias pq='paru -Ss'
+	# alias pi='sudo pacman -S'
+	# alias pu='sudo pacman -Syu'
+	# alias pr='sudo pacman -rnsc'
+	# alias po='sudo pacman -qtdq | sudo pacman -rns -'
+	# alias pc='pacman Scc'
+	# alias pq='pacman -Ss'
+elif grep -q "Debian\|ubuntu" /etc/os-release; then
 	alias pu='sudo apt update && sudo apt upgrade && sudo apt autoremove'
 	alias pi='sudo apt install'
 	alias pr='sudo apt purge'
@@ -40,7 +45,7 @@ if grep -q "Debian\|Ubuntu" /etc/os-release; then
 fi
 alias nmu='nmcli con up --ask'
 alias nmd='nmcli con down'
-alias screen='xinput --map-to-output "Wacom ISDv4 E6 Pen Pen (0)" LVDS1 --map-to-output "Wacom ISDv4 E6 Pen Eraser (0)" LVDS1'
+alias screen='xinput --map-to-output "wacom isdv4 e6 pen pen (0)" lvds1 --map-to-output "wacom isdv4 e6 pen eraser (0)" lvds1'
 
 ##custom shell functions (a.k.a. fun with fzf)
 #search and edit a configuration file
