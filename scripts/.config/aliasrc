@@ -2,7 +2,7 @@
 # File              : aliasrc
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 24.03.2020
-# Last Modified Date: 02.06.2021
+# Last Modified Date: 04.06.2021
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 ##aliases
@@ -45,7 +45,7 @@ elif grep -q "Debian\|ubuntu" /etc/os-release; then
 fi
 alias nmu='nmcli con up --ask'
 alias nmd='nmcli con down'
-alias screen='xinput --map-to-output "wacom isdv4 e6 pen pen (0)" lvds1 --map-to-output "wacom isdv4 e6 pen eraser (0)" lvds1'
+alias screen='xinput --map-to-output "Wacom ISDv4 E6 Pen Pen (0)" LVDS1 --map-to-output "Wacom ISDv4 e6 Pen Eraser (0)" LVDS1'
 
 ##custom shell functions (a.k.a. fun with fzf)
 #search and edit a configuration file
