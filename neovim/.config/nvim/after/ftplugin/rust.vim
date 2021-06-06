@@ -7,11 +7,11 @@
 "settings for cpp files
 
 "set tabwidth
-setlocal tabstop=2
-setlocal shiftwidth=2
+setlocal tabstop=4
+setlocal shiftwidth=4
 
 "set make program
-setlocal makeprg=cargo\ build\ &&\ cargo\ run
+setlocal makeprg=cargo\ run
 
 "set format program
 setlocal formatprg=rustfmt
