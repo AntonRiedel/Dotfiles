@@ -79,13 +79,13 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/anton/.local/share/nvim/site/pack/packer/start/completion-nvim"
   },
-  gruvbox = {
-    loaded = true,
-    path = "/home/anton/.local/share/nvim/site/pack/packer/start/gruvbox"
-  },
   ["lightline.vim"] = {
     loaded = true,
     path = "/home/anton/.local/share/nvim/site/pack/packer/start/lightline.vim"
+  },
+  ["moonlight.nvim"] = {
+    loaded = true,
+    path = "/home/anton/.local/share/nvim/site/pack/packer/start/moonlight.nvim"
   },
   neoformat = {
     loaded = true,

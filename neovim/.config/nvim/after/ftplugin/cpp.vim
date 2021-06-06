@@ -1,10 +1,13 @@
 " File              : cpp.vim
 " Author            : Anton Riedel <anton.riedel@tum.de>
 " Date              : 16.09.2020
-" Last Modified Date: 09.04.2021
+" Last Modified Date: 06.06.2021
 " Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 "settings for cpp files
+
+"set comment string for commentary.vim
+setlocal commentstring=//\ %s
 
 "set tabwidth
 setlocal tabstop=2
@@ -25,7 +28,7 @@ setlocal equalprg=clang-format
 " autoformat files on save
 augroup Format
     autocmd!
-    autocmd BufWritePre * AddHeader
+    autocmd BufWritePre * undojoin | AddHeader
     autocmd BufWritePre * undojoin | Neoformat
     autocmd BufWritePost * edit
 augroup END

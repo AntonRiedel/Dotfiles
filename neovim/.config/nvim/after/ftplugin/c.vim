@@ -1,7 +1,7 @@
 " File              : c.vim
 " Author            : Anton Riedel <anton.riedel@tum.de>
 " Date              : 11.11.2020
-" Last Modified Date: 04.12.2020
+" Last Modified Date: 06.06.2021
 " Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 "settings for c files
@@ -10,6 +10,9 @@
 if (&ft != 'c')
     finish
 endif
+
+"set comment string for commentary.vim
+setlocal commentstring=//\ %s
 
 "set tabwidth
 setlocal tabstop=2

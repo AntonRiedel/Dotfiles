@@ -2,7 +2,7 @@
 File              : packer.lua
 Author            : Anton Riedel <anton.riedel@tum.de>
 Date              : 25.04.2021
-Last Modified Date: 09.05.2021
+Last Modified Date: 05.06.2021
 Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 --]] --
 -- install packer if it is not installed already
@@ -23,7 +23,8 @@ return require('packer').startup(function()
     use {'wbthomason/packer.nvim'}
 
     -- quality of life
-    use {'gruvbox-community/gruvbox'}
+    -- use {'gruvbox-community/gruvbox'}
+    use 'shaunsingh/moonlight.nvim'
     use {'tpope/vim-surround'}
     use {'tpope/vim-commentary'}
     use {'tpope/vim-repeat'}

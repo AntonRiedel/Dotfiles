@@ -1,9 +1,10 @@
-session_name: default
+session_name: thesis
 start_directory: $HOME/nextcloud/master_thesis/thesis
 windows:
     - window_name: dev
     - window_name: tex
+      panes:
+        - shell_command: $EDITOR main.tex
     - window_name: texComp
       panes:
-          - shell_command:
-              latexmk -pvc
+        - shell_command: latexmk -pvc
