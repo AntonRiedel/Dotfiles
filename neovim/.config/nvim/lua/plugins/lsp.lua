@@ -48,6 +48,7 @@ require'nvim-treesitter.configs'.setup {
 
 -- setup completion
 vim.o.completeopt = "menuone,noinsert"
+vim.o.inccommand = "nosplit"
 require'compe'.setup {
     enabled = true,
     autocomplete = true,

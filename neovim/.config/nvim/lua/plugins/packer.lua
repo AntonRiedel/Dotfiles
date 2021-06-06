@@ -30,6 +30,7 @@ return require('packer').startup(function()
     use {'vimwiki/vimwiki'}
     use {'jiangmiao/auto-pairs'}
     use {'itchyny/lightline.vim'}
+    -- use {'lukas-reineke/indent-blankline.nvim', branch = "lua"}
     -- use {'junegunn/fzf'}
 
     -- development
