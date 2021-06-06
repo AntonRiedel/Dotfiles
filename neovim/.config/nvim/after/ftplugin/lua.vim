@@ -1,7 +1,7 @@
 " File              : lua.vim
 " Author            : Anton Riedel <anton.riedel@tum.de>
 " Date              : 16.09.2020
-" Last Modified Date: 24.04.2021
+" Last Modified Date: 06.06.2021
 " Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 "settings for lua files

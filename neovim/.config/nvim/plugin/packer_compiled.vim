@@ -75,10 +75,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/anton/.local/share/nvim/site/pack/packer/start/auto-pairs"
   },
-  ["completion-nvim"] = {
-    loaded = true,
-    path = "/home/anton/.local/share/nvim/site/pack/packer/start/completion-nvim"
-  },
   ["lightline.vim"] = {
     loaded = true,
     path = "/home/anton/.local/share/nvim/site/pack/packer/start/lightline.vim"
@@ -90,6 +86,10 @@ _G.packer_plugins = {
   neoformat = {
     loaded = true,
     path = "/home/anton/.local/share/nvim/site/pack/packer/start/neoformat"
+  },
+  ["nvim-compe"] = {
+    loaded = true,
+    path = "/home/anton/.local/share/nvim/site/pack/packer/start/nvim-compe"
   },
   ["nvim-lspconfig"] = {
     loaded = true,

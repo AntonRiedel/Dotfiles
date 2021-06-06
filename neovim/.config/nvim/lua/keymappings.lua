@@ -2,11 +2,14 @@
 File              : keymappings.lua
 Author            : Anton Riedel <anton.riedel@tum.de>
 Date              : 26.04.2021
-Last Modified Date: 30.04.2021
+Last Modified Date: 06.06.2021
 Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 --]] --
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
+-- generic keymappings
+-- plugin specific keymappings are defined in their respecitve config files
+vim.api.nvim_set_keymap('', '<Space>', '<Nop>', {noremap = true, silent = true})
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
 options = {noremap = true}
 

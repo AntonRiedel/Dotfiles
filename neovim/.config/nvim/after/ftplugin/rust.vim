@@ -1,7 +1,7 @@
 " File              : rust.vim
 " Author            : Anton Riedel <anton.riedel@tum.de>
 " Date              : 16.09.2020
-" Last Modified Date: 30.05.2021
+" Last Modified Date: 06.06.2021
 " Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 "settings for cpp files
@@ -11,7 +11,7 @@ setlocal tabstop=2
 setlocal shiftwidth=2
 
 "set make program
-setlocal makeprg=cargo\ build
+setlocal makeprg=cargo\ build\ &&\ cargo\ run
 
 "set format program
 setlocal formatprg=rustfmt
