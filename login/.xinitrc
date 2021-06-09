@@ -36,7 +36,7 @@ $HOME/.config/screenlayout/default.sh
 xwallpaper --stretch $WALLPAPER
 
 #start compositor
-xcompmgr &
+# xcompmgr &
 
 #screenshots
 flameshot &

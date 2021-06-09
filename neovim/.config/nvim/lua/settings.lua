@@ -28,7 +28,6 @@ vim.g.tex_flavor = 'tex'
 -- misc
 vim.o.shell = '/bin/bash'
 vim.o.hidden = true
-vim.bo.swapfile = false
 vim.o.tabstop = 4
 vim.wo.list = true
 vim.o.clipboard = 'unnamedplus'
@@ -42,7 +41,7 @@ vim.cmd [[set undofile]]
 vim.o.ignorecase = true
 vim.o.smartcase = true
 vim.o.incsearch = true
-vim.o.hlsearch = false
+vim.o.hlsearch = true
 
 -- sane splitting
 vim.o.splitright = true
