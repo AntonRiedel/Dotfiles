@@ -2,7 +2,7 @@
 File              : settings.lua
 Author            : Anton Riedel <anton.riedel@tum.de>
 Date              : 25.04.2021
-Last Modified Date: 06.06.2021
+Last Modified Date: 09.06.2021
 Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 --]] --
 -- external programs
@@ -16,7 +16,6 @@ vim.g.loaded_perl_provider = 0
 vim.api.nvim_exec([[
   augroup Terminal
     autocmd!
-    au TermOpen * tnoremap <buffer> <Esc> <c-\><c-n>
     au TermOpen * set nonu
     au TermOpen * set nornu
     au TermOpen * startinsert

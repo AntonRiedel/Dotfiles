@@ -2,7 +2,7 @@
 File              : keymappings.lua
 Author            : Anton Riedel <anton.riedel@tum.de>
 Date              : 26.04.2021
-Last Modified Date: 06.06.2021
+Last Modified Date: 09.06.2021
 Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 --]] --
 -- generic keymappings
