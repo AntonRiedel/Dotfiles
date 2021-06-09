@@ -80,9 +80,9 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/anton/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim"
   },
-  ["lightline.vim"] = {
+  ["lualine.nvim"] = {
     loaded = true,
-    path = "/home/anton/.local/share/nvim/site/pack/packer/start/lightline.vim"
+    path = "/home/anton/.local/share/nvim/site/pack/packer/start/lualine.nvim"
   },
   ["material.nvim"] = {
     loaded = true,

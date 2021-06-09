@@ -35,6 +35,7 @@ vim.o.clipboard = 'unnamedplus'
 vim.o.showtabline = 2
 vim.o.mouse = "a"
 vim.o.breakindent = true
+vim.g.wildignorecase = true
 vim.cmd [[set undofile]]
 
 -- search

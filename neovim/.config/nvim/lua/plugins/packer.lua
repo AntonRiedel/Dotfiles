@@ -22,16 +22,16 @@ return require('packer').startup(function()
     use {'wbthomason/packer.nvim'}
 
     -- quality of life
-    -- use {'gruvbox-community/gruvbox'}
-    use 'marko-cerovac/material.nvim'
+    use 'marko-cerovac/material.nvim' -- for palenight colorscheme
+    use {'hoob3rt/lualine.nvim'}
+    use {'lukas-reineke/indent-blankline.nvim', branch = "lua"}
     use {'tpope/vim-surround'}
     use {'tpope/vim-commentary'}
     use {'tpope/vim-repeat'}
-    use {'vimwiki/vimwiki'}
     use {'jiangmiao/auto-pairs'}
-    use {'itchyny/lightline.vim'}
-    use {'lukas-reineke/indent-blankline.nvim', branch = "lua"}
-    -- use {'junegunn/fzf'}
+    use {'vimwiki/vimwiki'}
+    -- use {'itchyny/lightline.vim'}
+    -- use {'gruvbox-community/gruvbox'}
 
     -- development
     use {'alpertuna/vim-header'}
@@ -39,7 +39,6 @@ return require('packer').startup(function()
     use {'tpope/vim-fugitive'}
     use {'sbdchd/neoformat'}
     use {'neovim/nvim-lspconfig'}
-    -- use {'nvim-lua/completion-nvim'}
     use 'hrsh7th/nvim-compe'
     use {'nvim-treesitter/nvim-treesitter'}
     use {
@@ -47,4 +46,6 @@ return require('packer').startup(function()
         requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
     }
     use {'SirVer/ultisnips', requires = {'honza/vim-snippets'}}
+    -- use {'junegunn/fzf'}
+    -- use {'nvim-lua/completion-nvim'}
 end)
