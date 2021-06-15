@@ -2,7 +2,7 @@
 File              : lsp.lua
 Author            : Anton Riedel <anton.riedel@tum.de>
 Date              : 26.04.2021
-Last Modified Date: 06.06.2021
+Last Modified Date: 11.06.2021
 Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 --]] --
 local nvim_lsp = require('lspconfig')
@@ -65,6 +65,29 @@ require'compe'.setup {
 
     source = {path = true, buffer = true, nvim_lsp = true, ultisnips = true}
 }
+
+-- setup for autopairs
+require('nvim-autopairs').setup()
+local npairs = require('nvim-autopairs')
+
+-- skip it, if you use another global object
+_G.MUtils = {}
+
+vim.g.completion_confirm_key = "<CR>"
+MUtils.completion_confirm = function()
+    if vim.fn.pumvisible() ~= 0 then
+        if vim.fn.complete_info()["selected"] ~= -1 then
+            return vim.fn["compe#confirm"](npairs.esc("<cr>"))
+        else
+            return npairs.esc("<cr>")
+        end
+    else
+        return npairs.autopairs_cr()
+    end
+end
+
+vim.api.nvim_set_keymap('i', '<CR>', 'v:lua.MUtils.completion_confirm()',
+                        {expr = true, noremap = true})
 
 -- vim.o.completeopt = 'menuone,noinsert,noselect'
 -- vim.g.completion_matching_strategy_list = {'exact', 'fuzzy', 'substring'}
