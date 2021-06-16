@@ -2,7 +2,7 @@
 File              : lsp.lua
 Author            : Anton Riedel <anton.riedel@tum.de>
 Date              : 26.04.2021
-Last Modified Date: 11.06.2021
+Last Modified Date: 16.06.2021
 Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 --]] --
 local nvim_lsp = require('lspconfig')
@@ -63,7 +63,13 @@ require'compe'.setup {
     max_menu_width = 100,
     documentation = true,
 
-    source = {path = true, buffer = true, nvim_lsp = true, ultisnips = true}
+    source = {
+        path = true,
+        buffer = true,
+        spell = false,
+        nvim_lsp = true,
+        ultisnips = true
+    }
 }
 
 -- setup for autopairs
