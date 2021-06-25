@@ -2,11 +2,8 @@
 # File              : deploy.sh
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 25.03.2020
-# Last Modified Date: 02.06.2021
+# Last Modified Date: 18.06.2021
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
-
-#include dowloading languageserver binaries
-#https://github.com/latex-lsp/texlab/releases/download/v2.2.0/texlab-x86_64-linux.tar.gz
 
 Install_AURHelper() {
 	#download and install ${AURHelper}-bin
