@@ -2,7 +2,7 @@
 # File              : nextsync.sh
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 24.03.2020
-# Last Modified Date: 10.06.2021
+# Last Modified Date: 26.06.2021
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 #bail out if nextcloud is running
@@ -18,6 +18,6 @@ Server="https://sgrastar.strangled.net/nextcloud"
 mkdir -p $Dir
 
 #sync files
-nextcloudcmd --user "$User" --password "$Password" --exclude "$HOME/.config/Nextcloud/sync-exclude.lst" "$Dir" "$Server"
+nextcloudcmd -s --user "$User" --password "$Password" --exclude "$HOME/.config/Nextcloud/sync-exclude.lst" "$Dir" "$Server"
 
 exit 0
