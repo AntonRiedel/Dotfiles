@@ -1,7 +1,7 @@
 " File              : cpp.vim
 " Author            : Anton Riedel <anton.riedel@tum.de>
 " Date              : 16.09.2020
-" Last Modified Date: 06.06.2021
+" Last Modified Date: 02.07.2021
 " Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 "settings for cpp files
@@ -17,6 +17,7 @@ setlocal shiftwidth=2
 " setlocal makeprg=cmake\ --build\ build
 if expand('%:e')=='C'
     setlocal makeprg=root\ -q\ -l\ -b\ %
+	nnoremap <leader>rb :!rootbrowse
 else
     setlocal makeprg=mkdir\ -p\ build\ &&\ cmake\ -S\ \.\ -B\ build\ &&\ cmake\ --build\ build
 endif

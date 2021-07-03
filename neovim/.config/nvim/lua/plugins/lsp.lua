@@ -2,7 +2,7 @@
 File              : lsp.lua
 Author            : Anton Riedel <anton.riedel@tum.de>
 Date              : 26.04.2021
-Last Modified Date: 27.06.2021
+Last Modified Date: 02.07.2021
 Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 --]] --
 local nvim_lsp = require('lspconfig')
@@ -71,6 +71,12 @@ require'compe'.setup {
         ultisnips = true
     }
 }
+
+-- local default_opts = {noremap = true, silent = true, expr = true}
+-- vim.api.nvim_set_keymap('i', '<C-Space>', [[ compe#complete() ]], default_opts)
+-- vim.api.nvim_set_keymap('i', '<C-e>', [[ compe#close() ]], default_opts)
+-- vim.api.nvim_set_keymap('i', '<C-f>', [[{ 'delta': +4 }]], opts)
+-- vim.api.nvim_set_keymap('i', '<C-d>', [[{ 'delta': -4 }]], opts)
 
 -- setup for autopairs
 -- require("nvim-autopairs.completion.compe").setup({

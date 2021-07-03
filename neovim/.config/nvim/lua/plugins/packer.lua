@@ -2,7 +2,7 @@
 File              : packer.lua
 Author            : Anton Riedel <anton.riedel@tum.de>
 Date              : 25.04.2021
-Last Modified Date: 27.06.2021
+Last Modified Date: 03.07.2021
 Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 --]] --
 -- install packer if it is not installed already
@@ -24,7 +24,7 @@ return require('packer').startup(function()
     -- quality of life
     use 'marko-cerovac/material.nvim' -- for palenight colorscheme
     use {'hoob3rt/lualine.nvim'}
-    use {'lukas-reineke/indent-blankline.nvim', branch = "lua"}
+    use {'lukas-reineke/indent-blankline.nvim'}
     use {'tpope/vim-surround'}
     use {'tpope/vim-commentary'}
     use {'tpope/vim-repeat'}

@@ -2,7 +2,7 @@
 File              : keymappings.lua
 Author            : Anton Riedel <anton.riedel@tum.de>
 Date              : 26.04.2021
-Last Modified Date: 09.06.2021
+Last Modified Date: 30.06.2021
 Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 --]] --
 -- generic keymappings
@@ -15,3 +15,5 @@ options = {noremap = true}
 
 vim.api.nvim_set_keymap('n', '<leader>tv', ':vsplit<CR>:terminal<CR>', options)
 vim.api.nvim_set_keymap('n', '<leader>th', ':split<CR>:terminal<CR>', options)
+vim.api.nvim_set_keymap('n', '<leader>s', ':%s/<c-r><c-w>//g<left><left>',
+                        options)
