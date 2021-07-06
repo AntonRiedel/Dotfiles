@@ -2,7 +2,7 @@
 File              : lsp.lua
 Author            : Anton Riedel <anton.riedel@tum.de>
 Date              : 26.04.2021
-Last Modified Date: 02.07.2021
+Last Modified Date: 06.07.2021
 Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 --]] --
 local nvim_lsp = require('lspconfig')
@@ -71,18 +71,18 @@ require'compe'.setup {
         ultisnips = true
     }
 }
+-- require('nvim-autopairs').setup()
+-- vim.cmd([[ inoremap <silent><expr> <C-Space> compe#complete()]])
+-- vim.cmd(
+--     [[ inoremap <silent><expr> <CR>      compe#confirm(luaeval("require 'nvim-autopairs'.autopairs_cr()"))]])
+-- vim.cmd([[ inoremap <silent><expr> <C-e>     compe#close('<C-e>')]])
+-- vim.cmd([[ inoremap <silent><expr> <C-f>     compe#scroll({ 'delta': +4 })]])
+-- vim.cmd([[ inoremap <silent><expr> <C-d>     compe#scroll({ 'delta': -4 })]])
 
--- local default_opts = {noremap = true, silent = true, expr = true}
--- vim.api.nvim_set_keymap('i', '<C-Space>', [[ compe#complete() ]], default_opts)
--- vim.api.nvim_set_keymap('i', '<C-e>', [[ compe#close() ]], default_opts)
--- vim.api.nvim_set_keymap('i', '<C-f>', [[{ 'delta': +4 }]], opts)
--- vim.api.nvim_set_keymap('i', '<C-d>', [[{ 'delta': -4 }]], opts)
-
--- setup for autopairs
--- require("nvim-autopairs.completion.compe").setup({
---     map_cr = true, --  map <CR> on insert mode
---     map_complete = true -- it will auto insert `(` after select function or method item
--- })
+require("nvim-autopairs.completion.compe").setup({
+    map_cr = true,
+    map_complete = true
+})
 
 -- vim.o.completeopt = 'menuone,noinsert,noselect'
 -- vim.g.completion_matching_strategy_list = {'exact', 'fuzzy', 'substring'}

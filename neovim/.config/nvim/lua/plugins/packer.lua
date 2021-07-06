@@ -2,7 +2,7 @@
 File              : packer.lua
 Author            : Anton Riedel <anton.riedel@tum.de>
 Date              : 25.04.2021
-Last Modified Date: 03.07.2021
+Last Modified Date: 06.07.2021
 Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 --]] --
 -- install packer if it is not installed already
@@ -28,8 +28,8 @@ return require('packer').startup(function()
     use {'tpope/vim-surround'}
     use {'tpope/vim-commentary'}
     use {'tpope/vim-repeat'}
-    use {'jiangmiao/auto-pairs'}
-    -- use {'windwp/nvim-autopairs'}
+    -- use {'jiangmiao/auto-pairs'}
+    use {'windwp/nvim-autopairs'}
     use {'unblevable/quick-scope'}
     use {'vimwiki/vimwiki'}
     -- use {'itchyny/lightline.vim'}
