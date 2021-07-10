@@ -2,7 +2,7 @@
 File              : lsp.lua
 Author            : Anton Riedel <anton.riedel@tum.de>
 Date              : 26.04.2021
-Last Modified Date: 06.07.2021
+Last Modified Date: 07.07.2021
 Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 --]] --
 local nvim_lsp = require('lspconfig')
@@ -47,8 +47,9 @@ require'nvim-treesitter.configs'.setup {
 }
 
 -- setup completion
-vim.o.completeopt = "menuone,noinsert"
+vim.o.completeopt = "menuone,noselect"
 vim.o.inccommand = "nosplit"
+
 require'compe'.setup {
     enabled = true,
     autocomplete = true,
@@ -71,18 +72,18 @@ require'compe'.setup {
         ultisnips = true
     }
 }
--- require('nvim-autopairs').setup()
--- vim.cmd([[ inoremap <silent><expr> <C-Space> compe#complete()]])
--- vim.cmd(
---     [[ inoremap <silent><expr> <CR>      compe#confirm(luaeval("require 'nvim-autopairs'.autopairs_cr()"))]])
--- vim.cmd([[ inoremap <silent><expr> <C-e>     compe#close('<C-e>')]])
--- vim.cmd([[ inoremap <silent><expr> <C-f>     compe#scroll({ 'delta': +4 })]])
--- vim.cmd([[ inoremap <silent><expr> <C-d>     compe#scroll({ 'delta': -4 })]])
+vim.cmd([[
+inoremap <silent><expr> <C-Space> compe#complete()
+inoremap <silent><expr> <CR>      compe#confirm('<CR>')
+inoremap <silent><expr> <C-e>     compe#close('<C-e>')
+inoremap <silent><expr> <C-f>     compe#scroll({ 'delta': +4 })
+inoremap <silent><expr> <C-d>     compe#scroll({ 'delta': -4 })
+]])
 
-require("nvim-autopairs.completion.compe").setup({
-    map_cr = true,
-    map_complete = true
-})
+-- require("nvim-autopairs.completion.compe").setup({
+--     map_cr = true, --  map <CR> on insert mode
+--     map_complete = true -- it will auto insert `(` after select function or method item
+-- })
 
 -- vim.o.completeopt = 'menuone,noinsert,noselect'
 -- vim.g.completion_matching_strategy_list = {'exact', 'fuzzy', 'substring'}

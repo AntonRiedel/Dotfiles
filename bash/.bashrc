@@ -2,7 +2,7 @@
 # File              : .bashrc
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 28.04.2020
-# Last Modified Date: 03.05.2021
+# Last Modified Date: 08.07.2021
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 #misc settings for bash shell
@@ -34,6 +34,10 @@ export PS1="\[$(tput bold)\]\[$(tput setaf 1)\][\[$(tput setaf 3)\]\u\[$(tput se
 
 #aliases
 [ -f "$HOME/.config/aliasrc" ] && source "$HOME/.config/aliasrc"
+
+# fzf
+[ -f /usr/share/fzf/key-bindings.bash ] && source /usr/share/fzf/key-bindings.bash
+[ -f /usr/share/fzf/completion.bash ] && source /usr/share/fzf/completion.bash
 
 #remote specifig config
 [ -f "$HOME/.bashrc_remote" ] && source "$HOME/.bashrc_remote"

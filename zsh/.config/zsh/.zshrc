@@ -21,11 +21,9 @@ bindkey -v
 export KEYTIMEOUT=1
 
 #switch to vim buffer
-autoload edit-command-line; zle -N edit-command-line
+autoload edit-command-line
+zle -N edit-command-line
 bindkey '^v' edit-command-line
-
-#backward search
-bindkey '^R'    history-incremental-search-backward
 
 #Use vim keys in tab complete menu
 autoload -U compinit
@@ -47,42 +45,11 @@ _comp_options+=(globdots)
 zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*'
 
 #load additional plugins
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
+[ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] && source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+[ -f /usr/share/fzf/key-bindings.zsh ] && source /usr/share/fzf/key-bindings.zsh
+[ -f /usr/share/fzf/completion.zsh ] && source /usr/share/fzf/completion.zsh
+#backward search
+# bindkey '^R'    history-incremental-search-backward
 
 #Load aliases
 [ -f "$HOME/.config/aliasrc" ] && source "$HOME/.config/aliasrc"
-
-##spaceship prompt
-#autoload -U colors && colors
-##define order
-#SPACESHIP_PROMPT_ORDER=(
-#user          # Username section
-#host          # Hostname section
-#dir           # Current directory section
-#git           # Git section (git_branch + git_status)
-#venv          # virtualenv section
-#conda         # conda virtualenv section
-#pyenv         # Pyenv section
-#line_sep      # Line break
-#jobs          # Background jobs indicator
-#char          # Prompt character
-#)
-##customize the prompt
-#SPACESHIP_PROMPT_ADD_NEWLINE=false
-#SPACESHIP_PROMPT_SEPARATE_LINE=true
-#SPACESHIP_PROMPT_FIRST_PREFIX_SHOW=true
-#SPACESHIP_PROMPT_PREFIXES_SHOW=true
-#SPACESHIP_PROMPT_SUFFIXES_SHOW=true
-#SPACESHIP_USER_PREFIX=[
-#SPACESHIP_USER_SHOW=always
-#SPACESHIP_USER_SUFFIX=''
-#SPACESHIP_HOST_PREFIX=@
-#SPACESHIP_HOST_SHOW=always
-#SPACESHIP_HOST_SUFFIX=]
-#SPACESHIP_DIR_PREFIX=' in '
-#SPACESHIP_DIR_TRUNC=0
-
-#autoload -U promptinit; promptinit
-#prompt spaceship
-
-#source /home/anton/.config/broot/launcher/bash/br
