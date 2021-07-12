@@ -2,11 +2,11 @@
 File              : settings.lua
 Author            : Anton Riedel <anton.riedel@tum.de>
 Date              : 25.04.2021
-Last Modified Date: 09.06.2021
+Last Modified Date: 12.07.2021
 Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 --]] --
 -- external programs
-vim.g.python3_host_prog = '/usr/bin/python3'
+vim.g.python3_host_prog = '/bin/python3'
 vim.g.loaded_python_provider = 0
 vim.g.loaded_ruby_provider = 0
 vim.g.loaded_node_provider = 0
