@@ -70,7 +70,7 @@ Deploy_config_remote() {
 	mkdir -p $HOME/.local/bin $HOME/.local/share $HOME/.config
 
 	# download nvim appimage
-	wget https://github.com/neovim/neovim/releases/download/v0.5.0/nvim.appimage -o $HOME/.local/bin/nvim
+	wget https://github.com/neovim/neovim/releases/download/v0.5.0/nvim.appimage -O $HOME/.local/bin/nvim
 	chmod +x $HOME/.local/bin/nvim
 
 	#create symlinks
