@@ -70,8 +70,10 @@ Deploy_config_remote() {
 	mkdir -p $HOME/.local/bin $HOME/.local/share $HOME/.config
 
 	# download nvim appimage
-	wget https://github.com/neovim/neovim/releases/download/v0.5.0/nvim.appimage -O $HOME/.local/bin/nvim
-	chmod +x $HOME/.local/bin/nvim
+	if [ ! -f $HOME/.local/bin/nvim ]; then
+		wget https://github.com/neovim/neovim/releases/download/v0.5.0/nvim.appimage -O $HOME/.local/bin/nvim
+		chmod +x $HOME/.local/bin/nvim
+	fi
 
 	#create symlinks
 	ln -sf $DotDir/bash/.bashrc $HOME/.bashrc
@@ -81,7 +83,7 @@ Deploy_config_remote() {
 	ln -sf $DotDir/scripts/.config/aliasrc $HOME/.config/aliasrc
 	ln -sf $DotDir/tmux/.tmux.conf $HOME/.tmux.conf
 	ln -sf $DotDir/tmux/.config/tmuxp $HOME/.tmuxp
-	ln -sf $DotDir/git/.config/git $HOME/.config/git
+	ln -sf $DotDir/neovim/.config/nvim $HOME/.config/nvim
 
 	return 0
 }
