@@ -2,7 +2,7 @@
 # File              : deploy.sh
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 25.03.2020
-# Last Modified Date: 18.06.2021
+# Last Modified Date: 12.07.2021
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 Install_AURHelper() {
@@ -68,6 +68,10 @@ Deploy_config_remote() {
 
 	#make directories for scirpts and config files
 	mkdir -p $HOME/.local/bin $HOME/.local/share $HOME/.config
+
+	# download nvim appimage
+	wget https://github.com/neovim/neovim/releases/download/v0.5.0/nvim.appimage -o $HOME/.local/bin/nvim
+	chmod +x $HOME/.local/bin/nvim
 
 	#create symlinks
 	ln -sf $DotDir/bash/.bashrc $HOME/.bashrc

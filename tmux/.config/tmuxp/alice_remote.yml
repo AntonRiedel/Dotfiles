@@ -1,8 +1,6 @@
 session_name: AliPhysics
 shell_command_before:
-  - cd ~/Alice
-  - [ ! $(vagrant status | grep -q 'running') ] && vagrant up
-  - ssh vagrant@192.168.121.225 -i ~/.ssh/key/vagrant
+  - cd $ALICE
 windows:
   - window_name: htop
     panes:
@@ -12,19 +10,21 @@ windows:
     focus: true
     panes:
       - shell_command:
-        - cd AliPhysics
+        - alienv enter AliPhysics/latest
+        - bash
+        - cd $ALICE/AliPhysics
   - window_name: compiling
     panes:
       - shell_command:
         - sleep 5
         - alienv enter AliPhysics/latest
         - bash
-        - cd sw/BUILD/AliPhysics-latest-master/AliPhysics
-        - find . | entr -c make install -j$(nproc)
+        - cd $ALICE/sw/BUILD/AliPhysics-latest-master/AliPhysics
+        - find $ALICE/AliPhysics/PWG/FLOW | entr -c make install -j$(nproc)
   - window_name: steering
     panes:
       - shell_command:
         - sleep 10
         - alienv enter AliPhysics/latest
         - bash
-        - cd Analysis
+        - cd $ALICE_ANALYSIS

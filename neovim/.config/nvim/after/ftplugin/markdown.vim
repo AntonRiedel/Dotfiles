@@ -1,7 +1,7 @@
 " File              : markdown.vim
 " Author            : Anton Riedel <anton.riedel@tum.de>
 " Date              : 16.09.2020
-" Last Modified Date: 16.01.2021
+" Last Modified Date: 12.07.2021
 " Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 "settings for cpp files
@@ -11,7 +11,7 @@ setlocal tabstop=4
 setlocal shiftwidth=4
 
 "set make program
-setlocal makeprg=pandoc\ %\ -o\ output.pdf
+setlocal makeprg=pandoc\ %\ -o\ %:r.pdf
 
 "set format program
 " setlocal formatprg=clang-format
