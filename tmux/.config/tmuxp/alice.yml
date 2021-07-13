@@ -20,7 +20,7 @@ windows:
         - alienv enter AliPhysics/latest
         - bash
         - cd sw/BUILD/AliPhysics-latest-master/AliPhysics
-        - find ~/AliPhysics | entr -c make install -j$(nproc)
+        - find ~/AliPhysics/ -type f -name "*.cxx" -o -name "*.h" | entr -pc make install -j$(nproc)
   - window_name: steering
     panes:
       - shell_command:
