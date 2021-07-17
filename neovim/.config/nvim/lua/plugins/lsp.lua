@@ -2,7 +2,7 @@
 File              : lsp.lua
 Author            : Anton Riedel <anton.riedel@tum.de>
 Date              : 26.04.2021
-Last Modified Date: 07.07.2021
+Last Modified Date: 17.07.2021
 Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 --]] --
 local nvim_lsp = require('lspconfig')
@@ -37,7 +37,7 @@ local on_attach = function(_client, bufnr)
 end
 
 -- Enable language servers
-local servers = {'clangd', 'pyls', 'bashls', 'texlab', 'rust_analyzer'}
+local servers = {'clangd', 'pylsp', 'bashls', 'texlab', 'rust_analyzer'}
 for _, lsp in ipairs(servers) do nvim_lsp[lsp].setup {on_attach = on_attach} end
 
 -- treesitter setup

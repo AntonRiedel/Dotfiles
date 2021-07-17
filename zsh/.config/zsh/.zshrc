@@ -13,12 +13,12 @@ PS1="%B[%F{cyan}%n%f@%F{yellow}%M%f] %F{red}%~%f
 setopt share_history HIST_IGNORE_ALL_DUPS autocd
 
 # Set config for history
-export HISTSIZE=10000
-export SAVEHIST=10000
+HISTSIZE=10000
+SAVEHIST=10000
 
 #enable vi mode
 bindkey -v
-export KEYTIMEOUT=1
+KEYTIMEOUT=1
 
 #switch to vim buffer
 autoload edit-command-line

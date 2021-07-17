@@ -7,8 +7,10 @@ super + {_,shift} + b
 # 	$TERMINAL -e nextsync.sh
 super + {_,shift} + e
 	$TERMINAL -e {neomutt,mw sync}
-super + v
+super + n
  	$TERMINAL -e newsboat
+super + v
+    vncviewer
 super + o
     xournalpp
 
