@@ -2,7 +2,7 @@
 File              : packer.lua
 Author            : Anton Riedel <anton.riedel@tum.de>
 Date              : 25.04.2021
-Last Modified Date: 07.07.2021
+Last Modified Date: 20.07.2021
 Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 --]] --
 -- install packer if it is not installed already
@@ -12,8 +12,7 @@ local install_path = vim.fn.stdpath('data') ..
 if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
     vim.api.nvim_command(
         '!git clone https://github.com/wbthomason/packer.nvim ' .. install_path)
-    vim.api.nvim_command('PackerSync')
-    vim.api.nvim_command('packloadall')
+    vim.api.nvim_command('packadd packer.nvim')
 end
 
 return require('packer').startup(function()
@@ -43,7 +42,8 @@ return require('packer').startup(function()
     use {'sbdchd/neoformat'}
     use {'neovim/nvim-lspconfig'}
     use 'hrsh7th/nvim-compe'
-    use {'nvim-treesitter/nvim-treesitter'}
+    use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
+    use {'nvim-treesitter/nvim-treesitter-textobjects'}
     use {
         'nvim-telescope/telescope.nvim',
         requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}

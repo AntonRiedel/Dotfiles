@@ -2,7 +2,7 @@
 File              : lsp.lua
 Author            : Anton Riedel <anton.riedel@tum.de>
 Date              : 26.04.2021
-Last Modified Date: 17.07.2021
+Last Modified Date: 20.07.2021
 Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 --]] --
 local nvim_lsp = require('lspconfig')
@@ -43,7 +43,29 @@ for _, lsp in ipairs(servers) do nvim_lsp[lsp].setup {on_attach = on_attach} end
 -- treesitter setup
 require'nvim-treesitter.configs'.setup {
     ensure_installed = {"bash", "c", "cpp", "python", "rust", "lua"},
-    highlight = {enable = true}
+    highlight = {enable = true},
+    textobjects = {
+        select = {
+            enable = true,
+
+            -- Automatically jump forward to textobj, similar to targets.vim 
+            lookahead = true,
+
+            keymaps = {
+                -- You can use the capture groups defined in textobjects.scm
+                ["af"] = "@function.outer",
+                ["if"] = "@function.inner",
+                ["al"] = "@loop.outer",
+                ["il"] = "@loop.inner"
+
+            }
+        },
+        swap = {
+            enable = true,
+            swap_next = {["<leader>a"] = "@parameter.inner"},
+            swap_previous = {["<leader>A"] = "@parameter.inner"}
+        }
+    }
 }
 
 -- setup completion
