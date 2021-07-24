@@ -2,7 +2,7 @@
 # File              : aliasrc
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 24.03.2020
-# Last Modified Date: 04.06.2021
+# Last Modified Date: 24.07.2021
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 ##aliases
@@ -25,8 +25,8 @@ alias gc='git commit'
 alias gch='git checkout'
 alias gb='git branch'
 if grep -q "Arch Linux" /etc/os-release; then
-	alias pi='paru -S'
 	alias pu='paru -Syu'
+	alias pi='paru -S'
 	alias pr='paru -Rnsc'
 	alias po='paru -Qtdq | paru -Rns -'
 	alias pc='paru Scc'
@@ -41,6 +41,8 @@ elif grep -q "Debian\|ubuntu" /etc/os-release; then
 	alias pu='sudo apt update && sudo apt upgrade && sudo apt autoremove'
 	alias pi='sudo apt install'
 	alias pr='sudo apt purge'
+	alias po='sudo apt autoremove'
+	alias pc='sudo apt autoclean'
 	alias pq='apt search'
 fi
 alias nmu='nmcli con up --ask'
