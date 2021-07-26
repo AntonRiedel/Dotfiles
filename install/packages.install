@@ -13,6 +13,7 @@ biber
 binutils
 bison
 boost
+bridge-utils
 btrfs-progs
 cgdb
 cifs-utils
@@ -21,6 +22,7 @@ cmake
 cmus
 ctags
 dashbinsh
+dnsmasq
 dosfstools
 efibootmgr
 entr
@@ -47,9 +49,11 @@ htop
 i3lock
 imagemagick
 intel-ucode
+iptables-nft
 jupyter-notebook
 jupyterlab
 libtool
+libvirt
 libxft-bgra-git
 linux
 linux-firmware
@@ -67,13 +71,13 @@ neofetch
 neomutt
 neovim
 networkmanager
-networkmanager-openvpn
 networkmanager-vpnc
 newsboat
 nextcloud-client
 nfs-utils
 nm-connection-editor
 notmuch
+openbsd-netcat
 openmp
 openssh
 opus-tools
@@ -84,13 +88,15 @@ pandoc-bin
 parallel
 paru-bin
 pass
+passff-host
 patch
 pdfjs
-pipewire-pulse
 pkgconf
+pulseaudio
 pulsemixer
 python-adblock
 python-language-server
+python-lsp-server
 python-matplotlib
 python-numpy
 python-pipenv
@@ -98,6 +104,8 @@ python-pynvim
 python-pywinrm
 python-scipy
 python-sympy
+python-unidecode
+qemu
 qpdf
 qpdfview
 qutebrowser
@@ -132,7 +140,7 @@ texlive-publishers
 texlive-science
 thinkpad-scripts
 tigervnc
-timeshift-bin
+timeshift
 tlp
 tmux
 tmuxp
@@ -142,6 +150,7 @@ ttf-hack
 ttf-joypixels
 unclutter
 unzip
+vagrant
 vim
 vpnc
 w3m
@@ -149,7 +158,6 @@ wget
 which
 xcape
 xclip
-xcompmgr
 xf86-video-intel
 xorg-server
 xorg-xinit

@@ -2,7 +2,7 @@
 # File              : aliasrc
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 24.03.2020
-# Last Modified Date: 24.07.2021
+# Last Modified Date: 25.07.2021
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 ##aliases
@@ -66,7 +66,7 @@ sshc() {
 		sshpass -P "passphrase" -e ssh "$Host"
 	elif grep -q "cipgate\|jump\|t30" <<<"$Host"; then
 		#need password for cipgate and t30gate
-		export SSHPASS="$(pass email/tum)"
+		export SSHPASS="$(pass email/tum_lrz)"
 		sshpass -e ssh "$Host"
 	else
 		#all others normally do not need a password
