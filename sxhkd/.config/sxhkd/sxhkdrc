@@ -38,6 +38,7 @@ super + {_,shift} + x
 super + {_,shift} + r
     {dmenu_run -i -F -p "Run: ",screen.sh}
 super + g
-	passmenu -i
+    passmenu-otp
+	# passmenu -i
 super + y
     flameshot gui
