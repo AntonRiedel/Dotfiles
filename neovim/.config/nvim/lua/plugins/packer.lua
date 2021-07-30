@@ -2,7 +2,7 @@
 File              : packer.lua
 Author            : Anton Riedel <anton.riedel@tum.de>
 Date              : 25.04.2021
-Last Modified Date: 27.07.2021
+Last Modified Date: 30.07.2021
 Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 --]] --
 -- install packer if it is not installed already
@@ -42,9 +42,14 @@ return require('packer').startup(function()
     use {'sbdchd/neoformat'}
     use {'neovim/nvim-lspconfig'}
     use 'hrsh7th/nvim-compe'
-    use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
+    use {
+        'nvim-treesitter/nvim-treesitter',
+        branch = '0.5-compat',
+        run = ':TSUpdate'
+    }
     use {
         'nvim-treesitter/nvim-treesitter-textobjects',
+        branch = '0.5-compat',
         requires = {'nvim-treesitter/nvim-treesitter'}
     }
     use {
