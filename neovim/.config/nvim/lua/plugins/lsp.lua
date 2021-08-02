@@ -2,7 +2,7 @@
 File              : lsp.lua
 Author            : Anton Riedel <anton.riedel@tum.de>
 Date              : 26.04.2021
-Last Modified Date: 22.07.2021
+Last Modified Date: 02.08.2021
 Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 --]] --
 local nvim_lsp = require('lspconfig')
@@ -41,8 +41,17 @@ local servers = {'clangd', 'pylsp', 'bashls', 'texlab', 'rust_analyzer'}
 for _, lsp in ipairs(servers) do nvim_lsp[lsp].setup {on_attach = on_attach} end
 
 -- treesitter setup
+-- setup for norg
+local parser_configs = require('nvim-treesitter.parsers').get_parser_configs()
+parser_configs.norg = {
+    install_info = {
+        url = "https://github.com/vhyrro/tree-sitter-norg",
+        files = {"src/parser.c"},
+        branch = "main"
+    }
+}
 require'nvim-treesitter.configs'.setup {
-    ensure_installed = {"bash", "c", "cpp", "python", "rust", "lua"},
+    ensure_installed = {"bash", "c", "cpp", "python", "rust", "lua", "norg"},
     highlight = {enable = true},
     textobjects = {
         select = {
@@ -91,28 +100,16 @@ require'compe'.setup {
         buffer = true,
         spell = false,
         nvim_lsp = true,
+        neorg = true,
         ultisnips = true
     }
 }
+
+require('nvim-autopairs').setup()
 vim.cmd([[
 inoremap <silent><expr> <C-Space> compe#complete()
-inoremap <silent><expr> <CR>      compe#confirm('<CR>')
+inoremap <silent><expr> <CR>      compe#confirm(luaeval("require 'nvim-autopairs'.autopairs_cr()"))
 inoremap <silent><expr> <C-e>     compe#close('<C-e>')
 inoremap <silent><expr> <C-f>     compe#scroll({ 'delta': +4 })
 inoremap <silent><expr> <C-d>     compe#scroll({ 'delta': -4 })
 ]])
-
--- require("nvim-autopairs.completion.compe").setup({
---     map_cr = true, --  map <CR> on insert mode
---     map_complete = true -- it will auto insert `(` after select function or method item
--- })
-
--- vim.o.completeopt = 'menuone,noinsert,noselect'
--- vim.g.completion_matching_strategy_list = {'exact', 'fuzzy', 'substring'}
--- vim.g.completion_enable_auto_hover = 1
--- vim.g.completion_enable_auto_signature = 1
--- vim.g.completion_enable_snippet = 'UltiSnips'
--- vim.g.completion_enable_auto_popup = 1
--- vim.g.completion_enable_auto_paren = 1
--- vim.g.completion_matching_ignore_case = 1
--- vim.g.completion_trigger_keyword_length = 1

@@ -2,7 +2,7 @@
 File              : settings.lua
 Author            : Anton Riedel <anton.riedel@tum.de>
 Date              : 25.04.2021
-Last Modified Date: 12.07.2021
+Last Modified Date: 02.08.2021
 Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 --]] --
 -- external programs
@@ -26,29 +26,42 @@ vim.api.nvim_exec([[
 vim.g.tex_flavor = 'tex'
 
 -- misc
-vim.o.shell = '/bin/bash'
-vim.o.hidden = true
-vim.o.tabstop = 4
-vim.wo.list = true
-vim.o.clipboard = 'unnamedplus'
-vim.o.showtabline = 2
-vim.o.mouse = "a"
-vim.o.breakindent = true
-vim.g.wildignorecase = true
-vim.cmd [[set undofile]]
+vim.opt.shell = '/bin/bash'
+vim.opt.hidden = true
+vim.opt.tabstop = 4
+vim.opt.clipboard = 'unnamedplus'
+vim.opt.smarttab = true
+vim.opt.mouse = "a"
+vim.opt.autoindent = true
+vim.opt.wildignorecase = true
+vim.opt.undofile = false
+vim.opt.belloff = 'all'
+vim.opt.expandtab = true
+vim.opt.inccommand = 'split'
+vim.opt.joinspaces = false
+vim.opt.switchbuf = 'usetab'
 
 -- search
-vim.o.ignorecase = true
-vim.o.smartcase = true
-vim.o.incsearch = true
-vim.o.hlsearch = true
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+vim.opt.incsearch = true
+vim.opt.hlsearch = true
 
 -- sane splitting
-vim.o.splitright = true
-vim.o.splitbelow = true
+vim.opt.splitright = true
+vim.opt.splitbelow = true
 
 -- graphical
-vim.wo.cursorline = true
-vim.wo.cursorcolumn = true
-vim.wo.number = true
-vim.wo.relativenumber = true
+vim.opt.cursorline = true
+vim.opt.cursorcolumn = true
+vim.opt.number = true
+vim.opt.relativenumber = true
+vim.opt.laststatus = 2
+vim.opt.showtabline = 2
+vim.opt.lazyredraw = true
+vim.opt.list = true
+vim.opt.scrolloff = 3
+vim.opt.sidescrolloff = 3
+vim.opt.pumblend = 10
+vim.opt.wildmenu = true
+vim.opt.wildmode = 'longest:full,full'

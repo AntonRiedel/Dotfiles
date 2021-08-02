@@ -2,7 +2,7 @@
 File              : packer.lua
 Author            : Anton Riedel <anton.riedel@tum.de>
 Date              : 25.04.2021
-Last Modified Date: 30.07.2021
+Last Modified Date: 02.08.2021
 Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 --]] --
 -- install packer if it is not installed already
@@ -13,6 +13,7 @@ if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
     vim.api.nvim_command(
         '!git clone https://github.com/wbthomason/packer.nvim ' .. install_path)
     vim.api.nvim_command('packadd packer.nvim')
+    vim.api.nvim_command('PackerSync')
 end
 
 return require('packer').startup(function()
@@ -27,10 +28,11 @@ return require('packer').startup(function()
     use {'tpope/vim-surround'}
     use {'tpope/vim-commentary'}
     use {'tpope/vim-repeat'}
-    use {'jiangmiao/auto-pairs'}
-    -- use {'windwp/nvim-autopairs'}
+    -- use {'jiangmiao/auto-pairs'}
+    use {'windwp/nvim-autopairs'}
     -- use {'cohama/lexima.vim'}
     use {'unblevable/quick-scope'}
+    use {'vhyrro/neorg', requires = {'nvim-lua/plenary.nvim'}}
     use {'vimwiki/vimwiki'}
     -- use {'itchyny/lightline.vim'}
     -- use {'gruvbox-community/gruvbox'}
