@@ -100,6 +100,7 @@ require'compe'.setup {
         buffer = true,
         spell = false,
         nvim_lsp = true,
+        nvim_lua = true,
         neorg = true,
         ultisnips = true
     }
