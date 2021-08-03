@@ -2,7 +2,7 @@
 File              : lsp.lua
 Author            : Anton Riedel <anton.riedel@tum.de>
 Date              : 26.04.2021
-Last Modified Date: 03.08.2021
+Last Modified Date: 04.08.2021
 Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 --]] --
 local nvim_lsp = require('lspconfig')
@@ -56,23 +56,36 @@ require'nvim-treesitter.configs'.setup {
     textobjects = {
         select = {
             enable = true,
-
-            -- Automatically jump forward to textobj, similar to targets.vim 
             lookahead = true,
-
             keymaps = {
-                -- You can use the capture groups defined in textobjects.scm
-                ["af"] = "@function.outer",
-                ["if"] = "@function.inner",
-                ["al"] = "@loop.outer",
-                ["il"] = "@loop.inner"
-
+                ["taf"] = "@function.outer",
+                ["tif"] = "@function.inner",
+                ["tal"] = "@loop.outer",
+                ["til"] = "@loop.inner",
+                ["tac"] = "@condtional.outer",
+                ["tic"] = "@condtional.inner"
             }
         },
         swap = {
             enable = true,
-            swap_next = {["<leader>a"] = "@parameter.inner"},
-            swap_previous = {["<leader>A"] = "@parameter.inner"}
+            swap_next = {["tsa"] = "@parameter.inner"},
+            swap_previous = {["tsA"] = "@parameter.inner"}
+        },
+        move = {
+            enable = true,
+            set_jumps = true,
+            goto_next_start = {["]m"] = "@function.outer"},
+            goto_next_end = {["]M"] = "@function.outer"},
+            goto_previous_start = {["[m"] = "@function.outer"},
+            goto_previous_end = {["[M"] = "@function.outer"}
+        },
+        lsp_interop = {
+            enable = true,
+            border = 'none',
+            peek_definition_code = {
+                ["tdf"] = "@function.outer",
+                ["tdF"] = "@class.outer"
+            }
         }
     }
 }
