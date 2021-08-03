@@ -2,7 +2,7 @@
 File              : lsp.lua
 Author            : Anton Riedel <anton.riedel@tum.de>
 Date              : 26.04.2021
-Last Modified Date: 02.08.2021
+Last Modified Date: 03.08.2021
 Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 --]] --
 local nvim_lsp = require('lspconfig')
@@ -78,15 +78,13 @@ require'nvim-treesitter.configs'.setup {
 }
 
 -- setup completion
-vim.o.completeopt = "menuone,noselect"
-vim.o.inccommand = "nosplit"
+vim.opt.completeopt = "menuone,noselect"
 
 require'compe'.setup {
     enabled = true,
     autocomplete = true,
     debug = false,
     min_length = 1,
-    -- preselect = 'enable',
     throttle_time = 80,
     source_timeout = 200,
     incomplete_delay = 400,
@@ -107,6 +105,7 @@ require'compe'.setup {
 }
 
 require('nvim-autopairs').setup()
+
 vim.cmd([[
 inoremap <silent><expr> <C-Space> compe#complete()
 inoremap <silent><expr> <CR>      compe#confirm(luaeval("require 'nvim-autopairs'.autopairs_cr()"))
