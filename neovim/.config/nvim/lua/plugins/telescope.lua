@@ -18,10 +18,7 @@ require('telescope').setup {
         selection_strategy = "reset",
         sorting_strategy = "ascending",
         layout_strategy = "horizontal",
-        layout_config = {
-            horizontal = {mirror = false},
-            vertical = {mirror = true}
-        },
+        layout_config = {prompt_position = "top"},
         file_sorter = require'telescope.sorters'.get_fuzzy_file,
         file_ignore_patterns = {},
         generic_sorter = require'telescope.sorters'.get_generic_fuzzy_sorter,
@@ -47,3 +44,5 @@ vim.api
     .nvim_set_keymap('n', '<leader>fb', '<cmd>Telescope buffers<CR>', options)
 vim.api.nvim_set_keymap('n', '<leader>fl',
                         '<cmd>Telescope current_buffer_fuzzy_find<CR>', options)
+vim.api.nvim_set_keymap('n', '<leader>fs',
+                        '<cmd>Telescope lsp_document_symbols<CR>', options)
