@@ -28,7 +28,7 @@ return require('packer').startup(function()
     use {'tpope/vim-surround'}
     use {'tpope/vim-commentary'}
     use {'tpope/vim-repeat'}
-    use {'pope/vim-eunuch'}
+    use {'tpope/vim-eunuch'}
     -- use {'jiangmiao/auto-pairs'}
     use {'windwp/nvim-autopairs'}
     -- use {'cohama/lexima.vim'}
