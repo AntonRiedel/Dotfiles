@@ -2,7 +2,7 @@
 File              : packer.lua
 Author            : Anton Riedel <anton.riedel@tum.de>
 Date              : 25.04.2021
-Last Modified Date: 02.08.2021
+Last Modified Date: 06.08.2021
 Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 --]] --
 -- install packer if it is not installed already
@@ -28,6 +28,7 @@ return require('packer').startup(function()
     use {'tpope/vim-surround'}
     use {'tpope/vim-commentary'}
     use {'tpope/vim-repeat'}
+    use {'pope/vim-eunuch'}
     -- use {'jiangmiao/auto-pairs'}
     use {'windwp/nvim-autopairs'}
     -- use {'cohama/lexima.vim'}
