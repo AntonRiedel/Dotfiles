@@ -25,6 +25,7 @@ dashbinsh
 dnsmasq
 dosfstools
 efibootmgr
+emacs
 entr
 fakeroot
 file
@@ -114,6 +115,7 @@ qpdf
 qpdfview
 qutebrowser
 rdesktop
+ripgrep
 root
 rsync
 rust-analyzer

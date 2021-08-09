@@ -1,6 +1,6 @@
 session_name: AliPhysics
 shell_command_before:
-  - cd
+  - cd $ALICE
 windows:
   - window_name: htop
     panes:
@@ -12,19 +12,19 @@ windows:
       - shell_command:
         - alienv enter AliPhysics/latest
         - bash
-        - cd AliPhysics
+        - cd $ALICE/AliPhysics
   - window_name: compiling
     panes:
       - shell_command:
         - sleep 5
         - alienv enter AliPhysics/latest
         - bash
-        - cd sw/BUILD/AliPhysics-latest-master/AliPhysics
-        - find ~/AliPhysics/ -type f -name "*.cxx" -o -name "*.h" | entr -pc make install -j$(nproc)
+        - cd $ALICE/sw/BUILD/AliPhysics-latest-master/AliPhysics
+        - find $ALICE/AliPhysics/PWG/FLOW | entr -c make install -j$(nproc)
   - window_name: steering
     panes:
       - shell_command:
         - sleep 10
         - alienv enter AliPhysics/latest
         - bash
-        - cd Analysis
+        - cd $ALICE_ANALYSIS
