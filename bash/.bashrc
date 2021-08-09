@@ -2,7 +2,7 @@
 # File              : .bashrc
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 28.04.2020
-# Last Modified Date: 17.07.2021
+# Last Modified Date: 09.08.2021
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 #misc settings for bash shell
@@ -14,7 +14,7 @@ complete -cf sudo
 
 ##history setup
 #do not duplicate commands
-HISTCONTROL=ignoreboth:erasedups
+HISTCONTROL="ignoreboth:erasedups"
 
 # append to the history file, don't overwrite it
 shopt -s histappend
