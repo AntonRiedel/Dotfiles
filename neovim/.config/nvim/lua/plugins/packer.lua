@@ -13,7 +13,6 @@ if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
     vim.api.nvim_command(
         '!git clone https://github.com/wbthomason/packer.nvim ' .. install_path)
     vim.api.nvim_command('packadd packer.nvim')
-    vim.api.nvim_command('PackerSync')
 end
 
 return require('packer').startup(function()
@@ -47,13 +46,11 @@ return require('packer').startup(function()
     use {'hrsh7th/nvim-compe'}
     use {
         'nvim-treesitter/nvim-treesitter',
-        ft = {'bash', 'python', 'c', 'cpp', 'rust', 'tex', 'lua'},
         branch = '0.5-compat',
         run = ':TSUpdate'
     }
     use {
         'nvim-treesitter/nvim-treesitter-textobjects',
-        ft = {'bash', 'python', 'c', 'cpp', 'rust', 'tex', 'lua'},
         branch = '0.5-compat',
         requires = {'nvim-treesitter/nvim-treesitter'}
     }
