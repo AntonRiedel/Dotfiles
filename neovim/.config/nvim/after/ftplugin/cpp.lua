@@ -2,7 +2,7 @@
 File              : cpp.lua
 Author            : Anton Riedel <anton.riedel@tum.de>
 Date              : 09.08.2021
-Last Modified Date: 09.08.2021
+Last Modified Date: 20.08.2021
 Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 --]] --
 -- settings for cpp files
@@ -18,9 +18,9 @@ vim.bo.expandtab = true
 -- vim.bo.makeprg=cmake\ --build\ build
 if (vim.call("expand", "%:e") == "C") then
     vim.bo.makeprg = "root -q -l -b %"
-else
-    vim.bo.makeprg =
-        "mkdir -p build && cmake -S . -B build && cmake --build build"
+    -- else
+    --     vim.bo.makeprg =
+    --         "mkdir -p build && cmake -S . -B build && cmake --build build"
 end
 
 -- set format program

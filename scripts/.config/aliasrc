@@ -2,7 +2,7 @@
 # File              : aliasrc
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 24.03.2020
-# Last Modified Date: 13.08.2021
+# Last Modified Date: 19.08.2021
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 ##aliases
@@ -38,7 +38,7 @@ if grep -q "Arch Linux" /etc/os-release; then
     # alias pc='pacman Scc'
     # alias pq='pacman -Ss'
 elif grep -q "Debian\|ubuntu" /etc/os-release; then
-    alias pu='sudo apt update && sudo apt upgrade && sudo apt autoremove -y'
+    alias pu='sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y'
     alias pi='sudo apt install'
     alias pr='sudo apt purge'
     alias po='sudo apt autoremove'

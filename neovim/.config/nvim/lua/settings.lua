@@ -2,7 +2,7 @@
 File              : settings.lua
 Author            : Anton Riedel <anton.riedel@tum.de>
 Date              : 25.04.2021
-Last Modified Date: 02.08.2021
+Last Modified Date: 20.08.2021
 Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 --]] --
 -- external programs
@@ -34,7 +34,7 @@ vim.opt.smarttab = true
 vim.opt.mouse = "a"
 vim.opt.autoindent = true
 vim.opt.wildignorecase = true
-vim.opt.undofile = false
+vim.opt.undofile = true
 vim.opt.belloff = 'all'
 vim.opt.expandtab = true
 vim.opt.inccommand = 'split'

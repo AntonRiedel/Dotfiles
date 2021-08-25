@@ -2,7 +2,7 @@
 File              : packer.lua
 Author            : Anton Riedel <anton.riedel@tum.de>
 Date              : 25.04.2021
-Last Modified Date: 06.08.2021
+Last Modified Date: 25.08.2021
 Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 --]] --
 -- install packer if it is not installed already
@@ -39,19 +39,21 @@ return require('packer').startup(function()
     -- use {'gruvbox-community/gruvbox'}
 
     -- development
-    use {'alpertuna/vim-header'}
+    use {'alpertuna/vim-header', opt = true, cmd = {'AddHeader'}}
     use {'mhinz/vim-signify'}
     use {'tpope/vim-fugitive'}
-    use {'sbdchd/neoformat'}
+    use {'sbdchd/neoformat', opt = true, cmd = {'Neoformat'}}
     use {'neovim/nvim-lspconfig'}
-    use 'hrsh7th/nvim-compe'
+    use {'hrsh7th/nvim-compe'}
     use {
         'nvim-treesitter/nvim-treesitter',
+        ft = {'bash', 'python', 'c', 'cpp', 'rust', 'tex', 'lua'},
         branch = '0.5-compat',
         run = ':TSUpdate'
     }
     use {
         'nvim-treesitter/nvim-treesitter-textobjects',
+        ft = {'bash', 'python', 'c', 'cpp', 'rust', 'tex', 'lua'},
         branch = '0.5-compat',
         requires = {'nvim-treesitter/nvim-treesitter'}
     }

@@ -2,7 +2,7 @@
 # File              : .profile
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 24.03.2020
-# Last Modified Date: 22.05.2021
+# Last Modified Date: 19.08.2021
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 #add $HOME/.local/bin to PATH
@@ -14,7 +14,7 @@ export TERMINAL="alacritty"
 [ "$(which nvim)" ] && export EDITOR="nvim" || export EDITOR="vim"
 export VISUAL="${EDITOR}"
 export BROWSER="qutebrowser"
-export BROWSER2="firefox-nightly"
+export BROWSER2="firefox"
 export READER="zathura"
 export READER2="qpdfview"
 #make alacritty work on X200

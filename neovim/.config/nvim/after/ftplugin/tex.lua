@@ -2,7 +2,7 @@
 File              : tex.lua
 Author            : Anton Riedel <anton.riedel@tum.de>
 Date              : 09.08.2021
-Last Modified Date: 09.08.2021
+Last Modified Date: 24.08.2021
 Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 --]] --
 -- settings for tex files
