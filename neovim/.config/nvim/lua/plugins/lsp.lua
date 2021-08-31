@@ -2,7 +2,7 @@
 File              : lsp.lua
 Author            : Anton Riedel <anton.riedel@tum.de>
 Date              : 26.04.2021
-Last Modified Date: 04.08.2021
+Last Modified Date: 31.08.2021
 Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 --]] --
 local nvim_lsp = require('lspconfig')
@@ -36,9 +36,15 @@ local on_attach = function(_client, bufnr)
                                 opts)
 end
 
+-- nvim-cmp supports additional completion capabilities
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
+
 -- Enable language servers
 local servers = {'clangd', 'pylsp', 'bashls', 'texlab', 'rust_analyzer'}
-for _, lsp in ipairs(servers) do nvim_lsp[lsp].setup {on_attach = on_attach} end
+for _, lsp in ipairs(servers) do
+    nvim_lsp[lsp].setup {on_attach = on_attach, capabilities = capabilities}
+end
 
 -- treesitter setup
 -- setup for norg
@@ -50,6 +56,7 @@ parser_configs.norg = {
         branch = "main"
     }
 }
+
 require'nvim-treesitter.configs'.setup {
     ensure_installed = {"bash", "c", "cpp", "python", "rust", "lua", "norg"},
     highlight = {enable = true},
@@ -78,51 +85,73 @@ require'nvim-treesitter.configs'.setup {
             goto_next_end = {["]M"] = "@function.outer"},
             goto_previous_start = {["[m"] = "@function.outer"},
             goto_previous_end = {["[M"] = "@function.outer"}
-        },
-        lsp_interop = {
-            enable = true,
-            border = 'none',
-            peek_definition_code = {
-                ["tdf"] = "@function.outer",
-                ["tdF"] = "@class.outer"
-            }
         }
+        -- lsp_interop = {
+        --     enable = true,
+        --     border = 'none',
+        --     peek_definition_code = {
+        --         ["tdf"] = "@function.outer",
+        --         ["tdF"] = "@class.outer"
+        --     }
+        -- }
     }
 }
 
 -- setup completion
 vim.opt.completeopt = "menuone,noselect"
 
-require'compe'.setup {
-    enabled = true,
-    autocomplete = true,
-    debug = false,
-    min_length = 1,
-    throttle_time = 80,
-    source_timeout = 200,
-    incomplete_delay = 400,
-    max_abbr_width = 100,
-    max_kind_width = 100,
-    max_menu_width = 100,
-    documentation = true,
+-- luasnip setup
+local luasnip = require 'luasnip'
 
-    source = {
-        path = true,
-        buffer = true,
-        spell = false,
-        nvim_lsp = true,
-        nvim_lua = true,
-        neorg = true,
-        ultisnips = true
+-- nvim-cmp setup
+local cmp = require 'cmp'
+cmp.setup {
+    snippet = {
+        expand = function(args) require('luasnip').lsp_expand(args.body) end
+    },
+    mapping = {
+        ['<C-p>'] = cmp.mapping.select_prev_item(),
+        ['<C-n>'] = cmp.mapping.select_next_item(),
+        ['<C-d>'] = cmp.mapping.scroll_docs(-4),
+        ['<C-f>'] = cmp.mapping.scroll_docs(4),
+        ['<C-Space>'] = cmp.mapping.complete(),
+        ['<C-e>'] = cmp.mapping.close(),
+        ['<CR>'] = cmp.mapping.confirm {
+            behavior = cmp.ConfirmBehavior.Replace,
+            select = true
+        },
+        ['<Tab>'] = function(fallback)
+            if vim.fn.pumvisible() == 1 then
+                vim.fn.feedkeys(vim.api.nvim_replace_termcodes('<C-n>', true,
+                                                               true, true), 'n')
+            elseif luasnip.expand_or_jumpable() then
+                vim.fn.feedkeys(vim.api.nvim_replace_termcodes(
+                                    '<Plug>luasnip-expand-or-jump', true, true,
+                                    true), '')
+            else
+                fallback()
+            end
+        end,
+        ['<S-Tab>'] = function(fallback)
+            if vim.fn.pumvisible() == 1 then
+                vim.fn.feedkeys(vim.api.nvim_replace_termcodes('<C-p>', true,
+                                                               true, true), 'n')
+            elseif luasnip.jumpable(-1) then
+                vim.fn.feedkeys(vim.api.nvim_replace_termcodes(
+                                    '<Plug>luasnip-jump-prev', true, true, true),
+                                '')
+            else
+                fallback()
+            end
+        end
+    },
+    sources = {
+        {name = 'nvim_lsp'}, {name = 'luasnip'}, {name = 'buffer'},
+        {name = 'path'}, {name = 'latex_symbols'}
     }
 }
-
-require('nvim-autopairs').setup()
-
-vim.cmd([[
-inoremap <silent><expr> <C-Space> compe#complete()
-inoremap <silent><expr> <CR>      compe#confirm(luaeval("require 'nvim-autopairs'.autopairs_cr()"))
-inoremap <silent><expr> <C-e>     compe#close('<C-e>')
-inoremap <silent><expr> <C-f>     compe#scroll({ 'delta': +4 })
-inoremap <silent><expr> <C-d>     compe#scroll({ 'delta': -4 })
-]])
+require("nvim-autopairs").setup()
+require("nvim-autopairs.completion.cmp").setup({
+    map_cr = true, --  map <CR> on insert mode
+    map_complete = true -- it will auto insert `(` after select function or method item
+})

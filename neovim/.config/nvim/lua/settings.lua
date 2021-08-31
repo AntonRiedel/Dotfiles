@@ -5,7 +5,8 @@ Date              : 25.04.2021
 Last Modified Date: 20.08.2021
 Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 --]] --
--- external programs
+-- set path to external programs explicitly
+vim.opt.shell = '/bin/bash'
 vim.g.python3_host_prog = '/bin/python3'
 vim.g.loaded_python_provider = 0
 vim.g.loaded_ruby_provider = 0
@@ -16,17 +17,16 @@ vim.g.loaded_perl_provider = 0
 vim.api.nvim_exec([[
   augroup Terminal
     autocmd!
-    au TermOpen * set nonu
-    au TermOpen * set nornu
+    au TermOpen * set nonumber
+    au TermOpen * set norelativenumber
     au TermOpen * startinsert
   augroup end
 ]], false)
 
 -- fix tex filetype
-vim.g.tex_flavor = 'tex'
+vim.g.tex_flavor = 'latex'
 
 -- misc
-vim.opt.shell = '/bin/bash'
 vim.opt.hidden = true
 vim.opt.tabstop = 4
 vim.opt.clipboard = 'unnamedplus'

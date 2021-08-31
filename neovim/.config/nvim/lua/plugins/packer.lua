@@ -2,7 +2,7 @@
 File              : packer.lua
 Author            : Anton Riedel <anton.riedel@tum.de>
 Date              : 25.04.2021
-Last Modified Date: 25.08.2021
+Last Modified Date: 31.08.2021
 Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 --]] --
 -- install packer if it is not installed already
@@ -21,21 +21,17 @@ return require('packer').startup(function()
     use {'wbthomason/packer.nvim'}
 
     -- quality of life
-    use 'marko-cerovac/material.nvim' -- for palenight colorscheme
+    use 'marko-cerovac/material.nvim'
     use {'hoob3rt/lualine.nvim'}
     use {'lukas-reineke/indent-blankline.nvim'}
     use {'tpope/vim-surround'}
     use {'tpope/vim-commentary'}
     use {'tpope/vim-repeat'}
     use {'tpope/vim-eunuch'}
-    -- use {'jiangmiao/auto-pairs'}
-    use {'windwp/nvim-autopairs'}
-    -- use {'cohama/lexima.vim'}
+    use {'akinsho/toggleterm.nvim'}
     use {'unblevable/quick-scope'}
     use {'vhyrro/neorg', requires = {'nvim-lua/plenary.nvim'}}
     use {'vimwiki/vimwiki'}
-    -- use {'itchyny/lightline.vim'}
-    -- use {'gruvbox-community/gruvbox'}
 
     -- development
     use {'alpertuna/vim-header', opt = true, cmd = {'AddHeader'}}
@@ -43,7 +39,15 @@ return require('packer').startup(function()
     use {'tpope/vim-fugitive'}
     use {'sbdchd/neoformat', opt = true, cmd = {'Neoformat'}}
     use {'neovim/nvim-lspconfig'}
-    use {'hrsh7th/nvim-compe'}
+    use {
+        'hrsh7th/nvim-cmp',
+        requires = {
+            {'hrsh7th/cmp-buffer'}, {'hrsh7th/cmp-path'},
+            {'hrsh7th/cmp-nvim-lsp'}, {'saadparwaiz1/cmp_luasnip'},
+            {'kdheepak/cmp-latex-symbols'}
+        }
+    }
+    use {'L3MON4D3/LuaSnip'}
     use {
         'nvim-treesitter/nvim-treesitter',
         branch = '0.5-compat',
@@ -54,11 +58,11 @@ return require('packer').startup(function()
         branch = '0.5-compat',
         requires = {'nvim-treesitter/nvim-treesitter'}
     }
+    use {'windwp/nvim-autopairs'}
     use {
         'nvim-telescope/telescope.nvim',
         requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
     }
-    use {'SirVer/ultisnips', requires = {'honza/vim-snippets'}}
+    -- use {'SirVer/ultisnips', requires = {'honza/vim-snippets'}}
     -- use {'junegunn/fzf'}
-    -- use {'nvim-lua/completion-nvim'}
 end)
