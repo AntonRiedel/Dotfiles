@@ -2,7 +2,7 @@
 File              : telescope.lua
 Author            : Anton Riedel <anton.riedel@tum.de>
 Date              : 30.04.2021
-Last Modified Date: 04.08.2021
+Last Modified Date: 01.09.2021
 Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 --]] --
 require('telescope').setup {
@@ -32,8 +32,18 @@ require('telescope').setup {
         file_previewer = require'telescope.previewers'.vim_buffer_cat.new,
         grep_previewer = require'telescope.previewers'.vim_buffer_vimgrep.new,
         qflist_previewer = require'telescope.previewers'.vim_buffer_qflist.new
+    },
+    extensions = {
+        fzf = {
+            override_generic_sorter = false,
+            override_file_sorter = true,
+            case_mode = "smart_case"
+        }
     }
 }
+-- To get fzf loaded and working with telescope, you need to call
+-- load_extension, somewhere after setup function:
+require('telescope').load_extension('fzf')
 
 options = {noremap = true}
 vim.api.nvim_set_keymap('n', '<leader>ff', '<cmd>Telescope find_files<CR>',

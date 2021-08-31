@@ -2,7 +2,7 @@
 File              : packer.lua
 Author            : Anton Riedel <anton.riedel@tum.de>
 Date              : 25.04.2021
-Last Modified Date: 31.08.2021
+Last Modified Date: 01.09.2021
 Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 --]] --
 -- install packer if it is not installed already
@@ -61,8 +61,14 @@ return require('packer').startup(function()
     use {'windwp/nvim-autopairs'}
     use {
         'nvim-telescope/telescope.nvim',
-        requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
+        requires = {
+            {'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'},
+            {'nvim-telescope/telescope-fzf-native.nvim', run = 'make'}
+        }
     }
+
+    use {'kevinhwang91/nvim-bqf'}
+
     -- use {'SirVer/ultisnips', requires = {'honza/vim-snippets'}}
     -- use {'junegunn/fzf'}
 end)
