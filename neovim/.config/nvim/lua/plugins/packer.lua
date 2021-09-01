@@ -35,7 +35,7 @@ return require('packer').startup(function()
 
     -- development
     use {'alpertuna/vim-header', opt = true, cmd = {'AddHeader'}}
-    use {'mhinz/vim-signify'}
+    use {'lewis6991/gitsigns.nvim', requires = {'nvim-lua/plenary.nvim'}} -- use {'mhinz/vim-signify'}
     use {'tpope/vim-fugitive'}
     use {'sbdchd/neoformat', opt = true, cmd = {'Neoformat'}}
     use {'neovim/nvim-lspconfig'}
