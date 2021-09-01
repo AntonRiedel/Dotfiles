@@ -2,7 +2,7 @@
 File              : lsp.lua
 Author            : Anton Riedel <anton.riedel@tum.de>
 Date              : 26.04.2021
-Last Modified Date: 31.08.2021
+Last Modified Date: 01.09.2021
 Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 --]] --
 local nvim_lsp = require('lspconfig')
@@ -47,18 +47,8 @@ for _, lsp in ipairs(servers) do
 end
 
 -- treesitter setup
--- setup for norg
-local parser_configs = require('nvim-treesitter.parsers').get_parser_configs()
-parser_configs.norg = {
-    install_info = {
-        url = "https://github.com/vhyrro/tree-sitter-norg",
-        files = {"src/parser.c"},
-        branch = "main"
-    }
-}
-
 require'nvim-treesitter.configs'.setup {
-    ensure_installed = {"bash", "c", "cpp", "python", "rust", "lua", "norg"},
+    ensure_installed = {"bash", "c", "cpp", "python", "rust", "lua"},
     highlight = {enable = true},
     textobjects = {
         select = {
@@ -86,14 +76,6 @@ require'nvim-treesitter.configs'.setup {
             goto_previous_start = {["[m"] = "@function.outer"},
             goto_previous_end = {["[M"] = "@function.outer"}
         }
-        -- lsp_interop = {
-        --     enable = true,
-        --     border = 'none',
-        --     peek_definition_code = {
-        --         ["tdf"] = "@function.outer",
-        --         ["tdF"] = "@class.outer"
-        --     }
-        -- }
     }
 }
 
@@ -147,9 +129,10 @@ cmp.setup {
     },
     sources = {
         {name = 'nvim_lsp'}, {name = 'luasnip'}, {name = 'buffer'},
-        {name = 'path'}, {name = 'latex_symbols'}
+        {name = 'path'}, {name = 'latex_symbols'}, {name = 'orgmode'}
     }
 }
+
 require("nvim-autopairs").setup()
 require("nvim-autopairs.completion.cmp").setup({
     map_cr = true, --  map <CR> on insert mode

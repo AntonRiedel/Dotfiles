@@ -30,13 +30,12 @@ return require('packer').startup(function()
     use {'tpope/vim-eunuch'}
     use {'akinsho/toggleterm.nvim'}
     use {'unblevable/quick-scope'}
-    use {'vhyrro/neorg', requires = {'nvim-lua/plenary.nvim'}}
-    use {'vimwiki/vimwiki'}
-
+    -- use {'vimwiki/vimwiki'}
+    use {'kristijanhusak/orgmode.nvim'}
     -- development
     use {'alpertuna/vim-header', opt = true, cmd = {'AddHeader'}}
-    use {'lewis6991/gitsigns.nvim', requires = {'nvim-lua/plenary.nvim'}} -- use {'mhinz/vim-signify'}
-    use {'tpope/vim-fugitive'}
+    use {'lewis6991/gitsigns.nvim', requires = {'nvim-lua/plenary.nvim'}}
+    use {'tpope/vim-fugitive', opt = true, cmd = {'G'}}
     use {'sbdchd/neoformat', opt = true, cmd = {'Neoformat'}}
     use {'neovim/nvim-lspconfig'}
     use {

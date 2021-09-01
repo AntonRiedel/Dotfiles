@@ -24,7 +24,7 @@ require('material').setup({
 vim.cmd([[colorscheme material]])
 
 -- load lualine plugin
-require("lualine").setup {
+require("lualine").setup({
     options = {icons_enabled = false, theme = 'palenight'},
     sections = {
         lualine_a = {'mode'},
@@ -43,7 +43,7 @@ require("lualine").setup {
         lualine_z = {}
     },
     extensions = {'quickfix', 'fugitive'}
-}
+})
 
 -- load indentline plugin
 vim.opt.listchars = {eol = "↴"}

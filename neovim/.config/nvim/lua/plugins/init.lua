@@ -7,8 +7,7 @@ Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 --]] --
 require('plugins.packer')
 require('plugins.graphics')
-require('plugins.vimwiki')
-require('plugins.neorg')
+require('plugins.orgmode')
 require('plugins.toggleterm')
 require('plugins.vim-header')
 require('plugins.lsp')
