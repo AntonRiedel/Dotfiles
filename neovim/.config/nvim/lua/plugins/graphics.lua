@@ -2,7 +2,7 @@
 File              : graphics.lua
 Author            : Anton Riedel <anton.riedel@tum.de>
 Date              : 25.04.2021
-Last Modified Date: 01.09.2021
+Last Modified Date: 03.09.2021
 Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 --]] --
 vim.o.termguicolors = true

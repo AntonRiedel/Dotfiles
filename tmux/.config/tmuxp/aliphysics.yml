@@ -1,6 +1,6 @@
 session_name: AliPhysics
 shell_command_before:
-  - cd $ALICE
+  - cd ${ALICE:=$HOME}
 windows:
   - window_name: htop
     panes:
@@ -27,4 +27,4 @@ windows:
         - sleep 10
         - alienv enter AliPhysics/latest
         - bash
-        - cd $ALICE_ANALYSIS
+        - cd ${ALICE_ANALYSIS:=$HOME/Analysis}

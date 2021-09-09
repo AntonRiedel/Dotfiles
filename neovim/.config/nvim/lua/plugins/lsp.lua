@@ -2,7 +2,7 @@
 File              : lsp.lua
 Author            : Anton Riedel <anton.riedel@tum.de>
 Date              : 26.04.2021
-Last Modified Date: 01.09.2021
+Last Modified Date: 02.09.2021
 Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 --]] --
 local nvim_lsp = require('lspconfig')
@@ -47,9 +47,12 @@ for _, lsp in ipairs(servers) do
 end
 
 -- treesitter setup
-require'nvim-treesitter.configs'.setup {
-    ensure_installed = {"bash", "c", "cpp", "python", "rust", "lua"},
+require('nvim-treesitter.configs').setup {
+    ensure_installed = {
+        "bash", "c", "cpp", "python", "rust", "lua", "bibtex", "latex"
+    },
     highlight = {enable = true},
+    indent = {enable = true},
     textobjects = {
         select = {
             enable = true,
