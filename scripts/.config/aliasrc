@@ -99,7 +99,7 @@ tp() {
     if [ -d $HOME/.config/tmuxp ]; then
         ConfigDir=$HOME/.config/tmuxp/
     elif [ -d $HOME/.tmuxp ]; then
-        ConfigDir=$HOME/tmuxp/
+        ConfigDir=$HOME/.tmuxp/
     else
         return 1
     fi
