@@ -2,7 +2,7 @@
 # File              : .profile
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 24.03.2020
-# Last Modified Date: 19.08.2021
+# Last Modified Date: 12.09.2021
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 #add $HOME/.local/bin to PATH
@@ -44,4 +44,8 @@ export FZF_DEFAULT_OPTS="--reverse --height=40%"
 export WALLPAPER="${HOME}/nextcloud/wallpaper/arch4.png"
 
 #start Xorg on tty1
-[ "$(tty)" = "/dev/tty1" ] && [ "$(which dwm)" ] && exec startx &>/dev/null
+[ "$(tty)" = "/dev/tty1" ] && exec startx &>/dev/null
+# start dwl
+# [ "$(tty)" = "/dev/tty1" ] && [ "$(which dwl)" ] && exec dwl >/tmp/dwltags
+# start wayland on tt2
+[ "$(tty)" = "/dev/tty2" ] && exec qtile start -b wayland &>/tmp/qtile_log

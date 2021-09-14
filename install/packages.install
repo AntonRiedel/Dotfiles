@@ -30,7 +30,7 @@ entr
 fakeroot
 file
 findutils
-firefox-nightly
+firefox
 flake8
 flameshot
 flex
@@ -166,6 +166,7 @@ xcape
 xclip
 xf86-video-intel
 xorg-server
+xorg-xbacklight
 xorg-xinit
 xorg-xkill
 xorg-xsetroot
