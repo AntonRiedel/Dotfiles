@@ -2,7 +2,7 @@
 File              : lsp.lua
 Author            : Anton Riedel <anton.riedel@tum.de>
 Date              : 26.04.2021
-Last Modified Date: 02.09.2021
+Last Modified Date: 19.09.2021
 Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 --]] --
 local nvim_lsp = require('lspconfig')
@@ -106,10 +106,11 @@ cmp.setup {
             select = true
         },
         ['<Tab>'] = function(fallback)
-            if vim.fn.pumvisible() == 1 then
-                vim.fn.feedkeys(vim.api.nvim_replace_termcodes('<C-n>', true,
-                                                               true, true), 'n')
-            elseif luasnip.expand_or_jumpable() then
+            -- if vim.fn.pumvisible() == 1 then
+            --     vim.fn.feedkeys(vim.api.nvim_replace_termcodes('<C-n>', true,
+            --                                                    true, true), 'n')
+            -- elseif luasnip.expand_or_jumpable() then
+            if luasnip.expand_or_jumpable() then
                 vim.fn.feedkeys(vim.api.nvim_replace_termcodes(
                                     '<Plug>luasnip-expand-or-jump', true, true,
                                     true), '')
@@ -118,10 +119,11 @@ cmp.setup {
             end
         end,
         ['<S-Tab>'] = function(fallback)
-            if vim.fn.pumvisible() == 1 then
-                vim.fn.feedkeys(vim.api.nvim_replace_termcodes('<C-p>', true,
-                                                               true, true), 'n')
-            elseif luasnip.jumpable(-1) then
+            -- if vim.fn.pumvisible() == 1 then
+            --     vim.fn.feedkeys(vim.api.nvim_replace_termcodes('<C-p>', true,
+            --                                                    true, true), 'n')
+            -- elseif luasnip.jumpable(-1) then
+            if luasnip.jumpable(-1) then
                 vim.fn.feedkeys(vim.api.nvim_replace_termcodes(
                                     '<Plug>luasnip-jump-prev', true, true, true),
                                 '')
@@ -135,9 +137,3 @@ cmp.setup {
         {name = 'path'}, {name = 'latex_symbols'}, {name = 'orgmode'}
     }
 }
-
-require("nvim-autopairs").setup()
-require("nvim-autopairs.completion.cmp").setup({
-    map_cr = true, --  map <CR> on insert mode
-    map_complete = true -- it will auto insert `(` after select function or method item
-})

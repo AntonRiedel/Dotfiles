@@ -2,7 +2,7 @@
 File              : graphics.lua
 Author            : Anton Riedel <anton.riedel@tum.de>
 Date              : 25.04.2021
-Last Modified Date: 03.09.2021
+Last Modified Date: 15.09.2021
 Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 --]] --
 vim.o.termguicolors = true
@@ -45,14 +45,7 @@ require("lualine").setup({
     extensions = {'quickfix', 'fugitive'}
 })
 
--- load indentline plugin
-vim.opt.listchars = {eol = "↴"}
-
-require("indent_blankline").setup {
-    use_treesitter = true,
-    show_end_of_line = true,
-    show_current_context = true
-}
+require("indent_blankline").setup()
 
 -- load gitsigns plugin
 require('gitsigns').setup({keymaps = {}})
