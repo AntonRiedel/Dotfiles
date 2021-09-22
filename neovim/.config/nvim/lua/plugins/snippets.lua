@@ -2,7 +2,7 @@
 File              : snippets.lua
 Author            : Anton Riedel <anton.riedel@tum.de>
 Date              : 19.09.2021
-Last Modified Date: 21.09.2021
+Last Modified Date: 22.09.2021
 Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 --]] --
 --
@@ -22,7 +22,12 @@ ls.snippets = {
             name = "cout",
             dscr = "cout",
             docstring = "std::cout << 1 << std::endl"
-        }, {t("std::cout << "), i(1, "PRINT"), t(" << std::endl")})
+        }, {t("std::cout << "), i(1, "PRINT"), t(" << std::endl;")}), s({
+            trig = "debug",
+            name = "debug",
+            dscr = "cout current line",
+            docstring = "std::cout << 1 << std::endl"
+        }, {t("std::cout << \"DEBUG: Line \" <<__LINE__ << std::endl;")})
     },
     -- latex snipptes
     tex = {
