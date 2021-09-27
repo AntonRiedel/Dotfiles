@@ -27,17 +27,16 @@ ls.snippets = {
             name = "debug",
             dscr = "cout current line",
             docstring = "std::cout << 1 << std::endl"
-        }, {t("std::cout << \"DEBUG: Line \" <<__LINE__ << std::endl;")}), s(
-            {
-                trig = "for",
-                name = "Loop",
-                dscr = "for loop",
-                docstring = "for(1;2;3){4}"
-            }, {
-                t("for ("), i(1, "int"), t(" "), i(2, "i"), t("="), i(3, "0"),
-                t(";"), i(4, "i"), i(5, "<"), i(6, "N"), t(";"), i(7, "i++"),
-                t({"){", "   "}), i(8, "LOOP"), t({"", "}"})
-            })
+        }, {t("std::cout << \"DEBUG: Line \" <<__LINE__ << std::endl;")}), s({
+            trig = "fori",
+            name = "normal for loop",
+            dscr = "for loop",
+            docstring = "for(1 2=3;4 5 6;7){8}"
+        }, {
+            t("for ("), i(1, "int"), t(" "), i(2, "i"), t("="), i(3, "0"),
+            t(";"), i(4, "i"), i(5, "<"), i(6, "N"), t(";"), i(7, "i++"),
+            t({"){", "   "}), i(8, "LOOP"), t({"", "}"})
+        })
     },
     -- latex snipptes
     tex = {
