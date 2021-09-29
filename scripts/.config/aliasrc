@@ -2,7 +2,7 @@
 # File              : aliasrc
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 24.03.2020
-# Last Modified Date: 09.09.2021
+# Last Modified Date: 29.09.2021
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 ##aliases
@@ -24,20 +24,21 @@ alias ga='git add'
 alias gc='git commit'
 alias gch='git checkout'
 alias gb='git branch'
-if grep -q "Arch Linux" /etc/os-release; then
+alias rr='root -q -l -b'
+if grep -iq "arch linux" /etc/os-release; then
     alias pu='paru -Syu'
     alias pi='paru -S'
     alias pr='paru -Rnsc'
     alias po='paru -Qtdq | paru -Rns -'
-    alias pc='paru Scc'
+    alias pc='paru -Scc'
     alias pq='paru -Ss'
     # alias pi='sudo pacman -S'
     # alias pu='sudo pacman -Syu'
     # alias pr='sudo pacman -rnsc'
-    # alias po='sudo pacman -qtdq | sudo pacman -rns -'
+    # alias po='sudo pacman -Qtdq | sudo pacman -rns -'
     # alias pc='pacman Scc'
     # alias pq='pacman -Ss'
-elif grep -q "Debian\|ubuntu" /etc/os-release; then
+elif grep -iq "debian\|ubuntu" /etc/os-release; then
     alias pu='sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y'
     alias pi='sudo apt install'
     alias pr='sudo apt purge'
@@ -62,17 +63,11 @@ sshc() {
 
     if [ $Host = "sun" ]; then
         # key with passphrase; hence we need sshpass -P
-        export SSHPASS="$(pass sun/key)"
-        sshpass -P "passphrase" -e ssh "$Host"
-    elif grep -q "cipgate\|jump\|t30" <<<"$Host"; then
-        #need password for cipgate and t30gate
-        export SSHPASS="$(pass email/tum_lrz)"
-        sshpass -e ssh "$Host"
+        SSHPASS="$(pass sun/key)" sshpass -P "passphrase" -e ssh "$Host"
     else
         #all others normally do not need a password
         ssh "$Host"
     fi
-    export SSHPASS=""
 
     return 0
 }
