@@ -1,0 +1,12 @@
+#!/bin/sh
+# File              : waylandrc
+# Author            : Anton Riedel <anton.riedel@tum.de>
+# Date              : 01.10.2021
+# Last Modified Date: 10.10.2021
+# Last Modified By  : Anton Riedel <anton.riedel@tum.de>
+
+# startup script for wayland compositor
+
+swaybg -i $WALLPAPER &>/dev/null &
+
+exit 0

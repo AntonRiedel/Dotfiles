@@ -17,10 +17,10 @@ fi
 #capslock: useless key in a great location; let's make it great
 #Old trick: map capslock to escape
 #setxkbmap -option caps:escape
-
 #New trick: map capslock to escape when pressed alone and to crtl when pressed in combination with another key
-setxkbmap -option ctrl:nocaps #map capslock to CRTL
-xcape -e 'Control_L=Escape'   #map CRTL to escape when pressed on its own
+# setxkbmap -option ctrl:nocaps #map capslock to CRTL
+# xcape -e 'Control_L=Escape'   #map CRTL to escape when pressed on its own
+# New New trick: remap system wide with dual-function-key
 
 #prevent screen from blanking
 xset -dpms

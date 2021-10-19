@@ -2,7 +2,7 @@
 File              : packer.lua
 Author            : Anton Riedel <anton.riedel@tum.de>
 Date              : 25.04.2021
-Last Modified Date: 01.09.2021
+Last Modified Date: 18.10.2021
 Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 --]] --
 -- install packer if it is not installed already
@@ -31,7 +31,27 @@ return require('packer').startup(function()
     use {'akinsho/toggleterm.nvim'}
     use {'unblevable/quick-scope'}
     -- use {'vimwiki/vimwiki'}
-    use {'kristijanhusak/orgmode.nvim'}
+    -- use {'kristijanhusak/orgmode.nvim'}
+    use { 
+    "nvim-neorg/neorg",
+    config = function()
+        require('neorg').setup {
+            -- Tell Neorg what modules to load
+            load = {
+                ["core.defaults"] = {}, -- Load all the default modules
+                ["core.norg.concealer"] = {}, -- Allows for use of icons
+                ["core.norg.dirman"] = { -- Manage your directories with Neorg
+                    config = {
+                        workspaces = {
+                            my_workspace = "~/neorg"
+                        }
+                    }
+                }
+            },
+        }
+    end,
+    requires = "nvim-lua/plenary.nvim"
+    }
     -- development
     use {'alpertuna/vim-header', opt = true, cmd = {'AddHeader'}}
     use {'lewis6991/gitsigns.nvim', requires = {'nvim-lua/plenary.nvim'}}

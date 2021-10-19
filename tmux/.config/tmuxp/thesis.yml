@@ -1,5 +1,10 @@
+# File              : thesis.yml
+# Author            : Anton Riedel <anton.riedel@tum.de>
+# Date              : 12.10.2021
+# Last Modified Date: 12.10.2021
+# Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 session_name: thesis
-start_directory: $HOME/nextcloud/master_thesis/thesis
+start_directory: /home/anton/nextcloud/master_thesis/thesis
 windows:
     - window_name: dev
     - window_name: tex

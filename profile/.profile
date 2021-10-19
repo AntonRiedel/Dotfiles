@@ -2,7 +2,7 @@
 # File              : .profile
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 24.03.2020
-# Last Modified Date: 12.09.2021
+# Last Modified Date: 01.10.2021
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 #add $HOME/.local/bin to PATH
@@ -32,7 +32,7 @@ export NOTMUCH_CONFIG="${XDG_CONFIG_HOME}/notmuch-config"
 export ZDOTDIR="${XDG_CONFIG_HOME}/zsh"
 export GNUPGHOME="${XDG_CONFIG_HOME}/gnupg"
 export PASSWORD_STORE_DIR="${XDG_DATA_HOME}/password-store"
-export HISTFILE="${XDG_DATA_HOME}/history"
+export HISTFILE="${XDG_DATA_HOME}/shell_history"
 export LESSHISTFILE="-"
 export CARGO_HOME="${XDG_DATA_HOME}/cargo"
 export RUSTUP_HOME="${XDG_DATA_HOME}/rustup"
@@ -43,9 +43,6 @@ export FZF_DEFAULT_OPTS="--reverse --height=40%"
 #set default wallpaper
 export WALLPAPER="${HOME}/nextcloud/wallpaper/arch4.png"
 
-#start Xorg on tty1
-[ "$(tty)" = "/dev/tty1" ] && exec startx &>/dev/null
-# start dwl
-# [ "$(tty)" = "/dev/tty1" ] && [ "$(which dwl)" ] && exec dwl >/tmp/dwltags
-# start wayland on tt2
-[ "$(tty)" = "/dev/tty2" ] && exec qtile start -b wayland &>/tmp/qtile_log
+#start Xorg
+[ "$(tty)" = "/dev/tty1" ] && exec startx $XDG_CONFIG_HOME/X11/xinitrc &>/dev/null
+[ "$(tty)" = "/dev/tty2" ] && exec dwl -s $XDG_CONFIG_HOME/Wayland/waylandrc

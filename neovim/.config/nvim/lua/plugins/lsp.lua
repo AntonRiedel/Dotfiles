@@ -2,7 +2,7 @@
 File              : lsp.lua
 Author            : Anton Riedel <anton.riedel@tum.de>
 Date              : 26.04.2021
-Last Modified Date: 11.10.2021
+Last Modified Date: 18.10.2021
 Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 --]] --
 local nvim_lsp = require('lspconfig')
@@ -46,10 +46,20 @@ for _, lsp in ipairs(servers) do
     nvim_lsp[lsp].setup {on_attach = on_attach, capabilities = capabilities}
 end
 
+-- for neorg
+local parser_configs = require('nvim-treesitter.parsers').get_parser_configs()
+parser_configs.norg = {
+    install_info = {
+        url = "https://github.com/nvim-neorg/tree-sitter-norg",
+        files = { "src/parser.c", "src/scanner.cc" },
+        branch = "main"
+    },
+}
+
 -- treesitter setup
 require('nvim-treesitter.configs').setup {
     ensure_installed = {
-        "bash", "c", "cpp", "python", "rust", "lua", "bibtex", "latex"
+        "bash", "c", "cpp", "python", "rust", "lua", "bibtex", "latex","norg"
     },
     highlight = {enable = true},
     indent = {enable = true},
