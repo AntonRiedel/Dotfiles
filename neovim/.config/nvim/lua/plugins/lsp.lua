@@ -2,7 +2,7 @@
 File              : lsp.lua
 Author            : Anton Riedel <anton.riedel@tum.de>
 Date              : 26.04.2021
-Last Modified Date: 18.10.2021
+Last Modified Date: 19.10.2021
 Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 --]] --
 local nvim_lsp = require('lspconfig')
@@ -119,21 +119,15 @@ cmp.setup {
             select = true
         },
         ["<Tab>"] = cmp.mapping(function(fallback)
-      if cmp.visible() then
-        cmp.select_next_item()
-      elseif luasnip.expand_or_jumpable() then
+      if luasnip.expand_or_jumpable() then
         luasnip.expand_or_jump()
-      elseif has_words_before() then
-        cmp.complete()
       else
         fallback()
       end
     end, { "i", "s" }),
 
     ["<S-Tab>"] = cmp.mapping(function(fallback)
-      if cmp.visible() then
-        cmp.select_prev_item()
-      elseif luasnip.jumpable(-1) then
+      if luasnip.jumpable(-1) then
         luasnip.jump(-1)
       else
         fallback()
@@ -142,34 +136,6 @@ cmp.setup {
     },
     sources = {
         {name = 'nvim_lsp'}, {name = 'luasnip'}, {name = 'buffer'},
-        {name = 'path'}, {name = 'latex_symbols'}, {name = 'orgmode'}
+        {name = 'path'}, {name = 'latex_symbols'}, 
     }
 }
-
-
-        -- ['<Tab>'] = function(fallback)
-        --     -- if vim.fn.pumvisible() == 1 then
-        --     --     vim.fn.feedkeys(vim.api.nvim_replace_termcodes('<C-n>', true,
-        --     --                                                    true, true), 'n')
-        --     -- elseif luasnip.expand_or_jumpable() then
-        --     if luasnip.expand_or_jumpable() then
-        --         vim.fn.feedkeys(vim.api.nvim_replace_termcodes(
-        --                             '<Plug>luasnip-expand-or-jump', true, true,
-        --                             true), '')
-        --     else
-        --         fallback()
-        --     end
-        -- end,
-        -- ['<S-Tab>'] = function(fallback)
-        --     -- if vim.fn.pumvisible() == 1 then
-        --     --     vim.fn.feedkeys(vim.api.nvim_replace_termcodes('<C-p>', true,
-        --     --                                                    true, true), 'n')
-        --     -- elseif luasnip.jumpable(-1) then
-        --     if luasnip.jumpable(-1) then
-        --         vim.fn.feedkeys(vim.api.nvim_replace_termcodes(
-        --                             '<Plug>luasnip-jump-prev', true, true, true),
-        --                         '')
-        --     else
-        --         fallback()
-        --     end
-        -- end

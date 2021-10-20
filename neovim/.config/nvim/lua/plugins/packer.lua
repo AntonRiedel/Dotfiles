@@ -2,7 +2,7 @@
 File              : packer.lua
 Author            : Anton Riedel <anton.riedel@tum.de>
 Date              : 25.04.2021
-Last Modified Date: 18.10.2021
+Last Modified Date: 19.10.2021
 Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 --]] --
 -- install packer if it is not installed already
@@ -55,6 +55,7 @@ return require('packer').startup(function()
     -- development
     use {'alpertuna/vim-header', opt = true, cmd = {'AddHeader'}}
     use {'lewis6991/gitsigns.nvim', requires = {'nvim-lua/plenary.nvim'}}
+    use {'chentau/marks.nvim'}
     use {'tpope/vim-fugitive', opt = true, cmd = {'G'}}
     use {'sbdchd/neoformat', opt = true, cmd = {'Neoformat'}}
     use {'neovim/nvim-lspconfig'}
