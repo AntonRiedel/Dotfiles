@@ -2,7 +2,7 @@
 File              : packer.lua
 Author            : Anton Riedel <anton.riedel@tum.de>
 Date              : 25.04.2021
-Last Modified Date: 19.10.2021
+Last Modified Date: 28.10.2021
 Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 --]] --
 -- install packer if it is not installed already
@@ -21,7 +21,7 @@ return require('packer').startup(function()
     use {'wbthomason/packer.nvim'}
 
     -- quality of life
-    use 'marko-cerovac/material.nvim'
+    use { 'marko-cerovac/material.nvim' }
     use {'hoob3rt/lualine.nvim'}
     use {'lukas-reineke/indent-blankline.nvim'}
     use {'tpope/vim-surround'}
@@ -64,7 +64,6 @@ return require('packer').startup(function()
         requires = {
             {'hrsh7th/cmp-buffer'}, {'hrsh7th/cmp-path'},
             {'hrsh7th/cmp-nvim-lsp'}, {'saadparwaiz1/cmp_luasnip'},
-            {'kdheepak/cmp-latex-symbols'}
         }
     }
     use {'L3MON4D3/LuaSnip'}
