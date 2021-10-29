@@ -2,7 +2,7 @@
 File              : lsp.lua
 Author            : Anton Riedel <anton.riedel@tum.de>
 Date              : 26.04.2021
-Last Modified Date: 28.10.2021
+Last Modified Date: 29.10.2021
 Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 --]] --
 local nvim_lsp = require('lspconfig')
@@ -106,10 +106,7 @@ local cmp = require'cmp'
 cmp.setup({
     snippet = {
       expand = function(args)
-        vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
-        -- require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
-        -- vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
-        -- require'snippy'.expand_snippet(args.body) -- For `snippy` users.
+        require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
       end,
     },
     mapping = {
@@ -125,28 +122,12 @@ cmp.setup({
     },
     sources = cmp.config.sources({
       { name = 'nvim_lsp' },
-      { name = 'vsnip' }, -- For vsnip users.
-      -- { name = 'luasnip' }, -- For luasnip users.
-      -- { name = 'ultisnips' }, -- For ultisnips users.
-      -- { name = 'snippy' }, -- For snippy users.
-    }, {
+      { name = 'luasnip' },
       { name = 'buffer' },
+      { name = 'path' },
+      { name = 'neorg' },
     })
   })
-
-  -- Use buffer source for `/`.
-cmp.setup.cmdline('/', {
-    sources = {
-      { name = 'buffer' }
-    }
-  })
-
-cmp.setup.cmdline('./', {
-    sources = {
-      { name = 'buffer' }
-    }
-  })
-
 
 require("nvim-autopairs").setup()
 local Rule = require('nvim-autopairs.rule')
