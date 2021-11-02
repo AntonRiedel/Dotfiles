@@ -5,4 +5,8 @@
 	editor = $EDITOR
 	pager = less
 [pull]
-	rebase = false
+	rebase = true
+[branch]
+	autosetuprebase = always
+[commit]
+    template = ~/.config/git/template
