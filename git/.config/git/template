@@ -1,11 +1,7 @@
-Why:
+# Title: Summary, imperative, start upper case, don't end with a period
+# No more than 50 chars. #### 50 chars is here: #
 
-*
+# Remember blank line between title and body.
 
-This change addresses the need by:
-
-*
-
-# 50-character subject line
-#
-# 72-character wrapped longer description.
+# Body: Explain *what* and *why* (not *how*)
+# Wrap at 72 chars. ################################## which is here: #
