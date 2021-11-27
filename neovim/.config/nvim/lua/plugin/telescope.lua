@@ -2,6 +2,7 @@ if packer_bootstrap then return end
 
 require('telescope').setup {
     defaults = {
+        mappings = {i = {['<C-q>'] = "send_to_qflist"}},
         vimgrep_arguments = {
             'rg', '--color=never', '--no-heading', '--with-filename',
             '--line-number', '--column', '--smart-case'
@@ -31,7 +32,7 @@ require('telescope').setup {
 }
 
 -- keybindings for telescope
-options = {noremap = true}
+local options = {noremap = true, silent = true}
 vim.api.nvim_set_keymap('n', '<leader>ff', '<cmd>Telescope find_files<CR>',
                         options)
 vim.api.nvim_set_keymap('n', '<leader>fg', '<cmd>Telescope live_grep<CR>',

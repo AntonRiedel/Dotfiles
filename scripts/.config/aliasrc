@@ -25,6 +25,7 @@ alias gc='git commit'
 alias gch='git checkout'
 alias gb='git branch'
 alias rr='root -q -l -b'
+alias ranger='source ranger'
 if grep -iq "arch linux" /etc/os-release; then
     alias pu='paru -Syu'
     alias pi='paru -S'

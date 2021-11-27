@@ -20,6 +20,9 @@ return require('packer').startup(function(use)
     -- statusline
     use {'nvim-lualine/lualine.nvim', config = require('plugin/statusline')}
 
+    -- custom file headers
+    use {'ahonn/vim-fileheader', config = require('plugin/fileheader')}
+
     -- treesitter
     use {
         'nvim-treesitter/nvim-treesitter',
@@ -49,9 +52,22 @@ return require('packer').startup(function(use)
         config = require('plugin/completion'),
         requires = {
             {'hrsh7th/cmp-buffer'}, {'hrsh7th/cmp-path'},
-            {'hrsh7th/cmp-cmdline'}, {'hrsh7th/cmp-nvim-lsp'}
+            {'hrsh7th/cmp-nvim-lsp'}, {'saadparwaiz1/cmp_luasnip'}
         }
     }
+
+    -- snippet engine
+    use {
+        'L3MON4D3/LuaSnip',
+        config = require('plugin/snippets'),
+        requires = {'rafamadriz/friendly-snippets'}
+    }
+
+    -- better motions
+    use {'ggandor/lightspeed.nvim'}
+
+    -- surround
+    use {'tpope/vim-surround'}
 
     -- git integration
     use {'tpope/vim-fugitive'}
@@ -61,6 +77,9 @@ return require('packer').startup(function(use)
 
     -- terminal integration
     use {'numToStr/FTerm.nvim', config = require('plugin/terminal')}
+
+    -- make quickfix even more awesome
+    use {'kevinhwang91/nvim-bqf'}
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
