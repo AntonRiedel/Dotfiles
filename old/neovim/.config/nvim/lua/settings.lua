@@ -1,10 +1,3 @@
---[[--
-File              : settings.lua
-Author            : Anton Riedel <anton.riedel@tum.de>
-Date              : 25.04.2021
-Last Modified Date: 20.08.2021
-Last Modified By  : Anton Riedel <anton.riedel@tum.de>
---]] --
 -- set path to external programs explicitly
 vim.opt.shell = '/bin/bash'
 vim.g.python3_host_prog = '/bin/python3'
@@ -61,7 +54,7 @@ vim.opt.showtabline = 2
 vim.opt.lazyredraw = true
 vim.opt.list = true
 vim.opt.scrolloff = 3
-vim.opt.sidescrolloff = 3
+vim.opt.sidescrolloff = 10
 vim.opt.pumblend = 10
 vim.opt.wildmenu = true
 vim.opt.wildmode = 'longest:full,full'

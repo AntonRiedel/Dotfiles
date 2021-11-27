@@ -1,0 +1,68 @@
+-- install packer if it is not installed already
+local fn = vim.fn
+local install_path = fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
+if fn.empty(fn.glob(install_path)) > 0 then
+    packer_bootstrap = fn.system({
+        'git', 'clone', '--depth', '1',
+        'https://github.com/wbthomason/packer.nvim', install_path
+    })
+    vim.cmd([[packadd packer.nvim]])
+end
+
+return require('packer').startup(function(use)
+
+    -- packer can manage itself
+    use 'wbthomason/packer.nvim'
+
+    -- colorscheme
+    use {'shaunsingh/moonlight.nvim', config = require('plugin/colorscheme')}
+
+    -- statusline
+    use {'nvim-lualine/lualine.nvim', config = require('plugin/statusline')}
+
+    -- treesitter
+    use {
+        'nvim-treesitter/nvim-treesitter',
+        config = require('plugin/treesitter'),
+        run = ':TSUpdate'
+    }
+
+    -- fuzzy finder
+    use {
+        'nvim-telescope/telescope.nvim',
+        config = require('plugin/telescope'),
+        requires = {{'nvim-lua/plenary.nvim'}}
+    }
+
+    -- code formatting
+    use {'lukas-reineke/format.nvim', config = require('plugin/format')}
+
+    -- code commenting
+    use {'numToStr/Comment.nvim', config = require('plugin/comment')}
+
+    -- lsp
+    use {'neovim/nvim-lspconfig', config = require('plugin/lsp')}
+
+    -- completion
+    use {
+        'hrsh7th/nvim-cmp',
+        config = require('plugin/completion'),
+        requires = {
+            {'hrsh7th/cmp-buffer'}, {'hrsh7th/cmp-path'},
+            {'hrsh7th/cmp-cmdline'}, {'hrsh7th/cmp-nvim-lsp'}
+        }
+    }
+
+    -- git integration
+    use {'tpope/vim-fugitive'}
+
+    -- org mode
+    use {'nvim-orgmode/orgmode', config = require('plugin/orgmode')}
+
+    -- terminal integration
+    use {'numToStr/FTerm.nvim', config = require('plugin/terminal')}
+
+    -- Automatically set up your configuration after cloning packer.nvim
+    -- Put this at the end after all plugins
+    if packer_bootstrap then require('packer').sync() end
+end)

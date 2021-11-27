@@ -29,7 +29,7 @@ fd
 file
 findutils
 firefox
-flameshot-git
+flameshot
 flex
 fzf
 gawk
@@ -60,8 +60,10 @@ m4
 make
 man-db
 moreutils
+mpd
 mpv
 mutt-wizard
+ncmpcpp
 neofetch
 neomutt
 neovim
@@ -93,15 +95,24 @@ pv
 python-adblock
 python-lsp-server
 python-matplotlib
+python-pipenv
 python-pynvim
+python-scipy
+python-sympy
 qemu
+qpdfview
 qt5-wayland
 qutebrowser
+ranger
+rdesktop
 ripgrep
 root
 rsync
+rust-analyzer
+rustup
 sed
 shfmt
+sshfs
 sshpass
 stow
 sudo
@@ -117,6 +128,7 @@ texlive-formatsextra
 texlive-games
 texlive-humanities
 texlive-latexextra
+texlive-latexindent-meta
 texlive-music
 texlive-pictures
 texlive-pstricks
@@ -130,6 +142,7 @@ tmux
 tmuxp
 ttf-hack
 ttf-joypixels
+ueberzug
 unclutter
 unzip
 vagrant
@@ -144,6 +157,7 @@ wlroots
 xclip
 xf86-video-intel
 xorg-server
+xorg-xbacklight
 xorg-xinit
 xorg-xkill
 xorg-xsetroot
@@ -155,4 +169,5 @@ ydotool
 youtube-dl
 zathura
 zathura-pdf-poppler
+zip
 zsh

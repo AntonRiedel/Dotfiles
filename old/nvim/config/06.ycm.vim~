@@ -1,7 +1,0 @@
-" File              : 06.ycm.vim
-" Author            : Anton Riedel <anton.riedel@tum.de>
-" Date              : 29.08.2020
-" Last Modified Date: 29.08.2020
-" Last Modified By  : Anton Riedel <anton.riedel@tum.de>
-
-let g:ycm_clangd_binary_path = "/usr/bin/clangd"
