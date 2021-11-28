@@ -19,7 +19,6 @@ btrfs-progs
 cifs-utils
 clang
 cmake
-cmus
 dashbinsh
 dnsmasq
 efibootmgr
@@ -54,6 +53,8 @@ libxft-bgra-git
 linux
 linux-firmware
 linux-lts
+lua-format
+lua-language-server
 lxterminal
 lynx
 m4
@@ -66,7 +67,7 @@ mutt-wizard
 ncmpcpp
 neofetch
 neomutt
-neovim
+neovim-nightly-bin
 networkmanager
 networkmanager-openvpn
 newsboat
@@ -93,6 +94,7 @@ pkgconf
 pulsemixer
 pv
 python-adblock
+python-black
 python-lsp-server
 python-matplotlib
 python-pipenv
@@ -164,7 +166,6 @@ xorg-xsetroot
 xorg-xwayland
 xournalpp
 xwallpaper
-yapf
 ydotool
 youtube-dl
 zathura

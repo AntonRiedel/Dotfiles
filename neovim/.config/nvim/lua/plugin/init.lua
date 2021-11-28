@@ -63,6 +63,9 @@ return require('packer').startup(function(use)
         requires = {'rafamadriz/friendly-snippets'}
     }
 
+    -- auto pairs
+    use {'windwp/nvim-autopairs', config = require('plugin/autopairs')}
+
     -- better motions
     use {'ggandor/lightspeed.nvim'}
 
@@ -71,6 +74,11 @@ return require('packer').startup(function(use)
 
     -- git integration
     use {'tpope/vim-fugitive'}
+    use {
+        'lewis6991/gitsigns.nvim',
+        config = require('plugin/gitsigns'),
+        requires = {'nvim-lua/plenary.nvim'}
+    }
 
     -- org mode
     use {'nvim-orgmode/orgmode', config = require('plugin/orgmode')}
