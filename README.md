@@ -41,5 +41,5 @@ Under `old` you can find configuration files for programs I used to use such as:
 - vifm
 - nnn
 - lf
-- compton (->xcompmgr)
+- compton
 - dunst

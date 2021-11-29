@@ -42,7 +42,9 @@ end
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp
                                                                      .protocol
                                                                      .make_client_capabilities())
-local servers = {'clangd', 'pylsp', 'texlab', 'sumneko_lua', 'rust_analyzer'}
+local servers = {
+    'clangd', 'pylsp', 'bashls', 'sumneko_lua', 'texlab', 'rust_analyzer'
+}
 for _, lsp in ipairs(servers) do
     if lsp == 'sumneko_lua' then
         nvim_lsp[lsp].setup {

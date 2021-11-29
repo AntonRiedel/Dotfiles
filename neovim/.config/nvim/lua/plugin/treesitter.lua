@@ -12,7 +12,9 @@ parser_config.org = {
 }
 
 require'nvim-treesitter.configs'.setup {
-    ensure_installed = {"c", "cpp", "python", "latex", "lua", "rust", "org"},
+    ensure_installed = {
+        "c", "cpp", "python", "bash", "latex", "lua", "rust", "org"
+    },
     highlight = {enable = true, additional_vim_regex_highlighting = false},
     indent = {enable = true}
 }
