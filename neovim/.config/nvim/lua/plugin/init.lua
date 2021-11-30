@@ -1,3 +1,10 @@
+--[[--
+File              : init.lua
+Author            : Anton Riedel <anton.riedel@tum.de>
+Date              : 30.11.2021
+Last Modified Date: 30.11.2021
+Last Modified By  : Anton Riedel <anton.riedel@tum.de>
+--]] --
 -- install packer if it is not installed already
 local fn = vim.fn
 local install_path = fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
@@ -20,8 +27,8 @@ return require('packer').startup(function(use)
     -- statusline
     use {'nvim-lualine/lualine.nvim', config = require('plugin/statusline')}
 
-    -- custom file headers
-    use {'ahonn/vim-fileheader', config = require('plugin/fileheader')}
+    -- file headers
+    use {'alpertuna/vim-header', config = require('plugin/fileheader')}
 
     -- treesitter
     use {

@@ -1,3 +1,10 @@
+--[[--
+File              : config.lua
+Author            : Anton Riedel <anton.riedel@tum.de>
+Date              : 30.11.2021
+Last Modified Date: 30.11.2021
+Last Modified By  : Anton Riedel <anton.riedel@tum.de>
+--]] --
 -- set path to external programs explicitly
 vim.opt.shell = '/bin/bash'
 vim.g.python3_host_prog = '/bin/python3'

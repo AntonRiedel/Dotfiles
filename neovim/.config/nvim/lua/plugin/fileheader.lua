@@ -1,10 +1,13 @@
+--[[--
+File              : fileheader.lua
+Author            : Anton Riedel <anton.riedel@tum.de>
+Date              : 30.11.2021
+Last Modified Date: 30.11.2021
+Last Modified By  : Anton Riedel <anton.riedel@tum.de>
+--]]--
 if packer_bootstrap then return end
 
-vim.g.fileheader_auto_add = 0
-vim.g.fileheader_auto_update = 1
-vim.g.fileheader_author = "Anton Riedel"
-vim.g.fileheader_default_email = "anton.riedel@tum.de"
-vim.g.fileheader_show_email = 1
-vim.g.fileheader_date_format = "%Y-%m-%d %H:%M:%S"
-vim.g.fileheader_by_git_config = 1
-vim.g.fileheader_new_line_at_end = 1
+vim.g.header_auto_add_header = 0
+vim.g.header_auto_update_header = 1
+vim.g.header_field_author = "Anton Riedel"
+vim.g.header_field_author_email = "anton.riedel@tum.de"
