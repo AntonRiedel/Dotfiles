@@ -73,9 +73,6 @@ return require('packer').startup(function(use)
     -- auto pairs
     use {'windwp/nvim-autopairs', config = require('plugin/autopairs')}
 
-    -- better motions
-    use {'ggandor/lightspeed.nvim'}
-
     -- surround
     use {'tpope/vim-surround'}
 
