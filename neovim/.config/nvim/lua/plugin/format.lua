@@ -2,9 +2,9 @@
 File              : format.lua
 Author            : Anton Riedel <anton.riedel@tum.de>
 Date              : 30.11.2021
-Last Modified Date: 30.11.2021
+Last Modified Date: 03.12.2021
 Last Modified By  : Anton Riedel <anton.riedel@tum.de>
---]]--
+--]] --
 if packer_bootstrap then return end
 
 require('format').setup {
@@ -14,7 +14,9 @@ require('format').setup {
     sh = {{cmd = {"shfmt -w"}}},
     lua = {{cmd = {"lua-format -i"}}},
     rust = {{cmd = {"rustfmt"}}},
-    tex = {{cmd = {"latexindent -w -s"}}}
+    tex = {{cmd = {"latexindent -w -s"}}},
+    json = {{cmd = {"prettier -w -parser json"}}},
+    yaml = {{cmd = {"prettier -w -parser yaml"}}}
 }
 
 -- for debugging let g:format_debug = v:true

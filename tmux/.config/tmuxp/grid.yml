@@ -6,23 +6,23 @@ windows:
     focus: true
     panes:
       - shell_command:
-        - alienv enter AliPhysics/latest --shellrc
-        - cd ${GRID_UTILITY_SCRIPTS:=$HOME/GridUtilityScripts}
+          - alienv enter AliPhysics/latest --shellrc
+          - cd ${GRID_UTILITY_SCRIPTS:=$HOME/GridUtilityScripts}
   - window_name: steer
     panes:
       - shell_command:
-        - sleep 5
-        - alienv enter AliPhysics/latest --shellrc
-        - cd ${ALICE_ANALYSIS:=$HOME/Analysis}
+          - sleep 5
+          - alienv enter AliPhysics/latest --shellrc
+          - cd ${ALICE_ANALYSIS:=$HOME/Analysis}
   - window_name: resub
     panes:
       - shell_command:
-        - sleep 10
-        - alienv enter AliPhysics/latest --shellrc
-        - cd ${ALICE_ANALYSIS:=$HOME/Analysis}
+          - sleep 10
+          - alienv enter AliPhysics/latest --shellrc
+          - cd ${ALICE_ANALYSIS:=$HOME/Analysis}
   - window_name: cp
     panes:
       - shell_command:
-        - sleep 15
-        - alienv enter AliPhysics/latest --shellrc
-        - cd ${ALICE_ANALYSIS:=$HOME/Analysis}
+          - sleep 15
+          - alienv enter AliPhysics/latest --shellrc
+          - cd ${ALICE_ANALYSIS:=$HOME/Analysis}
