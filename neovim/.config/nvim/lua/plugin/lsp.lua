@@ -2,7 +2,7 @@
 File              : lsp.lua
 Author            : Anton Riedel <anton.riedel@tum.de>
 Date              : 30.11.2021
-Last Modified Date: 30.11.2021
+Last Modified Date: 03.12.2021
 Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 --]]--
 if packer_bootstrap then return end
@@ -50,7 +50,7 @@ local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp
                                                                      .protocol
                                                                      .make_client_capabilities())
 local servers = {
-    'clangd', 'pylsp', 'bashls', 'sumneko_lua', 'texlab', 'rust_analyzer'
+    'clangd', 'pyright', 'bashls', 'sumneko_lua', 'texlab', 'rust_analyzer'
 }
 for _, lsp in ipairs(servers) do
     if lsp == 'sumneko_lua' then
