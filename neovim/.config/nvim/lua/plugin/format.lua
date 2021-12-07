@@ -2,7 +2,7 @@
 File              : format.lua
 Author            : Anton Riedel <anton.riedel@tum.de>
 Date              : 30.11.2021
-Last Modified Date: 03.12.2021
+Last Modified Date: 07.12.2021
 Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 --]] --
 if packer_bootstrap then return end
@@ -15,8 +15,8 @@ require('format').setup {
     lua = {{cmd = {"lua-format -i"}}},
     rust = {{cmd = {"rustfmt"}}},
     tex = {{cmd = {"latexindent -w -s"}}},
-    json = {{cmd = {"prettier -w -parser json"}}},
-    yaml = {{cmd = {"prettier -w -parser yaml"}}}
+    json = {{cmd = {"prettier --write --parser json"}}},
+    yaml = {{cmd = {"prettier --write --parser yaml"}}}
 }
 
 -- for debugging let g:format_debug = v:true
