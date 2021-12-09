@@ -14,15 +14,9 @@ windows:
           - sleep 5
           - alienv enter AliPhysics/latest --shellrc
           - cd ${ALICE_ANALYSIS:=$HOME/Analysis}
-  - window_name: resub
+  - window_name: misc
     panes:
       - shell_command:
           - sleep 10
-          - alienv enter AliPhysics/latest --shellrc
-          - cd ${ALICE_ANALYSIS:=$HOME/Analysis}
-  - window_name: cp
-    panes:
-      - shell_command:
-          - sleep 15
           - alienv enter AliPhysics/latest --shellrc
           - cd ${ALICE_ANALYSIS:=$HOME/Analysis}

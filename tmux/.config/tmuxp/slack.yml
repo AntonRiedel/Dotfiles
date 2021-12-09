@@ -1,14 +1,18 @@
 # File              : slack.yml
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 12.10.2021
-# Last Modified Date: 03.12.2021
+# Last Modified Date: 09.12.2021
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 session_name: Slack
 start_directory: $HOME/.config/slack-term
 windows:
-    - window_name: DenseAndStrange
-      panes:
-        - shell_command: slack-term -config DenseAndStrange
-    - window_name: FemtoBoyz
-      panes:
-        - shell_command: slack-term -config FemtoBoyz
+  - window_name: DenseAndStrange
+    panes:
+      - shell_command: slack-term -config DenseAndStrange
+  - window_name: FemtoBoyz
+    panes:
+      - shell_command: slack-term -config FemtoBoyz
+  - window_name: Mail
+    focus: true
+    panes:
+      - shell_command: neomutt
