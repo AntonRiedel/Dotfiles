@@ -1,27 +1,26 @@
 session_name: AliPhysics
-shell_command_before:
-  - cd ${ALICE:=$HOME}
+start_directory: ${ALICE:=$HOME/alice}
 windows:
   - window_name: htop
     panes:
       - shell_command:
-        - htop
+          - htop
   - window_name: dev
     focus: true
     panes:
       - shell_command:
-        - alienv enter AliPhysics/latest --shellrc
-        - cd $ALICE/AliPhysics
+          - alienv enter AliPhysics/latest --shellrc
+          - cd $ALICE/AliPhysics
   - window_name: comp
     panes:
       - shell_command:
-        - sleep 5
-        - alienv enter AliPhysics/latest --shellrc
-        - cd $ALICE/sw/BUILD/AliPhysics-latest-master/AliPhysics
-        - find $ALICE/AliPhysics/PWG/FLOW | entr -pc make install -j$(nproc)
+          - sleep 5
+          - alienv enter AliPhysics/latest --shellrc
+          - cd $ALICE/sw/BUILD/AliPhysics-latest-master/AliPhysics
+          - find $ALICE/AliPhysics/PWG/FLOW | entr -pc make install -j$(nproc)
   - window_name: steer
     panes:
       - shell_command:
-        - sleep 10
-        - alienv enter AliPhysics/latest --shellrc
-        - cd ${ALICE_ANALYSIS:=$HOME/Analysis}
+          - sleep 10
+          - alienv enter AliPhysics/latest --shellrc
+          - cd ${ALICE_ANALYSIS:=$HOME/Analysis}

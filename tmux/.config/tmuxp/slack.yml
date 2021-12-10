@@ -1,7 +1,7 @@
 # File              : slack.yml
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 12.10.2021
-# Last Modified Date: 09.12.2021
+# Last Modified Date: 10.12.2021
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 session_name: Slack
 start_directory: $HOME/.config/slack-term
@@ -15,4 +15,6 @@ windows:
   - window_name: Mail
     focus: true
     panes:
-      - shell_command: neomutt
+      - shell_command:
+          - cd
+          - neomutt

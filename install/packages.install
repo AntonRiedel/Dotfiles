@@ -18,6 +18,7 @@ bridge-utils
 btrfs-progs
 cifs-utils
 clang
+clusterssh
 cmake
 dashbinsh
 dnsmasq
@@ -47,6 +48,7 @@ imagemagick
 intel-ucode
 interception-dual-function-keys
 iptables-nft
+jq
 libtool
 libvirt
 libxft-bgra-git
@@ -67,7 +69,7 @@ mutt-wizard
 ncmpcpp
 neofetch
 neomutt
-neovim-nightly-bin
+neovim
 networkmanager
 networkmanager-openvpn
 newsboat
@@ -91,11 +93,12 @@ passmenu-otp-git
 patch
 pdfjs
 pkgconf
+prettier
 pulsemixer
 pv
+pyright
 python-adblock
 python-black
-python-lsp-server
 python-matplotlib
 python-pipenv
 python-pynvim
@@ -107,6 +110,7 @@ qt5-wayland
 qutebrowser
 ranger
 rdesktop
+reflector
 ripgrep
 root
 rsync
@@ -114,6 +118,7 @@ rust-analyzer
 rustup
 sed
 shfmt
+slack-term-bin
 sshfs
 sshpass
 stow
