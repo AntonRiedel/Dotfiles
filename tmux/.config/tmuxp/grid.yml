@@ -1,6 +1,5 @@
 session_name: Grid
-shell_command_before:
-  - cd ${ALICE:=$HOME}
+start_directory: ${ALICE}
 windows:
   - window_name: dev
     focus: true

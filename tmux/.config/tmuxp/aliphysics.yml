@@ -1,5 +1,5 @@
 session_name: AliPhysics
-start_directory: ${ALICE:=$HOME/alice}
+start_directory: ${ALICE}
 windows:
   - window_name: htop
     panes:
