@@ -2,7 +2,7 @@
 File              : init.lua
 Author            : Anton Riedel <anton.riedel@tum.de>
 Date              : 30.11.2021
-Last Modified Date: 30.11.2021
+Last Modified Date: 17.01.2022
 Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 --]] --
 -- install packer if it is not installed already
