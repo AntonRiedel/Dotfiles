@@ -20,9 +20,12 @@ cifs-utils
 clang
 clusterssh
 cmake
+cool-retro-term
 dashbinsh
 dnsmasq
+dosfstools
 efibootmgr
+emacs
 entr
 fakeroot
 fd
@@ -38,6 +41,7 @@ gettext
 git
 grep
 groff
+gromit-mpx
 grub
 grub-btrfs
 grub-customizer
@@ -85,6 +89,7 @@ opusfile
 opustags
 pacman
 pacman-contrib
+pandoc-bin
 parallel
 paru-bin
 pass
@@ -92,6 +97,7 @@ passff-host
 passmenu-otp-git
 patch
 pdfjs
+pipewire-pulse
 pkgconf
 prettier
 pulsemixer
@@ -116,6 +122,7 @@ root
 rsync
 rust-analyzer
 rustup
+scrcpy
 sed
 shfmt
 slack-term-bin
@@ -144,6 +151,7 @@ texlive-science
 thinkpad-scripts
 tigervnc
 timeshift
+tk
 tlp
 tmux
 tmuxp
@@ -154,6 +162,7 @@ unclutter
 unzip
 vagrant
 vim
+virt-manager
 wayland-protocols
 wdisplays
 wget

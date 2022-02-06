@@ -2,7 +2,7 @@
 # File              : music.sh
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 08.06.2020
-# Last Modified Date: 05.12.2021
+# Last Modified Date: 22.01.2022
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 #check for arguments
@@ -34,7 +34,7 @@ Dir="$(echo "$Album" | iconv -cf UTF-8 -t ASCII//TRANSLIT | tr -d '[:punct:]' | 
 Total="$(wc -l <"$2")"
 
 #download data
-youtube-dl -i -x -f best/bestaudio -o '%(playlist_index)02d.%(ext)s' "$Url"
+youtube-dl -i -x -f best/bestaudio --retries "infinite" --fragment-retries "infinite" -o '%(playlist_index)02d.%(ext)s' "$Url"
 
 #set counter for tracks
 Counter=1

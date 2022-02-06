@@ -2,7 +2,7 @@
 # File              : aliasrc
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 24.03.2020
-# Last Modified Date: 04.11.2021
+# Last Modified Date: 26.01.2022
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 ##aliases
@@ -27,25 +27,25 @@ alias gb='git branch'
 alias rr='root -q -l -b'
 alias ranger='source ranger'
 if grep -iq "arch linux" /etc/os-release; then
-    alias pu='paru -Syu'
-    alias pi='paru -S'
-    alias pr='paru -Rnsc'
-    alias po='paru -Qtdq | paru -Rns -'
-    alias pc='paru -Scc'
-    alias pq='paru -Ss'
-    # alias pi='sudo pacman -S'
-    # alias pu='sudo pacman -Syu'
-    # alias pr='sudo pacman -rnsc'
-    # alias po='sudo pacman -Qtdq | sudo pacman -rns -'
-    # alias pc='pacman Scc'
-    # alias pq='pacman -Ss'
+	alias pu='paru -Syu'
+	alias pi='paru -S'
+	alias pr='paru -Rnsc'
+	alias po='paru -Qtdq | paru -Rns -'
+	alias pc='paru -Scc'
+	alias pq='paru -Ss'
+	# alias pi='sudo pacman -S'
+	# alias pu='sudo pacman -Syu'
+	# alias pr='sudo pacman -rnsc'
+	# alias po='sudo pacman -Qtdq | sudo pacman -rns -'
+	# alias pc='pacman Scc'
+	# alias pq='pacman -Ss'
 elif grep -iq "debian\|ubuntu" /etc/os-release; then
-    alias pu='sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y'
-    alias pi='sudo apt install'
-    alias pr='sudo apt purge'
-    alias po='sudo apt autoremove'
-    alias pc='sudo apt autoclean'
-    alias pq='apt search'
+	alias pu='sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y'
+	alias pi='sudo apt install'
+	alias pr='sudo apt purge'
+	alias po='sudo apt autoremove'
+	alias pc='sudo apt autoclean'
+	alias pq='apt search'
 fi
 alias nmu='nmcli con up --ask'
 alias nmd='nmcli con down'
@@ -54,57 +54,57 @@ alias screen='xinput --map-to-output "Wacom ISDv4 E6 Pen Pen (0)" LVDS1 --map-to
 ##custom shell functions (a.k.a. fun with fzf)
 #search and edit a configuration file
 ce() {
-    $EDITOR "$(find $HOME/Dotfiles -type f -not -path "*/old/*" | fzf --prompt="Edit config file: ")"
-    return 0
+	$EDITOR "$(find $HOME/Dotfiles -type f -not -path "*/old/*" | fzf --prompt="Edit config file: ")"
+	return 0
 }
 #connect to known host via ssh
 sshc() {
-    # choose a host from all known hosts
-    Host="$(grep -r "^Host " $HOME/.ssh/config.d | grep -v "git\|\*" | awk '{print $2}' | fzf --prompt="Connect to host: ")"
+	# choose a host from all known hosts
+	Host="$(grep -r "^Host " $HOME/.ssh/config.d | grep -v "git\|\*" | awk '{print $2}' | fzf --prompt="Connect to host: ")"
 
-    if [ $Host = "sun" ] || [ $Host = "sun_local" ]; then
-        # key with passphrase; hence we need sshpass -P
-        SSHPASS="$(pass sun/key)" sshpass -P "passphrase" -e ssh "$Host"
-    else
-        #all others __should__ do not need a password
-        ssh "$Host"
-    fi
+	if [ $Host = "sun" ] || [ $Host = "sun_local" ]; then
+		# key with passphrase; hence we need sshpass -P
+		SSHPASS="$(pass sun/key)" sshpass -P "passphrase" -e ssh "$Host"
+	else
+		#all others __should__ do not need a password
+		ssh "$Host"
+	fi
 
-    return 0
+	return 0
 }
 #search and enter a subdirectory in your home directory
-fd() {
-    cd "$(find $HOME -type d -not -path "old" -not -path ".git" | fzf --prompt="Jump to Dir: ")"
-    pwd
-    ls
-    return 0
+fdir() {
+	cd "$(find $HOME -type d -not -path "old" -not -path ".git" | fzf --prompt="Jump to Dir: ")"
+	pwd
+	ls
+	return 0
 }
 #search and open a file in your home directory
 ff() {
-    xdg-open "$(find $HOME -type f -not -path "*/old/*" | fzf --prompt="Open file: ")"
-    return 0
+	xdg-open "$(find $HOME -type f -not -path "*/old/*" | fzf --prompt="Open file: ")"
+	return 0
 }
 #search for a process and kill it
 kp() {
-    kill -s SIGKILL "$(ps aux | fzf --prompt="Job to kill: " | awk '{ print $2 }')" 2>/dev/null
-    return 0
+	kill -s SIGKILL "$(ps aux | fzf --prompt="Job to kill: " | awk '{ print $2 }')" 2>/dev/null
+	return 0
 }
 #load tmuxp config file
 tp() {
-    local ConfigDir
-    if [ -d $HOME/.config/tmuxp ]; then
-        ConfigDir=$HOME/.config/tmuxp/
-    elif [ -d $HOME/.tmuxp ]; then
-        ConfigDir=$HOME/.tmuxp/
-    else
-        return 1
-    fi
-    tmuxp load $(find $ConfigDir -type f -name "*.yml" | awk -F'/' '{gsub(".yml","",$NF);print $NF}' | fzf --prompt="Load tmux config:")
-    return 0
+	local ConfigDir
+	if [ -d $HOME/.config/tmuxp ]; then
+		ConfigDir=$HOME/.config/tmuxp/
+	elif [ -d $HOME/.tmuxp ]; then
+		ConfigDir=$HOME/.tmuxp/
+	else
+		return 1
+	fi
+	tmuxp load $(find $ConfigDir -type f -name "*.yml" | awk -F'/' '{gsub(".yml","",$NF);print $NF}' | fzf --prompt="Load tmux config:")
+	return 0
 }
 #copy a content of file in the current directory to clipboard
 ctc() {
-    File="$(find . -maxdepth 1 -type f | fzf --prompt="Copy file to clipboard: ")"
-    xclip -selection clipboard $File
-    return 0
+	File="$(find . -maxdepth 1 -type f | fzf --prompt="Copy file to clipboard: ")"
+	xclip -selection clipboard $File
+	return 0
 }
