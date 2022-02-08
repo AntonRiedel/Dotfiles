@@ -50,6 +50,9 @@ return require('packer').startup(function(use)
     -- code commenting
     use {'numToStr/Comment.nvim', config = require('plugin/comment')}
 
+    -- extend language servers
+    use {'p00f/clangd_extensions.nvim'}
+
     -- lsp
     use {'neovim/nvim-lspconfig', config = require('plugin/lsp')}
 
@@ -62,9 +65,6 @@ return require('packer').startup(function(use)
             {'hrsh7th/cmp-nvim-lsp'}, {'saadparwaiz1/cmp_luasnip'}
         }
     }
-
-    -- extend language servers
-    use {'p00f/clangd_extensions.nvim', config = require('plugin/clangd')}
 
     -- snippet engine
     use {

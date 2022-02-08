@@ -2,9 +2,9 @@
 File              : lsp.lua
 Author            : Anton Riedel <anton.riedel@tum.de>
 Date              : 30.11.2021
-Last Modified Date: 03.12.2021
+Last Modified Date: 08.02.2022
 Last Modified By  : Anton Riedel <anton.riedel@tum.de>
---]]--
+--]] --
 if packer_bootstrap then return end
 
 local nvim_lsp = require('lspconfig')
@@ -43,6 +43,9 @@ local on_attach = function(client, bufnr)
     -- buf_set_keymap('n', '<space>q', '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', opts)
     -- buf_set_keymap('n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
 end
+
+-- extend capabilities of certain language servers
+-- require("clangd_extensions").setup({})
 
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches

@@ -2,7 +2,7 @@
 File              : README.md
 Author            : Anton Riedel <anton.riedel@tum.de>
 Date              : 25.03.2020
-Last Modified Date: 17.09.2020
+Last Modified Date: 08.02.2022
 Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 -->
 
@@ -17,9 +17,9 @@ You can find configuration files for
 - neovim (editor)
 - tmux (terminal multiplexer)
 - sxhkd (hotkey daemon)
-- htop (system monitor)
 - qutebrowser (minimal vim-like web browser)
 - zathura (minimal vim-like pdf viewer)
+- ...
 
 as well as some custom scripts under `scripts`.
 
@@ -36,10 +36,10 @@ Under `old` you can find configuration files for programs I used to use such as:
 - termite (->alacritty)
 - urxvt (->alacritty)
 - xterm (->alacritty)
-- lxterminal (->alacritty)
 - ranger
 - vifm
 - nnn
 - lf
 - compton
 - dunst
+- ...
