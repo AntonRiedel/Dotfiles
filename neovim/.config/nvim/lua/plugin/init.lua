@@ -2,7 +2,7 @@
 File              : init.lua
 Author            : Anton Riedel <anton.riedel@tum.de>
 Date              : 30.11.2021
-Last Modified Date: 17.01.2022
+Last Modified Date: 08.02.2022
 Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 --]] --
 -- install packer if it is not installed already
@@ -34,7 +34,7 @@ return require('packer').startup(function(use)
     use {
         'nvim-treesitter/nvim-treesitter',
         config = require('plugin/treesitter'),
-        run = ':TSUpdate'
+        run = ':TkUpdate'
     }
 
     -- fuzzy finder
@@ -62,6 +62,9 @@ return require('packer').startup(function(use)
             {'hrsh7th/cmp-nvim-lsp'}, {'saadparwaiz1/cmp_luasnip'}
         }
     }
+
+    -- extend language servers
+    use {'p00f/clangd_extensions.nvim', config = require('plugin/clangd')}
 
     -- snippet engine
     use {
