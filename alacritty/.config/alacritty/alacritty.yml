@@ -1,7 +1,7 @@
 # File              : alacritty.yml
 # Author            : Anton Riedel <anton.riedel@tum.de>
 
-# Last Modified Date: 24.01.2022
+# Last Modified Date: 09.02.2022
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 # Configuration for Alacritty, the GPU enhanced terminal emulator.
@@ -40,8 +40,8 @@ window:
   # Blank space added around the window in pixels. This padding is scaled
   # by DPI and the specified value is always added at both opposing sides.
   padding:
-    x: 0
-    y: 0
+    x: 3
+    y: 3
 
   # Spread additional padding evenly around the terminal content.
   #dynamic_padding: false
@@ -258,7 +258,6 @@ bell:
   #  animation: EaseOutExpo
   duration: 0
 #  color: '#ffffff'
-
 
 #selection:
 #semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"

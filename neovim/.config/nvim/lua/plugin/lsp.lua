@@ -2,7 +2,7 @@
 File              : lsp.lua
 Author            : Anton Riedel <anton.riedel@tum.de>
 Date              : 30.11.2021
-Last Modified Date: 08.02.2022
+Last Modified Date: 14.02.2022
 Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 --]] --
 if packer_bootstrap then return end
@@ -45,7 +45,7 @@ local on_attach = function(client, bufnr)
 end
 
 -- extend capabilities of certain language servers
--- require("clangd_extensions").setup({})
+require("clangd_extensions").setup({})
 
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches

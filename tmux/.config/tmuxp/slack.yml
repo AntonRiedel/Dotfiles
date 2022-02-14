@@ -1,7 +1,7 @@
 # File              : slack.yml
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 12.10.2021
-# Last Modified Date: 10.12.2021
+# Last Modified Date: 10.02.2022
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 session_name: Slack
 start_directory: $HOME/.config/slack-term
@@ -12,6 +12,9 @@ windows:
   - window_name: FemtoBoyz
     panes:
       - shell_command: slack-term -config FemtoBoyz
+  - window_name: Mupa
+    panes:
+      - shell_command: slack-term -config Mupa
   - window_name: Mail
     focus: true
     panes:
