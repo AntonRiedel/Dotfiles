@@ -54,6 +54,9 @@ thinkpad-touch off
 #you do not need a mouse
 unclutter --timeout 2 --jitter 100 --ignore-scrolling &
 
+#notification daemon
+dunst &
+
 #launch statusbar
 bar.sh &
 

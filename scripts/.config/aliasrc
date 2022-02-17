@@ -2,7 +2,7 @@
 # File              : aliasrc
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 24.03.2020
-# Last Modified Date: 26.01.2022
+# Last Modified Date: 16.02.2022
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 ##aliases
@@ -70,13 +70,6 @@ sshc() {
 		ssh "$Host"
 	fi
 
-	return 0
-}
-#search and enter a subdirectory in your home directory
-fdir() {
-	cd "$(find $HOME -type d -not -path "old" -not -path ".git" | fzf --prompt="Jump to Dir: ")"
-	pwd
-	ls
 	return 0
 }
 #search and open a file in your home directory

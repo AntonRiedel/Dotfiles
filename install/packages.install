@@ -14,6 +14,7 @@ bemenu-wayland
 biber
 binutils
 bison
+boost
 bridge-utils
 btrfs-progs
 cifs-utils
@@ -24,6 +25,7 @@ cool-retro-term
 dashbinsh
 dnsmasq
 dosfstools
+dunst
 efibootmgr
 emacs
 entr
@@ -41,7 +43,6 @@ gettext
 git
 grep
 groff
-gromit-mpx
 grub
 grub-btrfs
 grub-customizer
@@ -53,6 +54,7 @@ intel-ucode
 interception-dual-function-keys
 iptables-nft
 jq
+kitty
 libtool
 libvirt
 libxft-bgra-git
@@ -151,10 +153,10 @@ texlive-science
 thinkpad-scripts
 tigervnc
 timeshift
-tk
 tlp
 tmux
 tmuxp
+ttf-fira-code
 ttf-hack
 ttf-joypixels
 ueberzug
