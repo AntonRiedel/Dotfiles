@@ -2,15 +2,15 @@
 # File              : .profile
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 24.03.2020
-# Last Modified Date: 17.02.2022
+# Last Modified Date: 19.02.2022
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 #add $HOME/.local/bin to PATH
 export PATH="${HOME}/.local/bin:${PATH}"
 
 #set default applications
-# export TERMINAL="alacritty"
-export TERMINAL="kitty"
+export TERMINAL="alacritty"
+# export TERMINAL="kitty"
 #export TERMINAL="st"
 [ "$(which nvim)" ] && export EDITOR="nvim" || export EDITOR="vim"
 export VISUAL="${EDITOR}"
@@ -42,7 +42,7 @@ export RUSTUP_HOME="${XDG_DATA_HOME}/rustup"
 export FZF_DEFAULT_OPTS="--reverse --height=40%"
 
 #set default wallpaper
-export WALLPAPER="${HOME}/nextcloud/wallpaper/arch12.png"
+export WALLPAPER="${HOME}/nextcloud/wallpaper/arch4.png"
 
 #start Xorg
 [ "$(tty)" = "/dev/tty1" ] && exec startx $XDG_CONFIG_HOME/X11/xinitrc &>/dev/null

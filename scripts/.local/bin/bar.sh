@@ -2,7 +2,7 @@
 # File              : bar.sh
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 27.04.2020
-# Last Modified Date: 02.11.2020
+# Last Modified Date: 18.02.2022
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 #handle SIGTRAP signals to update the status bar
@@ -37,20 +37,20 @@ status() {
 
 	#show remaining battery power
 	if [ -d /sys/class/power_supply/BAT? ]; then
-		acpi -b | awk '{print $3 $4 "("$5")"}' | sed -e 's/,//g; s/Charging/🔌/g; s/Full/⚡/g; s/Discharging/🔋/g; s/Unknown/🔄/g'
+		acpi -b | awk '{print $3 $4 "("$5")"}' | sed -e 's/,//g; s/Charging/🔌/g; s/Full/⚡/g; s/Discharging/🔋/g; s/Notcharging/🔄/g'
 	else
 		echo "⛽"
 	fi
 	echo "$delim"
 
 	#wifi quality percentage
-	grep "^\s*w" /proc/net/wireless | awk '{ print "📶",int($3 * 100 / 70)"%" }'
+	grep "^\s*w" /proc/net/wireless | awk '{ print "📶",int($3 * 100 / 70)"% " }'
 	sed "s/down//;s/up/🌐/" /sys/class/net/e*/operstate
 	echo "$delim"
 
 	# Date and time.
 	echo "📅"
-	date '+%Y %b %d (%a) %I:%M%p'
+	date '+%D (%a) %H:%M'
 }
 
 update() {

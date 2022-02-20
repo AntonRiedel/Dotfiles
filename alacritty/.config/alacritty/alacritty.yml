@@ -1,7 +1,7 @@
 # File              : alacritty.yml
 # Author            : Anton Riedel <anton.riedel@tum.de>
 
-# Last Modified Date: 15.02.2022
+# Last Modified Date: 19.02.2022
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 # Configuration for Alacritty, the GPU enhanced terminal emulator.
@@ -40,8 +40,8 @@ window:
   # Blank space added around the window in pixels. This padding is scaled
   # by DPI and the specified value is always added at both opposing sides.
   padding:
-    x: 3
-    y: 3
+    x: 2
+    y: 2
 
   # Spread additional padding evenly around the terminal content.
   #dynamic_padding: false
@@ -191,7 +191,8 @@ colors:
   # Cursor colors
   cursor:
     text: "0x2c2c2c"
-    cursor: "0xd9d9d9"
+    # cursor: "0xd9d9d9"
+    cursor: "0xff0000"
 
   # Normal colors
   normal:
