@@ -2,7 +2,7 @@
 # File              : .profile
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 24.03.2020
-# Last Modified Date: 19.02.2022
+# Last Modified Date: 22.02.2022
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 #add $HOME/.local/bin to PATH
@@ -46,4 +46,4 @@ export WALLPAPER="${HOME}/nextcloud/wallpaper/arch4.png"
 
 #start Xorg
 [ "$(tty)" = "/dev/tty1" ] && exec startx $XDG_CONFIG_HOME/X11/xinitrc &>/dev/null
-[ "$(tty)" = "/dev/tty2" ] && exec dwl -s $XDG_CONFIG_HOME/Wayland/waylandrc
+# [ "$(tty)" = "/dev/tty2" ] && exec dwl -s $XDG_CONFIG_HOME/Wayland/waylandrc
