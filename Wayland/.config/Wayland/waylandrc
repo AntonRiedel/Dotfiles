@@ -7,6 +7,6 @@
 
 # startup script for wayland compositor
 
-swaybg -i $WALLPAPER &>/dev/null &
+#swaybg -i $WALLPAPER &>/dev/null &
 
 exit 0

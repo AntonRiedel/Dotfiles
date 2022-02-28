@@ -9,8 +9,6 @@ autoconf
 automake
 base
 bash-language-server
-bemenu-dmenu-wayland
-bemenu-wayland
 biber
 binutils
 bison
@@ -21,7 +19,6 @@ cifs-utils
 clang
 clusterssh
 cmake
-cool-retro-term
 dashbinsh
 dnsmasq
 dosfstools
@@ -63,7 +60,6 @@ linux-firmware
 linux-lts
 lua-format
 lua-language-server
-lxterminal
 lynx
 m4
 make
@@ -90,7 +86,6 @@ opus-tools
 opusfile
 opustags
 pacman
-pacman-contrib
 pandoc-bin
 parallel
 paru-bin
@@ -103,7 +98,6 @@ pipewire-pulse
 pkgconf
 prettier
 pulsemixer
-pv
 pyright
 python-adblock
 python-black
@@ -116,7 +110,6 @@ qemu
 qpdfview
 qt5-wayland
 qutebrowser
-ranger
 rdesktop
 reflector
 ripgrep
@@ -132,7 +125,6 @@ sshfs
 sshpass
 stow
 sudo
-swaybg
 sxhkd
 sxiv
 texinfo
@@ -165,13 +157,8 @@ unzip
 vagrant
 vim
 virt-manager
-wayland-protocols
-wdisplays
 wget
 which
-wl-clipboard
-wlr-randr
-wlroots
 xclip
 xf86-video-intel
 xorg-server
@@ -182,7 +169,6 @@ xorg-xsetroot
 xorg-xwayland
 xournalpp
 xwallpaper
-ydotool-bin
 youtube-dl
 zathura
 zathura-pdf-poppler
