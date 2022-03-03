@@ -2,7 +2,7 @@
 File              : init.lua
 Author            : Anton Riedel <anton.riedel@tum.de>
 Date              : 30.11.2021
-Last Modified Date: 23.02.2022
+Last Modified Date: 02.03.2022
 Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 --]] --
 -- install packer if it is not installed already
@@ -48,7 +48,11 @@ return require('packer').startup(function(use)
     }
 
     -- code formatting
-    use {'lukas-reineke/format.nvim', config = require('plugin/format')}
+    use {
+        'lukas-reineke/lsp-format.nvim',
+        tag = 'v1',
+        config = require('plugin/format')
+    }
 
     -- code commenting
     use {'numToStr/Comment.nvim', config = require('plugin/comment')}
@@ -89,7 +93,6 @@ return require('packer').startup(function(use)
         config = require('plugin/gitsigns'),
         requires = {'nvim-lua/plenary.nvim'}
     }
-
 
     -- terminal integration
     use {'numToStr/FTerm.nvim', config = require('plugin/terminal')}

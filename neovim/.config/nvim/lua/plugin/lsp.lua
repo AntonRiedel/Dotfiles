@@ -2,7 +2,7 @@
 File              : lsp.lua
 Author            : Anton Riedel <anton.riedel@tum.de>
 Date              : 30.11.2021
-Last Modified Date: 14.02.2022
+Last Modified Date: 02.03.2022
 Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 --]] --
 if packer_bootstrap then return end
@@ -16,6 +16,9 @@ local on_attach = function(client, bufnr)
     local function buf_set_option(...)
         vim.api.nvim_buf_set_option(bufnr, ...)
     end
+
+    -- enable formatting
+    -- require('lsp-format').on_attach(client)
 
     -- Enable completion triggered by <c-x><c-o>
     buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
