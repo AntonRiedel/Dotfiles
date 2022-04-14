@@ -2,7 +2,7 @@
 File              : init.lua
 Author            : Anton Riedel <anton.riedel@tum.de>
 Date              : 30.11.2021
-Last Modified Date: 05.03.2022
+Last Modified Date: 14.04.2022
 Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 --]] --
 -- install packer if it is not installed already
@@ -23,6 +23,7 @@ return require('packer').startup(function(use)
 
     -- colorscheme
     use {'shaunsingh/moonlight.nvim', config = require('plugin/colorscheme')}
+    -- use {'EdenEast/nightfox.nvim', config = require('plugin/colorscheme')}
 
     -- statusline
     use {'nvim-lualine/lualine.nvim', config = require('plugin/statusline')}
@@ -31,32 +32,33 @@ return require('packer').startup(function(use)
     use {'alpertuna/vim-header', config = require('plugin/fileheader')}
 
     -- org mode
-    use {'nvim-orgmode/orgmode', config = require('plugin/orgmode')}
+    -- use {'nvim-orgmode/orgmode', config = require('plugin/orgmode')}
 
     -- treesitter
     use {
         'nvim-treesitter/nvim-treesitter',
         config = require('plugin/treesitter'),
-        run = ':TkUpdate'
+        run = ':TSUpdate'
     }
+
+    -- use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make'}
 
     -- fuzzy finder
     use {
         'nvim-telescope/telescope.nvim',
         config = require('plugin/telescope'),
         requires = {{'nvim-lua/plenary.nvim'}}
+        -- after = 'nvim-telescope/telescope-fzf-native.nvim'
     }
 
     -- code formatting
-    use { "mhartington/formatter.nvim",
-        config = require('plugin/format')
-    }
+    use {"mhartington/formatter.nvim", config = require('plugin/format')}
 
     -- code commenting
     use {'numToStr/Comment.nvim', config = require('plugin/comment')}
 
     -- extend language servers
-    use {'p00f/clangd_extensions.nvim'}
+    -- use {'p00f/clangd_extensions.nvim'}
 
     -- lsp
     use {'neovim/nvim-lspconfig', config = require('plugin/lsp')}
@@ -85,7 +87,7 @@ return require('packer').startup(function(use)
     use {'tpope/vim-surround'}
 
     -- git integration
-    use {'tpope/vim-fugitive'}
+    -- use {'tpope/vim-fugitive'}
     use {
         'lewis6991/gitsigns.nvim',
         config = require('plugin/gitsigns'),
@@ -96,7 +98,7 @@ return require('packer').startup(function(use)
     use {'numToStr/FTerm.nvim', config = require('plugin/terminal')}
 
     -- make quickfix even more awesome
-    use {'kevinhwang91/nvim-bqf'}
+    use {'kevinhwang91/nvim-bqf', ft = 'qf'}
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
