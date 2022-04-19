@@ -2,13 +2,12 @@
 File              : config.lua
 Author            : Anton Riedel <anton.riedel@tum.de>
 Date              : 30.11.2021
-Last Modified Date: 30.11.2021
+Last Modified Date: 16.04.2022
 Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 --]] --
 -- set path to external programs explicitly
 vim.opt.shell = '/bin/bash'
 vim.g.python3_host_prog = '/bin/python3'
-vim.g.loaded_python_provider = 0
 vim.g.loaded_ruby_provider = 0
 vim.g.loaded_node_provider = 0
 vim.g.loaded_perl_provider = 0

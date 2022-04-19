@@ -2,7 +2,7 @@
 File              : init.lua
 Author            : Anton Riedel <anton.riedel@tum.de>
 Date              : 30.11.2021
-Last Modified Date: 14.04.2022
+Last Modified Date: 17.04.2022
 Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 --]] --
 -- install packer if it is not installed already
@@ -22,8 +22,8 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
     -- colorscheme
-    use {'shaunsingh/moonlight.nvim', config = require('plugin/colorscheme')}
-    -- use {'EdenEast/nightfox.nvim', config = require('plugin/colorscheme')}
+    -- use {'shaunsingh/moonlight.nvim', config = require('plugin/colorscheme')}
+    use {'EdenEast/nightfox.nvim', config = require('plugin/colorscheme')}
 
     -- statusline
     use {'nvim-lualine/lualine.nvim', config = require('plugin/statusline')}
@@ -33,6 +33,11 @@ return require('packer').startup(function(use)
 
     -- org mode
     -- use {'nvim-orgmode/orgmode', config = require('plugin/orgmode')}
+    -- use {
+    --     'nvim-neorg/neorg',
+    --     config = require('plugin/neorg'),
+    --     requires = "nvim-lua/plenary.nvim"
+    -- }
 
     -- treesitter
     use {
@@ -48,7 +53,6 @@ return require('packer').startup(function(use)
         'nvim-telescope/telescope.nvim',
         config = require('plugin/telescope'),
         requires = {{'nvim-lua/plenary.nvim'}}
-        -- after = 'nvim-telescope/telescope-fzf-native.nvim'
     }
 
     -- code formatting
@@ -56,9 +60,6 @@ return require('packer').startup(function(use)
 
     -- code commenting
     use {'numToStr/Comment.nvim', config = require('plugin/comment')}
-
-    -- extend language servers
-    -- use {'p00f/clangd_extensions.nvim'}
 
     -- lsp
     use {'neovim/nvim-lspconfig', config = require('plugin/lsp')}
@@ -76,8 +77,8 @@ return require('packer').startup(function(use)
     -- snippet engine
     use {
         'L3MON4D3/LuaSnip',
-        config = require('plugin/snippets'),
-        requires = {'rafamadriz/friendly-snippets'}
+        config = require('plugin/snippets')
+        -- requires = {'rafamadriz/friendly-snippets'}
     }
 
     -- auto pairs
@@ -88,6 +89,7 @@ return require('packer').startup(function(use)
 
     -- git integration
     -- use {'tpope/vim-fugitive'}
+    -- use lazygit in terminal
     use {
         'lewis6991/gitsigns.nvim',
         config = require('plugin/gitsigns'),
