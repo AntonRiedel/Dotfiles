@@ -2,7 +2,7 @@
 File              : init.lua
 Author            : Anton Riedel <anton.riedel@tum.de>
 Date              : 30.11.2021
-Last Modified Date: 17.04.2022
+Last Modified Date: 20.04.2022
 Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 --]] --
 -- install packer if it is not installed already
@@ -64,6 +64,13 @@ return require('packer').startup(function(use)
     -- lsp
     use {'neovim/nvim-lspconfig', config = require('plugin/lsp')}
 
+    -- snippet engine
+    use {
+        'L3MON4D3/LuaSnip',
+        config = require('plugin/snippets'),
+        requires = {'rafamadriz/friendly-snippets'}
+    }
+
     -- completion
     use {
         'hrsh7th/nvim-cmp',
@@ -74,12 +81,6 @@ return require('packer').startup(function(use)
         }
     }
 
-    -- snippet engine
-    use {
-        'L3MON4D3/LuaSnip',
-        config = require('plugin/snippets')
-        -- requires = {'rafamadriz/friendly-snippets'}
-    }
 
     -- auto pairs
     use {'windwp/nvim-autopairs', config = require('plugin/autopairs')}
@@ -101,6 +102,9 @@ return require('packer').startup(function(use)
 
     -- make quickfix even more awesome
     use {'kevinhwang91/nvim-bqf', ft = 'qf'}
+
+    -- make registers more accessible
+    use {'tversteeg/registers.nvim'}
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
