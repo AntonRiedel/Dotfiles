@@ -2,7 +2,7 @@
 File              : init.lua
 Author            : Anton Riedel <anton.riedel@tum.de>
 Date              : 30.11.2021
-Last Modified Date: 20.04.2022
+Last Modified Date: 24.04.2022
 Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 --]] --
 -- install packer if it is not installed already
@@ -20,6 +20,8 @@ return require('packer').startup(function(use)
 
     -- packer can manage itself
     use 'wbthomason/packer.nvim'
+
+    use {'lewis6991/impatient.nvim', config = require('plugin/impatient')}
 
     -- colorscheme
     -- use {'shaunsingh/moonlight.nvim', config = require('plugin/colorscheme')}
