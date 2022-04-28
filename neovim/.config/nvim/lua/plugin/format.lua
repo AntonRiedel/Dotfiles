@@ -2,7 +2,7 @@
 File              : format.lua
 Author            : Anton Riedel <anton.riedel@tum.de>
 Date              : 30.11.2021
-Last Modified Date: 14.04.2022
+Last Modified Date: 28.04.2022
 Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 --]] --
 if packer_bootstrap then return end
@@ -49,6 +49,16 @@ require('formatter').setup({
         },
         cpp = {
             -- clang-format
+            function()
+                return {
+                    exe = "clang-format",
+                    args = {"--assume-filename", vim.api.nvim_buf_get_name(0)},
+                    stdin = true,
+                    cwd = vim.fn.expand('%:p:h') -- Run clang-format in cwd of the file.
+                }
+            end
+        },
+        cuda = {
             function()
                 return {
                     exe = "clang-format",
