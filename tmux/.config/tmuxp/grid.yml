@@ -1,21 +1,33 @@
 session_name: Grid
-start_directory: ${ALICE}
+before_script: ${HOME}/AliceVM/vagrant-up.sh
+start_directory: ${HOME}/AliceVM
+
 windows:
-  - window_name: dev
+  - window_name: devel
     focus: true
     panes:
       - shell_command:
+          - vagrant ssh
+          - cd /home/vagrant/aliPhysics
           - alienv enter AliPhysics/latest --shellrc
-          - cd ${GRID_UTILITY_SCRIPTS:=$HOME/GridUtilityScripts}
+          - cd /home/vagrant/GridUtilityScripts
   - window_name: steer
     panes:
       - shell_command:
           - sleep 5
+          - vagrant ssh
+          - cd /home/vagrant/aliPhysics
           - alienv enter AliPhysics/latest --shellrc
-          - cd ${ALICE_ANALYSIS:=$HOME/Analysis}
-  - window_name: misc
+          - cd
+  - window_name: remote
     panes:
       - shell_command:
           - sleep 10
+          - vagrant ssh
+          - cd /home/vagrant/aliPhysics
           - alienv enter AliPhysics/latest --shellrc
-          - cd ${ALICE_ANALYSIS:=$HOME/Analysis}
+          - cd
+  - window_name: local
+    panes:
+      - shell_command:
+          - cd

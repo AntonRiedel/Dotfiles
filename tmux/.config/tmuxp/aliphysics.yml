@@ -1,26 +1,38 @@
 session_name: AliPhysics
-start_directory: ${ALICE}
+before_script: ${HOME}/AliceVM/vagrant-up.sh
+start_directory: ${HOME}/AliceVM
 windows:
-  - window_name: htop
+  - window_name: devel
     panes:
       - shell_command:
-          - htop
-  - window_name: dev
-    focus: true
-    panes:
-      - shell_command:
+          - vagrant ssh
+          - cd /home/vagrant/aliPhysics
           - alienv enter AliPhysics/latest --shellrc
-          - cd $ALICE/AliPhysics
-  - window_name: comp
+          - cd /home/vagrant/aliPhysics/AliPhysics
+          - nvim
+  - window_name: build
     panes:
       - shell_command:
           - sleep 5
+          - vagrant ssh
+          - cd /home/vagrant/aliPhysics
           - alienv enter AliPhysics/latest --shellrc
-          - cd $ALICE/sw/BUILD/AliPhysics-latest-master/AliPhysics
-          - find $ALICE/AliPhysics/PWG/FLOW | entr -pc make install -j$(nproc)
-  - window_name: steer
+          - cd /home/vagrant/aliPhysics/sw/BUILD/AliPhysics-latest-master/AliPhysics/PWG/FLOW
+          - find . | entr -pc make install -j$(nproc)
+  - window_name: alien
     panes:
       - shell_command:
           - sleep 10
+          - vagrant ssh
+          - cd /home/vagrant/aliPhysics
           - alienv enter AliPhysics/latest --shellrc
-          - cd ${ALICE_ANALYSIS:=$HOME/Analysis}
+          - cd
+  - window_name: remote
+    panes:
+      - shell_command:
+          - sleep 15
+          - vagrant ssh
+  - window_name: local
+    panes:
+      - shell_command:
+          - cd
