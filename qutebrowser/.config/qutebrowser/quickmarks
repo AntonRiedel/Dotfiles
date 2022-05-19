@@ -1,5 +1,4 @@
-server https://sgrastar.strangled.net/nextcloud/index.php/login?clear=1
-server_local https://192.168.31.1/nextcloud/index.php/login
+server https://nextcloud.gemstones.strangled.net/index.php/login
 cip https://wiki.tum.de/display/tuphcip/CIP-Pool+TUM+Physikdepartment
 fopra https://www.ph.tum.de/academics/org/labs/fopra/?language=en
 moodle https://www.moodle.tum.de/
@@ -15,12 +14,9 @@ cheatsheet https://raw.githubusercontent.com/qutebrowser/qutebrowser/master/doc/
 pdg https://pdg.lbl.gov/
 freedns https://freedns.afraid.org/
 scihub https://sci-hub.do/
-envs https://envs.net/
 syncshare https://syncandshare.lrz.de/login
 ktas https://transfer.ktas.ph.tum.de/
 webdisk https://webdisk.mwn.de/Default.aspx?ReturnUrl=%2F
 cernbox https://cernbox.cern.ch/index.php/s/uz5XpmlOTYk8pKV
 tumpc https://wiki.tum.de/pages/viewpage.action?pageId=4304822
-sun https://sun.nudel.lan:9090/
 getJournal javascript:void(location.href='https://eaccess.ub.tum.de/login?url='+location.href)
-y https://app.vagrantup.com/boxes/search
