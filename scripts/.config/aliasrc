@@ -2,7 +2,7 @@
 # File              : aliasrc
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 24.03.2020
-# Last Modified Date: 16.02.2022
+# Last Modified Date: 07.07.2022
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 ##aliases
@@ -60,15 +60,7 @@ ce() {
 #connect to known host via ssh
 sshc() {
 	# choose a host from all known hosts
-	Host="$(grep -r "^Host " $HOME/.ssh/config.d | grep -v "git\|\*" | awk '{print $2}' | fzf --prompt="Connect to host: ")"
-
-	if [ $Host = "sun" ] || [ $Host = "sun_local" ]; then
-		# key with passphrase; hence we need sshpass -P
-		SSHPASS="$(pass sun/key)" sshpass -P "passphrase" -e ssh "$Host"
-	else
-		#all others __should__ do not need a password
-		ssh "$Host"
-	fi
+	ssh "$(grep -r "^Host " $HOME/.ssh/config.d | grep -v "git\|\*" | awk '{print $2}' | fzf --prompt="Connect to host: ")"
 
 	return 0
 }

@@ -1,4 +1,4 @@
-session_name: AliPhysics
+session_name: o2
 before_script: ${HOME}/AliceVM/vagrant-up.sh
 start_directory: ${HOME}/AliceVM
 windows:
@@ -7,8 +7,8 @@ windows:
       - shell_command:
           - vagrant ssh
           - cd /home/vagrant/o2
-          - alienv enter AliPhysics/latest --shellrc
-          - cd /home/vagrant/o2/AliPhysics
+          - alienv enter O2Physics/latest --shellrc
+          - cd /home/vagrant/o2/O2Physics
           - nvim
   - window_name: build
     panes:
@@ -16,16 +16,16 @@ windows:
           - sleep 5
           - vagrant ssh
           - cd /home/vagrant/o2
-          - alienv enter AliPhysics/latest --shellrc
-          - cd /home/vagrant/o2/sw/BUILD/AliPhysics-latest-master/AliPhysics/PWG/FLOW
-          - find . | entr -pc make install -j$(nproc)
+          - alienv enter O2Physics/latest ninja/latest --shellrc
+          - cd /home/vagrant/o2/sw/BUILD/O2Physics-latest-master/O2Physics
+          - find /home/vagrant/o2/O2Physics/ | entr -pc ninja install -j$(nproc)
   - window_name: alien
     panes:
       - shell_command:
           - sleep 10
           - vagrant ssh
           - cd /home/vagrant/o2
-          - alienv enter AliPhysics/latest --shellrc
+          - alienv enter O2Physics/latest --shellrc
           - cd
   - window_name: remote
     panes:
