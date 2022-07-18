@@ -1,7 +1,7 @@
 # File              : prod.yml
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 12.10.2021
-# Last Modified Date: 17.02.2022
+# Last Modified Date: 14.07.2022
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 session_name: Productivity
 windows:
@@ -12,12 +12,3 @@ windows:
   - window_name: Mail
     panes:
       - shell_command: neomutt
-  - window_name: DenseAndStrange
-    panes:
-      - shell_command: slack-term -config $HOME/.config/slack-term/DenseAndStrange
-  - window_name: FemtoBoyz
-    panes:
-      - shell_command: slack-term -config $HOME/.config/slack-term/FemtoBoyz
-  - window_name: Mupa
-    panes:
-      - shell_command: slack-term -config $HOME/.config/slack-term/Mupa

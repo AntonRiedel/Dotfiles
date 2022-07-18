@@ -2,7 +2,7 @@
 # File              : nextsync.sh
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 24.03.2020
-# Last Modified Date: 06.03.2022
+# Last Modified Date: 02.07.2022
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 #bail out if nextcloud is running
@@ -12,7 +12,7 @@ pgrep nextcloud >/dev/null && exit 1
 User="anton"
 Password="$(pass diamond/nextcloud/anton | head -n 1)"
 Dir="$HOME/nextcloud"
-Server="https://nextcloud.gemstones.strangled.net"
+Server="https://nextcloud.gemstones.crabdance.com"
 
 #make sure the directory exists; necessary when running for the first time after a reinstall
 mkdir -p $Dir
