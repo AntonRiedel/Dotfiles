@@ -1,0 +1,4 @@
+---
+- name: Create symlinks for shells (bash and zsh)
+  file:
+    src: 

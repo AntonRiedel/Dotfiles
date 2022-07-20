@@ -1,0 +1,14 @@
+---
+archlinux_packages:
+  - acpi
+  - alacritty
+  - ansible
+  - arandr
+  - base
+  - base-devel
+  - bridge-utils
+  - btrfs-progs
+  - fzf
+  - firefox
+  - jq
+  - ncdu

@@ -1,0 +1,8 @@
+---
+- name: Install packages for Arch Linux
+  become: yes
+  pacman:
+    name: "{{ item }}"
+    state: present
+  loop: "{{ archlinux_packages }}"
+  when: ansible_os_family == "Archlinux"

@@ -39,5 +39,5 @@ PS1="\[$(tput bold)\]\[$(tput setaf 1)\][\[$(tput setaf 3)\]\u\[$(tput setaf 2)\
 [ -f /usr/share/fzf/key-bindings.bash ] && source /usr/share/fzf/key-bindings.bash
 [ -f /usr/share/fzf/completion.bash ] && source /usr/share/fzf/completion.bash
 
-#remote specifig config
+# remote specifig config
 [ -f "$HOME/.bashrc_remote" ] && source "$HOME/.bashrc_remote"

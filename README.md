@@ -2,7 +2,7 @@
 File              : README.md
 Author            : Anton Riedel <anton.riedel@tum.de>
 Date              : 25.03.2020
-Last Modified Date: 08.02.2022
+Last Modified Date: 20.07.2022
 Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 -->
 
@@ -21,10 +21,11 @@ You can find configuration files for
 - zathura (minimal vim-like pdf viewer)
 - ...
 
-as well as some custom scripts under `scripts`.
+These Dotfiles are meant to be deployed with [Ansible](https://www.ansible.com/). Once have it installed you can simply run
 
-These Dotfiles are meant to be deployed with [GNU Stow](https://www.gnu.org/software/stow/).
-There is a corresponding script for deployment under `install`.
+```
+ansible-playbook bootstrap.yml
+```
 
 Under `old` you can find configuration files for programs I used to use such as:
 
@@ -41,5 +42,4 @@ Under `old` you can find configuration files for programs I used to use such as:
 - nnn
 - lf
 - compton
-- dunst
 - ...
