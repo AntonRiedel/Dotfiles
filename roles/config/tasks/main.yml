@@ -1,0 +1,86 @@
+---
+- name: Create XDG direcotries
+  file:
+    path: "{{ item }}"
+    state: directory
+  loop: "{{ XDG }}"
+
+- name: Deploy shell config (bash and zsh)
+  file:
+    src: "{{ playbook_dir }}/shell/{{ item }}"
+    dest: "{{ HOME }}/{{ item }}"
+    state: link
+    force: yes
+  loop:
+    - ".profile"
+    - ".bash_profile"
+    - ".bashrc"
+    - ".zprofile"
+    - ".config/zsh"
+    - ".config/aliasrc"
+
+- name: Deploy custom shell scripts
+  file:
+    src: "{{ playbook_dir }}/shell/.local/bin/{{ item }}"
+    dest: "{{ HOME }}/.local/bin/{{ item }}"
+    state: link
+    force: yes
+  loop:
+    - "bar.sh"
+    - "fin.sh"
+    - "lockscreen.sh"
+    - "nextsync.sh"
+    - "screen.sh"
+    - "sound.sh"
+
+- name: Deploy tmux config
+  file:
+    src: "{{ playbook_dir }}/tmux/{{ item }}"
+    dest: "{{ HOME }}/{{ item }}"
+    state: link
+    force: yes
+  loop:
+    - ".tmux.conf"
+    - ".config/tmuxp"
+
+- name: Deploy git config
+  file:
+    src: "{{ playbook_dir }}/git/.config/git"
+    dest: "{{ HOME }}/.config/git"
+    state: link
+    force: yes
+
+- name: Deploy neovim config
+  file:
+    src: "{{ playbook_dir }}/neovim/.config/nvim"
+    dest: "{{ HOME }}/.config/nvim"
+    state: link
+    force: yes
+
+- name: Deploy X11 config
+  file:
+    src: "{{ playbook_dir }}/X11/.config/X11"
+    dest: "{{ HOME }}/.config/X11"
+    state: link
+    force: yes
+
+- name: Deploy sxhkd config
+  file:
+    src: "{{ playbook_dir }}/sxhkd/.config/sxhkd"
+    dest: "{{ HOME }}/.config/sxhkd"
+    state: link
+    force: yes
+
+- name: Deploy alacritty config
+  file:
+    src: "{{ playbook_dir }}/alacritty/.config/alacritty"
+    dest: "{{ HOME }}/.config/alacritty"
+    state: link
+    force: yes
+
+- name: Deploy paru config
+  file:
+    src: "{{ playbook_dir }}/paru/.config/paru"
+    dest: "{{ HOME }}/.config/paru"
+    state: link
+    force: yes

@@ -1,0 +1,7 @@
+---
+HOME: "{{ lookup('env','HOME') }}"
+
+XDG:
+ - "{{ HOME }}/.local/bin"
+ - "{{ HOME }}/.local/share"
+ - "{{ HOME }}/.config"

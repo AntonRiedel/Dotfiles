@@ -36,7 +36,7 @@ super + {_,shift} + p
 super + {_,shift} + x
 	{fin.sh,xkill}
 super + {_,shift} + r
-    {dmenu_run -i -F -p "Run: ",screen.sh}
+    {dmenu_run -i -p "Run: ",screen.sh}
 super + g
     passmenu-otp -i
 	# passmenu -i

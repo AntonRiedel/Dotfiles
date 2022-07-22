@@ -2,7 +2,7 @@
 # File              : bar.sh
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 27.04.2020
-# Last Modified Date: 03.05.2022
+# Last Modified Date: 22.07.2022
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 #handle SIGTRAP signals to update the status bar
@@ -28,7 +28,7 @@ status() {
   echo "$delim"
 
   #show the cpu temperature
-  sensors | awk '/Core 0/ {print "🔥" $3}'
+  sensors | awk '/CPU/ {print "🔥" $2}'
   echo "$delim"
 
   #show RAM usage

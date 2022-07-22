@@ -2,5 +2,5 @@
 - hosts: localhost
   roles:
     - packages
-    - symlinks
+    - config
     - build

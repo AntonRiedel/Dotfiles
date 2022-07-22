@@ -2,7 +2,7 @@
 # File              : fin.sh
 # Author            : Anton Riedel <anton.riedel@tum.de>
 # Date              : 24.03.2020
-# Last Modified Date: 11.03.2022
+# Last Modified Date: 22.07.2022
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 ClearCache() {
@@ -34,7 +34,7 @@ ClearCache() {
 
 pgrep -x dmenu && exit 1
 
-choice=$(echo "Shutdown\nReboot\nExit\nLock Screen" | dmenu -F -i -l 4 -p "Select Option:")
+choice=$(echo -e "Shutdown\nReboot\nExit\nLock Screen" | dmenu -i -l 4 -p "Select Option:")
 
 case "$choice" in
 "Shutdown") ClearCache && /usr/bin/shutdown now ;;

@@ -6,3 +6,11 @@
     state: present
   loop: "{{ archlinux_packages }}"
   when: ansible_os_family == "Archlinux"
+
+- name: Install AUR packages
+  pacman:
+    executable: /usr/bin/paru
+    name: "{{ item }}"
+    state: present
+  loop: "{{ archlinux_aur_packages }}"
+  when: ansible_os_family == "Archlinux"
