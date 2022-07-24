@@ -1,0 +1,7 @@
+---
+- name: Deploy paru config
+  file:
+    src: "{{ playbook_dir }}/paru/.config/paru"
+    dest: "{{ HOME }}/.config/paru"
+    state: link
+    force: yes

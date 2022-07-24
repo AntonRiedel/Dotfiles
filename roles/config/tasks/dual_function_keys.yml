@@ -1,0 +1,19 @@
+---
+- name: Deploy dual function keys config
+  become: yes
+  copy:
+    src: "{{ item }}"
+    dest: "/etc/interception/{{ item }}"
+    owner: root
+    group: root
+    mode: "644"
+  loop:
+    - "udevmon.yaml"
+    - "mappings.yaml"
+  notify: restart udevmon
+
+- name: Start dual function keys service
+  systemd:
+    name: udevmon
+    state: started
+    enabled: yes

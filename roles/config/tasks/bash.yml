@@ -1,0 +1,12 @@
+---
+- name: Deploy bash config
+  file:
+    src: "{{ playbook_dir }}/shell/{{ item }}"
+    dest: "{{ HOME }}/{{ item }}"
+    state: link
+    force: yes
+  loop:
+    - ".profile"
+    - ".bash_profile"
+    - ".bashrc"
+    - ".config/aliasrc"

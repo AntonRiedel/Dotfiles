@@ -1,0 +1,7 @@
+---
+- name: Deploy X11 config
+  file:
+    src: "{{ playbook_dir }}/X11/.config/X11"
+    dest: "{{ HOME }}/.config/X11"
+    state: link
+    force: yes

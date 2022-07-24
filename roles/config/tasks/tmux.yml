@@ -1,0 +1,10 @@
+---
+- name: Deploy tmux config
+  file:
+    src: "{{ playbook_dir }}/tmux/{{ item }}"
+    dest: "{{ HOME }}/{{ item }}"
+    state: link
+    force: yes
+  loop:
+    - ".tmux.conf"
+    - ".config/tmuxp"

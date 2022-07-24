@@ -1,0 +1,7 @@
+---
+- name: Deploy sxhkd config
+  file:
+    src: "{{ playbook_dir }}/sxhkd/.config/sxhkd"
+    dest: "{{ HOME }}/.config/sxhkd"
+    state: link
+    force: yes

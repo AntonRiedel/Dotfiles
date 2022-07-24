@@ -1,0 +1,7 @@
+---
+- name: Deploy git config
+  file:
+    src: "{{ playbook_dir }}/git/.config/git"
+    dest: "{{ HOME }}/.config/git"
+    state: link
+    force: yes

@@ -1,0 +1,7 @@
+---
+- name: Deploy neovim config
+  file:
+    src: "{{ playbook_dir }}/neovim/.config/nvim"
+    dest: "{{ HOME }}/.config/nvim"
+    state: link
+    force: yes

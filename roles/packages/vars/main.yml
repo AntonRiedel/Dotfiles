@@ -25,6 +25,7 @@ archlinux_packages:
   - linux
   - linux-lts
   - linux-firmware
+  - lxsession
   - moreutils
   - neomutt
   - neovim
@@ -48,6 +49,7 @@ archlinux_packages:
   - lm_sensors
   - sshfs
   - sudo
+  - stow
   - sxhkd
   - texlab
   - texlive-bibtexextra

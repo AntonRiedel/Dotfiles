@@ -1,0 +1,13 @@
+---
+- name: Deploy zsh config
+  file:
+    src: "{{ playbook_dir }}/shell/{{ item }}"
+    dest: "{{ HOME }}/{{ item }}"
+    state: link
+    force: yes
+  loop:
+    - ".profile"
+    - ".zprofile"
+    - ".config/zsh"
+    - ".config/aliasrc"
+

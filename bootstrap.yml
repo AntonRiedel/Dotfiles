@@ -1,6 +1,6 @@
 ---
 - hosts: localhost
   roles:
-    - packages
-    - config
+    - { role: packages, tags: ["install"] }
+    - { role: config, tags: ["deploy"] }
     - build

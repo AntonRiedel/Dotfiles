@@ -1,0 +1,13 @@
+---
+- include_tasks: zsh.yml
+- include_tasks: bash.yml
+- include_tasks: scripts.yml
+- include_tasks: tmux.yml
+- include_tasks: git.yml
+- include_tasks: neovim.yml
+- include_tasks: X11.yml
+- include_tasks: sxhkd.yml
+- include_tasks: alacritty.yml
+- include_tasks: paru.yml
+- include_tasks: dual_function_keys.yml
+- include_tasks: nobeep.yml

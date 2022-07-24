@@ -1,0 +1,10 @@
+---
+- name: Blacklisting pcspkr
+  become: yes
+  copy:
+    src: "nobeep.conf"
+    dest: "/etc/modprobe.d/nobeep.conf"
+    owner: root
+    group: root
+    mode: "644"
+  notify: unload pcspkr

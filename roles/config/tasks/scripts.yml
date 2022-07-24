@@ -1,0 +1,15 @@
+---
+- name: Deploy custom shell scripts
+  file:
+    src: "{{ playbook_dir }}/shell/.local/bin/{{ item }}"
+    dest: "{{ HOME }}/.local/bin/{{ item }}"
+    state: link
+    force: yes
+  loop:
+    - "bar.sh"
+    - "fin.sh"
+    - "lockscreen.sh"
+    - "nextsync.sh"
+    - "screen.sh"
+    - "sound.sh"
+
