@@ -11,6 +11,7 @@ archlinux_packages:
   - dmenu
   - fzf
   - firefox
+  - flameshot
   - jq
   - ncdu
   - tlp
@@ -20,6 +21,8 @@ archlinux_packages:
   - refind
   - fd
   - htop
+  - imagemagick
+  - i3lock
   - gzip
   - interception-dual-function-keys
   - linux
@@ -44,6 +47,7 @@ archlinux_packages:
   - pulsemixer
   - qutebrowser
   - ripgrep
+  - rdesktop
   - root
   - rsync
   - lm_sensors
