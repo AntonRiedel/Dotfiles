@@ -17,8 +17,8 @@ windows:
           - vagrant ssh
           - cd /home/vagrant/o2
           - alienv enter AliPhysics/latest --shellrc
-          - cd /home/vagrant/o2/sw/BUILD/AliPhysics-latest-master/AliPhysics/PWG/FLOW
-          - find . | entr -pc make install -j$(nproc)
+          - cd /home/vagrant/o2/sw/BUILD/AliPhysics-latest-master/AliPhysics
+          - find /home/vagrant/o2/AliPhysics/PWG/FLOW | entr -pc make install -j$(nproc)
   - window_name: alien
     panes:
       - shell_command:
