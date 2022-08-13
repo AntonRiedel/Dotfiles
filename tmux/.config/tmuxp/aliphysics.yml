@@ -6,25 +6,25 @@ windows:
     panes:
       - shell_command:
           - vagrant ssh
-          - cd /home/vagrant/o2
+          - cd /home/vagrant/alice
           - alienv enter AliPhysics/latest --shellrc
-          - cd /home/vagrant/o2/AliPhysics
-          - nvim
+          - cd /home/vagrant/alice/AliPhysics
+          - echo "setup_brew for neovim"
   - window_name: build
     panes:
       - shell_command:
           - sleep 5
           - vagrant ssh
-          - cd /home/vagrant/o2
+          - cd /home/vagrant/alice
           - alienv enter AliPhysics/latest --shellrc
-          - cd /home/vagrant/o2/sw/BUILD/AliPhysics-latest-master/AliPhysics
-          - find /home/vagrant/o2/AliPhysics/PWG/FLOW | entr -pc make install -j$(nproc)
+          - cd /home/vagrant/alice/sw/BUILD/AliPhysics-latest-master/AliPhysics
+          - find /home/vagrant/alice/AliPhysics/PWG/FLOW | entr -pc make install -j$(nproc)
   - window_name: alien
     panes:
       - shell_command:
           - sleep 10
           - vagrant ssh
-          - cd /home/vagrant/o2
+          - cd /home/vagrant/alice
           - alienv enter AliPhysics/latest --shellrc
           - cd
   - window_name: remote
