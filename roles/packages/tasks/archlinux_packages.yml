@@ -1,0 +1,25 @@
+---
+- name: Install packages for Arch Linux
+  become: yes
+  pacman:
+    name: "{{ item }}"
+    state: present
+  loop: "{{ archlinux_packages }}"
+
+- name: Check if AUR helper is already installed
+  stat:
+    path: /usr/bin/paru
+  register: aur_helper
+
+- name: Clone AUR helper from AUR
+  git:
+    repo: "https://aur.archlinux.org/paru-bin"
+    dest: /tmp/aur
+  when: aur_helper.stat.exists == -1
+
+- name: Install AUR packages
+  pacman:
+    executable: /usr/bin/paru
+    name: "{{ item }}"
+    state: present
+  loop: "{{ archlinux_aur_packages }}"
