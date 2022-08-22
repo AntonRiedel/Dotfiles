@@ -2,107 +2,155 @@
 File              : init.lua
 Author            : Anton Riedel <anton.riedel@tum.de>
 Date              : 30.11.2021
-Last Modified Date: 23.07.2022
+Last Modified Date: 21.08.2022
 Last Modified By  : Anton Riedel <anton.riedel@tum.de>
---]] --
+--]]
+--
 -- install packer if it is not installed already
 local fn = vim.fn
-local install_path = fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
+local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
 if fn.empty(fn.glob(install_path)) > 0 then
-    packer_bootstrap = fn.system({
-        'git', 'clone', '--depth', '1',
-        'https://github.com/wbthomason/packer.nvim', install_path
-    })
-    vim.cmd([[packadd packer.nvim]])
+	packer_bootstrap = fn.system({
+		"git",
+		"clone",
+		"--depth",
+		"1",
+		"https://github.com/wbthomason/packer.nvim",
+		install_path,
+	})
+	vim.cmd([[packadd packer.nvim]])
 end
 
-return require('packer').startup(function(use)
+return require("packer").startup(function(use)
+	-- packer can manage itself
+	use("wbthomason/packer.nvim")
 
-    -- packer can manage itself
-    use 'wbthomason/packer.nvim'
+	-- colorscheme
+	use({
+		"EdenEast/nightfox.nvim",
+		config = function()
+			require("plugin/colorscheme")
+		end,
+	})
 
-    -- colorscheme
-    -- use {'shaunsingh/moonlight.nvim', config = require('plugin/colorscheme')}
-    use {'EdenEast/nightfox.nvim', config = require('plugin/colorscheme')}
+	-- statusline
+	use({
+		"nvim-lualine/lualine.nvim",
+		config = function()
+			require("plugin/statusline")
+		end,
+	})
 
-    -- statusline
-    use {'nvim-lualine/lualine.nvim', config = require('plugin/statusline')}
+	-- file headers
+	use({
+		"alpertuna/vim-header",
+		config = function()
+			require("plugin/fileheader")
+		end,
+	})
 
-    -- file headers
-    use {'alpertuna/vim-header', config = require('plugin/fileheader')}
+	-- org mode
+	-- use {'nvim-orgmode/orgmode', config = require('plugin/orgmode')}
+	-- use {
+	--     'nvim-neorg/neorg',
+	--     config = require('plugin/neorg'),
+	--     requires = "nvim-lua/plenary.nvim"
+	-- }
 
-    -- org mode
-    -- use {'nvim-orgmode/orgmode', config = require('plugin/orgmode')}
-    -- use {
-    --     'nvim-neorg/neorg',
-    --     config = require('plugin/neorg'),
-    --     requires = "nvim-lua/plenary.nvim"
-    -- }
+	-- treesitter
+	use({
+		"nvim-treesitter/nvim-treesitter",
+		config = function()
+			require("plugin/treesitter")
+		end,
+		run = ":TSUpdate",
+	})
 
-    -- treesitter
-    use {
-        'nvim-treesitter/nvim-treesitter',
-        config = require('plugin/treesitter'),
-        run = ':TSUpdate'
-    }
+	-- fuzzy finder
+	use({
+		"nvim-telescope/telescope.nvim",
+		config = function()
+			require("plugin/telescope")
+		end,
+		requires = {
+			{ "nvim-lua/plenary.nvim" },
+			{
+				"nvim-telescope/telescope-fzf-native.nvim",
+				run = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build",
+			},
+		},
+	})
 
-    -- use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make'}
+	-- code formatting
+	use({
+		"mhartington/formatter.nvim",
+		config = function()
+			require("plugin/format")
+		end,
+	})
 
-    -- fuzzy finder
-    use {
-        'nvim-telescope/telescope.nvim',
-        config = require('plugin/telescope'),
-        requires = {{'nvim-lua/plenary.nvim'}}
-    }
+	-- code commenting
+	use({
+		"numToStr/Comment.nvim",
+		config = function()
+			require("plugin/comment")
+		end,
+	})
 
-    -- code formatting
-    use {"mhartington/formatter.nvim", config = require('plugin/format')}
+	-- snippet engine
+	use({
+		"L3MON4D3/LuaSnip",
+		config = function()
+			require("plugin/snippets")
+		end,
+		requires = { "rafamadriz/friendly-snippets" },
+	})
 
-    -- code commenting
-    use {'numToStr/Comment.nvim', config = require('plugin/comment')}
+	-- completion
+	use({
+		"hrsh7th/nvim-cmp",
+		config = function()
+			require("plugin/completion")
+		end,
+		requires = {
+			{ "hrsh7th/cmp-buffer" },
+			{ "hrsh7th/cmp-path" },
+			{ "hrsh7th/cmp-nvim-lsp" },
+			{ "neovim/nvim-lspconfig" },
+			{ "saadparwaiz1/cmp_luasnip" },
+			{ "windwp/nvim-autopairs" },
+		},
+	})
 
-    -- lsp
-    use {'neovim/nvim-lspconfig', config = require('plugin/lsp')}
+	use({
+		"kylechui/nvim-surround",
+		config = function()
+			require("plugin/surround")
+		end,
+	})
 
-    -- snippet engine
-    use {
-        'L3MON4D3/LuaSnip',
-        config = require('plugin/snippets'),
-        requires = {'rafamadriz/friendly-snippets'}
-    }
+	use({
+		"lewis6991/gitsigns.nvim",
+		config = function()
+			require("plugin/gitsigns")
+		end,
+		requires = { "nvim-lua/plenary.nvim" },
+	})
 
-    -- completion
-    use {
-        'hrsh7th/nvim-cmp',
-        config = require('plugin/completion'),
-        requires = {
-            {'hrsh7th/cmp-buffer'}, {'hrsh7th/cmp-path'},
-            {'hrsh7th/cmp-nvim-lsp'}, {'saadparwaiz1/cmp_luasnip'}
-        }
-    }
+	-- terminal integration
+	use({
+		"numToStr/FTerm.nvim",
+		config = function()
+			require("plugin/terminal")
+		end,
+	})
 
-    -- auto pairs
-    use {'windwp/nvim-autopairs', config = require('plugin/autopairs')}
+	-- make quickfix even more awesome
+	use({ "kevinhwang91/nvim-bqf", ft = "qf" })
 
-    -- surround
-    use {'tpope/vim-surround'}
-
-    -- git integration
-    -- use {'tpope/vim-fugitive'}
-    -- use lazygit in terminal
-    use {
-        'lewis6991/gitsigns.nvim',
-        config = require('plugin/gitsigns'),
-        requires = {'nvim-lua/plenary.nvim'}
-    }
-
-    -- terminal integration
-    use {'numToStr/FTerm.nvim', config = require('plugin/terminal')}
-
-    -- make quickfix even more awesome
-    use {'kevinhwang91/nvim-bqf', ft = 'qf'}
-
-    -- Automatically set up your configuration after cloning packer.nvim
-    -- Put this at the end after all plugins
-    if packer_bootstrap then require('packer').sync() end
+	-- Automatically set up your configuration after cloning packer.nvim
+	-- Put this at the end after all plugins
+	if packer_bootstrap then
+		require("packer").sync()
+	end
 end)

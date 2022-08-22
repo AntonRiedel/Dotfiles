@@ -2,7 +2,7 @@
 File              : config.lua
 Author            : Anton Riedel <anton.riedel@tum.de>
 Date              : 30.11.2021
-Last Modified Date: 16.04.2022
+Last Modified Date: 18.08.2022
 Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 --]] --
 -- set path to external programs explicitly
@@ -11,16 +11,6 @@ vim.g.python3_host_prog = '/bin/python3'
 vim.g.loaded_ruby_provider = 0
 vim.g.loaded_node_provider = 0
 vim.g.loaded_perl_provider = 0
-
--- autcommands for terminals
-vim.cmd([[
-  augroup Terminal
-    autocmd!
-    au TermOpen * set nonumber
-    au TermOpen * set norelativenumber
-    au TermOpen * startinsert
-  augroup end
-]])
 
 -- misc
 vim.opt.hidden = true

@@ -2,82 +2,29 @@
 File              : format.lua
 Author            : Anton Riedel <anton.riedel@tum.de>
 Date              : 30.11.2021
-Last Modified Date: 28.04.2022
+Last Modified Date: 19.08.2022
 Last Modified By  : Anton Riedel <anton.riedel@tum.de>
---]] --
-if packer_bootstrap then return end
+--]]
+--
+if packer_bootstrap then
+	return
+end
 
--- require('lsp-format').setup({})
-
-require('formatter').setup({
-    filetype = {
-        rust = {
-            -- Rustfmt
-            function()
-                return {
-                    exe = "rustfmt",
-                    args = {"--emit=stdout", "--edition=2021"},
-                    stdin = true
-                }
-            end
-        },
-        json = {
-            function()
-                return {
-                    exe = "jq",
-                    args = ".",
-                    stdin = true
-                }
-            end
-        },
-        sh = {
-            -- Shell Script Formatter
-            function()
-                return {exe = "shfmt", args = {"-i", 2}, stdin = true}
-            end
-        },
-        lua = {
-            -- luafmt
-            function()
-                return
-                    {exe = "lua-format", args = {"--in-place"}, stdin = false}
-            end
-        },
-        cpp = {
-            -- clang-format
-            function()
-                return {
-                    exe = "clang-format",
-                    args = {"--assume-filename", vim.api.nvim_buf_get_name(0)},
-                    stdin = true,
-                    cwd = vim.fn.expand('%:p:h') -- Run clang-format in cwd of the file.
-                }
-            end
-        },
-        cuda = {
-            function()
-                return {
-                    exe = "clang-format",
-                    args = {"--assume-filename", vim.api.nvim_buf_get_name(0)},
-                    stdin = true,
-                    cwd = vim.fn.expand('%:p:h') -- Run clang-format in cwd of the file.
-                }
-            end
-        },
-        python = {
-            -- Configuration for psf/black
-            function()
-                return {
-                    exe = "black", -- this should be available on your $PATH
-                    args = {'-'},
-                    stdin = true
-                }
-            end
-        },
-        tex = {
-            function()
-                return {exe = "latexindent", args = {"-"}, stdin = true}
-            end
-        }
-    }
+require("formatter").setup({
+	logging = true,
+	log_level = vim.log.levels.DEBUG,
+	filetype = {
+		rust = { require("formatter.filetypes.rust").rustfmt },
+		json = { require("formatter.filetypes.json").jq },
+		sh = { require("formatter.filetypes.sh").shfmt },
+		lua = { require("formatter.filetypes.lua").stylua },
+		cpp = { require("formatter.filetypes.cpp").clangformat },
+		c = { require("formatter.filetypes.c").clangformat },
+		python = { require("formatter.filetypes.python").black },
+		tex = {
+			function()
+				return { exe = "latexindent", args = { "-g /dev/sterr", "2>/dev/null" }, stdin = true }
+			end,
+		},
+	},
 })
