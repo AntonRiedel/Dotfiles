@@ -1,0 +1,10 @@
+---
+- name: Deploy mpd and ncmpcpp config
+  file:
+    src: "{{ playbook_dir }}/music/.config/{{ item }}"
+    dest: "{{ HOME }}/.config/{{ item }}"
+    state: link
+    force: yes
+  loop:
+      - mpd
+      - ncmpcpp

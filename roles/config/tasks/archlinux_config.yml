@@ -11,3 +11,4 @@
 - include_tasks: paru.yml
 - include_tasks: dual_function_keys.yml
 - include_tasks: nobeep.yml
+- include_tasks: music.yml

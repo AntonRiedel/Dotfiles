@@ -2,7 +2,7 @@
 File              : init.lua
 Author            : Anton Riedel <anton.riedel@tum.de>
 Date              : 30.11.2021
-Last Modified Date: 21.08.2022
+Last Modified Date: 23.08.2022
 Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 --]]
 --
@@ -49,14 +49,6 @@ return require("packer").startup(function(use)
 		end,
 	})
 
-	-- org mode
-	-- use {'nvim-orgmode/orgmode', config = require('plugin/orgmode')}
-	-- use {
-	--     'nvim-neorg/neorg',
-	--     config = require('plugin/neorg'),
-	--     requires = "nvim-lua/plenary.nvim"
-	-- }
-
 	-- treesitter
 	use({
 		"nvim-treesitter/nvim-treesitter",
@@ -64,6 +56,16 @@ return require("packer").startup(function(use)
 			require("plugin/treesitter")
 		end,
 		run = ":TSUpdate",
+	})
+
+	use({
+		"nvim-neorg/neorg",
+		config = function()
+			require("plugin/neorg")
+		end,
+		ft = "norg",
+		tag = "*",
+		requires = "nvim-lua/plenary.nvim",
 	})
 
 	-- fuzzy finder
