@@ -2,7 +2,7 @@
 File              : snippets.lua
 Author            : Anton Riedel <anton.riedel@tum.de>
 Date              : 30.11.2021
-Last Modified Date: 19.08.2022
+Last Modified Date: 29.08.2022
 Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 --]]
 --
@@ -32,9 +32,9 @@ local postfix = require("luasnip.extras.postfix").postfix
 local genSnippetHist1D = function(histType)
 	return
 		s(histType, {
-		t(histType .. "* "),
+		t(string.upper(histType) .. "* "),
 		i(1, "HistPointer"),
-		t([[ = new TH1F("]]),
+		t(" = new " .. string.upper(histType) .. '("'),
 		i(2, "HistName"),
 		t([[","]]),
 		i(3, "HistTitle"),
