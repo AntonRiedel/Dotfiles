@@ -2,7 +2,7 @@
 File              : snippets.lua
 Author            : Anton Riedel <anton.riedel@tum.de>
 Date              : 30.11.2021
-Last Modified Date: 29.08.2022
+Last Modified Date: 30.08.2022
 Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 --]]
 --
@@ -59,4 +59,4 @@ end
 
 ls.add_snippets("cpp", mySnippets)
 
--- require("luasnip.loaders.from_vscode").lazy_load()
+require("luasnip.loaders.from_vscode").lazy_load()

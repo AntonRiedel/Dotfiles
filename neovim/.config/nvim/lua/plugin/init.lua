@@ -2,7 +2,7 @@
 File              : init.lua
 Author            : Anton Riedel <anton.riedel@tum.de>
 Date              : 30.11.2021
-Last Modified Date: 29.08.2022
+Last Modified Date: 05.09.2022
 Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 --]]
 --
@@ -64,7 +64,8 @@ return require("packer").startup(function(use)
 			require("plugin/neorg")
 		end,
 		ft = "norg",
-		tag = "0.0.12",
+		-- tag = "0.0.12",
+		tag = "*",
 		requires = "nvim-lua/plenary.nvim",
 	})
 
@@ -103,7 +104,7 @@ return require("packer").startup(function(use)
 	use({
 		"L3MON4D3/LuaSnip",
 		config = function()
-			require("plugin/snippets")
+			require("snippets")
 		end,
 		requires = { "rafamadriz/friendly-snippets" },
 	})

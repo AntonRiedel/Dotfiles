@@ -10,3 +10,6 @@
 
 - include_tasks: debian_config.yml
   when: ansible_os_family == "Debian"
+
+- include_tasks: centos_config.yml
+  when: ansible_os_family == "Centos"
