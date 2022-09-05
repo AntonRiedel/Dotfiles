@@ -1,3 +1,3 @@
 ---
-- include_tasks: archlinux_packages
+- include_tasks: archlinux_packages.yml
   when: ansible_os_family == "Archlinux"
