@@ -2,7 +2,7 @@
 File              : format.lua
 Author            : Anton Riedel <anton.riedel@tum.de>
 Date              : 30.11.2021
-Last Modified Date: 19.08.2022
+Last Modified Date: 09.09.2022
 Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 --]]
 --
@@ -16,6 +16,7 @@ require("formatter").setup({
 	filetype = {
 		rust = { require("formatter.filetypes.rust").rustfmt },
 		json = { require("formatter.filetypes.json").jq },
+		yaml = { require("formatter.filetypes.yaml").prettier },
 		sh = { require("formatter.filetypes.sh").shfmt },
 		lua = { require("formatter.filetypes.lua").stylua },
 		cpp = { require("formatter.filetypes.cpp").clangformat },
