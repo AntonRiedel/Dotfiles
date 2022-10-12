@@ -1,0 +1,36 @@
+session_name: o2
+before_script: ${HOME}/AliceVM/vagrant-up.sh
+start_directory: ${HOME}/AliceVM
+windows:
+  - window_name: devel
+    panes:
+      - shell_command:
+          - vagrant ssh
+          - cd /home/vagrant/alice/O2Physics
+          - nvim
+  - window_name: build
+    panes:
+      - shell_command:
+          - sleep 10
+          - vagrant ssh
+          - cd /home/vagrant/alice
+          - alienv enter O2Physics/latest ninja/latest --shellrc
+          - cd /home/vagrant/alice/sw/BUILD/O2Physics-latest-master/O2Physics
+          - find /home/vagrant/alice/O2Physics/ | entr -pc ninja install -j$(nproc)
+  - window_name: alien
+    panes:
+      - shell_command:
+          - sleep 20
+          - vagrant ssh
+          - cd /home/vagrant/alice
+          - alienv enter O2Physics/latest --shellrc
+          - cd /vagrant
+  - window_name: remote
+    panes:
+      - shell_command:
+          - sleep 30
+          - vagrant ssh
+  - window_name: local
+    panes:
+      - shell_command:
+          - cd
