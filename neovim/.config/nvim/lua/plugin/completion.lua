@@ -2,7 +2,7 @@
 File              : completion.lua
 Author            : Anton Riedel <anton.riedel@tum.de>
 Date              : 30.11.2021
-Last Modified Date: 30.09.2022
+Last Modified Date: 17.10.2022
 Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 --]]
 --
@@ -83,7 +83,7 @@ local servers = {
 	"texlab",
 	"rust_analyzer",
 }
-local capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities())
+local capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
 for _, lsp in pairs(servers) do
 	require("lspconfig")[lsp].setup({ on_attach = on_attach, capabilities = capabilities })
 end

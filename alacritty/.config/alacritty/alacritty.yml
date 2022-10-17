@@ -1,6 +1,6 @@
 # File              : alacritty.yml
 # Author            : Anton Riedel <anton.riedel@tum.de>
-# Last Modified Date: 04.08.2022
+# Last Modified Date: 14.10.2022
 # Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 
 # Configuration for Alacritty, the GPU enhanced terminal emulator.
@@ -81,7 +81,7 @@ window:
   #
   # Override the variant of the GTK theme. Commonly supported values are `dark` and `light`.
   # Set this to `None` to use the default theme variant.
-  gtk_theme_variant: dark
+  window.decorations_theme_variant: dark
   opacity: 1
 
 scrolling:
