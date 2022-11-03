@@ -1,34 +1,24 @@
 session_name: AliPhysics
-before_script: ${HOME}/AliceVM/vagrant-up.sh
-start_directory: ${HOME}/AliceVM
+start_directory: ${HOME}/alice
 windows:
   - window_name: devel
     panes:
       - shell_command:
-          - vagrant ssh
-          - cd /home/vagrant/alice/AliPhysics
+          - cd AliPhysics
+          - nvim
   - window_name: build
     panes:
       - shell_command:
-          - sleep 10
-          - vagrant ssh
-          - cd /home/vagrant/alice
+          - distrobox enter Alice
           - alienv enter AliPhysics/latest --shellrc
-          - cd /home/vagrant/alice/sw/BUILD/AliPhysics-latest-master/AliPhysics
-          - find /home/vagrant/alice/AliPhysics/PWG/FLOW | entr -pc make install -j$(nproc)
+          - cd sw/BUILD/AliPhysics-latest-master/AliPhysics
+          - while sleep 0.1; do find ${HOME}/alice/AliPhysics/ | entr -pc make install -j$(nproc); done
   - window_name: alien
     panes:
       - shell_command:
-          - sleep 20
-          - vagrant ssh
-          - cd /home/vagrant/alice
+          - distrobox enter Alice
           - alienv enter AliPhysics/latest --shellrc
           - cd
-  - window_name: remote
-    panes:
-      - shell_command:
-          - sleep 30
-          - vagrant ssh
   - window_name: local
     panes:
       - shell_command:

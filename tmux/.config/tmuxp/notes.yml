@@ -1,0 +1,13 @@
+session_name: notes
+start_directory: ${HOME}/nextcloud/notes
+windows:
+  - window_name: work
+    panes:
+      - shell_command:
+          - cd work
+          - nvim
+  - window_name: private
+    panes:
+      - shell_command:
+          - cd private
+          - nvim
