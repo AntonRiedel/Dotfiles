@@ -10,7 +10,7 @@ windows:
     panes:
       - shell_command:
           - distrobox enter Alice
-          - alienv enter AliPhysics/latest --shellrc
+          - alienv enter AliPhysics/latest CMake/latest --shellrc
           - cd sw/BUILD/AliPhysics-latest-master/AliPhysics
           - while sleep 0.1; do find ${HOME}/alice/AliPhysics/ | entr -pc make install -j$(nproc); done
   - window_name: alien

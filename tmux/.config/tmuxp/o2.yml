@@ -10,7 +10,7 @@ windows:
     panes:
       - shell_command:
           - distrobox enter Alice
-          - alienv enter O2Physics/latest ninja/latest --shellrc
+          - alienv enter O2Physics/latest CMake/latest ninja/latest --shellrc
           - cd sw/BUILD/O2Physics-latest/O2Physics
           - while sleep 0.1; do find ${HOME}/alice/O2Physics/ | entr -pc ninja install -j$(nproc); done
   - window_name: alien
