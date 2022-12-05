@@ -1,7 +1,7 @@
 ---
 - name: Deploy tmux config
   file:
-    src: "{{ playbook_dir }}/.config/{{ item }}"
+    src: "{{ playbook_dir }}/tmux/.config/{{ item }}"
     dest: "{{ HOME }}/.config/{{ item }}"
     state: link
     force: yes
