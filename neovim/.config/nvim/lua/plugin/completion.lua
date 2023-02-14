@@ -2,7 +2,7 @@
 File              : completion.lua
 Author            : Anton Riedel <anton.riedel@tum.de>
 Date              : 30.11.2021
-Last Modified Date: 06.12.2022
+Last Modified Date: 14.02.2023
 Last Modified By  : Anton Riedel <anton.riedel@tum.de>
 --]]
 --
@@ -79,7 +79,7 @@ local servers = {
 	"clangd",
 	"pyright",
 	"bashls",
-	"sumneko_lua",
+	"lua_ls",
 	"texlab",
 	"rust_analyzer",
 	"ansiblels",
